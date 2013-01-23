@@ -1,11 +1,11 @@
 # Name of your blog (this will show up at the top of your page and in the RSS feed)
-name: Sample Jekyll Blog
+name: Michael Lancaster
 
 # Short description (goes below the title; it will also be used in the RSS feed)
-description: This is a sample Jekyll Blog.
+description: Front End Developer/HTML5 Soldier
 
 # Your name, as you want it to appear underneath each post and in the footer
-author: Your Name
+author: Michael Lancaster
 
 # The directory for category index pages. Change it to something else if
 # for example you want links like /categories/category1 instead of /category1
@@ -17,7 +17,7 @@ category_dir: /
 #baseurl: /path/to/blog 
 
 # The URL of your actual domain. This will be used to make absolute links in the RSS feed.
-url: http://yourdomain.com/
+url: http://bymichaellancaster.com/
 
 # Continue compiling even if there are errors. Keep it true, unless troubleshooting.
 auto: true

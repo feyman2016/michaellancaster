@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Sample Jekyll Blog</title>
+		<description>This is a sample Jekyll Blog.</description>
+		<link>http://yourdomain.com/</link>
+		
+			<item>
+				<title>This is just a Test</title>
+				<description>&lt;p&gt;Vestibulum imperdiet adipiscing arcu, quis aliquam dolor condimentum dapibus. Aliquam fermentum leo aliquet quam volutpat et molestie mauris mattis. Suspendisse semper consequat velit in suscipit. Praesent blandit, mi id facilisis adipiscing, tortor tellus mollis quam, sed dignissim sapien diam ac lectus. Nunc eget ornare quam. Vivamus sit amet tortor dolor, non egestas ligula. Mauris nisi risus, semper nec blandit id, suscipit eget dolor. Sed placerat odio at erat porttitor varius. Phasellus ornare vestibulum dolor ac rhoncus. Mauris laoreet varius est eu rhoncus. Curabitur facilisis mauris eu purus pharetra vitae tincidunt nulla gravida. Duis sagittis, felis a luctus mattis, metus sem tempus velit, sit amet blandit tellus nisi id augue.&lt;/p&gt;
+
+&lt;p&gt;Proin feugiat libero ac lorem mollis fermentum. Cras et lacus sodales nisl facilisis ornare. Sed dolor eros, pulvinar ac varius non, bibendum eget odio. Nulla facilisi. Pellentesque et nisi a tellus ullamcorper faucibus. Nullam sagittis tempor mi non mattis. Proin ultricies, enim sit amet bibendum tristique, ligula ante feugiat nunc, sit amet imperdiet tortor nisl et felis. Pellentesque et nisl dui, non dictum libero. Vivamus tempor ante ac leo suscipit a sodales ligula iaculis. Curabitur massa mi, semper sed bibendum eget, auctor in nulla. Quisque at mi in ligula viverra suscipit sed vitae leo.&lt;/p&gt;</description>
+				<published>Thu Jan 19 00:00:00 -0600 2012</published>
+				<link>http://yourdomain.com//category2/2012/01/19/testing/</link>
+			</item>
+		
+			<item>
+				<title>Hello World</title>
+				<description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis aliquam tellus. Integer a lectus sem. Fusce interdum fermentum dapibus. Curabitur vehicula, metus venenatis blandit molestie, magna lacus venenatis lectus, nec aliquet libero ipsum vitae est. Cras tempus dictum mauris, in accumsan nulla aliquam ut. Suspendisse mauris dui, tristique nec commodo vitae, sagittis et ipsum. In nulla nulla, malesuada ut commodo vitae, varius quis quam. Sed vestibulum ante id dolor vestibulum faucibus. Maecenas nec ipsum nec ligula consectetur consectetur sit amet nec eros. Morbi vestibulum, purus vitae tempor faucibus, purus nisi fermentum odio, ac lobortis quam leo sed diam. Nulla facilisi. In fringilla tortor sed tortor feugiat eu convallis eros vehicula. Curabitur mattis condimentum diam, in ultricies arcu dapibus ut. Vivamus posuere quam vel nisi mollis accumsan euismod justo lobortis.&lt;/p&gt;
+
+&lt;p&gt;Quisque suscipit dolor sem. Curabitur ligula est, volutpat eget posuere eget, commodo in urna. Fusce sed nunc nibh. Mauris non lectus eu purus porta suscipit nec eu elit. Nam placerat volutpat tempus. Maecenas orci eros, suscipit lacinia dictum eu, viverra et purus. Fusce nisl arcu, suscipit nec varius vel, consequat at libero.&lt;/p&gt;
+
+&lt;p&gt;Ut eu velit magna, vitae dictum elit. Donec et quam nibh, vel vehicula ligula. Proin sed sagittis dolor. Praesent in nisl non dui adipiscing tempus. Morbi at libero elementum felis feugiat ultricies et facilisis sapien. Suspendisse aliquam sollicitudin nisl. Ut accumsan, sapien ac pretium aliquam, odio massa gravida arcu, id fringilla urna eros sit amet leo. Vestibulum elit elit, condimentum sed accumsan sed, congue id sem. Cras nunc libero, vestibulum at viverra at, lobortis vitae dui.&lt;/p&gt;</description>
+				<published>Wed Jan 18 00:00:00 -0600 2012</published>
+				<link>http://yourdomain.com//category1/2012/01/18/hello/</link>
+			</item>
+		
+	</channel>
+</rss>
