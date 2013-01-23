@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 	<channel>
-		<title>Sample Jekyll Blog</title>
-		<description>This is a sample Jekyll Blog.</description>
-		<link>http://yourdomain.com/</link>
+		<title>Michael Lancaster</title>
+		<description>Front End Developer/HTML5 Soldier</description>
+		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
 				<title>This is just a Test</title>
@@ -11,7 +11,7 @@
 
 &lt;p&gt;Proin feugiat libero ac lorem mollis fermentum. Cras et lacus sodales nisl facilisis ornare. Sed dolor eros, pulvinar ac varius non, bibendum eget odio. Nulla facilisi. Pellentesque et nisi a tellus ullamcorper faucibus. Nullam sagittis tempor mi non mattis. Proin ultricies, enim sit amet bibendum tristique, ligula ante feugiat nunc, sit amet imperdiet tortor nisl et felis. Pellentesque et nisl dui, non dictum libero. Vivamus tempor ante ac leo suscipit a sodales ligula iaculis. Curabitur massa mi, semper sed bibendum eget, auctor in nulla. Quisque at mi in ligula viverra suscipit sed vitae leo.&lt;/p&gt;</description>
 				<published>Thu Jan 19 00:00:00 -0600 2012</published>
-				<link>http://yourdomain.com//category2/2012/01/19/testing/</link>
+				<link>http://bymichaellancaster.com//category2/2012/01/19/testing/</link>
 			</item>
 		
 			<item>
@@ -22,7 +22,7 @@
 
 &lt;p&gt;Ut eu velit magna, vitae dictum elit. Donec et quam nibh, vel vehicula ligula. Proin sed sagittis dolor. Praesent in nisl non dui adipiscing tempus. Morbi at libero elementum felis feugiat ultricies et facilisis sapien. Suspendisse aliquam sollicitudin nisl. Ut accumsan, sapien ac pretium aliquam, odio massa gravida arcu, id fringilla urna eros sit amet leo. Vestibulum elit elit, condimentum sed accumsan sed, congue id sem. Cras nunc libero, vestibulum at viverra at, lobortis vitae dui.&lt;/p&gt;</description>
 				<published>Wed Jan 18 00:00:00 -0600 2012</published>
-				<link>http://yourdomain.com//category1/2012/01/18/hello/</link>
+				<link>http://bymichaellancaster.com//category1/2012/01/18/hello/</link>
 			</item>
 		
 	</channel>
