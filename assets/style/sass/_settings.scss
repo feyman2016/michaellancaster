@@ -4,3 +4,15 @@
 // CSS 3 support 
 @import "compass/css3";
 $experimental-support-for-svg: true;
+
+//variables
+
+//font colors
+$fc-white: #fff;
+$fc-gray: #BDC9CC;
+
+//aside slide to right fx
+$slideR: slideR 1.5s;
+
+//content slide to bottom fx
+$slideB: slideB 1.5s;

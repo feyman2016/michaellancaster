@@ -1,17 +1,55 @@
-// Layout
+/*
+=========================
+aside
+=========================
+*/
 #aside {
+	background: #222;
 	position: fixed;
 	top: 0;
 	left: 0;
 	bottom: 0;
-	width: 200px;
-	background: #222;
+	width: 240px;
+	padding: 0;
 	box-shadow: 0px 0px 3px 2px #fff;
+
+	-webkit-animation: $slideR;
+	-moz-animation: $slideR;
+	-ms-animation: $slideR;
+	-o-animation: $slideR;
 }
 
+@-webkit-keyframes slideR {
+	from {
+		@include transform(translate(-250px, 0));
+	}
+	to {
+		@include transform(translate(0, 0));
+	}
+}
+
+
+/*
+=========================
+content
+=========================
+*/
 #content {
-	position: fixed;
 	width: 78%;
-	left: 250px;
+	margin: 0 0 0 290px;
 	padding: 0 20px 0 0;
+
+	-webkit-animation: $slideB;
+	-moz-animation: $slideB;
+	-ms-animation: $slideB;
+	-o-animation: $slideB;
+}
+
+@-webkit-keyframes slideB {
+	from {
+		@include transform(translate(0, -250px));
+	}
+	to {
+		@include transform(translate(0, 0));
+	}
 }

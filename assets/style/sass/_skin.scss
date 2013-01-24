@@ -1,1 +1,58 @@
-// Skin
+/*
+=========================
+logo
+=========================
+*/
+.logo {
+	padding: 10px;
+
+	& img {
+		border-radius: 50px;
+		box-shadow: 2px 2px 5px #000;
+		margin: 0 12px 0 0;
+	}
+
+	&:hover img {
+		border-radius: 0;
+	}
+
+	& .tit-author {
+		color: $fc-white;
+		margin: 13px 0 0 0;
+		font-size: 15px;
+	}
+
+	&:hover .tit-author {
+		text-shadow: 0 0 2px #fff;
+	}
+
+	& .role-author {
+		font-size: 12px;
+		color: $fc-gray;
+	}
+}
+
+/*
+=========================
+menu
+=========================
+*/
+.menu {
+
+	& li {
+		border-bottom: 1px solid #000;
+	}
+
+	& a {
+		height: 115px;
+		font-size: 18px;
+		color: $fc-gray;
+
+		&:hover {
+			background: #333;
+			color: $fc-white;
+			text-shadow: 0 0 2px #fff;
+		}
+	}
+
+}
