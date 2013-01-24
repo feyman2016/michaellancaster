@@ -9,7 +9,7 @@
 }
 
 html {
-	background: #fff;
+	background: url(../images/bg.png) repeat-x #F2F2F2;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -24,3 +24,5 @@ a {
 		text-decoration: underline;
 	}
 }
+
+ul, li { list-style: none; }
