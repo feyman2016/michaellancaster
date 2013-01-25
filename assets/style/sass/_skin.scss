@@ -55,7 +55,7 @@ menu
 		@include transition(all .2s ease);
 	}
 
-	& li a:hover {
+	& li a:hover, & li .active {
 		color: $fc-white;
 		text-shadow: 0 0 2px #fff;
 	}
@@ -72,8 +72,8 @@ menu
 	& li:nth-child(2) a {
 		background: url(../images/icons-article.png) no-repeat 62px 40px;
 	}
-	& li:nth-child(2) a:hover {
-		background: #333 url(../images/icons-article.png) no-repeat 62px -100px;
+	& li:nth-child(2) a:hover, & li:nth-child(2) .active {
+		background: #333 url(../images/icons-article.png) no-repeat 62px -90px;
 	}
 
 	//third menu

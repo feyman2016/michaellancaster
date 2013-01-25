@@ -23,6 +23,9 @@
 .di { display: inline; }
 .dib { display: inline-block; }
 
+.v { visibility: visible; }
+.vh { visibility: hidden; }
+
 .cb { clear: both; }
 .cf:after {
   content: "";

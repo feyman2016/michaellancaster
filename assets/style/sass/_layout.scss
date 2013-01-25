@@ -1,5 +1,16 @@
 /*
 =========================
+ui
+=========================
+*/
+.ui-tit-01 {
+	color: #333;
+	font-size: 13px;
+}
+
+
+/*
+=========================
 aside
 =========================
 */
@@ -11,12 +22,17 @@ aside
 	bottom: 0;
 	width: 240px;
 	padding: 0;
-	box-shadow: 0px 0px 3px 2px #fff;
+	box-shadow: 4px 0px 6px -1px #fff;
+	z-index: 10;
 
 	-webkit-animation: $slideR;
 	-moz-animation: $slideR;
 	-ms-animation: $slideR;
 	-o-animation: $slideR;
+
+	&.active {
+		box-shadow: none;
+	}
 }
 
 @-webkit-keyframes slideR {
@@ -28,6 +44,54 @@ aside
 	}
 }
 
+@-moz-keyframes slideR {
+	from {
+		@include transform(translate(-250px, 0));
+	}
+	to {
+		@include transform(translate(0, 0));
+	}
+}
+
+@-ms-keyframes slideR {
+	from {
+		@include transform(translate(-250px, 0));
+	}
+	to {
+		@include transform(translate(0, 0));
+	}
+}
+
+@-o-keyframes slideR {
+	from {
+		@include transform(translate(-250px, 0));
+	}
+	to {
+		@include transform(translate(0, 0));
+	}
+}
+
+
+/*
+=========================
+article list
+=========================
+*/
+#articles-list {
+	background: #ee473f;
+	position: fixed;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	width: 200px;
+	box-shadow: 4px 0px 6px -1px #fff, inset 0px 7px 8px -1px rgba(0, 0, 0, 0.3);
+	padding: 15px 5px;
+	@include transition(all .2s ease);
+
+	&.active { 
+		left: 240px;
+	}
+}
 
 /*
 =========================
@@ -35,17 +99,48 @@ content
 =========================
 */
 #content {
-	width: 78%;
 	margin: 0 0 0 290px;
 	padding: 0 20px 0 0;
+	@include transition(all .2s ease);
 
 	-webkit-animation: $slideB;
 	-moz-animation: $slideB;
 	-ms-animation: $slideB;
 	-o-animation: $slideB;
+
+	&.active {
+		margin: 0 0 0 465px;
+	}
 }
 
 @-webkit-keyframes slideB {
+	from {
+		@include transform(translate(0, -250px));
+	}
+	to {
+		@include transform(translate(0, 0));
+	}
+}
+
+@-moz-keyframes slideB {
+	from {
+		@include transform(translate(0, -250px));
+	}
+	to {
+		@include transform(translate(0, 0));
+	}
+}
+
+@-ms-keyframes slideB {
+	from {
+		@include transform(translate(0, -250px));
+	}
+	to {
+		@include transform(translate(0, 0));
+	}
+}
+
+@-o-keyframes slideB {
 	from {
 		@include transform(translate(0, -250px));
 	}
