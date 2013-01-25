@@ -4,7 +4,6 @@
 ::webkit-selection{ background-color: #fff2a8; color: #000; }
 
 * {
-	@include transition(all .5s ease);
 	@include box-sizing(border-box);
 }
 

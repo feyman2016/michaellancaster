@@ -10,6 +10,7 @@ logo
 		border-radius: 50px;
 		box-shadow: 2px 2px 5px #000;
 		margin: 0 12px 0 0;
+		@include transition(all .2s ease);
 	}
 
 	&:hover img {
@@ -20,6 +21,7 @@ logo
 		color: $fc-white;
 		margin: 13px 0 0 0;
 		font-size: 15px;
+		@include transition(all .5s ease);
 	}
 
 	&:hover .tit-author {
@@ -45,14 +47,52 @@ menu
 
 	& a {
 		height: 115px;
-		font-size: 18px;
+		font-size: 14px;
 		color: $fc-gray;
+		text-transform: uppercase;
+		padding: 0 0 0 112px;
+		line-height: 117px;
+		@include transition(all .2s ease);
+	}
 
-		&:hover {
-			background: #333;
-			color: $fc-white;
-			text-shadow: 0 0 2px #fff;
-		}
+	& li a:hover {
+		color: $fc-white;
+		text-shadow: 0 0 2px #fff;
+	}
+
+	//first menu
+	& li:nth-child(1) a {
+		background: url(../images/icons-user.png) no-repeat 62px 40px;
+	}
+	& li:nth-child(1) a:hover {
+		background: #333 url(../images/icons-user.png) no-repeat 62px -100px;
+	}
+
+	//second menu
+	& li:nth-child(2) a {
+		background: url(../images/icons-article.png) no-repeat 62px 40px;
+	}
+	& li:nth-child(2) a:hover {
+		background: #333 url(../images/icons-article.png) no-repeat 62px -100px;
+	}
+
+	//third menu
+	& li:nth-child(3) a {
+		background: url(../images/icons-lab.png) no-repeat 62px 40px;
+	}
+	& li:nth-child(3) a:hover {
+		background: #333 url(../images/icons-lab.png) no-repeat 62px -87px;
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
