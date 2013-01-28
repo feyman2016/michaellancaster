@@ -1,5 +1,27 @@
 /*
 =========================
+UI
+=========================
+*/
+.ui-tit-01 {
+	color: $fc-black;
+	font-size: 16px;
+	margin: 0;
+}
+
+.ui-tit-02 {
+	margin: 0;
+	font-size: 13px;
+	color: $fc-black;
+}
+
+.ui-date {
+	font-size: 12px;
+	color: #444;
+}
+
+/*
+=========================
 logo
 =========================
 */
@@ -85,9 +107,6 @@ menu
 	}
 
 }
-
-
-
 
 
 

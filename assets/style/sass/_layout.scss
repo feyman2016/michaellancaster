@@ -1,16 +1,5 @@
 /*
 =========================
-ui
-=========================
-*/
-.ui-tit-01 {
-	color: #333;
-	font-size: 13px;
-}
-
-
-/*
-=========================
 aside
 =========================
 */
@@ -82,15 +71,37 @@ article list
 	position: fixed;
 	bottom: 0;
 	top: 0;
-	left: 0;
+	left: -250px;
 	width: 200px;
 	box-shadow: 4px 0px 6px -1px #fff, inset 0px 7px 8px -1px rgba(0, 0, 0, 0.3);
-	padding: 15px 10px;
+	padding: 15px 0;
 	overflow-y: scroll; 
 	@include transition(all .2s ease);
 
 	&.active { 
 		left: 240px;
+	}
+
+	& li {
+		margin: 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+		&:last-child {
+			border: none;
+		}
+	}
+
+	& a {
+		display: block;
+		padding: 10px;
+		@include transition(all .2s ease);
+
+		&:hover {
+			background: rgba(0, 0, 0, 0.2);
+
+			& .ui-tit-02, 
+			& .ui-date { color: $fc-white; }
+		}
 	}
 }
 
@@ -102,7 +113,7 @@ content
 #content {
 	margin: 0 0 0 290px;
 	padding: 0 20px 0 0;
-	@include transition(all .2s ease);
+	@include transition(all .5s ease);
 
 	-webkit-animation: $slideB;
 	-moz-animation: $slideB;
@@ -116,36 +127,36 @@ content
 
 @-webkit-keyframes slideB {
 	from {
-		@include transform(translate(0, -250px));
+		opacity: 0;
 	}
 	to {
-		@include transform(translate(0, 0));
+		opacity: 1;
 	}
 }
 
 @-moz-keyframes slideB {
 	from {
-		@include transform(translate(0, -250px));
+		opacity: 0;
 	}
 	to {
-		@include transform(translate(0, 0));
+		opacity: 1;
 	}
 }
 
 @-ms-keyframes slideB {
 	from {
-		@include transform(translate(0, -250px));
+		opacity: 0;
 	}
 	to {
-		@include transform(translate(0, 0));
+		opacity: 1;
 	}
 }
 
 @-o-keyframes slideB {
 	from {
-		@include transform(translate(0, -250px));
+		opacity: 0;
 	}
 	to {
-		@include transform(translate(0, 0));
+		opacity: 1;
 	}
 }
