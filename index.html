@@ -5,14 +5,16 @@ title: Home
 
 {% for post in site.posts limit: 5  %}
 	
-	<div class="post">
+	<article class="post">
 
-		<h2>{{ post.title }}</h2>
-		<span class="date">{{ post.date | date_to_string }}</span>
+		<h2 class="ui-tit-01">{{ post.title }}</h2>
+		<span class="ui-date db">{{ post.date | date_to_string }}</span>
 	
-		<div class="entry">{{ post.excerpt }}</div>
+		<div class="ui-copy">
+			<p>{{ post.excerpt }}</p>
 
-        <span class="meta"><a href="{{site.baseurl}}{{ post.url }}">Read More</a></span>
-	</div>
+			<a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}" class="ui-a-01 dib">Read more</a>
+		</div>
+	</article>
 	
 {% endfor %}

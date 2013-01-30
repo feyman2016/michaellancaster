@@ -35,3 +35,4 @@ function showArticles() {
 $(function () {
 	showArticles();
 });
+//end
