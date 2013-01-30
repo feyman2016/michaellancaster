@@ -33,11 +33,12 @@
 					<small class="role-author db">Front End Engineer</small>
 				</a>
 			</h1>
+
 		</header>
 		<!-- header / end -->
 
 		<!-- nav -->
-		<nav>
+		<nav id="nav">
 			<ul class="menu">
 				<li><a href="/about.html" title="Life, Work.." class="db">About</a></li>
 				<li><a href="#articles-list" title="Code, Technology, Random stuff and afins" class="db" id="bt-show-articles">Articles</a></li>
@@ -48,6 +49,22 @@
 
 	</aside>
 	<!-- aside / end -->
+
+	<!-- mobile navigation -->
+	<select id="mb-menu" class="dn">
+		<option value="" seleted="selected">Select</option>
+		<option value="/">Home</option>
+		<option value="/about.html">About</option>
+		<optgroup label="Articles">
+			
+			<option value="/blog/2012/01/19/why-I-choose-Jekyll-instead-wordpress">Why I choose use Jekyll instead wordpress</option>
+			
+			<option value="/blog/2012/01/18/first-things-first">First things first</option>
+			
+		</optgroup>
+		<option value="/lab.html">Lab</option>
+	</select>
+	<!-- mobile navigation / end -->
 
 	<!-- articles list -->
 	<ul id="articles-list" class="vh">

@@ -33,11 +33,12 @@
 					<small class="role-author db">Front End Engineer</small>
 				</a>
 			</h1>
+
 		</header>
 		<!-- header / end -->
 
 		<!-- nav -->
-		<nav>
+		<nav id="nav">
 			<ul class="menu">
 				<li><a href="{{site.baseurl}}/about.html" title="Life, Work.." class="db">About</a></li>
 				<li><a href="#articles-list" title="Code, Technology, Random stuff and afins" class="db" id="bt-show-articles">Articles</a></li>
@@ -48,6 +49,20 @@
 
 	</aside>
 	<!-- aside / end -->
+
+	<!-- mobile navigation -->
+	<select id="mb-menu" class="dn">
+		<option value="" seleted="selected">Select</option>
+		<option value="{{site.baseurl}}/">Home</option>
+		<option value="{{site.baseurl}}/about.html">About</option>
+		<optgroup label="Articles">
+			{% for post in site.posts %}
+			<option value="{{site.baseurl}}{{ post.url }}">{{ post.title }}</option>
+			{% endfor %}
+		</optgroup>
+		<option value="{{site.baseurl}}/lab.html">Lab</option>
+	</select>
+	<!-- mobile navigation / end -->
 
 	<!-- articles list -->
 	<ul id="articles-list" class="vh">

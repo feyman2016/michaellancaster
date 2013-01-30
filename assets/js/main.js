@@ -31,8 +31,15 @@ function showArticles() {
 	});
 }
 
+//menu redirection
+function mobileNav() {
+	$('#mb-menu').change(function() {
+		window.location = $(this).find("option:selected").val();
+	});
+}
 
 $(function () {
+	mobileNav();
 	showArticles();
 });
 //end
