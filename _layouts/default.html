@@ -40,9 +40,9 @@
 		<!-- nav -->
 		<nav id="nav">
 			<ul class="menu">
-				<li><a href="{{site.baseurl}}/about.html" title="Life, Work.." class="db">About</a></li>
+				<li><a href="{{site.baseurl}}/about" title="Life, Work.." class="db">About</a></li>
 				<li><a href="#articles-list" title="Code, Technology, Random stuff and afins" class="db" id="bt-show-articles">Articles</a></li>
-				<li><a href="{{site.baseurl}}/lab.html" title="Some experiments" class="db">Lab</a></li>
+				<li><a href="{{site.baseurl}}/lab" title="Some experiments" class="db">Lab</a></li>
 			</ul>
 		</nav>
 		<!-- nav / end -->
@@ -54,13 +54,13 @@
 	<select id="mb-menu" class="dn">
 		<option value="" seleted="selected">Select</option>
 		<option value="{{site.baseurl}}/">Home</option>
-		<option value="{{site.baseurl}}/about.html">About</option>
+		<option value="{{site.baseurl}}/about">About</option>
 		<optgroup label="Articles">
 			{% for post in site.posts %}
 			<option value="{{site.baseurl}}{{ post.url }}">{{ post.title }}</option>
 			{% endfor %}
 		</optgroup>
-		<option value="{{site.baseurl}}/lab.html">Lab</option>
+		<option value="{{site.baseurl}}/lab">Lab</option>
 	</select>
 	<!-- mobile navigation / end -->
 
