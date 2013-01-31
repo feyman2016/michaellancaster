@@ -19,9 +19,13 @@ UI
 	font-size: 0.75em;
 	color: #444;
 }
- 
-.ui-copy p {
-	margin: 15px 0 5px 0;
+
+.ui-cop {
+	width: 70%;
+
+	& p {
+		margin: 15px 0 5px 0;
+	}
 }
 
 .ui-a-01 {
