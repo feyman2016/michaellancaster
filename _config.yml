@@ -25,4 +25,5 @@ url: http://bymichaellancaster.com/
 auto: true
 
 # Makes pretty (descriptive) permalinks. See Jekyll docs for alternatives.
-permalink: /blog/:year/:month/:day/:title
+# /blog/:year/:month/:day/:title
+permalink: /blog/:title
