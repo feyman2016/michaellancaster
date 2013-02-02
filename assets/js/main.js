@@ -38,8 +38,15 @@ function mobileNav() {
 	});
 }
 
+//Load github repos
+function loadRepos() {
+	var data_repos = '[data-repo]';
+	$(data_repos).github();
+}
+
 $(function () {
 	mobileNav();
 	showArticles();
+	loadRepos();
 });
 //end
