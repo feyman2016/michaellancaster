@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-      <loc>http://bymichaellancaster.com/blog/2013/01/30/first-things-first</loc>
+      <loc>http://bymichaellancaster.com/blog/adding-parametes-facebook-share</loc>
+      <lastmod>2013-01-31</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
+      <loc>http://bymichaellancaster.com/blog/first-things-first</loc>
       <lastmod>2013-01-30</lastmod>
       <changefreq>never</changefreq>
   </url>
   <url>
-      <loc>http://bymichaellancaster.com/blog/2012/01/19/why-I-choose-Jekyll-instead-wordpress</loc>
+      <loc>http://bymichaellancaster.com/blog/why-I-choose-Jekyll-instead-wordpress</loc>
       <lastmod>2012-01-19</lastmod>
       <changefreq>never</changefreq>
   </url>

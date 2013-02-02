@@ -6,6 +6,15 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Adding custom parameters to the facebook share</title>
+				<description>&lt;p&gt;I don&amp;#8217;t know why the Facebook documentation for developers miss some very good and basic information. But here&amp;#8217;s what I found to add parameters to the share link.&lt;/p&gt;
+
+&lt;p&gt;http://www.facebook.com/sharer.php?s=100&amp;amp;p&lt;span&gt;title&lt;/span&gt;=titlehere&amp;amp;p&lt;span&gt;url&lt;/span&gt;=http://www.yoururlhere.com&amp;amp;p&lt;span&gt;summary&lt;/span&gt;=yoursummaryhere&amp;amp;p&lt;span&gt;images&lt;/span&gt;=http://www.urltoyourimage.com&lt;/p&gt;</description>
+				<published>Thu Jan 31 00:00:00 -0600 2013</published>
+				<link>http://bymichaellancaster.com//blog/adding-parametes-facebook-share</link>
+			</item>
+		
+			<item>
 				<title>First things first</title>
 				<description>&lt;p&gt;Since I started to work as a Front End Developer (almost 2 year ago) I&amp;#8217;ve been studying and learning new things every single day and I think now it&amp;#8217;s a good time to start share my humble knowledge and my other main reason is that I haven&amp;#8217;t studying English (Yes..shame on me!) but technical/theory stuff and Ah I moved from Brazil to US months ago and I want to make my English even better than my Portuguese.&lt;/p&gt;
 
@@ -15,7 +24,7 @@
 
 &lt;p&gt;So please be patient and feel free to contribute.&lt;/p&gt;</description>
 				<published>Wed Jan 30 00:00:00 -0600 2013</published>
-				<link>http://bymichaellancaster.com//blog/2013/01/30/first-things-first</link>
+				<link>http://bymichaellancaster.com//blog/first-things-first</link>
 			</item>
 		
 			<item>
@@ -24,7 +33,7 @@
 
 &lt;p&gt;Proin feugiat libero ac lorem mollis fermentum. Cras et lacus sodales nisl facilisis ornare. Sed dolor eros, pulvinar ac varius non, bibendum eget odio. Nulla facilisi. Pellentesque et nisi a tellus ullamcorper faucibus. Nullam sagittis tempor mi non mattis. Proin ultricies, enim sit amet bibendum tristique, ligula ante feugiat nunc, sit amet imperdiet tortor nisl et felis. Pellentesque et nisl dui, non dictum libero. Vivamus tempor ante ac leo suscipit a sodales ligula iaculis. Curabitur massa mi, semper sed bibendum eget, auctor in nulla. Quisque at mi in ligula viverra suscipit sed vitae leo.&lt;/p&gt;</description>
 				<published>Thu Jan 19 00:00:00 -0600 2012</published>
-				<link>http://bymichaellancaster.com//blog/2012/01/19/why-I-choose-Jekyll-instead-wordpress</link>
+				<link>http://bymichaellancaster.com//blog/why-I-choose-Jekyll-instead-wordpress</link>
 			</item>
 		
 	</channel>
