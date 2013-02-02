@@ -24,7 +24,7 @@ Github - Jquery
 
 /* Github Box Header */
 
-.github-box .github-box-header {
+.github-box-header {
   position: relative;
   border-bottom: 1px solid #ddd;
   border-radius: 5px 5px 0 0;
@@ -34,7 +34,7 @@ Github - Jquery
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc',endColorstr='#ebebeb')";
 }
 
-.github-box .github-box-header h3 {
+.github-box-tit {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -43,12 +43,12 @@ Github - Jquery
   padding: 10px 10px 10px 10px;
 }
 
-.github-box .github-box-header h3 a {
+.github-box-tit a {
   font-weight: bold
 }
 
 /* Github Box Header - Stats */
-.github-box .github-box-header .github-stats {
+.github-stats {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -61,7 +61,7 @@ Github - Jquery
   height: 21px;
 }
 
-.github-box .github-box-header .github-stats a {
+.github-stats a {
   display: inline-block;
   height: 21px;
   color: #666;
@@ -71,38 +71,38 @@ Github - Jquery
   opacity: 0.7;
 }
 
-.github-box .github-box-header .github-stats a:hover {
+.github-stats a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-.github-box .github-box-header .github-stats .repo-watchers {
+.github-stats .repo-watchers {
   border-right: 1px solid #ddd;
   background-position: 3px 4px;
 }
 
-.github-box .github-box-header .github-stats .repo-forks {
+.github-stats .repo-forks {
   background-position: 2px -14px;
   padding-left: 15px;
 }
 
 /* Github Box Content */
-.github-box .github-box-content {
+.github-box-content {
   padding: 10px;
   font-weight: 300;
   font-size: 0.7em;
 }
 
-.github-box .github-box-content p {
+.github-box-content-txt {
   margin: 0;
 }
 
-.github-box .github-box-content .repo-link {
+.repo-link {
   font-weight: bold;
 }
 
 /* Github Box Download */
-.github-box .github-box-download {
+.github-box-download {
   position: relative;
   border-top: 1px solid #ddd;
   background: white;
@@ -111,20 +111,20 @@ Github - Jquery
   height: 24px;
 }
 
-.github-box .github-box-download .repo-update {
+.repo-update {
   margin: 0;
   font-size: 11px;
   color: #666;
   line-height: 24px;
 }
 
-.github-box .github-box-download .repo-update strong {
+.github-box-download-strong {
   font-size: 12px;
   font-weight: bold;
   color: #000;
 }
 
-.github-box .github-box-download .repo-download {
+.repo-download {
   position: absolute;
   display: block;
   top: 10px;
@@ -149,7 +149,7 @@ Github - Jquery
   opacity: 0.7;
 }
 
-.github-box .github-box-download .repo-download:hover {
+.repo-download:hover {
   color: #527894;
   border-color: #cfe3ed;
   border-bottom-color: #9fc7db;
