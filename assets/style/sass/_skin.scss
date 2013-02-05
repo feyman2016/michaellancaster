@@ -23,8 +23,16 @@ UI
 .ui-copy {
 	width: 95%;
 
+	& h2 {
+		font-size: 17px;
+	}
+
 	& p {
-		margin: 15px 0 5px 0;
+		margin-bottom: 5px;
+	}
+	
+	& p:first-child {
+		margin-top: 15px;
 	}
 }
 
