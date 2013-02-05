@@ -43,10 +43,11 @@ UI
 
 	& a {
 		color: #ee473f;
+		display: inline-block;
 		@include transition(all .2s ease);
 
 		&:hover {
-			@include transform(rotate(20deg));
+			@include transform(rotate(-15deg));
 		}
 	}
 
