@@ -13,14 +13,11 @@ I agree it is a great CMS/Blog Tool that helps us delivery great products in sho
 I started looking for something more elegant that I could use git _I love git_ to deploy.
 So I tried Github Pages and Jekyll a _blog-aware, static site generator in Ruby_ that uses Liquid template to process the templates.
 
-
-<pre>
-	<code data-language="css">
-		.element {
-			display: inline block;
-		}
-	</code>
-</pre>
+{% highlight css linenos %}
+.element {
+	display: inline-block;
+}
+{% endhighlight %}
 
 and I found Jekyll to blog I started to but I wasn't very happy because I want to test my others experiments like Node.js.
 
