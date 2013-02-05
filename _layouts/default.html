@@ -26,7 +26,7 @@
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{site.baseurl}}/feed.xml" />
 </head>
 
-<body class="{{ page.title }}">
+<body class="{% if page.title == 'Home' %} home {% endif %} {% if page.title == 'Lab' %} lab {% endif %}">
 
 	<!-- aside -->
 	<aside id="aside">
