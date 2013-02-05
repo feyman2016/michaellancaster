@@ -28,12 +28,31 @@ UI
 		margin: 20px 0 10px 0;
 	}
 
+	& h3 {
+		font-size: 1.0025em;
+		margin: 8px 0 5px 0;
+	}
+
 	& p {
 		margin: 0 0 5px 0;
 	}
 
 	& p:first-child {
 		margin-top: 35px;
+	}
+
+	& a {
+		color: #ee473f;
+		@include transition(all .2s ease);
+
+		&:hover {
+			@include transform(rotate(20deg));
+		}
+	}
+
+	& li {
+		list-style: circle;
+		margin: 5px 0 5px 20px;
 	}
 }
 
