@@ -138,7 +138,7 @@ menu
 	& li:nth-child(1) a {
 		background: url(../images/icons-user.png) no-repeat 62px 40px;
 	}
-	& li:nth-child(1) a:hover {
+	& li:nth-child(1) a:hover, .about & li:nth-child(1) a {
 		background: #333 url(../images/icons-user.png) no-repeat 62px -100px;
 	}
 
@@ -154,7 +154,7 @@ menu
 	& li:nth-child(3) a {
 		background: url(../images/icons-lab.png) no-repeat 62px 40px;
 	}
-	& li:nth-child(3) a:hover {
+	& li:nth-child(3) a:hover, .lab & li:nth-child(3) a {
 		background: #333 url(../images/icons-lab.png) no-repeat 62px -87px;
 	}
 
