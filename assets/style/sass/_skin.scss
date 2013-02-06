@@ -129,7 +129,7 @@ menu
 		@include transition(all .2s ease);
 	}
 
-	& li a:hover, & li .active {
+	& li a:hover, & li .active, .about & li:nth-child(1) a, .lab & li:nth-child(3) a {
 		color: $fc-white;
 		text-shadow: 0 0 2px #fff;
 	}
