@@ -8,7 +8,7 @@ excerpt: I needed a new look and like I said in my last (first) post I love to l
 I needed a new look and as I said in my last (first) post I love to learn and experiment new things and at the same time I'm not very fan of Wordpress as a developer point of view either. <br>
 I agree it is a good CMS/Blog Tool that helps us delivery great products in short time for clients therefore it's good for business but Wordpress "themes" has a bunch of ugly, messy code and sometimes happens to be infected by other plugins/scripts causing headaches, you loose your data or even worst.
 
-## Here's why I choose Jekyll
+## Long story short
 
 <p>
 I started looking for something more elegant that I could use git to deploy
