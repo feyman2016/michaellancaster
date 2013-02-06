@@ -13,14 +13,15 @@ I agree it is a good CMS/Blog Tool that helps us delivery great products in shor
 <p>
 I started looking for something more elegant that I could use git to deploy
 So I tried Github Pages and Jekyll a "blog-aware, static site generator in Ruby" that uses Liquid template to process the templates.
-But I would do experiments with Node.js and Ruby someday so I found <a href="http://www.heroku.com" title="Heroku" target="_blank">Heroku</a></p>
+But I would do experiments with Node.js and Ruby someday so I found <a href="http://www.heroku.com" title="Heroku" target="_blank">Heroku</a> is a cloud application platform for building, deploying, and running cloud apps using Ruby, Node.js, Clojure, Java, Python and Scala.
+</p>
 
-### I Can run locally and test
+I Can run and test locally, pretty simple.
 <pre><code data-language="ruby">
 	foreman start
 </code></pre>
 
-After see my changes I want to deploy directly to my cloud.
+And After see my changes I want to deploy directly to my cloud.
 
 <pre><code data-language="ruby">
 	git add .
@@ -42,4 +43,4 @@ Done! Beautiful! Everything up and running.
 - Markdown (Blogging).
 - Disqus (comments).
 
-I may do a better explanation how it works further but for now I need to post.
+I may do a better explanation how it works further on but for now I need some posts.
