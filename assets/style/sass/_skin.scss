@@ -15,6 +15,12 @@ UI
 	color: $fc-black;
 }
 
+.ui-tit-03 {
+	margin: 0;
+	font-size: 0.8100em;
+	color: $fc-black;
+}
+
 .ui-date {
 	font-size: 0.75em;
 	color: #444;
@@ -183,6 +189,21 @@ about page
 
 	& a {
 		display: block;
+	}
+
+	//tab
+	& a:first-child:target #professional {
+		display: block;
+	}
+	& a:first-child:target #personal {
+		display: none;
+	}
+
+	& a:last-child:target #personal {
+		display: block;
+	}
+	& a:last-child:target #professional {
+		display: none;
 	}
 }
 
