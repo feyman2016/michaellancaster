@@ -192,14 +192,14 @@ about page
 	}
 
 	//tab
-	& a:first-child:target #professional {
+	& a:first-child:target {
 		display: block;
 	}
 	& a:first-child:target #personal {
 		display: none;
 	}
 
-	& a:last-child:target #personal {
+	& a:last-child:target {
 		display: block;
 	}
 	& a:last-child:target #professional {
