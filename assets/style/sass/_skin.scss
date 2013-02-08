@@ -76,6 +76,15 @@ UI
 	}
 }
 
+.ui-a-02 {
+	font-size: 1.5625em;
+	color: #ee473f;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 .post {
 	margin: 0 0 35px 0;
 }
@@ -190,24 +199,24 @@ about page
 	& a {
 		display: block;
 	}
+}
 
-	//tab
-	& a:first-child:target {
-		display: block;
-	}
-	& a:first-child:target #personal {
-		display: none;
-	}
+//tab
+#professional:target {
+	display: block;
 
-	& a:last-child:target {
-		display: block;
-	}
-	& a:last-child:target #professional {
+	& #personal {
 		display: none;
 	}
 }
 
+#personal:target {
+	display: block;
 
+	& #professional {
+		display: none;
+	}
+}
 
 
 
