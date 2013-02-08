@@ -164,6 +164,28 @@ menu
 
 }
 
+/*
+=========================
+about page
+=========================
+*/
+.nav-about {
+	margin: 0 0 20px 0;
+
+	& li {
+		float: left;
+		margin: 0 10px 0 0;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	& a {
+		display: block;
+	}
+}
+
 
 
 
