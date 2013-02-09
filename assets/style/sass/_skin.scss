@@ -197,7 +197,17 @@ about page
 	}
 
 	& a {
-		display: block;
+		display: inline-block;
+		background: #efefef;
+		font-size: 20px;
+		padding: 0 10px;
+		text-shadow: 2px 2px 2px #ddd;
+		@include transition(all .2s ease);
+
+		&:hover {
+			background: none;
+			color: #ee473f;
+		}
 	}
 }
 
