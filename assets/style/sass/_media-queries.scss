@@ -3,6 +3,7 @@ $git_breakpoint: "max-width: 1219px";
 $first_breakpoint: "max-width: 865px";
 $last_breakpoint: "max-width: 700px";
 
+// Github repository breakpoint
 @media all and ($git_breakpoint) {
 	.github-box {
 		width: 90%;
@@ -10,6 +11,7 @@ $last_breakpoint: "max-width: 700px";
 	}
 }
 
+//First content breakpoint
 @media all and ($first_breakpoint) {
 	#aside {
 		width: 75px;
@@ -61,7 +63,7 @@ $last_breakpoint: "max-width: 700px";
 	}
 }
 
-/* last breakpoint */
+// Last content breakpoint
 @media all and ($last_breakpoint) {
 	#articles-list, 
 	#nav {
