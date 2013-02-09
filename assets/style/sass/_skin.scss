@@ -162,7 +162,8 @@ menu
 		background: url(../images/icons-user.png) no-repeat 62px 40px;
 	}
 	& li:nth-child(1) a:hover, .about & li:nth-child(1) a {
-		background: #333 url(../images/icons-user.png) no-repeat 62px -100px;
+		background-position: 62px -100px;
+		background-color: #333;
 	}
 
 	//second menu
@@ -170,7 +171,8 @@ menu
 		background: url(../images/icons-article.png) no-repeat 62px 40px;
 	}
 	& li:nth-child(2) a:hover, & li:nth-child(2) .active {
-		background: #333 url(../images/icons-article.png) no-repeat 62px -90px;
+		background-position: 62px -90px;
+		background-color: #333;
 	}
 
 	//third menu
@@ -178,7 +180,8 @@ menu
 		background: url(../images/icons-lab.png) no-repeat 62px 40px;
 	}
 	& li:nth-child(3) a:hover, .lab & li:nth-child(3) a {
-		background: #333 url(../images/icons-lab.png) no-repeat 62px -87px;
+		background-position: 62px -87px;
+		background-color: #333;
 	}
 
 }
