@@ -220,24 +220,18 @@ about page
 }
 
 //tab
-#professional:target {
+#short:target {
 	display: block;
 
-	& #personal {
+	& #long {
 		display: none;
 	}
 }
 
-#personal:target {
+#long:target {
 	display: block;
 
-	& #professional {
+	& #short {
 		display: none;
 	}
 }
-
-
-
-
-
-
