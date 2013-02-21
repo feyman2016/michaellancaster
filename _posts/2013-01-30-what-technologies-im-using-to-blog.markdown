@@ -2,7 +2,7 @@
 layout: post
 title: What technologies I'm using to blog?!
 
-excerpt: I needed a new look and like I said in my last (first) post I love to learn and experiment new things and at the same time I'm not very fan of Wordpress as a developer point of view either.
+excerpt: I needed a new look and like I said in my last (first) post I love to learn and experiment new things and at the same time I'm not very fan of Wordpress as a developer point of view.
 ---
 
 I needed a new look and as I said in my last (first) post I love to learn and experiment new things and at the same time I'm not very fan of Wordpress as a developer point of view either. <br>
