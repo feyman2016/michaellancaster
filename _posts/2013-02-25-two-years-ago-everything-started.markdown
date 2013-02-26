@@ -15,8 +15,8 @@ After 5 months of my hard core work and a lot of growth this same senior develop
 Was I and another two developers working hard to delivery the system on time but at that time was more independent and I could be outstanding helping and making improvements to the client side of the system.
 After 4 months working in-site at CCEE we delivered the system and DBR.ag hired me.
 At the Agency I started to think in process to help our work flow so I suggested and showed why we we should use Control Version(in that case SVN).
-I developed a simple HTML5 markup framework as a good practice to all developers follow and it was very fun.
-After some months HP called us to come back to CCEE and help the JSP developers with client side (at this point I was working as mid-level for DBR.ag) mostly with JS/jQuery.
+I also developed a simple HTML5 markup framework as a good practice to all developers follow and it was very fun.
+After some months HP called us to come back to CCEE and help the JSP developers with client side mostly with JS/jQuery.
 
 The rest you can guess reading the about me page so let's talk about some other topics here now.
 
