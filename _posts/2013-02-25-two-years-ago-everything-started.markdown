@@ -5,7 +5,7 @@ title: Two years ago everything started.
 excerpt: This is a little history about my journey when two years ago I passed a test and got my first paid job as a Front End Developer Jr.
 ---
 
- I'll be short here because I can't tell everything and finish this post while I cook.
+ While I cook my pasta I do this post so I'll be short.
 
 For my first job I did a test and got this first paid job as a Front End Developer Jr.
 It was hard because we had so many projects and things to do that I wasn't used to (Mostly developers used to get there around 9:30 am and leave around 9:30 pm) I used to get home at 1:00 am so I had time to eat fast, shower and get some rest to another day.
