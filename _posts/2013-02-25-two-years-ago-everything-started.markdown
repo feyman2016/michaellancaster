@@ -7,12 +7,12 @@ excerpt: This is a little history about my journey when two years ago I passed a
 
  While I cook my pasta I do this post so I'll be short.
 
-For my first job I did a test and got this first paid job as a Front End Developer Jr.
+For my first job I did a test and got my first paid job as a Front End Developer Jr
 It was hard because we had so many projects and things to do that I wasn't used to (Mostly developers used to get there around 9:30 am and leave around 9:30 pm) I used to get home at 1:00 am so I had time to eat fast, shower and get some rest to another day.
 I had my senior developer supporting and protecting me like a father and I could learn a lot from him not just technical stuff but how to act in certain situations.
 
 After 5 months of my hard core work and a lot of growth this same senior developer indicated me to another company DBR.ag to work as a consultant for some months in a big ongoing project at Chamber of Electric Energy Commercialization in Brazil.
-Was I and another two developers working hard to delivery the system on time but now I was more independent and I could be outstanding helping and making improvements to the client side of the system.
+Was I and another two developers working hard to delivery the system on time but at that time was more independent and I could be outstanding helping and making improvements to the client side of the system.
 After 4 months working in-site at CCEE we delivered the system and DBR.ag hired me.
 At the Agency I started to think in process to help our work flow so I suggested and showed why we we should use Control Version(in that case SVN).
 I developed a simple HTML5 markup framework as a good practice to all developers follow and it was very fun.
