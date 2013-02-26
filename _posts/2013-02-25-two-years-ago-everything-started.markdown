@@ -29,16 +29,17 @@ I had great senior developers, but all of them had something in common they were
 I'm always evaluating myself and looking new ways to improve myself in being a better professional.
 Lately (around 6 months) I discovered the best way "for me" to learn better is read as much as I can about something new I want to learn before actually try it so I will have like an 360 point of view, a better understanding of it.
 
-## Something I use to be productive.
+## Something that I try follow to keep me productive.
 
 <p class="ui-txt-01">
 	<ul>
-		<li><strong class="ui-strong db">Starting by the tools I use to do my job better:</strong></li>
-		<li>Know the shortcuts yours tools has and use them.</li>
+		<li>Know the shortcuts of your tools and use them wisely.</li>
 		<li>Choose some sort of "Robot mode playlist" where the songs works just as a background.</li>
-		<li>Keep focus wake up and think about your tasks for the day you have to get done.</li>
+		<li>Keep focus wake up and think about your tasks for the day that you have to get done.</li>
 		<li>First do it, then do it right, then do it better</li>
 		<li>Follow the most active and productive guys in your field, stay updated, read, talk, discuss about it when is possible.</li>
 		<li>Make experiments. Don't have time? make time experiments are very important to expand your view outside of the "work box"</li>
 	</ul>
 </p>
+
+and this work is what keep me awake at night learning new things when everybody else is sleeping.
