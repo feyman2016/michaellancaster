@@ -27,7 +27,7 @@ I had great senior developers, but all of them had something in common they were
 ## How I'm doing it
 
 I'm always evaluating myself and looking new ways to improve myself in being a better professional.
-Lately (around 6 months) I discovered the best way "for me" to learn better is read as much as I can about something new I want to learn before actually try it so I will have like an 360 point of view, a better understanding of it.
+Lately (around 6 months) I discovered the best way "for me" to learn better is read as much as I can about something new that I want to learn before actually try it so I will have like an 360 point of view, a better understanding of it.
 
 ## Something that I try follow to keep me productive.
 
