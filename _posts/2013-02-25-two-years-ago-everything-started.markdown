@@ -34,11 +34,11 @@ Lately (around 6 months) I discovered the best way "for me" to learn better is r
 <p class="ui-txt-01">
 	<ul>
 		<li><strong class="ui-strong db">Starting by the tools I use to do my job better:</strong></li>
-		<li>- Know the shortcuts yours tools has and use them.</li>
-		<li>- Choose some sort of "Robot mode playlist" where the songs works just as a background.</li>
-		<li>- Keep focus wake up and think about your tasks for the day you have to get done.</li>
-		<li>- First do it, then do it right, then do it better</li>
-		<li>- Follow the most active and productive guys in your field, stay updated, read, talk, discuss about it when is possible.</li>
-		<li>- Make experiments. Don't have time? make time experiments are very important to expand your view outside of the "work box"</li>
+		<li>Know the shortcuts yours tools has and use them.</li>
+		<li>Choose some sort of "Robot mode playlist" where the songs works just as a background.</li>
+		<li>Keep focus wake up and think about your tasks for the day you have to get done.</li>
+		<li>First do it, then do it right, then do it better</li>
+		<li>Follow the most active and productive guys in your field, stay updated, read, talk, discuss about it when is possible.</li>
+		<li>Make experiments. Don't have time? make time experiments are very important to expand your view outside of the "work box"</li>
 	</ul>
 </p>
