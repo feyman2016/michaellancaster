@@ -18,11 +18,11 @@ At the Agency I started to think in process to help our work flow so I suggested
 I also developed a simple HTML5 markup framework as a good practice to all developers follow and it was very fun.
 After some months HP called us to come back to CCEE and help the JSP developers with client side mostly with JS/jQuery.
 
-The rest you can guess reading the about me page so let's talk about some other topics here now.
+The rest you can guess reading the about me page so let's talk about some other topics now.
 
 ## Outdated Developers
 
-I had great senior developers, but all of them had something in common they were kidding of outdated about the new stuff and things we could use maybe because of the hard work flow, family, laziness whatever I just know one of the things that makes difference in a great professional to a good one is his ability to make things better not just getting it done but making it better so I put in my head always look for make it better and stay update to new things that could help improve my job.
+I had great senior developers, but all of them had something in common they were kind of outdated about the new stuff and things we could use maybe because of the hard work flow, family, laziness whatever I just know one of the things that makes difference in a great professional to a good one is his ability to make things better not just getting it done but making it better so I put in my head always look for make it better and stay update to new things that could help improve my job.
 
 ## How I'm doing it
 
