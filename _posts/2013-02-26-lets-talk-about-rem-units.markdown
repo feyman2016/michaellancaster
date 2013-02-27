@@ -18,7 +18,7 @@ I could talk a lot about all the principal units we have been using but let's ge
 	}
 </code></pre>
 
-Now with the popularity and acceptance of the Responsive Design (web applications accessible in any devices) people are thinking more about scale things and make it fit to their user's device.
+Now with the popularity and acceptance of the Responsive Design (web applications accessible in any devices) developers and designers are thinking more about scale things and make it fit to their user's device.
 Style sheets that use relative units can more easily scale from one device environment to another.
 Therefore we started to scale the font-size transforming pixel in em's using this math child / parent = em's voila!!
 
