@@ -18,15 +18,15 @@ But I would do experiments with Node.js and Ruby someday so I choose <a href="ht
 
 I Can run and test locally, pretty simple.
 <pre><code data-language="ruby">
-	foreman start
+foreman start
 </code></pre>
 
 And After see my changes I want to deploy directly to my cloud.
 
 <pre><code data-language="ruby">
-	git add .
-	git commit -m "my message"
-	git push origin
+git add .
+git commit -m "my message"
+git push origin
 </code></pre>
 Done! Beautiful! Everything up and running.
 
