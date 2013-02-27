@@ -32,7 +32,7 @@ Therefore we started to scale the font-size transforming pixel in em's using thi
 	}
 </code></pre>
 
-Oh! wait. Do we have to repeat this math going to element parent to element parent to give their childs the right em's values? It's hard to believe but yes we do.
+Oh! wait. Do we have to repeat this math going through element parent by element parent to give their child the right em's values? It's hard to believe but yes we do.
 
 Now when your wife, girlfriend, dog (whatever) asked you why you are loosing hair and getting bald that's your answer "I use px to calculate em's Baby!"
 
