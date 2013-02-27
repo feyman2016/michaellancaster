@@ -6,7 +6,7 @@ excerpt: I think choose the right units of measurement have been always not "coo
 ---
 
 ## The past/present
-I could talk a lot about all the principal units we have been using but let's get this straightwe have been using "px" since ever and this approach just doesn't scale.
+I could talk a lot about all the principal units we have been using but let's get this straight we have been using "px" since ever and this approach just doesn't work anymore or scale.
 
 <pre><code data-language="css">
 	.parent {
