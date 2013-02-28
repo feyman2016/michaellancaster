@@ -5,13 +5,13 @@ UI
 */
 .ui-tit-01 {
 	color: $fc-black;
-	font-size: 1.995em;
+	font-size: 3.5rem;
 	margin: 0;
 }
 
 .ui-tit-02 {
 	margin: 0;
-	font-size: 0.8125em;
+	font-size: 1.2rem;
 	color: $fc-black;
 }
 
@@ -20,7 +20,7 @@ UI
 }
 
 .ui-date {
-	font-size: 0.75em;
+	font-size: 1.1rem;
 	color: #444;
 }
 
@@ -118,7 +118,7 @@ logo
 	& .tit-author {
 		color: $fc-white;
 		margin: 13px 0 0 0;
-		font-size: 15px;
+		font-size: 1.5rem;
 		@include transition(all .5s ease);
 	}
 
@@ -127,7 +127,7 @@ logo
 	}
 
 	& .role-author {
-		font-size: 12px;
+		font-size: 1.2rem;
 		color: $fc-gray;
 	}
 }
@@ -145,7 +145,7 @@ menu
 
 	& a {
 		height: 115px;
-		font-size: 14px;
+		font-size: 1.4rem;
 		color: $fc-gray;
 		text-transform: uppercase;
 		padding: 0 0 0 112px;
