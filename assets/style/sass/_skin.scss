@@ -73,11 +73,11 @@ UI
 }
 
 .ui-a-01 {
-	font-size: 0.875em;
 	color: #ee473f;
 
 	&:hover {
 		text-decoration: underline;
+		@include transform(rotate(-15deg));
 	}
 }
 
