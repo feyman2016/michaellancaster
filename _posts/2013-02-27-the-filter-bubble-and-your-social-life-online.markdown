@@ -18,7 +18,8 @@ Watching this great video we ca see that people don't loose their old habits to 
 
 <object width="853" height="480"><param name="movie" value="http://www.youtube.com/v/B8ofWFx525s?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/B8ofWFx525s?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="853" height="480" allowscriptaccess="always" allowfullscreen="true"></embed></object>
 
-I also suggest you to watch this incredible documentary called <a href="http://internetrising.net/" title="internet rising" target="_blanc">"Internet Rising"</a> investigating the evolving relationships between the Internet and collective consciousness of humanity. It provokes many questions about ancient and modern paradoxes of life. You definitely should check it out.
+##I also suggest..
+you to watch this incredible documentary called <a href="http://internetrising.net/" title="internet rising" target="_blanc">"Internet Rising"</a> investigating the evolving relationships between the Internet and collective consciousness of humanity. It provokes many questions about ancient and modern paradoxes of life. You definitely should check it out.
 
 
 
