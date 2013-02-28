@@ -30,12 +30,12 @@ UI
 	width: 95%;
 
 	& h2 {
-		font-size: 1.5625em;
+		font-size: 2.5rem;
 		margin: 20px 0 10px 0;
 	}
 
 	& h3 {
-		font-size: 1.0025em;
+		font-size: 2.0rem;
 		margin: 15px 0 5px 0;
 	}
 
@@ -74,6 +74,8 @@ UI
 
 .ui-a-01 {
 	color: #ee473f;
+	display: inline-block;
+	@include transition(all .2s ease);
 
 	&:hover {
 		text-decoration: underline;
