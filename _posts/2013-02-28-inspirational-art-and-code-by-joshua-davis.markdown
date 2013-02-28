@@ -6,7 +6,8 @@ excerpt: A friend of mine shared this great talk by Joshua Davis at W3Conf in Sa
 ---
  
 A friend of mine shared this great talk by Joshua Davis at W3Conf in San Francisco.
-Joshua Davis work's is very inspirational and see these awesome things makes my life better!
+<br>
+Joshua's work is very inspirational and see these awesome things makes my life better!
 
 Don't forget to check out his website <a href="http://www.joshuadavis.com/" title="Joshua Davis" target="_blank">Joshua Davis</a>
 
