@@ -2,7 +2,7 @@
 layout: post
 title: Secrets of Lea Verou about CSS.
 
-excerpt: I'm not sure when it was but in the end of 2011 or beginning of 2012 I saw Lea Verou talking about "CSS3 Secrets: 10 things you might not know about CSS3" and it was great see how many great techniques we can use to achieve our client - side goals.
+excerpt: I'm not sure when it was but in the end of 2011 or beginning of 2012 I saw Lea Verou talking about "CSS3 Secrets 10 things you might not know about CSS3" and it was great see how many great techniques we can use to achieve our client - side goals.
 ---
  
 I'm not sure when it was but in the end of 2011 or beginning of 2012 I saw <a href="http://lea.verou.me/" title="Lea Verou" target="_blank">Lea Verou</a> talking about "CSS3 Secrets: 10 things you might not know about CSS3" and it was great see how many great techniques we can use to achieve our client - side goals.
