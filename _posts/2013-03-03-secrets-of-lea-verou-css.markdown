@@ -9,9 +9,7 @@ I'm not sure when it was but in the end of 2011 or beginning of 2012 I saw <a hr
 
 ##10 things you might not know about CSS3
 
-<iframe src="http://player.vimeo.com/video/31719130" width="640" height="360" frameborder="0" allowfullscreen="true"></iframe>
-
-<br>
+<iframe src="http://player.vimeo.com/video/31719130" width="640" height="360" frameborder="0"></iframe>
 
 And this year (2013) she had another great speak at W3Conf in San Francisco about "More CSS Secrets: Another 10 things you may not know about CSS"
 
