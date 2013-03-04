@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Inspirational Art and Code by Joshua Davis
+title: Inspirational Art and Code by Joshua Davis.
 
 excerpt: A friend of mine shared this great talk by Joshua Davis at W3Conf in San Francisco..his work is very inspirational.. just amazing.
 ---
