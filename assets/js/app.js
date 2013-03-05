@@ -44,30 +44,9 @@ function loadRepos() {
 	$(data_repos).github();
 }
 
-function fluidIframeVideo() {
-
-	var $allVideos = $("iframe[src^='http://www.youtube.com']"),
-	    $fluidEl = $(".ui-copy");
-
-		$allVideos.each(function() {
-			$(this).data('aspectRatio', this.height / this.width).removeAttr('height').removeAttr('width');
-		});
-
-		$(window).resize(function() {
-			var newWidth = $fluidEl.width();
-
-			$allVideos.each(function() {
-				var $el = $(this);
-
-				$el.width(newWidth).height(newWidth * $el.data('aspectRatio'));
-			});
-		}).resize();
-}
-
 $(function () {
 	mobileNav();
 	showArticles();
 	loadRepos();
-	fluidIframeVideo();
 });
 //end
