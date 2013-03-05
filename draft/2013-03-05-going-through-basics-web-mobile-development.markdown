@@ -13,4 +13,4 @@ So I'll approach the basic development of mobile web apps focusing on iOS device
 
 ##Viewport and screensizes
 
-When a Web app is designed to be on
+When a Web app is designed to be on Desktop and it sees on mobile happens to not work properly and here's why.
