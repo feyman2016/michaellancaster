@@ -2,8 +2,7 @@
 layout: post
 title: Why should you be using CSS preprocessors?!
 
-excerpt: All parts of the web development is very excited but when comes to CSS when get stuck to some specs from W3C and our possibilities gets limited to "fix" this
-we have CSS preprocessors like SASS (My favorite), Stylus, (LESS) and more but I'm going to talk about SASS lang today.
+excerpt: All parts of the web development is very excited but when comes to CSS when get stuck to some specs from W3C and our possibilities gets limited to "fix" this we have CSS preprocessors like SASS (My favorite), Stylus, (LESS) and more but I'm going to talk about SASS lang today.
 ---
 
 All parts of the web development is very excited but when comes to CSS when get stuck to some specs from W3C and our possibilities gets limited to "fix" this
