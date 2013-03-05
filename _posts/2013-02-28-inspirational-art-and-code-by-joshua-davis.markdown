@@ -11,5 +11,5 @@ Joshua's work is very inspirational and see these awesome things makes my life b
 
 Don't forget to check out his website <a href="http://www.joshuadavis.com/" title="Joshua Davis" target="_blank">Joshua Davis</a>
 
-<iframe src="http://www.youtube.com/embed/LJS4fBjdPM4?rel=0" frameborder="0" allowfullscreen="true"></iframe>
+<iframe width="640" height="360" src="http://www.youtube.com/embed/LJS4fBjdPM4?rel=0" frameborder="0" allowfullscreen="true"></iframe>
 
