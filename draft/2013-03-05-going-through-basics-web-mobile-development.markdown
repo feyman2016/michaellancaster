@@ -9,8 +9,13 @@ As we all know and see the users using mobile web sites increases incredible qui
 
 Users are actually using mobile web apps to read articles, consult restaurants menu, prices, products images and the list just go on..
 
+When a Web app is designed to be on Desktop and it sees on mobile the differences between these two devices it shows are very clear for the user, the user interaction like "click" turns to be emulated as "touch events", the screen-size as iPhone is 320x356 pixels, the mobile viewport 960px, performance
 So I'll approach the basic development of mobile web apps focusing on iOS device.
 
 ##Viewport and screensizes
 
-When a Web app is designed to be on Desktop and it sees on mobile happens to not work properly and here's why.
+
+##Include in this post
+- Network connection speedy.
+- Device Baterry and memory.
+- Retina Display
