@@ -99,6 +99,16 @@ UI
 
 .tit-mg { margin: 0 0 10px 0; }
 
+.AudioVideoMedia {
+	width: 50%;
+
+	& img, 
+	& iframe {
+		width: 99%;
+		height: 99%;
+	}
+}
+
 /*
 =========================
 logo
