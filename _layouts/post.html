@@ -7,7 +7,7 @@ comments: true
 
     <h2 class="ui-tit-01">{{ page.title }}</h2>
 
-    <span class="ui-date db">{{ page.date | date_to_string }}</span>
+    <span class="ui-date db">{{ page.date | date: "%d %b %y" }}</span>
 
     <!-- <span class="category">Category: {{ page.categories | category_links }}</span> -->
 

@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> The filter bubble and your social life online. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL</title>
+    <title> How I'm naming CSS for Web Applications |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" The filter bubble and your social life online. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL">
+    <meta name="description" content=" How I'm naming CSS for Web Applications |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Blog by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
@@ -141,29 +141,70 @@
 
 		<article class="post">
 
-    <h2 class="ui-tit-01">The filter bubble and your social life online.</h2>
+    <h2 class="ui-tit-01">How I'm naming CSS for Web Applications</h2>
 
-    <span class="ui-date db">27 Feb 13</span>
+    <span class="ui-date db"></span>
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>At the same time Internet give us liberty to think and see different points about our world in culture, politics, nature, life in general the internet is made by &#8220;man&#8221; and we have our own perspective of the world. Therefore we are doing the same exactly mistakes we are doing offline it&#8217;s just another digital space 1 and 0&#8217;s.</p>
+	<div class="ui-copy"><p>Since I started to develop for Web I had/have a very high concern about how to name my &#8220;classes&#8221; and at the begin we follow the good practices from W3C and other developers right?!</p>
 
-<p>It&#8217;s sort of funny sometimes how we push things turning every person the &#8220;product of the environment&#8221; even on digital.</p>
+<h2 id='how_was_at_the_beginning'>how was at the beginning</h2>
 
-<p>I&#8217;ll never deny that technology in particular internet changed the world for better but I still think we could do much better when we start to change our mindset as a &#8220;person&#8221; for the community.</p>
+<p>My first job I had a great senior front end developer that taught me a lot of things and the other developers followed his good practices kind of made for the JS developer. <br /> So this is how we used to write CSS</p>
+<pre><code data-language='css'>
+#header {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
 
-<p>Watching this great video we can see that people don&#8217;t loose their old habits to live in their &#8220;boxes&#8221; and continue to create their &#8220;Extended Mind&#8221;</p>
+#logo {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
 
-<h2 id='are_we_going_backwards'>Are we going backwards?!</h2>
-<object width='640' height='360'><param value='http://www.youtube.com/v/B8ofWFx525s?version=3&amp;hl=en_US' name='movie' /><param value='true' name='allowFullScreen' /><param value='always' name='allowscriptaccess' /><embed allowscriptaccess='always' allowfullscreen='true' width='640' src='http://www.youtube.com/v/B8ofWFx525s?version=3&amp;hl=en_US' type='application/x-shockwave-flash' height='360' /></object>
-<h2 id='i_also_suggest'>I also suggest..</h2>
+#menu {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
 
-<p>you to watch this incredible documentary called <a target='_blanc' href='http://internetrising.net/' title='internet rising'>"Internet Rising"</a> investigating the evolving relationships between the Internet and collective consciousness of humanity. It provokes many questions about ancient and modern paradoxes of life. You definitely should check it out.</p>
-<object width='640' height='360'><param value='http://www.youtube.com/v/pMh8oBdKkK4?version=3&amp;hl=en_US' name='movie' /><param value='true' name='allowFullScreen' /><param value='always' name='allowscriptaccess' /><embed allowscriptaccess='always' allowfullscreen='true' width='640' src='http://www.youtube.com/v/pMh8oBdKkK4?version=3&amp;hl=en_US' type='application/x-shockwave-flash' height='360' /></object><br />
-<p>Both videos are great to inspired us to think about almost everything surround us in the digital life.</p></div>
+#search {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
 
-    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2013</small></span> -->
+#bt-yellow {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
+</code></pre>
+<p>As you can see we used to use &#8220;id&#8217;s&#8221; for everything and the properties were by alphabetical order. That approach had no problem for the javascript developer that was concern not just about performance but make his life easier.</p>
+
+<p>When a Web app is designed to be on Desktop and it sees on mobile the differences between these two devices it shows are very clear for the user, the user interaction like &#8220;click&#8221; turns to be emulated as &#8220;touch events&#8221;, the screen-size as iPhone is 320x356 pixels, the mobile viewport 960px, performance So I&#8217;ll approach the basic development of mobile web apps focusing on iOS device.</p>
+
+<h2 id='viewport_and_screensizes'>Viewport and screensizes</h2>
+
+<h2 id='include_in_this_post'>Include in this post</h2>
+
+<ul>
+<li>show classes at the beginning</li>
+
+<li>show good practices</li>
+
+<li>Show the new way to name classes</li>
+</ul></div>
+
+    <!-- <span class="meta"><small>By Michael Lancaster &copy; </small></span> -->
 
             <div id="disqus_thread"></div>
 		    <script type="text/javascript">

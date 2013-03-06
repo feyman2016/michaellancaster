@@ -7,14 +7,14 @@
 		
 			<item>
 				<title>Secrets of Lea Verou about CSS.</title>
-				<description>&lt;p&gt;I&amp;#8217;m not sure when it was but in the end of 2011 or beginning of 2012 I saw &lt;a title='Lea Verou' target='_blank' href='http://lea.verou.me/'&gt;Lea Verou&lt;/a&gt; talking about &amp;#8220;CSS3 Secrets: 10 things you might not know about CSS3&amp;#8221; and it was great see how many great techniques we can use to achieve our &lt;br /&gt; client - side goals.&lt;/p&gt;
+				<description>&lt;p&gt;I&amp;#8217;m not sure when it was but in the end of 2011 or beginning of 2012 I saw &lt;a target='_blank' href='http://lea.verou.me/' title='Lea Verou'&gt;Lea Verou&lt;/a&gt; talking about &amp;#8220;CSS3 Secrets: 10 things you might not know about CSS3&amp;#8221; and it was great see how many great techniques we can use to achieve our &lt;br /&gt; client - side goals.&lt;/p&gt;
 
 &lt;h2 id='10_things_you_might_not_know_about_css3'&gt;10 things you might not know about CSS3&lt;/h2&gt;
-&lt;object width='640' height='360'&gt;&lt;param name='movie' value='http://www.youtube.com/v/54wJkqG8jXE?version=3&amp;amp;hl=en_US&amp;amp;rel=0' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed width='640' allowscriptaccess='always' type='application/x-shockwave-flash' height='360' allowfullscreen='true' src='http://www.youtube.com/v/54wJkqG8jXE?version=3&amp;amp;hl=en_US&amp;amp;rel=0' /&gt;&lt;/object&gt;&lt;br /&gt;
+&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/54wJkqG8jXE?version=3&amp;amp;hl=en_US&amp;amp;rel=0' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='640' src='http://www.youtube.com/v/54wJkqG8jXE?version=3&amp;amp;hl=en_US&amp;amp;rel=0' type='application/x-shockwave-flash' height='360' /&gt;&lt;/object&gt;&lt;br /&gt;
 &lt;p&gt;And this year (2013) she had another great speak at W3Conf in San Francisco about &amp;#8220;More CSS Secrets: Another 10 things you may not know about CSS&amp;#8221;&lt;/p&gt;
 
 &lt;h2 id='more_css_secrets_another_10_things_you_may_not_know_about_css'&gt;More CSS Secrets: Another 10 things you may not know about CSS&lt;/h2&gt;
-&lt;object width='640' height='360'&gt;&lt;param name='movie' value='http://www.youtube.com/v/3ikye7Qc7Ak?version=3&amp;amp;hl=en_US&amp;amp;rel=0' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed width='640' allowscriptaccess='always' type='application/x-shockwave-flash' height='360' allowfullscreen='true' src='http://www.youtube.com/v/3ikye7Qc7Ak?version=3&amp;amp;hl=en_US&amp;amp;rel=0' /&gt;&lt;/object&gt;&lt;br /&gt;
+&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/3ikye7Qc7Ak?version=3&amp;amp;hl=en_US&amp;amp;rel=0' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='640' src='http://www.youtube.com/v/3ikye7Qc7Ak?version=3&amp;amp;hl=en_US&amp;amp;rel=0' type='application/x-shockwave-flash' height='360' /&gt;&lt;/object&gt;&lt;br /&gt;
 &lt;p&gt;As you can see she is a Client - Side hacker specifically in CSS and always bringing new ideas and techniques to solve common problems we used to solve with complex javascript code and hacks.&lt;/p&gt;</description>
 				<published>Sun Mar 03 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/secrets-of-lea-verou-css</link>
@@ -24,8 +24,8 @@
 				<title>Inspirational Art and Code by Joshua Davis.</title>
 				<description>&lt;p&gt;A friend of mine shared this great talk by Joshua Davis at W3Conf in San Francisco. &lt;br /&gt; Joshua&amp;#8217;s work is very inspirational and see these awesome things makes my life better!&lt;/p&gt;
 
-&lt;p&gt;Don&amp;#8217;t forget to check out his website &lt;a title='Joshua Davis' target='_blank' href='http://www.joshuadavis.com/'&gt;Joshua Davis&lt;/a&gt;&lt;/p&gt;
-&lt;object width='640' height='360'&gt;&lt;param name='movie' value='http://www.youtube.com/v/LJS4fBjdPM4?version=3&amp;amp;hl=en_US&amp;amp;rel=0' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed width='640' allowscriptaccess='always' type='application/x-shockwave-flash' height='360' allowfullscreen='true' src='http://www.youtube.com/v/LJS4fBjdPM4?version=3&amp;amp;hl=en_US&amp;amp;rel=0' /&gt;&lt;/object&gt;</description>
+&lt;p&gt;Don&amp;#8217;t forget to check out his website &lt;a target='_blank' href='http://www.joshuadavis.com/' title='Joshua Davis'&gt;Joshua Davis&lt;/a&gt;&lt;/p&gt;
+&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/LJS4fBjdPM4?version=3&amp;amp;hl=en_US&amp;amp;rel=0' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='640' src='http://www.youtube.com/v/LJS4fBjdPM4?version=3&amp;amp;hl=en_US&amp;amp;rel=0' type='application/x-shockwave-flash' height='360' /&gt;&lt;/object&gt;</description>
 				<published>Thu Feb 28 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/inspirational-art-and-code-by-joshua-davis</link>
 			</item>
@@ -41,11 +41,11 @@
 &lt;p&gt;Watching this great video we can see that people don&amp;#8217;t loose their old habits to live in their &amp;#8220;boxes&amp;#8221; and continue to create their &amp;#8220;Extended Mind&amp;#8221;&lt;/p&gt;
 
 &lt;h2 id='are_we_going_backwards'&gt;Are we going backwards?!&lt;/h2&gt;
-&lt;object width='640' height='360'&gt;&lt;param name='movie' value='http://www.youtube.com/v/B8ofWFx525s?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed width='640' allowscriptaccess='always' type='application/x-shockwave-flash' height='360' allowfullscreen='true' src='http://www.youtube.com/v/B8ofWFx525s?version=3&amp;amp;hl=en_US' /&gt;&lt;/object&gt;
+&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/B8ofWFx525s?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='640' src='http://www.youtube.com/v/B8ofWFx525s?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' height='360' /&gt;&lt;/object&gt;
 &lt;h2 id='i_also_suggest'&gt;I also suggest..&lt;/h2&gt;
 
-&lt;p&gt;you to watch this incredible documentary called &lt;a title='internet rising' target='_blanc' href='http://internetrising.net/'&gt;&quot;Internet Rising&quot;&lt;/a&gt; investigating the evolving relationships between the Internet and collective consciousness of humanity. It provokes many questions about ancient and modern paradoxes of life. You definitely should check it out.&lt;/p&gt;
-&lt;object width='640' height='360'&gt;&lt;param name='movie' value='http://www.youtube.com/v/pMh8oBdKkK4?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed width='640' allowscriptaccess='always' type='application/x-shockwave-flash' height='360' allowfullscreen='true' src='http://www.youtube.com/v/pMh8oBdKkK4?version=3&amp;amp;hl=en_US' /&gt;&lt;/object&gt;&lt;br /&gt;
+&lt;p&gt;you to watch this incredible documentary called &lt;a target='_blanc' href='http://internetrising.net/' title='internet rising'&gt;&quot;Internet Rising&quot;&lt;/a&gt; investigating the evolving relationships between the Internet and collective consciousness of humanity. It provokes many questions about ancient and modern paradoxes of life. You definitely should check it out.&lt;/p&gt;
+&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/pMh8oBdKkK4?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='640' src='http://www.youtube.com/v/pMh8oBdKkK4?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' height='360' /&gt;&lt;/object&gt;&lt;br /&gt;
 &lt;p&gt;Both videos are great to inspired us to think about almost everything surround us in the digital life.&lt;/p&gt;</description>
 				<published>Wed Feb 27 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/the-filter-bubble-and-your-social-life-online</link>
@@ -81,7 +81,7 @@
 
 &lt;h2 id='the_presentfuture'&gt;The present/future&lt;/h2&gt;
 
-&lt;p&gt;But now (a while ago) the &lt;a title='W3C spec' target='_blank' href='http://www.w3.org/TR/css3-values/#font-relative-lengths'&gt;W3C spec&lt;/a&gt; added to CSS3 the rem unit that is relative to the document parent (root em).&lt;/p&gt;
+&lt;p&gt;But now (a while ago) the &lt;a target='_blank' href='http://www.w3.org/TR/css3-values/#font-relative-lengths' title='W3C spec'&gt;W3C spec&lt;/a&gt; added to CSS3 the rem unit that is relative to the document parent (root em).&lt;/p&gt;
 &lt;pre&gt;&lt;code data-language='css'&gt;
 html {
 	font-size: 62.5%;
@@ -95,7 +95,7 @@ child {
 	font-size: 1.2rem; /* 12px */
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;No need to go through all your parent doing that math to change their child and the browser support makes us even happier developers &lt;a title='Can I use rem units?' target='_blank' href='http://caniuse.com/rem'&gt;caniuse.com/rem&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;No need to go through all your parent doing that math to change their child and the browser support makes us even happier developers &lt;a target='_blank' href='http://caniuse.com/rem' title='Can I use rem units?'&gt;caniuse.com/rem&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id='browser_support'&gt;Browser support&lt;/h2&gt;
 
@@ -134,7 +134,7 @@ child {
 		
 			<item>
 				<title>Two years ago everything started.</title>
-				<description>&lt;p&gt;While I cook my pasta I do this post so I&amp;#8217;ll be short.&lt;/p&gt;
+				<description>&lt;p&gt;While I cook my pasta I write this post so I&amp;#8217;ll be short.&lt;/p&gt;
 
 &lt;p&gt;For my first job I did a test and got my first paid job as a Front End Developer Jr It was hard because we had so many projects and things to do that I wasn&amp;#8217;t used to (Mostly developers used to get there around 9:30 am and leave around 9:30 pm) I used to get home at 1:00 am so I had time to eat fast, shower and get some rest to another day. I had my senior developer supporting and protecting me like a father and I could learn a lot from him not just technical stuff but how to act in certain situations.&lt;/p&gt;
 
@@ -174,7 +174,7 @@ child {
 &lt;p&gt;
 I started looking for something more elegant that I could use git to deploy
 So I tried Github Pages and Jekyll a &quot;blog-aware, static site generator in Ruby&quot; that uses Liquid template to process the templates.
-But I would do experiments with Node.js and Ruby someday so I choose &lt;a title='Heroku' target='_blank' href='http://www.heroku.com'&gt;Heroku&lt;/a&gt; (cloud application platform for build, deploy, and run cloud apps using Ruby, Node.js, Clojure, Java, Python and Scala).
+But I would do experiments with Node.js and Ruby someday so I choose &lt;a target='_blank' href='http://www.heroku.com' title='Heroku'&gt;Heroku&lt;/a&gt; (cloud application platform for build, deploy, and run cloud apps using Ruby, Node.js, Clojure, Java, Python and Scala).
 &lt;/p&gt;
 &lt;p&gt;I Can run and test locally, pretty simple. &lt;pre&gt;&lt;code data-language='ruby'&gt;
 foreman start
