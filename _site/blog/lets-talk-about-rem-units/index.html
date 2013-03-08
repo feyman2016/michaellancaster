@@ -63,6 +63,8 @@
 		<option value="/about">About</option>
 		<optgroup label="Articles">
 			
+			<option value="/blog/css-architecture-for-web-applications">CSS architecture for Web Applications.</option>
+			
 			<option value="/blog/secrets-of-lea-verou-css">Secrets of Lea Verou about CSS.</option>
 			
 			<option value="/blog/inspirational-art-and-code-by-joshua-davis">Inspirational Art and Code by Joshua Davis.</option>
@@ -84,6 +86,13 @@
 
 	<!-- articles list -->
 	<ul id="articles-list" class="vh">
+		
+		<li>
+			<a href="/blog/css-architecture-for-web-applications" title="CSS architecture for Web Applications.">
+				<h2 class="ui-tit-02">CSS architecture for Web Applications.</h2>
+				<span class="ui-date">08 Mar 2013</span>
+			</a>
+		</li>
 		
 		<li>
 			<a href="/blog/secrets-of-lea-verou-css" title="Secrets of Lea Verou about CSS.">
@@ -175,7 +184,7 @@
 
 <h2 id='the_presentfuture'>The present/future</h2>
 
-<p>But now (a while ago) the <a target='_blank' href='http://www.w3.org/TR/css3-values/#font-relative-lengths' title='W3C spec'>W3C spec</a> added to CSS3 the rem unit that is relative to the document parent (root em).</p>
+<p>But now (a while ago) the <a href='http://www.w3.org/TR/css3-values/#font-relative-lengths' title='W3C spec' target='_blank'>W3C spec</a> added to CSS3 the rem unit that is relative to the document parent (root em).</p>
 <pre><code data-language='css'>
 html {
 	font-size: 62.5%;
@@ -189,7 +198,7 @@ child {
 	font-size: 1.2rem; /* 12px */
 }
 </code></pre>
-<p>No need to go through all your parent doing that math to change their child and the browser support makes us even happier developers <a target='_blank' href='http://caniuse.com/rem' title='Can I use rem units?'>caniuse.com/rem</a></p>
+<p>No need to go through all your parent doing that math to change their child and the browser support makes us even happier developers <a href='http://caniuse.com/rem' title='Can I use rem units?' target='_blank'>caniuse.com/rem</a></p>
 
 <h2 id='browser_support'>Browser support</h2>
 

@@ -6,15 +6,149 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>CSS architecture for Web Applications.</title>
+				<description>&lt;p&gt;Since I started develop for Web I had/have a very high concern about how to name my &amp;#8220;classes&amp;#8221; and at the begin we follow the &amp;#8220;good practices&amp;#8221; from W3C and other developers right?!&lt;/p&gt;
+
+&lt;h2 id='how_was_at_the_beginning'&gt;how was at the beginning&lt;/h2&gt;
+
+&lt;p&gt;My first job I had a great senior front end developer that taught me a lot of things and the other developers followed his good practices kind of made for the JS developer and this is how we used to write CSS.&lt;/p&gt;
+&lt;pre&gt;&lt;code data-language='css'&gt;
+#header {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
+
+#logo {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
+
+#menu {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
+
+#search {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
+
+#bt-yellow {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Yeah! as you can see we used to use &amp;#8220;id&amp;#8217;s&amp;#8221; for everything (95% of the html elements) and the properties were by alphabetical order (nothing wrong with alphabetical order).&lt;br /&gt; This approach using that CSS architecture &amp;#8220;id&amp;#8217;s&amp;#8221; has no problem for browser rendering and the Javascript developers concerned not just about performance but make his life easier.&lt;/p&gt;
+
+&lt;p&gt;But as a point of view of good CSS architecture wasn&amp;#8217;t DRY, reusable, modular, and depending on the project this can get pretty messy and heavy. So kids, never do this way ok?!&lt;/p&gt;
+
+&lt;h2 id='second_experience'&gt;Second experience&lt;/h2&gt;
+
+&lt;p&gt;My second experience with a different way to write CSS architecture was when I worked as a consultant for Chamber of Electric Energy Commercialization in their ongoing big Web Application.&lt;/p&gt;
+
+&lt;p&gt;At this point the initial developers started kind of in a good way making like a mixed code between SMACCS and their judgments. &lt;br /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code data-language='css'&gt;
+ul.button-group-yellow {
+	property: value;
+	property: value;
+}
+
+ul.button-group-yellow li {
+	property: value;
+	property: value;
+}
+
+ul.button-group-yellow li div {
+	property: value;
+	property: value;
+}
+
+ul.button-group-yellow li div p {
+	property: value;
+	property: value;
+}
+
+ul.button-group-yellow li div p a {
+	property: value;
+	property: value;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We had a bunch of modular groups but terrible long descendants selectors, tag-qualify and all that is very bad for browser rendering/performance, not scalable and gets/got pretty messy after all.&lt;/p&gt;
+
+&lt;h2 id='what_you_should_know'&gt;What you should know&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CSS is code therefore size and rendering matters.&lt;/li&gt;
+
+&lt;li&gt;Browsers render your CSS going right to left.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code data-language='css'&gt;
+#header div ul li p a {
+	/* seriously when I saw these cases I just want to cry in some corner eating ice cream */
+	/* the browser render go through all your elements starting at the element a to match */
+	property: value;
+	property: value;
+}
+
+#header a {
+	/* better than the first example */
+	property: value;
+	property: value;
+}
+
+ul#header {
+	/* not good, will be very hard to happen when you have to use tag-qualify */
+	property: value;
+	property: value;
+}
+
+#header {
+	/* good for performance but don't forget you want to make your code modular, DRY, scalable */
+	property: value;
+	property: value;
+}
+
+.button {
+	/* good practice for performance and CSS architecture  */
+	property: value;
+	property: value;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Use DRY methodology, modular groups, scalable.&lt;/li&gt;
+
+&lt;li&gt;Make it well documented (readable for humans not machines).&lt;/li&gt;
+
+&lt;li&gt;Use CSS preprocessors (I prefer SASS) but be aware of long descendants selectors.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='how_i_suggest_and_how_im_doing'&gt;How I suggest and how I&amp;#8217;m doing.&lt;/h2&gt;
+
+&lt;p&gt;Like I said I have been struggling not just to choose class names since EVA..but after a while thinking, looking at others code and trying good practices I decided to go through this path I&amp;#8217;m going to show you. (for now, I might change again one day).&lt;/p&gt;</description>
+				<published>Fri Mar 08 00:00:00 -0600 2013</published>
+				<link>http://bymichaellancaster.com//blog/css-architecture-for-web-applications</link>
+			</item>
+		
+			<item>
 				<title>Secrets of Lea Verou about CSS.</title>
-				<description>&lt;p&gt;I&amp;#8217;m not sure when it was but in the end of 2011 or beginning of 2012 I saw &lt;a target='_blank' href='http://lea.verou.me/' title='Lea Verou'&gt;Lea Verou&lt;/a&gt; talking about &amp;#8220;CSS3 Secrets: 10 things you might not know about CSS3&amp;#8221; and it was great see how many great techniques we can use to achieve our &lt;br /&gt; client - side goals.&lt;/p&gt;
+				<description>&lt;p&gt;I&amp;#8217;m not sure when it was but in the end of 2011 or beginning of 2012 I saw &lt;a href='http://lea.verou.me/' title='Lea Verou' target='_blank'&gt;Lea Verou&lt;/a&gt; talking about &amp;#8220;CSS3 Secrets: 10 things you might not know about CSS3&amp;#8221; and it was great see how many great techniques we can use to achieve our &lt;br /&gt; client - side goals.&lt;/p&gt;
 
 &lt;h2 id='10_things_you_might_not_know_about_css3'&gt;10 things you might not know about CSS3&lt;/h2&gt;
-&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/54wJkqG8jXE?version=3&amp;amp;hl=en_US&amp;amp;rel=0' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='640' src='http://www.youtube.com/v/54wJkqG8jXE?version=3&amp;amp;hl=en_US&amp;amp;rel=0' type='application/x-shockwave-flash' height='360' /&gt;&lt;/object&gt;&lt;br /&gt;
+&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/54wJkqG8jXE?version=3&amp;amp;hl=en_US&amp;amp;rel=0' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' src='http://www.youtube.com/v/54wJkqG8jXE?version=3&amp;amp;hl=en_US&amp;amp;rel=0' width='640' height='360' type='application/x-shockwave-flash' allowfullscreen='true' /&gt;&lt;/object&gt;&lt;br /&gt;
 &lt;p&gt;And this year (2013) she had another great speak at W3Conf in San Francisco about &amp;#8220;More CSS Secrets: Another 10 things you may not know about CSS&amp;#8221;&lt;/p&gt;
 
 &lt;h2 id='more_css_secrets_another_10_things_you_may_not_know_about_css'&gt;More CSS Secrets: Another 10 things you may not know about CSS&lt;/h2&gt;
-&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/3ikye7Qc7Ak?version=3&amp;amp;hl=en_US&amp;amp;rel=0' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='640' src='http://www.youtube.com/v/3ikye7Qc7Ak?version=3&amp;amp;hl=en_US&amp;amp;rel=0' type='application/x-shockwave-flash' height='360' /&gt;&lt;/object&gt;&lt;br /&gt;
+&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/3ikye7Qc7Ak?version=3&amp;amp;hl=en_US&amp;amp;rel=0' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' src='http://www.youtube.com/v/3ikye7Qc7Ak?version=3&amp;amp;hl=en_US&amp;amp;rel=0' width='640' height='360' type='application/x-shockwave-flash' allowfullscreen='true' /&gt;&lt;/object&gt;&lt;br /&gt;
 &lt;p&gt;As you can see she is a Client - Side hacker specifically in CSS and always bringing new ideas and techniques to solve common problems we used to solve with complex javascript code and hacks.&lt;/p&gt;</description>
 				<published>Sun Mar 03 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/secrets-of-lea-verou-css</link>
@@ -24,8 +158,8 @@
 				<title>Inspirational Art and Code by Joshua Davis.</title>
 				<description>&lt;p&gt;A friend of mine shared this great talk by Joshua Davis at W3Conf in San Francisco. &lt;br /&gt; Joshua&amp;#8217;s work is very inspirational and see these awesome things makes my life better!&lt;/p&gt;
 
-&lt;p&gt;Don&amp;#8217;t forget to check out his website &lt;a target='_blank' href='http://www.joshuadavis.com/' title='Joshua Davis'&gt;Joshua Davis&lt;/a&gt;&lt;/p&gt;
-&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/LJS4fBjdPM4?version=3&amp;amp;hl=en_US&amp;amp;rel=0' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='640' src='http://www.youtube.com/v/LJS4fBjdPM4?version=3&amp;amp;hl=en_US&amp;amp;rel=0' type='application/x-shockwave-flash' height='360' /&gt;&lt;/object&gt;</description>
+&lt;p&gt;Don&amp;#8217;t forget to check out his website &lt;a href='http://www.joshuadavis.com/' title='Joshua Davis' target='_blank'&gt;Joshua Davis&lt;/a&gt;&lt;/p&gt;
+&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/LJS4fBjdPM4?version=3&amp;amp;hl=en_US&amp;amp;rel=0' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' src='http://www.youtube.com/v/LJS4fBjdPM4?version=3&amp;amp;hl=en_US&amp;amp;rel=0' width='640' height='360' type='application/x-shockwave-flash' allowfullscreen='true' /&gt;&lt;/object&gt;</description>
 				<published>Thu Feb 28 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/inspirational-art-and-code-by-joshua-davis</link>
 			</item>
@@ -41,11 +175,11 @@
 &lt;p&gt;Watching this great video we can see that people don&amp;#8217;t loose their old habits to live in their &amp;#8220;boxes&amp;#8221; and continue to create their &amp;#8220;Extended Mind&amp;#8221;&lt;/p&gt;
 
 &lt;h2 id='are_we_going_backwards'&gt;Are we going backwards?!&lt;/h2&gt;
-&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/B8ofWFx525s?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='640' src='http://www.youtube.com/v/B8ofWFx525s?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' height='360' /&gt;&lt;/object&gt;
+&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/B8ofWFx525s?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' src='http://www.youtube.com/v/B8ofWFx525s?version=3&amp;amp;hl=en_US' width='640' height='360' type='application/x-shockwave-flash' allowfullscreen='true' /&gt;&lt;/object&gt;
 &lt;h2 id='i_also_suggest'&gt;I also suggest..&lt;/h2&gt;
 
-&lt;p&gt;you to watch this incredible documentary called &lt;a target='_blanc' href='http://internetrising.net/' title='internet rising'&gt;&quot;Internet Rising&quot;&lt;/a&gt; investigating the evolving relationships between the Internet and collective consciousness of humanity. It provokes many questions about ancient and modern paradoxes of life. You definitely should check it out.&lt;/p&gt;
-&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/pMh8oBdKkK4?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' allowfullscreen='true' width='640' src='http://www.youtube.com/v/pMh8oBdKkK4?version=3&amp;amp;hl=en_US' type='application/x-shockwave-flash' height='360' /&gt;&lt;/object&gt;&lt;br /&gt;
+&lt;p&gt;you to watch this incredible documentary called &lt;a href='http://internetrising.net/' title='internet rising' target='_blanc'&gt;&quot;Internet Rising&quot;&lt;/a&gt; investigating the evolving relationships between the Internet and collective consciousness of humanity. It provokes many questions about ancient and modern paradoxes of life. You definitely should check it out.&lt;/p&gt;
+&lt;object width='640' height='360'&gt;&lt;param value='http://www.youtube.com/v/pMh8oBdKkK4?version=3&amp;amp;hl=en_US' name='movie' /&gt;&lt;param value='true' name='allowFullScreen' /&gt;&lt;param value='always' name='allowscriptaccess' /&gt;&lt;embed allowscriptaccess='always' src='http://www.youtube.com/v/pMh8oBdKkK4?version=3&amp;amp;hl=en_US' width='640' height='360' type='application/x-shockwave-flash' allowfullscreen='true' /&gt;&lt;/object&gt;&lt;br /&gt;
 &lt;p&gt;Both videos are great to inspired us to think about almost everything surround us in the digital life.&lt;/p&gt;</description>
 				<published>Wed Feb 27 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/the-filter-bubble-and-your-social-life-online</link>
@@ -81,7 +215,7 @@
 
 &lt;h2 id='the_presentfuture'&gt;The present/future&lt;/h2&gt;
 
-&lt;p&gt;But now (a while ago) the &lt;a target='_blank' href='http://www.w3.org/TR/css3-values/#font-relative-lengths' title='W3C spec'&gt;W3C spec&lt;/a&gt; added to CSS3 the rem unit that is relative to the document parent (root em).&lt;/p&gt;
+&lt;p&gt;But now (a while ago) the &lt;a href='http://www.w3.org/TR/css3-values/#font-relative-lengths' title='W3C spec' target='_blank'&gt;W3C spec&lt;/a&gt; added to CSS3 the rem unit that is relative to the document parent (root em).&lt;/p&gt;
 &lt;pre&gt;&lt;code data-language='css'&gt;
 html {
 	font-size: 62.5%;
@@ -95,7 +229,7 @@ child {
 	font-size: 1.2rem; /* 12px */
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;No need to go through all your parent doing that math to change their child and the browser support makes us even happier developers &lt;a target='_blank' href='http://caniuse.com/rem' title='Can I use rem units?'&gt;caniuse.com/rem&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;No need to go through all your parent doing that math to change their child and the browser support makes us even happier developers &lt;a href='http://caniuse.com/rem' title='Can I use rem units?' target='_blank'&gt;caniuse.com/rem&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id='browser_support'&gt;Browser support&lt;/h2&gt;
 
@@ -174,7 +308,7 @@ child {
 &lt;p&gt;
 I started looking for something more elegant that I could use git to deploy
 So I tried Github Pages and Jekyll a &quot;blog-aware, static site generator in Ruby&quot; that uses Liquid template to process the templates.
-But I would do experiments with Node.js and Ruby someday so I choose &lt;a target='_blank' href='http://www.heroku.com' title='Heroku'&gt;Heroku&lt;/a&gt; (cloud application platform for build, deploy, and run cloud apps using Ruby, Node.js, Clojure, Java, Python and Scala).
+But I would do experiments with Node.js and Ruby someday so I choose &lt;a href='http://www.heroku.com' title='Heroku' target='_blank'&gt;Heroku&lt;/a&gt; (cloud application platform for build, deploy, and run cloud apps using Ruby, Node.js, Clojure, Java, Python and Scala).
 &lt;/p&gt;
 &lt;p&gt;I Can run and test locally, pretty simple. &lt;pre&gt;&lt;code data-language='ruby'&gt;
 foreman start
