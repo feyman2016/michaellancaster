@@ -210,7 +210,7 @@ Example, Let's say we have one module.
 }
 </code></pre>
 
-I even don't need to show you the HTML markup to make you understand the HTML markup, can you see the possibilities here?!
+I even don't need to show you the HTML markup to make you understand the HTML structure, can you see the possibilities here?!
 
 ##One week before this post
 
