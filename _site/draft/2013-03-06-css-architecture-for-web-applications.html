@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> First things first. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL</title>
+    <title> CSS architecture for Web Applications. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" First things first. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL">
+    <meta name="description" content=" CSS architecture for Web Applications. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Blog by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
@@ -63,7 +63,7 @@
 		<option value="/about">About</option>
 		<optgroup label="Articles">
 			
-			<option value="/blog/css-architecture-for-web-applications">CSS Architecture for Web Applications.</option>
+			<option value="/blog/css-architecture-for-web-applications">CSS architecture for Web Applications.</option>
 			
 			<option value="/blog/secrets-of-lea-verou-css">Secrets of Lea Verou about CSS.</option>
 			
@@ -88,8 +88,8 @@
 	<ul id="articles-list" class="vh">
 		
 		<li>
-			<a href="/blog/css-architecture-for-web-applications" title="CSS Architecture for Web Applications.">
-				<h2 class="ui-tit-02">CSS Architecture for Web Applications.</h2>
+			<a href="/blog/css-architecture-for-web-applications" title="CSS architecture for Web Applications.">
+				<h2 class="ui-tit-02">CSS architecture for Web Applications.</h2>
 				<span class="ui-date">08 Mar 2013</span>
 			</a>
 		</li>
@@ -150,21 +150,140 @@
 
 		<article class="post">
 
-    <h2 class="ui-tit-01">First things first.</h2>
+    <h2 class="ui-tit-01">CSS architecture for Web Applications.</h2>
 
-    <span class="ui-date db">30 Jan 13</span>
+    <span class="ui-date db"></span>
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>Since I started to work as a Front End Developer I&#8217;ve been studying and learning new things every single day and I think now it&#8217;s a good time to start share my humble knowledge and other main reason is that I haven&#8217;t studying English (Yes..shame on me!) just technical/theory stuff. <br /> Ah I moved from Brazil to US months ago and I want to make my English even better than my Portuguese.</p>
+	<div class="ui-copy"><p>Since I started develop for Web I had/have a very high concern about how to name my &#8220;classes&#8221; and at the begin we follow the &#8220;good practices&#8221; from W3C and other developers right?!</p>
 
-<p>So read in English is very common for me but now I need to make my mind think as a native American (I&#8217;m half American by the way but I lived in Brazil for 21 years) explore new words therefore what is the best way to explore those words than practice writing a blog.</p>
+<h2 id='how_was_at_the_beginning'>how was at the beginning</h2>
 
-<p>triple win here. I will practice my English, keep learning technical stuff and share some knowledge :)</p>
+<p>My first job I had a great senior front end developer that taught me a lot of things and the other developers followed his good practices kind of made for the JS developer and this is how we used to write CSS.</p>
+<pre><code data-language='css'>
+#header {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
 
-<p>So please be patient and feel free to contribute. <br /> thanks.</p></div>
+#logo {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
 
-    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2013</small></span> -->
+#menu {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
+
+#search {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
+
+#bt-yellow {
+	propertyA: value;
+	propertyB: value;
+	propertyC: value;
+	propertyD: value;
+}
+</code></pre>
+<p>Yeah! as you can see we used to use &#8220;id&#8217;s&#8221; for everything (95% of the html elements) and the properties were by alphabetical order (nothing wrong with alphabetical order).<br /> This approach using that CSS architecture &#8220;id&#8217;s&#8221; has no problem for browser rendering and the Javascript developers concerned not just about performance but make his life easier.</p>
+
+<p>But as a point of view of good CSS architecture wasn&#8217;t DRY, reusable, modular, and depending on the project this can get pretty messy and heavy. So kids, never do this way ok?!</p>
+
+<h2 id='second_experience'>Second experience</h2>
+
+<p>My second experience with a different way to write CSS architecture was when I worked as a consultant for Chamber of Electric Energy Commercialization in their ongoing big Web Application.</p>
+
+<p>At this point the initial developers started kind of in a good way making like a mixed code between SMACCS and their judgments. <br /></p>
+<pre><code data-language='css'>
+ul.button-group-yellow {
+	property: value;
+	property: value;
+}
+
+ul.button-group-yellow li {
+	property: value;
+	property: value;
+}
+
+ul.button-group-yellow li div {
+	property: value;
+	property: value;
+}
+
+ul.button-group-yellow li div p {
+	property: value;
+	property: value;
+}
+
+ul.button-group-yellow li div p a {
+	property: value;
+	property: value;
+}
+</code></pre>
+<p>We had a bunch of modular groups but terrible long descendants selectors, tag-qualify and all that is very bad for browser rendering/performance, not scalable and gets/got pretty messy after all.</p>
+
+<h2 id='what_you_should_knowuse'>What you should know/use</h2>
+
+<ul>
+<li>
+<p>CSS is code therefore size and rendering matters.</p>
+</li>
+
+<li>
+<p>Browsers render your CSS going right to left. <pre style='border: solid 3px red; background-color: pink' class='markdown-html-error'>REXML could not parse this XML/HTML: 
+&lt;pre&gt;&lt;code data-language=&quot;css&quot;&gt;</pre></p>
+
+<h1 id='header_div_ul_li_p_a_'>header div ul li p a {</h1>
+
+<p>/* seriously when I saw these cases I just want to cry in some corner eating ice cream <em>/ /</em> the browser render go through all your elements starting at the element a to match <em>/ property: value; property: value; }</em></p>
+</li>
+</ul>
+
+<h1 id='header_a_'>header a {</h1>
+
+<pre><code>/* better than the first example */
+property: value;
+property: value;</code></pre>
+
+<p>}</p>
+
+<p>ul#header { /* not good, will be very hard to happen when you have to use tag-qualify <em>/ property: value; property: value; }</em></p>
+
+<h1 id='header_'>header {</h1>
+
+<pre><code>/* good for performance but don&#39;t forget you want to make your code modular, DRY, scalable */
+property: value;
+property: value;</code></pre>
+
+<p>}</p>
+
+<p>.header { /* good practice for performance and <em>/ property: value; property: value; } &lt;/code&gt;&lt;/pre&gt;</em></p>
+
+<ul>
+<li>Use DRY methodology, modular groups, scalable.</li>
+
+<li>Make it well documented (readable for humans not machines).</li>
+
+<li>Use CSS preprocessors (I prefer SASS) but be aware of long descendants selectors.</li>
+</ul>
+
+<h2 id='how_i_suggest_and_how_im_doing'>How I suggest and how I&#8217;m doing.</h2>
+
+<p>Like I said I have been struggling not just to choose class names since EVA..but after a while thinking, looking at others code and trying good practices I decided to go through this path I&#8217;m going to show you. (for now, I might change again one day).</p></div>
+
+    <!-- <span class="meta"><small>By Michael Lancaster &copy; </small></span> -->
 
             <div id="disqus_thread"></div>
 		    <script type="text/javascript">
