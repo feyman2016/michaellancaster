@@ -245,7 +245,7 @@ Lastly we have "promoBox--round" with two dashes that means extended/modifier. B
 
 ##Final thoughts
 
-There's no absolute way to write, named CSS or build "The god master architecture" but there's definitely great practices to make a great Web application and it all depends on your team and the focus on your Web application goals.
+There's no absolute way to write, give classes name notation or build "The god master CSS architecture" but there's definitely great practices to make a great Web application and it all depends on your team and the focus on your Web application goals.
 
 
 
