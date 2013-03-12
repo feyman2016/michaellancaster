@@ -6,6 +6,43 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Fluid iframe and images without use of javascript.</title>
+				<description>&lt;p&gt;Simple technique to make fluid iframes and images without use of javascript or plugins. Using this technique we have more gains in performance and simplicity.&lt;/p&gt;
+
+&lt;p&gt;This is a technique of positioning a element inside of another using &amp;#8220;position: absolute;&amp;#8221; for the &amp;#8220;child&amp;#8221; and &amp;#8220;position: relative;&amp;#8221; for the &amp;#8220;wrap&amp;#8221;.&lt;/p&gt;
+
+&lt;p&gt;(ps: Depending on your case I suggest you set height for images).&lt;/p&gt;
+
+&lt;h2 id='html'&gt;HTML&lt;/h2&gt;
+&lt;pre&gt;&lt;code data-language='html'&gt;
+&lt;div class='fluidMedia'&gt;
+	&lt;iframe src='' frameborder='0'&gt; &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id='css'&gt;CSS&lt;/h2&gt;
+&lt;pre&gt;&lt;code data-language='css'&gt;
+.fluidMedia {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.fluidMedia iframe {
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Cheers!&lt;/p&gt;</description>
+				<published>Tue Mar 12 00:00:00 -0500 2013</published>
+				<link>http://bymichaellancaster.com//blog/fluid-iframe-and-images-without-javascript-plugins</link>
+			</item>
+		
+			<item>
 				<title>CSS Architecture for Web Applications.</title>
 				<description>&lt;p&gt;Write CSS is more complex than some developers, software engineers and designers think and If you are a &amp;#8220;Dogma&amp;#8221; &amp;#8220;best practice&amp;#8221; person this post might hurt your feelings.&lt;/p&gt;
 
@@ -222,7 +259,7 @@ header#header {
 
 &lt;h2 id='one_week_before_this_post'&gt;One week before this post&lt;/h2&gt;
 
-&lt;p&gt;One week before I write this post I saw the speak of &lt;a title='' href='http://nicolasgallagher.com/' target='_blank'&gt;Nicolas Gallagher&lt;/a&gt; about &amp;#8220;Questioning good practices&amp;#8221; (I highly recommend) in his speak he also showed a &lt;a title='Russian Search engine' href='http://www.yandex.com/' target='_blank'&gt;Russian Search engine&lt;/a&gt; classes notation name and It&amp;#8217;s true my notation is fashionable at the moment.&lt;/p&gt;
+&lt;p&gt;One week before I write this post I saw the speak of &lt;a target='_blank' href='http://nicolasgallagher.com/' title=''&gt;Nicolas Gallagher&lt;/a&gt; about &amp;#8220;Questioning good practices&amp;#8221; (I highly recommend) in his speak he also showed a &lt;a target='_blank' href='http://www.yandex.com/' title='Russian Search engine'&gt;Russian Search engine&lt;/a&gt; classes notation name and It&amp;#8217;s true my notation is fashionable at the moment.&lt;/p&gt;
 
 &lt;p&gt;All made sense. So now on I will use this non-fashionable YET classes notation name but answering the same questions I told you before.&lt;br /&gt; what are you talking about Michael? Here&amp;#8217;s a new example of that module above.&lt;/p&gt;
 &lt;pre&gt;&lt;code data-language='css'&gt;
@@ -250,21 +287,25 @@ header#header {
 
 &lt;h2 id='final_thoughts'&gt;Final thoughts&lt;/h2&gt;
 
-&lt;p&gt;There&amp;#8217;s no absolute way to write, named CSS or build &amp;#8220;The god master architecture&amp;#8221; but there&amp;#8217;s definitely great practices to make a great Web application and it all depends on your team and the focus on your Web application goals.&lt;/p&gt;</description>
+&lt;p&gt;There&amp;#8217;s no absolute way to write, give classes name notation or build &amp;#8220;The god master CSS architecture&amp;#8221; but there&amp;#8217;s definitely great practices to make a great Web application and it all depends on your team and the focus on your Web application goals.&lt;/p&gt;</description>
 				<published>Fri Mar 08 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/css-architecture-for-web-applications</link>
 			</item>
 		
 			<item>
 				<title>Secrets of Lea Verou about CSS.</title>
-				<description>&lt;p&gt;I&amp;#8217;m not sure when it was but in the end of 2011 or beginning of 2012 I saw &lt;a title='Lea Verou' href='http://lea.verou.me/' target='_blank'&gt;Lea Verou&lt;/a&gt; talking about &amp;#8220;CSS3 Secrets: 10 things you might not know about CSS3&amp;#8221; and it was great see how many great techniques we can use to achieve our &lt;br /&gt; client - side goals.&lt;/p&gt;
+				<description>&lt;p&gt;I&amp;#8217;m not sure when it was but in the end of 2011 or beginning of 2012 I saw &lt;a target='_blank' href='http://lea.verou.me/' title='Lea Verou'&gt;Lea Verou&lt;/a&gt; talking about &amp;#8220;CSS3 Secrets: 10 things you might not know about CSS3&amp;#8221; and it was great see how many great techniques we can use to achieve our &lt;br /&gt; client - side goals.&lt;/p&gt;
 
 &lt;h2 id='10_things_you_might_not_know_about_css3'&gt;10 things you might not know about CSS3&lt;/h2&gt;
-&lt;object height='360' width='640'&gt;&lt;param name='movie' value='http://www.youtube.com/v/54wJkqG8jXE?version=3&amp;amp;hl=en_US&amp;amp;rel=0' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/54wJkqG8jXE?version=3&amp;amp;hl=en_US&amp;amp;rel=0' height='360' allowscriptaccess='always' width='640' type='application/x-shockwave-flash' allowfullscreen='true' /&gt;&lt;/object&gt;&lt;br /&gt;
+&lt;div class='fluidMedia'&gt;
+	&lt;iframe src='https://www.youtube.com/embed/54wJkqG8jXE' allowfullscreen='allowfullscreen' frameborder='0'&gt; &lt;/iframe&gt;
+&lt;/div&gt;&lt;br /&gt;
 &lt;p&gt;And this year (2013) she had another great speak at W3Conf in San Francisco about &amp;#8220;More CSS Secrets: Another 10 things you may not know about CSS&amp;#8221;&lt;/p&gt;
 
 &lt;h2 id='more_css_secrets_another_10_things_you_may_not_know_about_css'&gt;More CSS Secrets: Another 10 things you may not know about CSS&lt;/h2&gt;
-&lt;object height='360' width='640'&gt;&lt;param name='movie' value='http://www.youtube.com/v/3ikye7Qc7Ak?version=3&amp;amp;hl=en_US&amp;amp;rel=0' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/3ikye7Qc7Ak?version=3&amp;amp;hl=en_US&amp;amp;rel=0' height='360' allowscriptaccess='always' width='640' type='application/x-shockwave-flash' allowfullscreen='true' /&gt;&lt;/object&gt;&lt;br /&gt;
+&lt;div class='fluidMedia'&gt;
+	&lt;iframe src='https://www.youtube.com/embed/3ikye7Qc7Ak' allowfullscreen='allowfullscreen' frameborder='0'&gt; &lt;/iframe&gt;
+&lt;/div&gt;&lt;br /&gt;
 &lt;p&gt;As you can see she is a Client - Side hacker specifically in CSS and always bringing new ideas and techniques to solve common problems we used to solve with complex javascript code and hacks.&lt;/p&gt;</description>
 				<published>Sun Mar 03 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/secrets-of-lea-verou-css</link>
@@ -272,10 +313,12 @@ header#header {
 		
 			<item>
 				<title>Inspirational Art and Code by Joshua Davis.</title>
-				<description>&lt;p&gt;A friend of mine shared this great talk by Joshua Davis at W3Conf in San Francisco. &lt;br /&gt; Joshua&amp;#8217;s work is very inspirational and see these awesome things makes my life better!&lt;/p&gt;
+				<description>&lt;p&gt;A friend of mine shared this great talk by Joshua Davis at W3Conf in San Francisco. &lt;br /&gt; Joshua&amp;#8217;s work is very inspirational and he can do very cool things using processing.js to generate forms.&lt;/p&gt;
 
-&lt;p&gt;Don&amp;#8217;t forget to check out his website &lt;a title='Joshua Davis' href='http://www.joshuadavis.com/' target='_blank'&gt;Joshua Davis&lt;/a&gt;&lt;/p&gt;
-&lt;object height='360' width='640'&gt;&lt;param name='movie' value='http://www.youtube.com/v/LJS4fBjdPM4?version=3&amp;amp;hl=en_US&amp;amp;rel=0' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/LJS4fBjdPM4?version=3&amp;amp;hl=en_US&amp;amp;rel=0' height='360' allowscriptaccess='always' width='640' type='application/x-shockwave-flash' allowfullscreen='true' /&gt;&lt;/object&gt;</description>
+&lt;p&gt;Don&amp;#8217;t forget to check out his website &lt;a target='_blank' href='http://www.joshuadavis.com/' title='Joshua Davis'&gt;Joshua Davis&lt;/a&gt;&lt;/p&gt;
+&lt;div class='fluidMedia'&gt;
+	&lt;iframe src='https://www.youtube.com/embed/LJS4fBjdPM4' allowfullscreen='allowfullscreen' frameborder='0' /&gt;
+&lt;/div&gt;</description>
 				<published>Thu Feb 28 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/inspirational-art-and-code-by-joshua-davis</link>
 			</item>
@@ -291,11 +334,15 @@ header#header {
 &lt;p&gt;Watching this great video we can see that people don&amp;#8217;t loose their old habits to live in their &amp;#8220;boxes&amp;#8221; and continue to create their &amp;#8220;Extended Mind&amp;#8221;&lt;/p&gt;
 
 &lt;h2 id='are_we_going_backwards'&gt;Are we going backwards?!&lt;/h2&gt;
-&lt;object height='360' width='640'&gt;&lt;param name='movie' value='http://www.youtube.com/v/B8ofWFx525s?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/B8ofWFx525s?version=3&amp;amp;hl=en_US' height='360' allowscriptaccess='always' width='640' type='application/x-shockwave-flash' allowfullscreen='true' /&gt;&lt;/object&gt;
+&lt;div class='fluidMedia'&gt;
+	&lt;iframe src='https://www.youtube.com/embed/B8ofWFx525s' allowfullscreen='allowfullscreen' frameborder='0' /&gt;
+&lt;/div&gt;
 &lt;h2 id='i_also_suggest'&gt;I also suggest..&lt;/h2&gt;
 
-&lt;p&gt;you to watch this incredible documentary called &lt;a title='internet rising' href='http://internetrising.net/' target='_blanc'&gt;&quot;Internet Rising&quot;&lt;/a&gt; investigating the evolving relationships between the Internet and collective consciousness of humanity. It provokes many questions about ancient and modern paradoxes of life. You definitely should check it out.&lt;/p&gt;
-&lt;object height='360' width='640'&gt;&lt;param name='movie' value='http://www.youtube.com/v/pMh8oBdKkK4?version=3&amp;amp;hl=en_US' /&gt;&lt;param name='allowFullScreen' value='true' /&gt;&lt;param name='allowscriptaccess' value='always' /&gt;&lt;embed src='http://www.youtube.com/v/pMh8oBdKkK4?version=3&amp;amp;hl=en_US' height='360' allowscriptaccess='always' width='640' type='application/x-shockwave-flash' allowfullscreen='true' /&gt;&lt;/object&gt;&lt;br /&gt;
+&lt;p&gt;you to watch this incredible documentary called &lt;a target='_blanc' href='http://internetrising.net/' title='internet rising'&gt;&quot;Internet Rising&quot;&lt;/a&gt; investigating the evolving relationships between the Internet and collective consciousness of humanity. It provokes many questions about ancient and modern paradoxes of life. You definitely should check it out.&lt;/p&gt;
+&lt;div class='fluidMedia'&gt;
+	&lt;iframe src='https://www.youtube.com/embed/pMh8oBdKkK4' allowfullscreen='allowfullscreen' frameborder='0' /&gt;
+&lt;/div&gt;&lt;br /&gt;
 &lt;p&gt;Both videos are great to inspired us to think about almost everything surround us in the digital life.&lt;/p&gt;</description>
 				<published>Wed Feb 27 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/the-filter-bubble-and-your-social-life-online</link>
@@ -331,7 +378,7 @@ header#header {
 
 &lt;h2 id='the_presentfuture'&gt;The present/future&lt;/h2&gt;
 
-&lt;p&gt;But now (a while ago) the &lt;a title='W3C spec' href='http://www.w3.org/TR/css3-values/#font-relative-lengths' target='_blank'&gt;W3C spec&lt;/a&gt; added to CSS3 the rem unit that is relative to the document parent (root em).&lt;/p&gt;
+&lt;p&gt;But now (a while ago) the &lt;a target='_blank' href='http://www.w3.org/TR/css3-values/#font-relative-lengths' title='W3C spec'&gt;W3C spec&lt;/a&gt; added to CSS3 the rem unit that is relative to the document parent (root em).&lt;/p&gt;
 &lt;pre&gt;&lt;code data-language='css'&gt;
 html {
 	font-size: 62.5%;
@@ -345,7 +392,7 @@ child {
 	font-size: 1.2rem; /* 12px */
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;No need to go through all your parent doing that math to change their child and the browser support makes us even happier developers &lt;a title='Can I use rem units?' href='http://caniuse.com/rem' target='_blank'&gt;caniuse.com/rem&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;No need to go through all your parent doing that math to change their child and the browser support makes us even happier developers &lt;a target='_blank' href='http://caniuse.com/rem' title='Can I use rem units?'&gt;caniuse.com/rem&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id='browser_support'&gt;Browser support&lt;/h2&gt;
 
@@ -424,7 +471,7 @@ child {
 &lt;p&gt;
 I started looking for something more elegant that I could use git to deploy
 So I tried Github Pages and Jekyll a &quot;blog-aware, static site generator in Ruby&quot; that uses Liquid template to process the templates.
-But I would do experiments with Node.js and Ruby someday so I choose &lt;a title='Heroku' href='http://www.heroku.com' target='_blank'&gt;Heroku&lt;/a&gt; (cloud application platform for build, deploy, and run cloud apps using Ruby, Node.js, Clojure, Java, Python and Scala).
+But I would do experiments with Node.js and Ruby someday so I choose &lt;a target='_blank' href='http://www.heroku.com' title='Heroku'&gt;Heroku&lt;/a&gt; (cloud application platform for build, deploy, and run cloud apps using Ruby, Node.js, Clojure, Java, Python and Scala).
 &lt;/p&gt;
 &lt;p&gt;I Can run and test locally, pretty simple. &lt;pre&gt;&lt;code data-language='ruby'&gt;
 foreman start

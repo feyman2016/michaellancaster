@@ -9,14 +9,19 @@ I'm not sure when it was but in the end of 2011 or beginning of 2012 I saw <a hr
 
 ##10 things you might not know about CSS3
 
-<object width="640" height="360"><param name="movie" value="http://www.youtube.com/v/54wJkqG8jXE?version=3&amp;hl=en_US&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/54wJkqG8jXE?version=3&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" width="640" height="360" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+<div class="fluidMedia">
+	<iframe src="https://www.youtube.com/embed/54wJkqG8jXE" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+</div>
 
 <br>
 
 And this year (2013) she had another great speak at W3Conf in San Francisco about "More CSS Secrets: Another 10 things you may not know about CSS"
 
 ##More CSS Secrets: Another 10 things you may not know about CSS
-<object width="640" height="360"><param name="movie" value="http://www.youtube.com/v/3ikye7Qc7Ak?version=3&amp;hl=en_US&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/3ikye7Qc7Ak?version=3&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" width="640" height="360" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+<div class="fluidMedia">
+	<iframe src="https://www.youtube.com/embed/3ikye7Qc7Ak" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
+</div>
 
 <br>
 

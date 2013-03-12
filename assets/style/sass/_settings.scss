@@ -1,11 +1,9 @@
-// Normalise CSS
-@import "normalise";
-
 // CSS 3 support 
 @import "compass/css3";
 $experimental-support-for-svg: true;
 
-//variables
+// Normalize CSS
+@import "normalize";
 
 //font colors
 $fc-white: #fff;

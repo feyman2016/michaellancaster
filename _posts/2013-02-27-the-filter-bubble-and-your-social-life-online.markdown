@@ -16,12 +16,16 @@ Watching this great video we can see that people don't loose their old habits to
 
 ##Are we going backwards?!
 
-<object width="640" height="360"><param name="movie" value="http://www.youtube.com/v/B8ofWFx525s?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/B8ofWFx525s?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="640" height="360" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+<div class="fluidMedia">
+	<iframe src="https://www.youtube.com/embed/B8ofWFx525s" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+</div>
 
 ##I also suggest..
 you to watch this incredible documentary called <a href="http://internetrising.net/" title="internet rising" target="_blanc">"Internet Rising"</a> investigating the evolving relationships between the Internet and collective consciousness of humanity. It provokes many questions about ancient and modern paradoxes of life. You definitely should check it out.
 
-<object width="640" height="360"><param name="movie" value="http://www.youtube.com/v/pMh8oBdKkK4?version=3&amp;hl=en_US"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/pMh8oBdKkK4?version=3&amp;hl=en_US" type="application/x-shockwave-flash" width="640" height="360" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+<div class="fluidMedia">
+	<iframe src="https://www.youtube.com/embed/pMh8oBdKkK4" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+</div>
 
 <br>
 Both videos are great to inspired us to think about almost everything surround us in the digital life.

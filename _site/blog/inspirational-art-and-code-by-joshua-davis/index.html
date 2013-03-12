@@ -20,7 +20,7 @@
     <!-- style -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/style/main.css">
+    <link rel="stylesheet" href="/assets/style/app.css">
 
     <!-- RSS feed -->
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
@@ -63,6 +63,8 @@
 		<option value="/about">About</option>
 		<optgroup label="Articles">
 			
+			<option value="/blog/fluid-iframe-and-images-without-javascript-plugins">Fluid iframe and images without use of javascript.</option>
+			
 			<option value="/blog/css-architecture-for-web-applications">CSS Architecture for Web Applications.</option>
 			
 			<option value="/blog/secrets-of-lea-verou-css">Secrets of Lea Verou about CSS.</option>
@@ -86,6 +88,13 @@
 
 	<!-- articles list -->
 	<ul id="articles-list" class="vh">
+		
+		<li>
+			<a href="/blog/fluid-iframe-and-images-without-javascript-plugins" title="Fluid iframe and images without use of javascript.">
+				<h2 class="ui-tit-02">Fluid iframe and images without use of javascript.</h2>
+				<span class="ui-date">12 Mar 2013</span>
+			</a>
+		</li>
 		
 		<li>
 			<a href="/blog/css-architecture-for-web-applications" title="CSS Architecture for Web Applications.">
@@ -156,10 +165,12 @@
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>A friend of mine shared this great talk by Joshua Davis at W3Conf in San Francisco. <br /> Joshua&#8217;s work is very inspirational and see these awesome things makes my life better!</p>
+	<div class="ui-copy"><p>A friend of mine shared this great talk by Joshua Davis at W3Conf in San Francisco. <br /> Joshua&#8217;s work is very inspirational and he can do very cool things using processing.js to generate forms.</p>
 
-<p>Don&#8217;t forget to check out his website <a title='Joshua Davis' href='http://www.joshuadavis.com/' target='_blank'>Joshua Davis</a></p>
-<object height='360' width='640'><param name='movie' value='http://www.youtube.com/v/LJS4fBjdPM4?version=3&amp;hl=en_US&amp;rel=0' /><param name='allowFullScreen' value='true' /><param name='allowscriptaccess' value='always' /><embed src='http://www.youtube.com/v/LJS4fBjdPM4?version=3&amp;hl=en_US&amp;rel=0' height='360' allowscriptaccess='always' width='640' type='application/x-shockwave-flash' allowfullscreen='true' /></object></div>
+<p>Don&#8217;t forget to check out his website <a target='_blank' href='http://www.joshuadavis.com/' title='Joshua Davis'>Joshua Davis</a></p>
+<div class='fluidMedia'>
+	<iframe src='https://www.youtube.com/embed/LJS4fBjdPM4' allowfullscreen='allowfullscreen' frameborder='0' />
+</div></div>
 
     <!-- <span class="meta"><small>By Michael Lancaster &copy; 2013</small></span> -->
 
