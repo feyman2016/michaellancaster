@@ -125,6 +125,7 @@ header#header {
 - Use CSS preprocessors (It doesn't mean you are going to have a good CSS architecture).
 - More developers = more problems so write a Doc & Stylesheets guide for your team.
 - Comments are KING. They wont be there afterwards because you will minify so use wisely.
+- Find the patterns in your design and apply OOCSS method (works great for me).
 - Rule sets in specific order (example how I do it below).
 
 <pre><code data-language="css">
@@ -209,7 +210,7 @@ Example, Let's say we have one module.
 }
 </code></pre>
 
-I even don't need to show you the HTML markup to make you understand the HTML markup, can you see the possibilities here?!
+I even don't need to show you the HTML markup to make you understand the HTML structure, can you see the possibilities here?!
 
 ##One week before this post
 
