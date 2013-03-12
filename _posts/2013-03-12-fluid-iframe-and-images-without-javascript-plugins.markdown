@@ -39,4 +39,11 @@ This is a technique of positioning a element inside of another using "position: 
 }
 </code></pre>
 
+##Browser support
+
+- IE 7+
+- Firefox 3.6+
+- Chrome 6+
+- Safari 5+
+
 Cheers!
