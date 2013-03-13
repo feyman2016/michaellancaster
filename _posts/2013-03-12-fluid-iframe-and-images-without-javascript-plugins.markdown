@@ -39,6 +39,8 @@ This is a technique of positioning a element inside of another using "position: 
 }
 </code></pre>
 
+Example <a href="/blog/secrets-of-lea-verou-css/">here</a>.
+
 ##Browser support
 
 - IE 7+
