@@ -26,7 +26,7 @@ And After see my changes I want to deploy directly to my cloud.
 <pre><code data-language="ruby">
 git add .
 git commit -m "my message"
-git push origin
+git push origin master
 </code></pre>
 Done! Beautiful! Everything up and running.
 
