@@ -24,10 +24,10 @@ This is a technique of positioning a element inside of another using "position: 
 <pre><code data-language="css">
 .fluidMedia {
 	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	height: 0;
-	overflow: hidden;
+	padding-bottom: 56.25%; /* proportion value */
+	padding-top: 30px; /* proportion value */
+	height: 0; /* just 0 */
+	overflow: hidden; /* nothing scape */
 }
 
 .fluidMedia iframe {
