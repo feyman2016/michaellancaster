@@ -185,7 +185,7 @@ header#header {
 - Code reuse. To maintain UI consistency and minimize development effort on typical interface components, those components have to be easily reusable. The source code should not have contextual dependency on the other code, it should be easy to move that code to another place.
 
 
-##My "new" way
+##Our fashionable way
 
 I always had concern about my classes notation name, how should I name semantically meaningful? how should I show this on the HTML? How I will better transfer/show by notation name my HTML structure?.. <br>
 <strong>One of the most important ideas of classes notation name is try to transfer/show the HTML structure reading the classes names on the CSS file</strong>
@@ -212,7 +212,7 @@ Example, Let's say we have one module.
 
 I even don't need to show you the HTML markup to make you understand the HTML structure, can you see the possibilities here?!
 
-##One week before this post
+##I'm changing to..
 
 One week before I write this post I saw the speak of <a href="http://nicolasgallagher.com/" target="_blank" title="">Nicolas Gallagher</a> about "Questioning good practices" (I highly recommend) in his speak he also showed a <a href="http://www.yandex.com/" target="_blank" title="Russian Search engine">Russian Search engine</a> classes notation name and It's true my notation is fashionable at the moment.
 
