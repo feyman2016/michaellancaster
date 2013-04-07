@@ -15,7 +15,7 @@ Two things are very clear to me. First we have to consume the server (imagine if
 
 ## Client - Side templating (the new kid in the block?!)
 
-The client side consists in remove the hard work from the server (even making the servers cost less expansive) and the back end side adding into a very, very known technology called Javascript that runs on each user's browser So no hard work to the server rendering templates and more control for you at your end.
+The client side consists in remove from the back to the client this template rendering into a very, very known technology called Javascript that runs on each user's browser making faster web apps and adding more control for you at your end.
 
 At start the client side template will use placeholders as content using it's own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled and the data will be added into the HTML element.
 
