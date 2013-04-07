@@ -6,6 +6,111 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Basic overview of client - side templating</title>
+				<description>&lt;p&gt;Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. are used to render templates and show content, but lately about two or three years ago we could noticed that developers and companies are changing this using client side templating.&lt;/p&gt;
+
+&lt;h2 id='server__side_templating_the_common_way'&gt;Server - Side templating (the common way)&lt;/h2&gt;
+
+&lt;p&gt;So as I mentioned before back end technologies like Java, Ruby, PHP.. has being used to render the template from the back to the the client side and this approach consists in literally render on the server using one of those technologies and through it into the client - side.&lt;/p&gt;
+
+&lt;p&gt;Two things are very clear to me. First we have to consume the server (imagine if you have to render lots of time), Second is the bandwidth request so the template and the data has to be downloaded into the client side (slow and request bandwidth).&lt;/p&gt;
+
+&lt;h2 id='client__side_templating_the_new_kid_in_the_block'&gt;Client - Side templating (the new kid in the block?!)&lt;/h2&gt;
+
+&lt;p&gt;The client side consists in remove the hard work from the server (even making the servers cost less expansive) and the back end side adding into a very, very known technology called Javascript that runs on each user&amp;#8217;s browser So no hard work to the server rendering templates and more control for you at your end.&lt;/p&gt;
+
+&lt;p&gt;At start the client side template will use placeholders as content using it&amp;#8217;s own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled and the data will be added into the HTML element.&lt;/p&gt;
+
+&lt;h2 id='simple_json_data_example'&gt;Simple JSON data example&lt;/h2&gt;
+&lt;pre&gt;&lt;code data-language='json'&gt;
+{
+  &quot;client&quot;: {
+    &quot;name&quot;: &quot;Michael lancaster&quot;,
+    &quot;name&quot;: &quot;John Due&quot;
+  },
+  &quot;occupation&quot;: {
+    &quot;description&quot;: &quot;Front End Engineer&quot;,
+    &quot;description&quot;: &quot;Jornalist&quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;br /&gt;
+&lt;p&gt;This is very human readable right?!&lt;/p&gt;
+
+&lt;h2 id='simple_web_app_example'&gt;Simple Web app example&lt;/h2&gt;
+
+&lt;p&gt;Here I&amp;#8217;m using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic. You can check out and download the Web app here &lt;a target='_blank' title='Handlebars.js app' href='http://git.io/tUfHyA'&gt;http://git.io/tUfHyA&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id='handlebarsjs_template_markup_example'&gt;Handlebars.js template markup example&lt;/h2&gt;
+&lt;script src='https://gist.github.com/weblancaster/5329561.js'&gt; &lt;/script&gt;&lt;br /&gt;
+&lt;h2 id='app_js_file'&gt;App JS file&lt;/h2&gt;
+
+&lt;p&gt;On my app.js file I request the JSON data, replace the template placeholders, render/compile the template and append to the HTML element.&lt;/p&gt;
+&lt;pre&gt;&lt;code data-language='javascript'&gt;
+//app js file
+function showNewsFromYahooAPI() {
+  $.ajax({
+        url: 'http://query.yahooapis.com/v1/public/yql?q=select%20title%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&amp;format=json&amp;callback=',
+        dataType: 'json'
+    }).done(function(data){
+      var
+        query = data.query.results,
+        source = $('#myTemplate').html(),
+        compiledTemplate = Handlebars.compile(source),
+        result = compiledTemplate(query);
+
+      $('#content').html(result);
+    });
+}
+
+$(function() {
+    showNewsFromYahooAPI();
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id='who_uses_client_side_templating'&gt;Who uses client side templating?!&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Linkedin (Dust.js)&lt;/li&gt;
+
+&lt;li&gt;USAToday (Underscore.js)&lt;/li&gt;
+
+&lt;li&gt;Walmart Mobile (Underscore.js)&lt;/li&gt;
+
+&lt;li&gt;Hulu (Handlebars.js)&lt;/li&gt;
+
+&lt;li&gt;Groupon (Mustache.js)&lt;/li&gt;
+
+&lt;li&gt;And many, many others.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='be_aware_of'&gt;Be aware of..&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Heavy rendering on the users side (devices are not that good as you think they are).&lt;/li&gt;
+
+&lt;li&gt;Organization is king.&lt;/li&gt;
+
+&lt;li&gt;There&amp;#8217;s logic-less and logic templates (ask yourself how complex is my template?).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='some_links_to_client_side_template'&gt;Some links to client side template&lt;/h2&gt;
+&lt;a target='_blank' title='Handlebarsjs' href='http://handlebarsjs.com/'&gt;http://handlebarsjs.com/&lt;/a&gt;&lt;br /&gt;&lt;a target='_blank' title='Mustachejs' href='http://mustache.github.io/'&gt;http://mustache.github.io/&lt;/a&gt;&lt;br /&gt;&lt;a target='_blank' title='Dustjs' href='http://akdubya.github.io/dustjs/'&gt;http://akdubya.github.io/dustjs/&lt;/a&gt;&lt;br /&gt;&lt;a target='_blank' title='Underscorejs' href='http://documentcloud.github.io/underscore/#template'&gt;http://documentcloud.github.io/underscore/#template&lt;/a&gt;&lt;br /&gt;&lt;a target='_blank' title='jQuery tmpl' href='https://github.com/jquery/jquery-tmpl'&gt;https://github.com/jquery/jquery-tmpl&lt;/a&gt;&lt;br /&gt;
+&lt;p&gt;and many others like Jade, Haml-js, Eco, etc.&lt;/p&gt;
+
+&lt;h2 id='i_suggest_you_read'&gt;I suggest you read..&lt;/h2&gt;
+&lt;p&gt;
+Smashing Magazine - Client-Side Templating &lt;a target='_blank' title='Smashing magazine: client side templating' href='http://coding.smashingmagazine.com/2012/12/05/client-side-templating/'&gt;click here.&lt;/a&gt;
+    &lt;br /&gt;
+Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates &lt;a target='_blank' title='Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates' href='http://engineering.linkedin.com/frontend/leaving-jsps-dust-moving-linkedin-dustjs-client-side-templates'&gt;click here.&lt;/a&gt;
+    &lt;br /&gt;
+The client-side templating throwdown: mustache, handlebars, dust.js, and more &lt;a target='_blank' title='The client-side templating throwdown: mustache, handlebars, dust.js, and more' href='http://engineering.linkedin.com/frontend/client-side-templating-throwdown-mustache-handlebars-dustjs-and-more'&gt;click here.&lt;/a&gt;
+
+&lt;/p&gt;
+&lt;p&gt;Cheers!&lt;/p&gt;</description>
+				<published>Sun Apr 07 00:00:00 -0500 2013</published>
+				<link>http://bymichaellancaster.com//blog/basic-overview-of-client-side-templating</link>
+			</item>
+		
+			<item>
 				<title>From San Francisco to the Brazilian developers community.</title>
 				<description>&lt;p&gt;I went to the HTML5 Developers Conference in San Francisco (01 Apr 13 to 03 Apr 13) and there I met some awesome developers from Brazil and as they are very active to help the developers community in Brazil with speaks, presentations and events they decided record a chat with me talking about how it is work in US, how I got a job here and some good tips for those that want to try this adventure.&lt;/p&gt;
 
@@ -17,7 +122,7 @@
 
 &lt;p&gt;The video isn&amp;#8217;t in a good quality but the content is the important.&lt;/p&gt;
 &lt;div class='fluidMedia'&gt;
-	&lt;iframe allowfullscreen='allowfullscreen' src='https://www.youtube.com/embed/73RVbGcZQXk' frameborder='0'&gt; &lt;/iframe&gt;
+	&lt;iframe src='https://www.youtube.com/embed/73RVbGcZQXk' allowfullscreen='allowfullscreen' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;&lt;br /&gt;
 &lt;p&gt;Thanks to all my friends from Brazil shared this to help the developers that thinks to come work in US.&lt;/p&gt;</description>
 				<published>Sat Apr 06 00:00:00 -0500 2013</published>
@@ -333,13 +438,13 @@ header#header {
 
 &lt;h2 id='10_things_you_might_not_know_about_css3'&gt;10 things you might not know about CSS3&lt;/h2&gt;
 &lt;div class='fluidMedia'&gt;
-	&lt;iframe allowfullscreen='allowfullscreen' src='https://www.youtube.com/embed/54wJkqG8jXE' frameborder='0'&gt; &lt;/iframe&gt;
+	&lt;iframe src='https://www.youtube.com/embed/54wJkqG8jXE' allowfullscreen='allowfullscreen' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;&lt;br /&gt;
 &lt;p&gt;And this year (2013) she had another great speak at W3Conf in San Francisco about &amp;#8220;More CSS Secrets: Another 10 things you may not know about CSS&amp;#8221;&lt;/p&gt;
 
 &lt;h2 id='more_css_secrets_another_10_things_you_may_not_know_about_css'&gt;More CSS Secrets: Another 10 things you may not know about CSS&lt;/h2&gt;
 &lt;div class='fluidMedia'&gt;
-	&lt;iframe allowfullscreen='allowfullscreen' src='https://www.youtube.com/embed/3ikye7Qc7Ak' frameborder='0'&gt; &lt;/iframe&gt;
+	&lt;iframe src='https://www.youtube.com/embed/3ikye7Qc7Ak' allowfullscreen='allowfullscreen' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;&lt;br /&gt;
 &lt;p&gt;As you can see she is a Client - Side hacker specifically in CSS and always bringing new ideas and techniques to solve common problems we used to solve with complex javascript code and hacks.&lt;/p&gt;</description>
 				<published>Sun Mar 03 00:00:00 -0600 2013</published>
@@ -352,7 +457,7 @@ header#header {
 
 &lt;p&gt;Don&amp;#8217;t forget to check out his website &lt;a target='_blank' title='Joshua Davis' href='http://www.joshuadavis.com/'&gt;Joshua Davis&lt;/a&gt;&lt;/p&gt;
 &lt;div class='fluidMedia'&gt;
-	&lt;iframe allowfullscreen='allowfullscreen' src='https://www.youtube.com/embed/LJS4fBjdPM4' frameborder='0'&gt; &lt;/iframe&gt;
+	&lt;iframe src='https://www.youtube.com/embed/LJS4fBjdPM4' allowfullscreen='allowfullscreen' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;</description>
 				<published>Thu Feb 28 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/inspirational-art-and-code-by-joshua-davis</link>
@@ -370,13 +475,13 @@ header#header {
 
 &lt;h2 id='are_we_going_backwards'&gt;Are we going backwards?!&lt;/h2&gt;
 &lt;div class='fluidMedia'&gt;
-	&lt;iframe allowfullscreen='allowfullscreen' src='https://www.youtube.com/embed/B8ofWFx525s' frameborder='0'&gt; &lt;/iframe&gt;
+	&lt;iframe src='https://www.youtube.com/embed/B8ofWFx525s' allowfullscreen='allowfullscreen' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;
 &lt;h2 id='i_also_suggest'&gt;I also suggest..&lt;/h2&gt;
 
 &lt;p&gt;you to watch this incredible documentary called &lt;a target='_blanc' title='internet rising' href='http://internetrising.net/'&gt;&quot;Internet Rising&quot;&lt;/a&gt; investigating the evolving relationships between the Internet and collective consciousness of humanity. It provokes many questions about ancient and modern paradoxes of life. You definitely should check it out.&lt;/p&gt;
 &lt;div class='fluidMedia'&gt;
-	&lt;iframe allowfullscreen='allowfullscreen' src='https://www.youtube.com/embed/pMh8oBdKkK4' frameborder='0'&gt; &lt;/iframe&gt;
+	&lt;iframe src='https://www.youtube.com/embed/pMh8oBdKkK4' allowfullscreen='allowfullscreen' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;&lt;br /&gt;
 &lt;p&gt;Both videos are great to inspired us to think about almost everything surround us in the digital life.&lt;/p&gt;</description>
 				<published>Wed Feb 27 00:00:00 -0600 2013</published>
@@ -549,19 +654,6 @@ git push origin master
 &lt;p&gt;I may do a better explanation how it works further on but for now I need some posts.&lt;/p&gt;</description>
 				<published>Wed Jan 30 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/what-technologies-im-using-to-blog</link>
-			</item>
-		
-			<item>
-				<title>First things first.</title>
-				<description>&lt;p&gt;Since I started to work as a Front End Developer I&amp;#8217;ve been studying and learning new things every single day and I think now it&amp;#8217;s a good time to start share my humble knowledge and other main reason is that I haven&amp;#8217;t studying English (Yes..shame on me!) just technical/theory stuff. &lt;br /&gt; Ah I moved from Brazil to US months ago and I want to make my English even better than my Portuguese.&lt;/p&gt;
-
-&lt;p&gt;So read in English is very common for me but now I need to make my mind think as a native American (I&amp;#8217;m half American by the way but I lived in Brazil for 21 years) explore new words therefore what is the best way to explore those words than practice writing a blog.&lt;/p&gt;
-
-&lt;p&gt;triple win here. I will practice my English, keep learning technical stuff and share some knowledge :)&lt;/p&gt;
-
-&lt;p&gt;So please be patient and feel free to contribute. &lt;br /&gt; thanks.&lt;/p&gt;</description>
-				<published>Wed Jan 30 00:00:00 -0600 2013</published>
-				<link>http://bymichaellancaster.com//blog/first-things-first</link>
 			</item>
 		
 	</channel>

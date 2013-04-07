@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+      <loc>http://bymichaellancaster.com/blog/basic-overview-of-client-side-templating</loc>
+      <lastmod>2013-04-07</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://bymichaellancaster.com/blog/from-san-francisco-to-the-brazilian-developers-community</loc>
       <lastmod>2013-04-06</lastmod>
       <changefreq>never</changefreq>
