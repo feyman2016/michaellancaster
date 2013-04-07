@@ -27,3 +27,5 @@ auto: false
 # Makes pretty (descriptive) permalinks. See Jekyll docs for alternatives.
 # /blog/:year/:month/:day/:title
 permalink: /blog/:title
+
+markdown: redcarpet

@@ -185,20 +185,21 @@
 
 	<div class="ui-copy"><p>Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. are used to render templates and show content, but lately about two or three years ago we could noticed that developers and companies are changing this using client side templating.</p>
 
-<h2 id='server__side_templating_the_common_way'>Server - Side templating (the common way)</h2>
+<h2>Server - Side templating (the common way)</h2>
 
 <p>So as I mentioned before back end technologies like Java, Ruby, PHP.. has being used to render the template from the back to the the client side and this approach consists in literally render on the server using one of those technologies and through it into the client - side.</p>
 
 <p>Two things are very clear to me. First we have to consume the server (imagine if you have to render lots of time), Second is the bandwidth request so the template and the data has to be downloaded into the client side (slow and request bandwidth).</p>
 
-<h2 id='client__side_templating_the_new_kid_in_the_block'>Client - Side templating (the new kid in the block?!)</h2>
+<h2>Client - Side templating (the new kid in the block?!)</h2>
 
-<p>The client side consists in remove from the back to the client this template rendering into a very, very known technology called Javascript that runs on each user&#8217;s browser making faster web apps and adding more control for you at your end.</p>
+<p>The client side consists in remove from the back to the client this template rendering into a very, very known technology called Javascript that runs on each user&#39;s browser making faster web apps and adding more control for you at your end.</p>
 
-<p>At start the client side template will use placeholders as content using it&#8217;s own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.</p>
+<p>At start the client side template will use placeholders as content using it&#39;s own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.</p>
 
-<h2 id='simple_json_data_example'>Simple JSON data example</h2>
-<pre><code data-language='json'>
+<h2>Simple JSON data example</h2>
+
+<pre><code data-language="json">
 {
   "client": {
     "name": "Michael lancaster",
@@ -209,20 +210,28 @@
     "description": "Jornalist"
   }
 }
-</code></pre><br />
+</code></pre>
+
+<p><br/></p>
+
 <p>This is very human readable right?!</p>
 
-<h2 id='simple_web_app_example'>Simple Web app example</h2>
+<h2>Simple Web app example</h2>
 
-<p>Here I&#8217;m using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic. You can check out and download the Web app here <a title='Handlebars.js app' href='http://git.io/tUfHyA' target='_blank'>http://git.io/tUfHyA</a></p>
+<p>Here I&#39;m using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic.
+You can check out and download the Web app here <a href="http://git.io/tUfHyA" title="Handlebars.js app" target="_blank">http://git.io/tUfHyA</a></p>
 
-<h2 id='handlebarsjs_template_markup_example'>Handlebars.js template markup example</h2>
-<script src='https://gist.github.com/weblancaster/5329561.js'> </script><br />
-<h2 id='app_js_file'>App JS file</h2>
+<h2>Handlebars.js template markup example</h2>
+
+<script src="https://gist.github.com/weblancaster/5329561.js"> </script>
+
+<p><br/></p>
+
+<h2>App JS file</h2>
 
 <p>On my app.js file I requested the JSON data, replaced the template placeholders, rendered/compiled the template and appended into the HTML element.</p>
-<pre><code data-language='javascript'>
-//app js file
+
+<pre><code data-language="javascript">
 function showNewsFromYahooAPI() {
   $.ajax({
         url: 'http://query.yahooapis.com/v1/public/yql?q=select%20title%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&format=json&callback=',
@@ -242,46 +251,53 @@ $(function() {
     showNewsFromYahooAPI();
 });
 </code></pre>
-<h2 id='who_uses_client_side_templating'>Who uses client side templating?!</h2>
+
+<h2>Who uses client side templating?!</h2>
 
 <ul>
 <li>Linkedin (Dust.js)</li>
-
 <li>USAToday (Underscore.js)</li>
-
 <li>Walmart Mobile (Underscore.js)</li>
-
 <li>Hulu (Handlebars.js)</li>
-
 <li>Groupon (Mustache.js)</li>
-
 <li>And many, many others.</li>
 </ul>
 
-<h2 id='be_aware_of'>Be aware of..</h2>
+<h2>Be aware of..</h2>
 
 <ul>
 <li>Heavy rendering on the users side (devices are not that good as you think they are).</li>
-
 <li>Organization is king.</li>
-
-<li>There&#8217;s logic-less and logic templates (ask yourself how complex is my template?).</li>
+<li>There&#39;s logic-less and logic templates (ask yourself how complex is my template?).</li>
 </ul>
 
-<h2 id='some_links_to_client_side_template'>Some links to client side template</h2>
-<a title='Handlebarsjs' href='http://handlebarsjs.com/' target='_blank'>http://handlebarsjs.com/</a><br /><a title='Mustachejs' href='http://mustache.github.io/' target='_blank'>http://mustache.github.io/</a><br /><a title='Dustjs' href='http://akdubya.github.io/dustjs/' target='_blank'>http://akdubya.github.io/dustjs/</a><br /><a title='Underscorejs' href='http://documentcloud.github.io/underscore/#template' target='_blank'>http://documentcloud.github.io/underscore/#template</a><br /><a title='jQuery tmpl' href='https://github.com/jquery/jquery-tmpl' target='_blank'>https://github.com/jquery/jquery-tmpl</a><br />
-<p>and many others like Jade, Haml-js, Eco, etc.</p>
+<h2>Some links to client side template</h2>
 
-<h2 id='i_suggest_you_read'>I suggest you read..</h2>
+<p><a href="http://handlebarsjs.com/" title="Handlebarsjs" target="_blank">http://handlebarsjs.com/</a>
+  <br>
+<a href="http://mustache.github.io/" title="Mustachejs" target="_blank">http://mustache.github.io/</a>
+  <br>
+<a href="http://akdubya.github.io/dustjs/" title="Dustjs" target="_blank">http://akdubya.github.io/dustjs/</a>
+  <br>
+<a href="http://documentcloud.github.io/underscore/#template" title="Underscorejs" target="_blank">http://documentcloud.github.io/underscore/#template</a>
+  <br>
+<a href="https://github.com/jquery/jquery-tmpl" title="jQuery tmpl" target="_blank">https://github.com/jquery/jquery-tmpl</a>
+  <br>
+and many others like Jade, Haml-js, Eco, etc.</p>
+
+<h2>I suggest you read..</h2>
+
 <p>
-Smashing Magazine - Client-Side Templating <a title='Smashing magazine: client side templating' href='http://coding.smashingmagazine.com/2012/12/05/client-side-templating/' target='_blank'>click here.</a>
-    <br />
-Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates <a title='Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates' href='http://engineering.linkedin.com/frontend/leaving-jsps-dust-moving-linkedin-dustjs-client-side-templates' target='_blank'>click here.</a>
-    <br />
-The client-side templating throwdown: mustache, handlebars, dust.js, and more <a title='The client-side templating throwdown: mustache, handlebars, dust.js, and more' href='http://engineering.linkedin.com/frontend/client-side-templating-throwdown-mustache-handlebars-dustjs-and-more' target='_blank'>click here.</a>
+Smashing Magazine - Client-Side Templating <a href="http://coding.smashingmagazine.com/2012/12/05/client-side-templating/" title="Smashing magazine: client side templating" target="_blank">click here.</a>
+    <br>
+Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates <a href="http://engineering.linkedin.com/frontend/leaving-jsps-dust-moving-linkedin-dustjs-client-side-templates" title="Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates" target="_blank">click here.</a>
+    <br>
+The client-side templating throwdown: mustache, handlebars, dust.js, and more <a href="http://engineering.linkedin.com/frontend/client-side-templating-throwdown-mustache-handlebars-dustjs-and-more" title="The client-side templating throwdown: mustache, handlebars, dust.js, and more" target="_blank">click here.</a>
 
 </p>
-<p>Cheers!</p></div>
+
+<p>Cheers!</p>
+</div>
 
     <!-- <span class="meta"><small>By Michael Lancaster &copy; 2013</small></span> -->
 

@@ -183,81 +183,88 @@
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><h2 id='the_pastpresent'>The past/present</h2>
+	<div class="ui-copy"><h2>The past/present</h2>
 
-<p>I could talk a lot about all the principal units we have been using but let&#8217;s get this straight we have been using &#8220;px&#8221; since ever and this approach just doesn&#8217;t work anymore or scale.</p>
-<pre><code data-language='css'>
+<p>I could talk a lot about all the principal units we have been using but let&#39;s get this straight we have been using &quot;px&quot; since ever and this approach just doesn&#39;t work anymore or scale.</p>
+
+<pre><code data-language="css">
 .parent {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 .child {
-	font-size: 12px;
+    font-size: 12px;
 }
 </code></pre>
-<p>Now with the popularity and acceptance of the Responsive Design (web applications accessible in any devices) developers and designers are thinking more about scale things and make it fit to their user&#8217;s device. Style sheets that use relative units can more easily scale from one device environment to another. Therefore we started to scale the font-size transforming pixel in em&#8217;s using this math child / parent = em&#8217;s voila!!</p>
-<pre><code data-language='css'>
+
+<p>Now with the popularity and acceptance of the Responsive Design (web applications accessible in any devices) developers and designers are thinking more about scale things and make it fit to their user&#39;s device.
+Style sheets that use relative units can more easily scale from one device environment to another.
+Therefore we started to scale the font-size transforming pixel in em&#39;s using this math child / parent = em&#39;s voila!!</p>
+
+<pre><code data-language="css">
 .parent {
-	font-size: 16px;
+    font-size: 16px;
 }
 
 .child {
-	font-size: 0.75em; /* 12 / 16 = 0.75 */
+    font-size: 0.75em; /* 12 / 16 = 0.75 */
 }
 </code></pre>
-<p>Oh! wait. Do we have to repeat this math going through element parent by element parent to give their child the right em&#8217;s values? It&#8217;s hard to believe but yes we do.</p>
 
-<p>Now when your wife, girlfriend, dog (whatever) asked you why you are loosing hair and getting bald that&#8217;s your answer &#8220;I use px to calculate em&#8217;s Baby!&#8221;</p>
+<p>Oh! wait. Do we have to repeat this math going through element parent by element parent to give their child the right em&#39;s values? It&#39;s hard to believe but yes we do.</p>
 
-<h2 id='the_presentfuture'>The present/future</h2>
+<p>Now when your wife, girlfriend, dog (whatever) asked you why you are loosing hair and getting bald that&#39;s your answer &quot;I use px to calculate em&#39;s Baby!&quot;</p>
 
-<p>But now (a while ago) the <a title='W3C spec' href='http://www.w3.org/TR/css3-values/#font-relative-lengths' target='_blank'>W3C spec</a> added to CSS3 the rem unit that is relative to the document parent (root em).</p>
-<pre><code data-language='css'>
+<h2>The present/future</h2>
+
+<p>But now (a while ago) the <a href="http://www.w3.org/TR/css3-values/#font-relative-lengths" title="W3C spec" target="_blank">W3C spec</a> added to CSS3 the rem unit that is relative to the document parent (root em).</p>
+
+<pre><code data-language="css">
 html {
-	font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 parent {
-	font-size: 1.6rem; /* 16px */
+    font-size: 1.6rem; /* 16px */
 }
 
 child {
-	font-size: 1.2rem; /* 12px */
+    font-size: 1.2rem; /* 12px */
 }
 </code></pre>
-<p>No need to go through all your parent doing that math to change their child and the browser support makes us even happier developers <a title='Can I use rem units?' href='http://caniuse.com/rem' target='_blank'>caniuse.com/rem</a></p>
 
-<h2 id='browser_support'>Browser support</h2>
+<p>No need to go through all your parent doing that math to change their child and the browser support makes us even happier developers <a href="http://caniuse.com/rem" title="Can I use rem units?" target="_blank">caniuse.com/rem</a></p>
+
+<h2>Browser support</h2>
 
 <ul>
 <li>IE 9+</li>
-
 <li>Firefox 3.6+</li>
-
 <li>Chrome 6+</li>
-
 <li>Safari 5+</li>
-
 <li>Opera 11.6+</li>
 </ul>
 
-<h2 id='old_browser_support'>Old browser support</h2>
-<pre><code data-language='css'>
+<h2>Old browser support</h2>
+
+<pre><code data-language="css">
 html {
-	font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 parent {
-	font-size: 16px;
-	font-size: 1.6rem; /* 16px */
+    font-size: 16px;
+    font-size: 1.6rem; /* 16px */
 }
 
 child {
-	font-size: 12px;
-	font-size: 1.2rem; /* 12px */
+    font-size: 12px;
+    font-size: 1.2rem; /* 12px */
 }
 </code></pre>
-<p>Let&#8217;s go now change all our style sheets and make it good for all users and developers!!</p></div>
+
+<p>Let&#39;s go now change all our style sheets and make it good for all users and developers!!</p>
+</div>
 
     <!-- <span class="meta"><small>By Michael Lancaster &copy; 2013</small></span> -->
 

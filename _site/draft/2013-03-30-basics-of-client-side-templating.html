@@ -183,74 +183,72 @@
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>I&#8217;m not a back end developer but as a developers I think we have to have an overview of the technologies that surround us.</p>
+	<div class="ui-copy"><p>I&#39;m not a back end developer but as a developers I think we have to have an overview of the technologies that surround us.</p>
 
 <p>Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. uses to render/show datas, but lately two or three years ago we can noticed developers and companies are changing the way they render/show the data/content into the web application using client side technologies javascript in this case.</p>
 
-<h2 id='who_uses_client_side_templating'>Who uses client side templating?!</h2>
+<h2>Who uses client side templating?!</h2>
 
 <ul>
 <li>Linkedin (Dust.js)</li>
-
 <li>USAToday (Underscore.js)</li>
-
 <li>Walmart Mobile (Underscore.js)</li>
-
 <li>Hulu (Handlebars.js)</li>
-
 <li>Groupon (Mustache.js)</li>
-
 <li>And many, many others.</li>
 </ul>
 
-<h2 id='server__side_templating_the_common_way'>Server - Side templating (the common way)</h2>
+<h2>Server - Side templating (the common way)</h2>
 
 <p>So as I mentioned before back end technologies like Java, Ruby, PHP.. has being used to render the data from the back to the the client side and this approach consists in literally render the on the server using one of those technologies and through into the client - side.</p>
 
 <p>Two things are very clear to me. First we have to consume the server (imagine if you have to render lots of time), Second is the bandwidth request/load so the template and the data has to be loaded into the client side (slow and request more bandwidth).</p>
 
-<h2 id='client__side_templating_the_new_kid_in_the_block'>Client - Side templating (the new kid in the block?!)</h2>
+<h2>Client - Side templating (the new kid in the block?!)</h2>
 
 <p>The client side consists in remove the hard work from the server (making the servers cost less expansive) and the back end side and add to a very, very common technologies called Javascript that renders in each users browsers So no hard work to the server rendering template.</p>
 
 <p>The client side template will just use the data request from the database using another very known technology json and then it you will render in the users browser</p>
 
-<h2 id='data_json_example'>Data JSON example</h2>
-<pre><code data-language='json'>
+<h2>Data JSON example</h2>
+
+<pre><code data-language="json">
 {
-	"client": {
-		"name": "Michael lancaster",
-		"name": "John Due"
-	}
-	"occupation": {
-	    "description": "Front End Engineer",
-		"description": "Jornalist"
-	},
+    "client": {
+        "name": "Michael lancaster",
+        "name": "John Due"
+    }
+    "occupation": {
+        "description": "Front End Engineer",
+        "description": "Jornalist"
+    },
 }
-</code></pre><br />
+</code></pre>
+
+<p><br/></p>
+
 <p>This is very human readable right?!</p>
 
-<h2 id='be_aware_of'>Be aware of..</h2>
+<h2>Be aware of..</h2>
 
 <ul>
 <li>Heavy rendering on the users side (devices are not that good as you think they are).</li>
-
 <li>Organization (you are going to use javascript and make separate data from the)</li>
 </ul>
 
-<p>When a Web app is designed to be on Desktop and it sees on mobile the differences between these two devices it shows are very clear for the user, the user interaction like &#8220;click&#8221; turns to be emulated as &#8220;touch events&#8221;, the screen-size as iPhone is 320x356 pixels, the mobile viewport 960px, performance So I&#8217;ll approach the basic development of mobile web apps focusing on iOS device.</p>
+<p>When a Web app is designed to be on Desktop and it sees on mobile the differences between these two devices it shows are very clear for the user, the user interaction like &quot;click&quot; turns to be emulated as &quot;touch events&quot;, the screen-size as iPhone is 320x356 pixels, the mobile viewport 960px, performance
+So I&#39;ll approach the basic development of mobile web apps focusing on iOS device.</p>
 
-<h2 id='viewport_and_screensizes'>Viewport and screensizes</h2>
+<h2>Viewport and screensizes</h2>
 
-<h2 id='include_in_this_post'>Include in this post</h2>
+<h2>Include in this post</h2>
 
 <ul>
 <li>Network connection speedy.</li>
-
 <li>Device Baterry and memory.</li>
-
 <li>Retina Display</li>
-</ul></div>
+</ul>
+</div>
 
     <!-- <span class="meta"><small>By Michael Lancaster &copy; </small></span> -->
 
