@@ -185,6 +185,14 @@ fluid media (images and videos)
 	}
 }
 
+.fluidImg {
+	
+	img {
+		max-width: 600px;
+		width: 100%;
+	}
+}
+
 /*
 =========================
 Disqus

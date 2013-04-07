@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--[if IE]> <html class="no-js ie"> <![endif]-->
+<!--[if lt IE 9]> <html class="no-js ie"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
@@ -63,7 +63,9 @@
 		<option value="/about">About</option>
 		<optgroup label="Articles">
 			
-			<option value="/blog/fluid-iframe-and-images-without-javascript-plugins">Fluid iframe and images without use of javascript.</option>
+			<option value="/blog/from-san-francisco-to-the-brazilian-developers-community">From San Francisco to the Brazilian developers community.</option>
+			
+			<option value="/blog/fluid-iframe-and-images-without-javascript-plugins">Fluid iframe without use of javascript.</option>
 			
 			<option value="/blog/css-architecture-for-web-applications">CSS Architecture for Web Applications.</option>
 			
@@ -90,8 +92,15 @@
 	<ul id="articles-list" class="vh">
 		
 		<li>
-			<a href="/blog/fluid-iframe-and-images-without-javascript-plugins" title="Fluid iframe and images without use of javascript.">
-				<h2 class="ui-tit-02">Fluid iframe and images without use of javascript.</h2>
+			<a href="/blog/from-san-francisco-to-the-brazilian-developers-community" title="From San Francisco to the Brazilian developers community.">
+				<h2 class="ui-tit-02">From San Francisco to the Brazilian developers community.</h2>
+				<span class="ui-date">06 Apr 2013</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="/blog/fluid-iframe-and-images-without-javascript-plugins" title="Fluid iframe without use of javascript.">
+				<h2 class="ui-tit-02">Fluid iframe without use of javascript.</h2>
 				<span class="ui-date">12 Mar 2013</span>
 			</a>
 		</li>
@@ -171,7 +180,7 @@
 <p>
 I started looking for something more elegant that I could use git to deploy
 So I tried Github Pages and Jekyll a "blog-aware, static site generator in Ruby" that uses Liquid template to process the templates.
-But I would do experiments with Node.js and Ruby someday so I choose <a title='Heroku' href='http://www.heroku.com' target='_blank'>Heroku</a> (cloud application platform for build, deploy, and run cloud apps using Ruby, Node.js, Clojure, Java, Python and Scala).
+But I would do experiments with Node.js and Ruby someday so I choose <a target='_blank' title='Heroku' href='http://www.heroku.com'>Heroku</a> (cloud application platform for build, deploy, and run cloud apps using Ruby, Node.js, Clojure, Java, Python and Scala).
 </p>
 <p>I Can run and test locally, pretty simple. <pre><code data-language='ruby'>
 foreman start
@@ -181,7 +190,7 @@ foreman start
 <pre><code data-language='ruby'>
 git add .
 git commit -m "my message"
-git push origin
+git push origin master
 </code></pre>
 <p>Done! Beautiful! Everything up and running.</p>
 

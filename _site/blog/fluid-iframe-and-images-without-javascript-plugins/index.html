@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<!--[if IE]> <html class="no-js ie"> <![endif]-->
+<!--[if lt IE 9]> <html class="no-js ie"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> Fluid iframe and images without use of javascript. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL</title>
+    <title> Fluid iframe without use of javascript. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" Fluid iframe and images without use of javascript. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL">
+    <meta name="description" content=" Fluid iframe without use of javascript. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Blog by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
@@ -63,7 +63,9 @@
 		<option value="/about">About</option>
 		<optgroup label="Articles">
 			
-			<option value="/blog/fluid-iframe-and-images-without-javascript-plugins">Fluid iframe and images without use of javascript.</option>
+			<option value="/blog/from-san-francisco-to-the-brazilian-developers-community">From San Francisco to the Brazilian developers community.</option>
+			
+			<option value="/blog/fluid-iframe-and-images-without-javascript-plugins">Fluid iframe without use of javascript.</option>
 			
 			<option value="/blog/css-architecture-for-web-applications">CSS Architecture for Web Applications.</option>
 			
@@ -90,8 +92,15 @@
 	<ul id="articles-list" class="vh">
 		
 		<li>
-			<a href="/blog/fluid-iframe-and-images-without-javascript-plugins" title="Fluid iframe and images without use of javascript.">
-				<h2 class="ui-tit-02">Fluid iframe and images without use of javascript.</h2>
+			<a href="/blog/from-san-francisco-to-the-brazilian-developers-community" title="From San Francisco to the Brazilian developers community.">
+				<h2 class="ui-tit-02">From San Francisco to the Brazilian developers community.</h2>
+				<span class="ui-date">06 Apr 2013</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="/blog/fluid-iframe-and-images-without-javascript-plugins" title="Fluid iframe without use of javascript.">
+				<h2 class="ui-tit-02">Fluid iframe without use of javascript.</h2>
 				<span class="ui-date">12 Mar 2013</span>
 			</a>
 		</li>
@@ -159,13 +168,13 @@
 
 		<article class="post">
 
-    <h2 class="ui-tit-01">Fluid iframe and images without use of javascript.</h2>
+    <h2 class="ui-tit-01">Fluid iframe without use of javascript.</h2>
 
     <span class="ui-date db">12 Mar 13</span>
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>Simple technique to make fluid iframes and images without use of javascript or plugins. Using this technique we have more gains in performance and simplicity.</p>
+	<div class="ui-copy"><p>Simple technique to make fluid iframes without use of javascript or plugins. Using this technique we have more gains in performance and simplicity.</p>
 
 <p>This is a technique of positioning a element inside of another using &#8220;position: absolute;&#8221; for the &#8220;child&#8221; and &#8220;position: relative;&#8221; for the &#8220;wrap&#8221;.</p>
 
@@ -174,14 +183,14 @@
 <h2 id='html'>HTML</h2>
 <pre><code data-language='html'>
 <div class='fluidMedia'>
-	<iframe frameborder='0' src=''> </iframe>
+	<iframe src='' frameborder='0'> </iframe>
 </div>
 </code></pre>
 <h2 id='css'>CSS</h2>
 <pre><code data-language='css'>
 .fluidMedia {
 	position: relative;
-	padding-bottom: 56.25%;
+	padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 */
 	padding-top: 30px;
 	height: 0;
 	overflow: hidden;
@@ -195,6 +204,20 @@
 	height: 100%;
 }
 </code></pre>
+<p>Example <a title='fluid iframe example' href='/blog/secrets-of-lea-verou-css/'>here</a>.</p>
+
+<h2 id='browser_support'>Browser support</h2>
+
+<ul>
+<li>IE 7+</li>
+
+<li>Firefox 3.6+</li>
+
+<li>Chrome 6+</li>
+
+<li>Safari 5+</li>
+</ul>
+
 <p>Cheers!</p></div>
 
     <!-- <span class="meta"><small>By Michael Lancaster &copy; 2013</small></span> -->

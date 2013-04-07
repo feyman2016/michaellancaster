@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> Inspirational Art and Code by Joshua Davis. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL</title>
+    <title> The basics of Client - Side templating |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" Inspirational Art and Code by Joshua Davis. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL">
+    <meta name="description" content=" The basics of Client - Side templating |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Blog by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
@@ -168,20 +168,82 @@
 
 		<article class="post">
 
-    <h2 class="ui-tit-01">Inspirational Art and Code by Joshua Davis.</h2>
+    <h2 class="ui-tit-01">The basics of Client - Side templating</h2>
 
-    <span class="ui-date db">28 Feb 13</span>
+    <span class="ui-date db"></span>
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>A friend of mine shared this great talk by Joshua Davis at W3Conf in San Francisco. <br /> Joshua&#8217;s work is very inspirational and he can do very cool things using processing.js to generate forms.</p>
+	<div class="ui-copy"><p>I&#8217;m not a back end developer but as a developers I think we have to have an overview of the technologies that surround us.</p>
 
-<p>Don&#8217;t forget to check out his website <a target='_blank' title='Joshua Davis' href='http://www.joshuadavis.com/'>Joshua Davis</a></p>
-<div class='fluidMedia'>
-	<iframe allowfullscreen='allowfullscreen' src='https://www.youtube.com/embed/LJS4fBjdPM4' frameborder='0'> </iframe>
-</div></div>
+<p>Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. uses to render/show datas, but lately two or three years ago we can noticed developers and companies are changing the way they render/show the data/content into the web application using client side technologies javascript in this case.</p>
 
-    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2013</small></span> -->
+<h2 id='who_uses_client_side_templating'>Who uses client side templating?!</h2>
+
+<ul>
+<li>Linkedin (Dust.js)</li>
+
+<li>USAToday (Underscore.js)</li>
+
+<li>Walmart Mobile (Underscore.js)</li>
+
+<li>Hulu (Handlebars.js)</li>
+
+<li>Groupon (Mustache.js)</li>
+
+<li>And many, many others.</li>
+</ul>
+
+<h2 id='server__side_templating_the_common_way'>Server - Side templating (the common way)</h2>
+
+<p>So as I mentioned before back end technologies like Java, Ruby, PHP.. has being used to render the data from the back to the the client side and this approach consists in literally render the on the server using one of those technologies and through into the client - side.</p>
+
+<p>Two things are very clear to me. First we have to consume the server (imagine if you have to render lots of time), Second is the bandwidth request/load so the template and the data has to be loaded into the client side (slow and request more bandwidth).</p>
+
+<h2 id='client__side_templating_the_new_kid_in_the_block'>Client - Side templating (the new kid in the block?!)</h2>
+
+<p>The client side consists in remove the hard work from the server (making the servers cost less expansive) and the back end side and add to a very, very common technologies called Javascript that renders in each users browsers So no hard work to the server rendering template.</p>
+
+<p>The client side template will just use the data request from the database using another very known technology json and then it you will render in the users browser</p>
+
+<h2 id='data_json_example'>Data JSON example</h2>
+<pre><code data-language='json'>
+{
+	"client": {
+		"name": "Michael lancaster",
+		"name": "John Due"
+	}
+	"occupation": {
+	    "description": "Front End Engineer",
+		"description": "Jornalist"
+	},
+}
+</code></pre><br />
+<p>This is very human readable right?!</p>
+
+<h2 id='be_aware_of'>Be aware of..</h2>
+
+<ul>
+<li>Heavy rendering on the users side (devices are not that good as you think they are).</li>
+
+<li>Organization (you are going to use javascript and make separate data from the)</li>
+</ul>
+
+<p>When a Web app is designed to be on Desktop and it sees on mobile the differences between these two devices it shows are very clear for the user, the user interaction like &#8220;click&#8221; turns to be emulated as &#8220;touch events&#8221;, the screen-size as iPhone is 320x356 pixels, the mobile viewport 960px, performance So I&#8217;ll approach the basic development of mobile web apps focusing on iOS device.</p>
+
+<h2 id='viewport_and_screensizes'>Viewport and screensizes</h2>
+
+<h2 id='include_in_this_post'>Include in this post</h2>
+
+<ul>
+<li>Network connection speedy.</li>
+
+<li>Device Baterry and memory.</li>
+
+<li>Retina Display</li>
+</ul></div>
+
+    <!-- <span class="meta"><small>By Michael Lancaster &copy; </small></span> -->
 
             <div id="disqus_thread"></div>
 		    <script type="text/javascript">

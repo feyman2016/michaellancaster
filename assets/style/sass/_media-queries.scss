@@ -1,15 +1,6 @@
 //first breakpoint
-$git_breakpoint: "max-width: 1219px";
 $first_breakpoint: "max-width: 865px";
 $last_breakpoint: "max-width: 700px";
-
-// Github repository breakpoint
-@media all and ($git_breakpoint) {
-	.github-box {
-		width: 90%;
-		float: none;
-	}
-}
 
 //First content breakpoint
 @media all and ($first_breakpoint) {

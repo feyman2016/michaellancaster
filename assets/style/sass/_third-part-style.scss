@@ -69,10 +69,13 @@ Github - Jquery
 */
 
 /* Github Box */
-.github-wrap > div {
+/* Github Box */
+
+.github-box-wrap {
   display: inline-block;
   width: 46%;
-  margin-right: 1.2em;
+  margin-right: 0.6em;
+  margin-left: 0.6em;
   margin-bottom: 2em;
 }
 
@@ -92,7 +95,7 @@ Github - Jquery
 
 /* Github Box Header */
 
-.github-box-header {
+.github-box .github-box-header {
   position: relative;
   border-bottom: 1px solid #ddd;
   border-radius: 5px 5px 0 0;
@@ -102,7 +105,7 @@ Github - Jquery
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc',endColorstr='#ebebeb')";
 }
 
-.github-box-tit {
+.github-box .github-box-header h3 {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -111,12 +114,13 @@ Github - Jquery
   padding: 10px 10px 10px 10px;
 }
 
-.github-box-tit a {
+.github-box .github-box-header h3 a {
   font-weight: bold
 }
 
 /* Github Box Header - Stats */
-.github-stats {
+
+.github-box .github-box-header .github-stats {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -129,7 +133,7 @@ Github - Jquery
   height: 21px;
 }
 
-.github-stats a {
+.github-box .github-box-header .github-stats a {
   display: inline-block;
   height: 21px;
   color: #666;
@@ -139,60 +143,66 @@ Github - Jquery
   opacity: 0.7;
 }
 
-.github-stats a:hover {
+.github-box .github-box-header .github-stats a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 
-.github-stats .repo-watchers {
+.github-box .github-box-header .github-stats .repo-watchers {
   border-right: 1px solid #ddd;
   background-position: 3px 4px;
 }
 
-.github-stats .repo-forks {
+.github-box .github-box-header .github-stats .repo-forks {
   background-position: 2px -14px;
   padding-left: 15px;
 }
 
 /* Github Box Content */
-.github-box-content {
+
+.github-box .github-box-content {
   padding: 10px;
   font-weight: 300;
   font-size: 0.7em;
 }
 
-.github-box-content-txt {
+.github-box .github-box-content p {
   margin: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.repo-link {
+.github-box .github-box-content .repo-link {
   font-weight: bold;
 }
 
 /* Github Box Download */
-.github-box-download {
+
+.github-box .github-box-download {
   position: relative;
   border-top: 1px solid #ddd;
   background: white;
   border-radius: 0 0 3px 3px;
   padding: 10px;
-  height: 45px;
+  height: 46px;
 }
 
-.repo-update {
+.github-box .github-box-download .repo-update {
   margin: 0;
   font-size: 11px;
   color: #666;
   line-height: 24px;
 }
 
-.github-box-download-strong {
+.github-box .github-box-download .repo-update strong {
   font-size: 12px;
   font-weight: bold;
   color: #000;
 }
 
-.repo-download {
+.github-box .github-box-download .repo-download {
   position: absolute;
   display: block;
   top: 10px;
@@ -217,10 +227,19 @@ Github - Jquery
   opacity: 0.7;
 }
 
-.repo-download:hover {
+.github-box .github-box-download .repo-download:hover {
   color: #527894;
   border-color: #cfe3ed;
   border-bottom-color: #9fc7db;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+}
+
+/* breakpoint content-driven */
+@media all and (max-width: 678px) { 
+  .github-box-wrap {
+    display: block;
+    width: inherit;
+    margin-right: 0;
+  }
 }

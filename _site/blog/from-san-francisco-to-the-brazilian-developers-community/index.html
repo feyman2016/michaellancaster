@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<!--[if IE]> <html class="no-js ie"> <![endif]-->
+<!--[if lt IE 9]> <html class="no-js ie"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> CSS architecture for Web Applications. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL</title>
+    <title> From San Francisco to the Brazilian developers community. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" CSS architecture for Web Applications. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL">
+    <meta name="description" content=" From San Francisco to the Brazilian developers community. |  Michael Lancaster Front End Engineer/HTML5 Soldier based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Blog by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
@@ -63,7 +63,9 @@
 		<option value="/about">About</option>
 		<optgroup label="Articles">
 			
-			<option value="/blog/fluid-iframe-and-images-without-javascript-plugins">Fluid iframe and images without use of javascript.</option>
+			<option value="/blog/from-san-francisco-to-the-brazilian-developers-community">From San Francisco to the Brazilian developers community.</option>
+			
+			<option value="/blog/fluid-iframe-and-images-without-javascript-plugins">Fluid iframe without use of javascript.</option>
 			
 			<option value="/blog/css-architecture-for-web-applications">CSS Architecture for Web Applications.</option>
 			
@@ -90,8 +92,15 @@
 	<ul id="articles-list" class="vh">
 		
 		<li>
-			<a href="/blog/fluid-iframe-and-images-without-javascript-plugins" title="Fluid iframe and images without use of javascript.">
-				<h2 class="ui-tit-02">Fluid iframe and images without use of javascript.</h2>
+			<a href="/blog/from-san-francisco-to-the-brazilian-developers-community" title="From San Francisco to the Brazilian developers community.">
+				<h2 class="ui-tit-02">From San Francisco to the Brazilian developers community.</h2>
+				<span class="ui-date">06 Apr 2013</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="/blog/fluid-iframe-and-images-without-javascript-plugins" title="Fluid iframe without use of javascript.">
+				<h2 class="ui-tit-02">Fluid iframe without use of javascript.</h2>
 				<span class="ui-date">12 Mar 2013</span>
 			</a>
 		</li>
@@ -159,142 +168,27 @@
 
 		<article class="post">
 
-    <h2 class="ui-tit-01">CSS architecture for Web Applications.</h2>
+    <h2 class="ui-tit-01">From San Francisco to the Brazilian developers community.</h2>
 
-    <span class="ui-date db"></span>
+    <span class="ui-date db">06 Apr 13</span>
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>Since I started develop for Web I had/have a very high concern about how to name my &#8220;classes&#8221; and at the begin we follow the &#8220;good practices&#8221; from W3C and other developers right?!</p>
+	<div class="ui-copy"><p>I went to the HTML5 Developers Conference in San Francisco (01 Apr 13 to 03 Apr 13) and there I met some awesome developers from Brazil and as they are very active to help the developers community in Brazil with speaks, presentations and events they decided record a chat with me talking about how it is work in US, how I got a job here and some good tips for those that want to try this adventure.</p>
 
-<h2 id='how_was_at_the_beginning'>how was at the beginning</h2>
+<p>The awesome developers from Brazil including myself and the Principal Mozilla&#8217;s Evangelist Christian Heilmann, we had a great dinner. ;)</p>
+<div class='fluidImg'>
+<img alt='Brazilian developers and Christian Heilmann' src='/assets/images/post-images/sf-dinner.jpg' />
+</div><br />
+<h2 id='the_chat'>The chat</h2>
 
-<p>My first job I had a great senior front end developer that taught me a lot of things and the other developers followed his good practices kind of made for the JS developer and this is how we used to write CSS.</p>
-<pre><code data-language='css'>
-#header {
-	propertyA: value;
-	propertyB: value;
-	propertyC: value;
-	propertyD: value;
-}
+<p>The video isn&#8217;t in a good quality but the content is the important.</p>
+<div class='fluidMedia'>
+	<iframe allowfullscreen='allowfullscreen' src='https://www.youtube.com/embed/73RVbGcZQXk' frameborder='0'> </iframe>
+</div><br />
+<p>Thanks to all my friends from Brazil shared this to help the developers that thinks to come work in US.</p></div>
 
-#logo {
-	propertyA: value;
-	propertyB: value;
-	propertyC: value;
-	propertyD: value;
-}
-
-#menu {
-	propertyA: value;
-	propertyB: value;
-	propertyC: value;
-	propertyD: value;
-}
-
-#search {
-	propertyA: value;
-	propertyB: value;
-	propertyC: value;
-	propertyD: value;
-}
-
-#bt-yellow {
-	propertyA: value;
-	propertyB: value;
-	propertyC: value;
-	propertyD: value;
-}
-</code></pre>
-<p>Yeah! as you can see we used to use &#8220;id&#8217;s&#8221; for everything (95% of the html elements) and the properties were by alphabetical order (nothing wrong with alphabetical order).<br /> This approach using that CSS architecture &#8220;id&#8217;s&#8221; has no problem for browser rendering and the Javascript developers concerned not just about performance but make his life easier.</p>
-
-<p>But as a point of view of good CSS architecture wasn&#8217;t DRY, reusable, modular, and depending on the project this can get pretty messy and heavy. So kids, never do this way ok?!</p>
-
-<h2 id='second_experience'>Second experience</h2>
-
-<p>My second experience with a different way to write CSS architecture was when I worked as a consultant for Chamber of Electric Energy Commercialization in their ongoing big Web Application.</p>
-
-<p>At this point the initial developers started kind of in a good way making like a mixed code between SMACCS and their judgments. <br /></p>
-<pre><code data-language='css'>
-ul.button-group-yellow {
-	property: value;
-	property: value;
-}
-
-ul.button-group-yellow li {
-	property: value;
-	property: value;
-}
-
-ul.button-group-yellow li div {
-	property: value;
-	property: value;
-}
-
-ul.button-group-yellow li div p {
-	property: value;
-	property: value;
-}
-
-ul.button-group-yellow li div p a {
-	property: value;
-	property: value;
-}
-</code></pre>
-<p>We had a bunch of modular groups but terrible long descendants selectors, tag-qualify and all that is very bad for browser rendering/performance, not scalable and gets/got pretty messy after all.</p>
-
-<h2 id='what_you_should_know'>What you should know</h2>
-
-<ul>
-<li>CSS is code therefore size and rendering matters.</li>
-
-<li>Browsers render your CSS going right to left.</li>
-</ul>
-<pre><code data-language='css'>
-#header div ul li p a {
-	/* seriously when I saw these cases I just want to cry in some corner eating ice cream */
-	/* the browser render go through all your elements starting at the element a to match */
-	property: value;
-	property: value;
-}
-
-#header a {
-	/* better than the first example */
-	property: value;
-	property: value;
-}
-
-ul#header {
-	/* not good, will be very hard to happen when you have to use tag-qualify */
-	property: value;
-	property: value;
-}
-
-#header {
-	/* good for performance but don't forget you want to make your code modular, DRY, scalable */
-	property: value;
-	property: value;
-}
-
-.button {
-	/* good practice for performance and CSS architecture  */
-	property: value;
-	property: value;
-}
-</code></pre>
-<ul>
-<li>Use DRY methodology, modular groups, scalable.</li>
-
-<li>Make it well documented (readable for humans not machines).</li>
-
-<li>Use CSS preprocessors (I prefer SASS) but be aware of long descendants selectors.</li>
-</ul>
-
-<h2 id='how_i_suggest_and_how_im_doing'>How I suggest and how I&#8217;m doing.</h2>
-
-<p>Like I said I have been struggling not just to choose class names since EVA..but after a while thinking, looking at others code and trying good practices I decided to go through this path I&#8217;m going to show you. (for now, I might change again one day).</p></div>
-
-    <!-- <span class="meta"><small>By Michael Lancaster &copy; </small></span> -->
+    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2013</small></span> -->
 
             <div id="disqus_thread"></div>
 		    <script type="text/javascript">

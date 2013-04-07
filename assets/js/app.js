@@ -9,10 +9,12 @@ function showArticles() {
 	bt.on('click', function(e) {
 		e.preventDefault();
 
-		if( !$(this).hasClass(active) ) {
+		var self = $(this);
+
+		if( !self.hasClass(active) ) {
 			elAside.addClass(active);
 
-			$(this).addClass(active);
+			self.addClass(active);
 
 			elArticles.removeClass('vh');
 			elArticles.addClass(active);
@@ -21,7 +23,7 @@ function showArticles() {
 		} else {
 			elAside.removeClass(active);
 
-			$(this).removeClass(active);
+			self.removeClass(active);
 
 			elArticles.removeClass(active);
 			elArticles.delay(500).addClass('vh');
@@ -33,7 +35,8 @@ function showArticles() {
 
 //menu redirection
 function mobileNav() {
-	$('#mb-menu').change(function() {
+	var mobiNav = $('#mb-menu');
+	mobiNav.change(function() {
 		window.location = $(this).find("option:selected").val();
 	});
 }
