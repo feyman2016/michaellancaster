@@ -34,8 +34,6 @@ At start the client side template will use placeholders as content using it's ow
 }
 </code></pre>
 
-<br/>
-
 This is very human readable right?!
 
 ## Simple Web app example
