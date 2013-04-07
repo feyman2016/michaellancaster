@@ -54,7 +54,6 @@ You can check out and download the Web app here <a href="http://git.io/tUfHyA" t
 On my app.js file I requested the JSON data, replaced the template placeholders, rendered/compiled the template and appended into the HTML element.
 
 <pre><code data-language="javascript">
-//app js file
 function showNewsFromYahooAPI() {
   $.ajax({
         url: 'http://query.yahooapis.com/v1/public/yql?q=select%20title%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&format=json&callback=',
