@@ -17,7 +17,7 @@ Two things are very clear to me. First we have to consume the server (imagine if
 
 The client side consists in remove from the back to the client this template rendering into a very, very known technology called Javascript that runs on each user's browser making faster web apps and adding more control for you at your end.
 
-At start the client side template will use placeholders as content using it's own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled and the data will be added into the HTML element.
+At start the client side template will use placeholders as content using it's own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.
 
 ## Simple JSON data example
 
@@ -51,7 +51,7 @@ You can check out and download the Web app here <a href="http://git.io/tUfHyA" t
 
 ## App JS file
 
-On my app.js file I request the JSON data, replace the template placeholders, render/compile the template and append to the HTML element.
+On my app.js file I requested the JSON data, replaced the template placeholders, rendered/compiled the template and appended into the HTML element.
 
 <pre><code data-language="javascript">
 //app js file
