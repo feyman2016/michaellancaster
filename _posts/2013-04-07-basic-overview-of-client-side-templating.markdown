@@ -43,12 +43,6 @@ This is very human readable right?!
 Here I'm using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic.
 You can check out and download the Web app here <a href="http://git.io/tUfHyA" title="Handlebars.js app" target="_blank">http://git.io/tUfHyA</a>
 
-## Handlebars.js template markup example
-
-<script src="https://gist.github.com/weblancaster/5329561.js"> </script>
-
-<br/>
-
 ## App JS file
 
 On my app.js file I requested the JSON data, replaced the template placeholders, rendered/compiled the template and appended into the HTML element.
@@ -74,6 +68,12 @@ $(function() {
     showNewsFromYahooAPI();
 });
 </code></pre>
+
+## Handlebars.js template markup example
+
+<script src="https://gist.github.com/weblancaster/5329561.js"> </script>
+
+<br/>
 
 ## Who uses client side templating?!
 

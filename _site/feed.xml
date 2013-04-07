@@ -17,9 +17,9 @@
 
 &lt;h2 id='client__side_templating_the_new_kid_in_the_block'&gt;Client - Side templating (the new kid in the block?!)&lt;/h2&gt;
 
-&lt;p&gt;The client side consists in remove the hard work from the server (even making the servers cost less expansive) and the back end side adding into a very, very known technology called Javascript that runs on each user&amp;#8217;s browser So no hard work to the server rendering templates and more control for you at your end.&lt;/p&gt;
+&lt;p&gt;The client side consists in remove from the back to the client this template rendering into a very, very known technology called Javascript that runs on each user&amp;#8217;s browser making faster web apps and adding more control for you at your end.&lt;/p&gt;
 
-&lt;p&gt;At start the client side template will use placeholders as content using it&amp;#8217;s own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled and the data will be added into the HTML element.&lt;/p&gt;
+&lt;p&gt;At start the client side template will use placeholders as content using it&amp;#8217;s own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.&lt;/p&gt;
 
 &lt;h2 id='simple_json_data_example'&gt;Simple JSON data example&lt;/h2&gt;
 &lt;pre&gt;&lt;code data-language='json'&gt;
@@ -38,13 +38,13 @@
 
 &lt;h2 id='simple_web_app_example'&gt;Simple Web app example&lt;/h2&gt;
 
-&lt;p&gt;Here I&amp;#8217;m using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic. You can check out and download the Web app here &lt;a target='_blank' title='Handlebars.js app' href='http://git.io/tUfHyA'&gt;http://git.io/tUfHyA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here I&amp;#8217;m using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic. You can check out and download the Web app here &lt;a href='http://git.io/tUfHyA' title='Handlebars.js app' target='_blank'&gt;http://git.io/tUfHyA&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id='handlebarsjs_template_markup_example'&gt;Handlebars.js template markup example&lt;/h2&gt;
 &lt;script src='https://gist.github.com/weblancaster/5329561.js'&gt; &lt;/script&gt;&lt;br /&gt;
 &lt;h2 id='app_js_file'&gt;App JS file&lt;/h2&gt;
 
-&lt;p&gt;On my app.js file I request the JSON data, replace the template placeholders, render/compile the template and append to the HTML element.&lt;/p&gt;
+&lt;p&gt;On my app.js file I requested the JSON data, replaced the template placeholders, rendered/compiled the template and appended into the HTML element.&lt;/p&gt;
 &lt;pre&gt;&lt;code data-language='javascript'&gt;
 //app js file
 function showNewsFromYahooAPI() {
@@ -93,16 +93,16 @@ $(function() {
 &lt;/ul&gt;
 
 &lt;h2 id='some_links_to_client_side_template'&gt;Some links to client side template&lt;/h2&gt;
-&lt;a target='_blank' title='Handlebarsjs' href='http://handlebarsjs.com/'&gt;http://handlebarsjs.com/&lt;/a&gt;&lt;br /&gt;&lt;a target='_blank' title='Mustachejs' href='http://mustache.github.io/'&gt;http://mustache.github.io/&lt;/a&gt;&lt;br /&gt;&lt;a target='_blank' title='Dustjs' href='http://akdubya.github.io/dustjs/'&gt;http://akdubya.github.io/dustjs/&lt;/a&gt;&lt;br /&gt;&lt;a target='_blank' title='Underscorejs' href='http://documentcloud.github.io/underscore/#template'&gt;http://documentcloud.github.io/underscore/#template&lt;/a&gt;&lt;br /&gt;&lt;a target='_blank' title='jQuery tmpl' href='https://github.com/jquery/jquery-tmpl'&gt;https://github.com/jquery/jquery-tmpl&lt;/a&gt;&lt;br /&gt;
+&lt;a href='http://handlebarsjs.com/' title='Handlebarsjs' target='_blank'&gt;http://handlebarsjs.com/&lt;/a&gt;&lt;br /&gt;&lt;a href='http://mustache.github.io/' title='Mustachejs' target='_blank'&gt;http://mustache.github.io/&lt;/a&gt;&lt;br /&gt;&lt;a href='http://akdubya.github.io/dustjs/' title='Dustjs' target='_blank'&gt;http://akdubya.github.io/dustjs/&lt;/a&gt;&lt;br /&gt;&lt;a href='http://documentcloud.github.io/underscore/#template' title='Underscorejs' target='_blank'&gt;http://documentcloud.github.io/underscore/#template&lt;/a&gt;&lt;br /&gt;&lt;a href='https://github.com/jquery/jquery-tmpl' title='jQuery tmpl' target='_blank'&gt;https://github.com/jquery/jquery-tmpl&lt;/a&gt;&lt;br /&gt;
 &lt;p&gt;and many others like Jade, Haml-js, Eco, etc.&lt;/p&gt;
 
 &lt;h2 id='i_suggest_you_read'&gt;I suggest you read..&lt;/h2&gt;
 &lt;p&gt;
-Smashing Magazine - Client-Side Templating &lt;a target='_blank' title='Smashing magazine: client side templating' href='http://coding.smashingmagazine.com/2012/12/05/client-side-templating/'&gt;click here.&lt;/a&gt;
+Smashing Magazine - Client-Side Templating &lt;a href='http://coding.smashingmagazine.com/2012/12/05/client-side-templating/' title='Smashing magazine: client side templating' target='_blank'&gt;click here.&lt;/a&gt;
     &lt;br /&gt;
-Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates &lt;a target='_blank' title='Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates' href='http://engineering.linkedin.com/frontend/leaving-jsps-dust-moving-linkedin-dustjs-client-side-templates'&gt;click here.&lt;/a&gt;
+Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates &lt;a href='http://engineering.linkedin.com/frontend/leaving-jsps-dust-moving-linkedin-dustjs-client-side-templates' title='Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates' target='_blank'&gt;click here.&lt;/a&gt;
     &lt;br /&gt;
-The client-side templating throwdown: mustache, handlebars, dust.js, and more &lt;a target='_blank' title='The client-side templating throwdown: mustache, handlebars, dust.js, and more' href='http://engineering.linkedin.com/frontend/client-side-templating-throwdown-mustache-handlebars-dustjs-and-more'&gt;click here.&lt;/a&gt;
+The client-side templating throwdown: mustache, handlebars, dust.js, and more &lt;a href='http://engineering.linkedin.com/frontend/client-side-templating-throwdown-mustache-handlebars-dustjs-and-more' title='The client-side templating throwdown: mustache, handlebars, dust.js, and more' target='_blank'&gt;click here.&lt;/a&gt;
 
 &lt;/p&gt;
 &lt;p&gt;Cheers!&lt;/p&gt;</description>
@@ -122,7 +122,7 @@ The client-side templating throwdown: mustache, handlebars, dust.js, and more &l
 
 &lt;p&gt;The video isn&amp;#8217;t in a good quality but the content is the important.&lt;/p&gt;
 &lt;div class='fluidMedia'&gt;
-	&lt;iframe src='https://www.youtube.com/embed/73RVbGcZQXk' allowfullscreen='allowfullscreen' frameborder='0'&gt; &lt;/iframe&gt;
+	&lt;iframe allowfullscreen='allowfullscreen' src='https://www.youtube.com/embed/73RVbGcZQXk' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;&lt;br /&gt;
 &lt;p&gt;Thanks to all my friends from Brazil shared this to help the developers that thinks to come work in US.&lt;/p&gt;</description>
 				<published>Sat Apr 06 00:00:00 -0500 2013</published>
@@ -161,7 +161,7 @@ The client-side templating throwdown: mustache, handlebars, dust.js, and more &l
 	height: 100%;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Example &lt;a title='fluid iframe example' href='/blog/secrets-of-lea-verou-css/'&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Example &lt;a href='/blog/secrets-of-lea-verou-css/' title='fluid iframe example'&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id='browser_support'&gt;Browser support&lt;/h2&gt;
 
@@ -399,7 +399,7 @@ header#header {
 
 &lt;h2 id='im_changing_to'&gt;I&amp;#8217;m changing to..&lt;/h2&gt;
 
-&lt;p&gt;One week before I write this post I saw the speak of &lt;a target='_blank' title='' href='http://nicolasgallagher.com/'&gt;Nicolas Gallagher&lt;/a&gt; about &amp;#8220;Questioning good practices&amp;#8221; (I highly recommend) in his speak he also showed a &lt;a target='_blank' title='Russian Search engine' href='http://www.yandex.com/'&gt;Russian Search engine&lt;/a&gt; classes notation name and It&amp;#8217;s true my notation is fashionable at the moment.&lt;/p&gt;
+&lt;p&gt;One week before I write this post I saw the speak of &lt;a href='http://nicolasgallagher.com/' title='' target='_blank'&gt;Nicolas Gallagher&lt;/a&gt; about &amp;#8220;Questioning good practices&amp;#8221; (I highly recommend) in his speak he also showed a &lt;a href='http://www.yandex.com/' title='Russian Search engine' target='_blank'&gt;Russian Search engine&lt;/a&gt; classes notation name and It&amp;#8217;s true my notation is fashionable at the moment.&lt;/p&gt;
 
 &lt;p&gt;All made sense. So now on I will use this non-fashionable YET classes notation name but answering the same questions I told you before.&lt;br /&gt; what are you talking about Michael? Here&amp;#8217;s a new example of that module above.&lt;/p&gt;
 &lt;pre&gt;&lt;code data-language='css'&gt;
@@ -434,17 +434,17 @@ header#header {
 		
 			<item>
 				<title>Secrets of Lea Verou about CSS.</title>
-				<description>&lt;p&gt;I&amp;#8217;m not sure when it was but in the end of 2011 or beginning of 2012 I saw &lt;a target='_blank' title='Lea Verou' href='http://lea.verou.me/'&gt;Lea Verou&lt;/a&gt; talking about &amp;#8220;CSS3 Secrets: 10 things you might not know about CSS3&amp;#8221; and it was great see how many great techniques we can use to achieve our &lt;br /&gt; client - side goals.&lt;/p&gt;
+				<description>&lt;p&gt;I&amp;#8217;m not sure when it was but in the end of 2011 or beginning of 2012 I saw &lt;a href='http://lea.verou.me/' title='Lea Verou' target='_blank'&gt;Lea Verou&lt;/a&gt; talking about &amp;#8220;CSS3 Secrets: 10 things you might not know about CSS3&amp;#8221; and it was great see how many great techniques we can use to achieve our &lt;br /&gt; client - side goals.&lt;/p&gt;
 
 &lt;h2 id='10_things_you_might_not_know_about_css3'&gt;10 things you might not know about CSS3&lt;/h2&gt;
 &lt;div class='fluidMedia'&gt;
-	&lt;iframe src='https://www.youtube.com/embed/54wJkqG8jXE' allowfullscreen='allowfullscreen' frameborder='0'&gt; &lt;/iframe&gt;
+	&lt;iframe allowfullscreen='allowfullscreen' src='https://www.youtube.com/embed/54wJkqG8jXE' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;&lt;br /&gt;
 &lt;p&gt;And this year (2013) she had another great speak at W3Conf in San Francisco about &amp;#8220;More CSS Secrets: Another 10 things you may not know about CSS&amp;#8221;&lt;/p&gt;
 
 &lt;h2 id='more_css_secrets_another_10_things_you_may_not_know_about_css'&gt;More CSS Secrets: Another 10 things you may not know about CSS&lt;/h2&gt;
 &lt;div class='fluidMedia'&gt;
-	&lt;iframe src='https://www.youtube.com/embed/3ikye7Qc7Ak' allowfullscreen='allowfullscreen' frameborder='0'&gt; &lt;/iframe&gt;
+	&lt;iframe allowfullscreen='allowfullscreen' src='https://www.youtube.com/embed/3ikye7Qc7Ak' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;&lt;br /&gt;
 &lt;p&gt;As you can see she is a Client - Side hacker specifically in CSS and always bringing new ideas and techniques to solve common problems we used to solve with complex javascript code and hacks.&lt;/p&gt;</description>
 				<published>Sun Mar 03 00:00:00 -0600 2013</published>
@@ -455,9 +455,9 @@ header#header {
 				<title>Inspirational Art and Code by Joshua Davis.</title>
 				<description>&lt;p&gt;A friend of mine shared this great talk by Joshua Davis at W3Conf in San Francisco. &lt;br /&gt; Joshua&amp;#8217;s work is very inspirational and he can do very cool things using processing.js to generate forms.&lt;/p&gt;
 
-&lt;p&gt;Don&amp;#8217;t forget to check out his website &lt;a target='_blank' title='Joshua Davis' href='http://www.joshuadavis.com/'&gt;Joshua Davis&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Don&amp;#8217;t forget to check out his website &lt;a href='http://www.joshuadavis.com/' title='Joshua Davis' target='_blank'&gt;Joshua Davis&lt;/a&gt;&lt;/p&gt;
 &lt;div class='fluidMedia'&gt;
-	&lt;iframe src='https://www.youtube.com/embed/LJS4fBjdPM4' allowfullscreen='allowfullscreen' frameborder='0'&gt; &lt;/iframe&gt;
+	&lt;iframe allowfullscreen='allowfullscreen' src='https://www.youtube.com/embed/LJS4fBjdPM4' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;</description>
 				<published>Thu Feb 28 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/inspirational-art-and-code-by-joshua-davis</link>
@@ -475,13 +475,13 @@ header#header {
 
 &lt;h2 id='are_we_going_backwards'&gt;Are we going backwards?!&lt;/h2&gt;
 &lt;div class='fluidMedia'&gt;
-	&lt;iframe src='https://www.youtube.com/embed/B8ofWFx525s' allowfullscreen='allowfullscreen' frameborder='0'&gt; &lt;/iframe&gt;
+	&lt;iframe allowfullscreen='allowfullscreen' src='https://www.youtube.com/embed/B8ofWFx525s' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;
 &lt;h2 id='i_also_suggest'&gt;I also suggest..&lt;/h2&gt;
 
-&lt;p&gt;you to watch this incredible documentary called &lt;a target='_blanc' title='internet rising' href='http://internetrising.net/'&gt;&quot;Internet Rising&quot;&lt;/a&gt; investigating the evolving relationships between the Internet and collective consciousness of humanity. It provokes many questions about ancient and modern paradoxes of life. You definitely should check it out.&lt;/p&gt;
+&lt;p&gt;you to watch this incredible documentary called &lt;a href='http://internetrising.net/' title='internet rising' target='_blanc'&gt;&quot;Internet Rising&quot;&lt;/a&gt; investigating the evolving relationships between the Internet and collective consciousness of humanity. It provokes many questions about ancient and modern paradoxes of life. You definitely should check it out.&lt;/p&gt;
 &lt;div class='fluidMedia'&gt;
-	&lt;iframe src='https://www.youtube.com/embed/pMh8oBdKkK4' allowfullscreen='allowfullscreen' frameborder='0'&gt; &lt;/iframe&gt;
+	&lt;iframe allowfullscreen='allowfullscreen' src='https://www.youtube.com/embed/pMh8oBdKkK4' frameborder='0'&gt; &lt;/iframe&gt;
 &lt;/div&gt;&lt;br /&gt;
 &lt;p&gt;Both videos are great to inspired us to think about almost everything surround us in the digital life.&lt;/p&gt;</description>
 				<published>Wed Feb 27 00:00:00 -0600 2013</published>
@@ -518,7 +518,7 @@ header#header {
 
 &lt;h2 id='the_presentfuture'&gt;The present/future&lt;/h2&gt;
 
-&lt;p&gt;But now (a while ago) the &lt;a target='_blank' title='W3C spec' href='http://www.w3.org/TR/css3-values/#font-relative-lengths'&gt;W3C spec&lt;/a&gt; added to CSS3 the rem unit that is relative to the document parent (root em).&lt;/p&gt;
+&lt;p&gt;But now (a while ago) the &lt;a href='http://www.w3.org/TR/css3-values/#font-relative-lengths' title='W3C spec' target='_blank'&gt;W3C spec&lt;/a&gt; added to CSS3 the rem unit that is relative to the document parent (root em).&lt;/p&gt;
 &lt;pre&gt;&lt;code data-language='css'&gt;
 html {
 	font-size: 62.5%;
@@ -532,7 +532,7 @@ child {
 	font-size: 1.2rem; /* 12px */
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;No need to go through all your parent doing that math to change their child and the browser support makes us even happier developers &lt;a target='_blank' title='Can I use rem units?' href='http://caniuse.com/rem'&gt;caniuse.com/rem&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;No need to go through all your parent doing that math to change their child and the browser support makes us even happier developers &lt;a href='http://caniuse.com/rem' title='Can I use rem units?' target='_blank'&gt;caniuse.com/rem&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id='browser_support'&gt;Browser support&lt;/h2&gt;
 
@@ -611,7 +611,7 @@ child {
 &lt;p&gt;
 I started looking for something more elegant that I could use git to deploy
 So I tried Github Pages and Jekyll a &quot;blog-aware, static site generator in Ruby&quot; that uses Liquid template to process the templates.
-But I would do experiments with Node.js and Ruby someday so I choose &lt;a target='_blank' title='Heroku' href='http://www.heroku.com'&gt;Heroku&lt;/a&gt; (cloud application platform for build, deploy, and run cloud apps using Ruby, Node.js, Clojure, Java, Python and Scala).
+But I would do experiments with Node.js and Ruby someday so I choose &lt;a href='http://www.heroku.com' title='Heroku' target='_blank'&gt;Heroku&lt;/a&gt; (cloud application platform for build, deploy, and run cloud apps using Ruby, Node.js, Clojure, Java, Python and Scala).
 &lt;/p&gt;
 &lt;p&gt;I Can run and test locally, pretty simple. &lt;pre&gt;&lt;code data-language='ruby'&gt;
 foreman start
