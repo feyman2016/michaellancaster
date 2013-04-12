@@ -36,8 +36,6 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
 &lt;p&gt;This is very human readable right?!&lt;/p&gt;
 
 &lt;h2&gt;Simple Web app example&lt;/h2&gt;
@@ -48,16 +46,6 @@ You can check out and download the Web app here &lt;a href=&quot;http://git.io/t
 &lt;h2&gt;Handlebars.js template markup example&lt;/h2&gt;
 
 &lt;script src=&quot;https://gist.github.com/weblancaster/5329561.js&quot;&gt; &lt;/script&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-&lt;script id=&quot;myTemplate&quot; type=&quot;text/x-handlebars-template&quot;&gt;
-  &lt;ul class=&quot;people_list&quot;&gt;
-    
-    &lt;li&gt;&lt;/li&gt;
-    
-  &lt;/ul&gt;
-&lt;/script&gt;
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 

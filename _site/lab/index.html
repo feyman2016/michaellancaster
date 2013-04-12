@@ -26,7 +26,7 @@
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
 </head>
 
-<body class="lab">
+<body class="lab" data-widgets="lab">
 
 	<!-- aside -->
 	<aside id="aside">
@@ -207,8 +207,14 @@
 <!-- js -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/plugins/jquery-1.8.3.min.js"><\/script>')</script>
-<script src="/assets/js/plugins/app.plugins.min.js"></script>
-<script src="/assets/js/app.min.js"></script>
+<script src="/assets/js/plugins/jquery.rainbow.min.js"></script>
+
+<!-- modular loader wrap -->
+<div id="modularLoaderWrap">
+</div>
+<!-- modular loader wrap / end -->
+
+<script src="/assets/js/app.js"></script>
 
 <script type="text/javascript">
 
