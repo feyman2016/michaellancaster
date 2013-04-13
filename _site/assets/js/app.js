@@ -126,6 +126,5 @@ var appScriptLoader = (function() {
 # Let's rock! (start)
 ========================================================================== */
 (function() {
-	'strict mode';
 	appScriptLoader.modulesInitialize();
 })();
