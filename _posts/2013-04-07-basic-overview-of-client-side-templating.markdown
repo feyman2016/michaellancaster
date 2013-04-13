@@ -17,6 +17,8 @@ Two things are very clear to me. First we have to consume the server (imagine if
 
 The client side consists in remove from the back to the client this template rendering into a very, very known technology called Javascript that runs on each user's browser making faster web apps and adding more control for you at your end.
 
+It has being very helpful for Single Page Applications where you can just update an section on your website without refresh the page or download all assets over again.
+
 At start the client side template will use placeholders as content using it's own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.
 
 ## Simple JSON data example
