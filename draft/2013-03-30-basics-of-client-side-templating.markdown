@@ -1,13 +1,17 @@
 ---
 layout: post
-title: The basics of Client - Side templating
+title: Starting with GruntJS "The basics"
 
-excerpt: Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. uses to render/show datas, but lately two or three years ago we can noticed developers and companies are changing the way they render/show the data/content into the web application using client side technologies javascript in this case.
+excerpt: Have you ever hear "Good developers are lazy developers"? So Yeah, who never does repetitive tasks? Doing those type of tasks make you stop to do what you
+do best. That is code, GruntJS helps you "a lot" with those really boring and repetitive tasks "Automation, automation, automation".
 ---
 
-I'm not a back end developer but as a developers I think we have to have an overview of the technologies that surround us.
+Have you ever hear "Good developers are lazy developers"? So Yeah, who never does repetitive tasks? Doing those type of tasks make you stop to do what you
+do best. That is code, GruntJS helps you "a lot" with those really boring and repetitive tasks "Automation, automation, automation".
 
-Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. uses to render/show datas, but lately two or three years ago we can noticed developers and companies are changing the way they render/show the data/content into the web application using client side technologies javascript in this case.
+GruntJS build using JS in Particular NodeJS and makes very easy to use to those familiar with this beautiful programming language called Javascript.
+My goal here is to help you start set up and starting the basic to get start use on your next project
+Without further due let's do it!
 
 ## Who uses client side templating?!
 
