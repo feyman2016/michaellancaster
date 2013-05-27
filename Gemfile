@@ -6,3 +6,4 @@ gem "jekyll", "~> 0.11.2" # we need at least this version so jekyll will use Rub
 gem "foreman"             # this is a tool to test and use the Procfile locally
 gem "heroku"              # if you install the Heroku Toolbelt you won't need this but it's good practice
 gem 'redcarpet', '~> 1.9' # explicitly prevent versions 2.x and newer from being used
+gem 'shotgun' # explicitly prevent versions 2.x and newer from being used
