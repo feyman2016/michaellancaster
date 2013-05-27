@@ -1,0 +1,33 @@
+---
+layout: post
+title: About my latest personal projects.
+
+excerpt: I'm always doing new experiments with things I've been learning and sometimes I end up using this experiments day-by-day so today I want to talk about the latest experiments I transformed in things I use at work.
+---
+
+I'm always doing new experiments with things I've been learning and sometimes I end up using this experiments day-by-day so today I want to talk about the latest experiments I transformed in things I use at work.
+
+## Modular Front End Development
+
+After my first job I have been creating HTML/CSS boilerplates based on how I'm using those technologies on the current company I'm working on.
+
+So why not just use HTML5 Boilerplate? First because like I said I do based on the mostly types of projects I'm working on, second because I like to create and build my own things mostly the times..
+And third because I think there's a misunderstood on the developers about the HTML5 Boilerplate they used to use just the HTML5 markup and the CSS architecture but this project is much more than that the developers behind the curtain worked hard to do "THE" HTML5 Boilerplate it's very robust so please just don't use because it's cool?! use because makes sense to your project take a look<a href="http://goo.gl/q419I" title="here to know more about HTML5 Boilerplate" target="_blank">here to know more about HTML5 Boilerplate</a>.
+
+I create this project focused in SASS (css) architecture organizing files by modules, ordering the compilation of the modules by specificity and hierarchy to make easier to maintain and easy to work on it.
+At this same project I added my other project called "CSS-helpers".
+
+## CSS helpers
+
+I like to code my css using OOCSS (a little bit of SMACSS) methodology and works super good for me so I created a module with all the styles I usually use in a project with things like "text-align: center;", "font-weight: bold;", "display: block;" and many others properties to help me develop faster applications.
+My goal here is to make something global where anyone can just add to it's css and use.
+
+## Media - Queries Chrome extension
+
+I got myself resizing the browser and writing the css media queries a couple of times (repeating myself) so I decided create a Chrome extension where I resize the browser and then click to generate the media queries with the size I need and I want to I also added a link to some great media queries screen sizes.
+
+## Modular Script Loader
+
+After a colleague have some problems with performance issue in the application mostly because of the JS plugins I 
+
+

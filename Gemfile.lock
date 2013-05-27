@@ -54,3 +54,4 @@ DEPENDENCIES
   jekyll (~> 0.11.2)
   rake
   redcarpet (~> 1.9)
+  shotgun

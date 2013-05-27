@@ -40,6 +40,30 @@
 				</a>
 			</h1>
 
+			<!-- mobile nav -->
+			<nav id="mobileNav" class="show-for-small">
+				<a href="#bt-nav-mobile" title="blog navigation"></a>
+				<ul class="mobileNav-main">
+					<li>
+						<a href="{{site.baseurl}}/about" title="Life, Work.." class="db">About</a>
+					</li>
+					<li>
+						<a href="{{site.baseurl}}/lab" title="Some experiments" class="db">Lab</a>
+					</li>
+					<li class="mobileNav-article">
+						<a href="#articles-list" title="Code, Technology, Random stuff" class="db" id="bt-show-articles">Articles</a>
+						<ul class="mobileNav-article-content">
+							{% for post in site.posts %}
+							<li>
+								<a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<!-- mobile nav / end -->
+
 		</header>
 		<!-- header / end -->
 
@@ -55,20 +79,6 @@
 
 	</aside>
 	<!-- aside / end -->
-
-	<!-- mobile navigation -->
-	<select id="mb-menu" class="dn">
-		<option value="" seleted="selected">Select</option>
-		<option value="{{site.baseurl}}/">Home</option>
-		<option value="{{site.baseurl}}/about">About</option>
-		<optgroup label="Articles">
-			{% for post in site.posts %}
-			<option value="{{site.baseurl}}{{ post.url }}">{{ post.title }}</option>
-			{% endfor %}
-		</optgroup>
-		<option value="{{site.baseurl}}/lab">Lab</option>
-	</select>
-	<!-- mobile navigation / end -->
 
 	<!-- articles list -->
 	<ul id="articles-list" class="vh">

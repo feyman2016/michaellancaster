@@ -2,6 +2,10 @@
 $first_breakpoint: "max-width: 865px";
 $last_breakpoint: "max-width: 700px";
 
+.show-for-small {
+	display: none;
+}
+
 //First content breakpoint
 @media all and ($first_breakpoint) {
 	#aside {
@@ -95,4 +99,58 @@ $last_breakpoint: "max-width: 700px";
 	#content.active {
 		margin-left: 20px;
 	}
+
+	.show-for-small {
+		display: block;
+	}
+
+	/* mobile navigation */
+	#mobileNav {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 90;
+	}
+	#mobileNav > a {
+		display: block;
+		background: url("../images/ico-menu.png") no-repeat 0 0;
+		width: 27px;
+		height: 28px;
+		top: 26px;
+		right: 10px;
+		position: absolute;
+	}
+	.mobileNav-main {
+		background: #000;
+		top: 77px;
+		position: relative;
+	}
+	.mobileNav-main a {
+		display: block;
+		color: #fff;
+		padding: 5px 10px;
+		font-size: 1.8rem;
+
+		&:hover {
+			background: #222;
+		}
+	}
+	.mobileNav-main > li:first-child a {
+		padding-top: 10px;
+	}
+
+	/* articles sub nav */
+	.mobileNav-article-content {
+		display: none;
+	}
 }
+
+
+
+
+
+
+
+
+
+
