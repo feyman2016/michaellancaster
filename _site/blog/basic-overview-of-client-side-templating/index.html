@@ -40,70 +40,6 @@
 				</a>
 			</h1>
 
-			<!-- mobile nav -->
-			<nav id="mobileNav" class="show-for-small">
-				<a href="#bt-nav-mobile" title="blog navigation"></a>
-				<ul class="mobileNav-main">
-					<li>
-						<a href="/about" title="Life, Work.." class="db">About</a>
-					</li>
-					<li>
-						<a href="/lab" title="Some experiments" class="db">Lab</a>
-					</li>
-					<li class="mobileNav-article">
-						<a href="#articles-list" title="Code, Technology, Random stuff" class="db" id="bt-show-articles">Articles</a>
-						<ul class="mobileNav-article-content">
-							
-							<li>
-								<a href="/blog/basic-overview-of-client-side-templating" title="Basic overview of client - side templating">Basic overview of client - side templating</a>
-							</li>
-							
-							<li>
-								<a href="/blog/from-san-francisco-to-the-brazilian-developers-community" title="From San Francisco to the Brazilian developers community.">From San Francisco to the Brazilian developers community.</a>
-							</li>
-							
-							<li>
-								<a href="/blog/fluid-iframe-and-images-without-javascript-plugins" title="Fluid iframe without use of javascript.">Fluid iframe without use of javascript.</a>
-							</li>
-							
-							<li>
-								<a href="/blog/css-architecture-for-web-applications" title="CSS Architecture for Web Applications.">CSS Architecture for Web Applications.</a>
-							</li>
-							
-							<li>
-								<a href="/blog/secrets-of-lea-verou-css" title="Secrets of Lea Verou about CSS.">Secrets of Lea Verou about CSS.</a>
-							</li>
-							
-							<li>
-								<a href="/blog/inspirational-art-and-code-by-joshua-davis" title="Inspirational Art and Code by Joshua Davis.">Inspirational Art and Code by Joshua Davis.</a>
-							</li>
-							
-							<li>
-								<a href="/blog/the-filter-bubble-and-your-social-life-online" title="The filter bubble and your social life online.">The filter bubble and your social life online.</a>
-							</li>
-							
-							<li>
-								<a href="/blog/lets-talk-about-rem-units" title="Let's talk about rem units.">Let's talk about rem units.</a>
-							</li>
-							
-							<li>
-								<a href="/blog/two-years-ago-everything-started" title="Two years ago everything started.">Two years ago everything started.</a>
-							</li>
-							
-							<li>
-								<a href="/blog/what-technologies-im-using-to-blog" title="What technologies I'm using to blog?!">What technologies I'm using to blog?!</a>
-							</li>
-							
-							<li>
-								<a href="/blog/first-things-first" title="First things first.">First things first.</a>
-							</li>
-							
-						</ul>
-					</li>
-				</ul>
-			</nav>
-			<!-- mobile nav / end -->
-
 		</header>
 		<!-- header / end -->
 
@@ -119,6 +55,40 @@
 
 	</aside>
 	<!-- aside / end -->
+
+	<!-- mobile navigation -->
+	<select id="mb-menu" class="dn">
+		<option value="" seleted="selected">Select</option>
+		<option value="/">Home</option>
+		<option value="/about">About</option>
+		<optgroup label="Articles">
+			
+			<option value="/blog/basic-overview-of-client-side-templating">Basic overview of client - side templating</option>
+			
+			<option value="/blog/from-san-francisco-to-the-brazilian-developers-community">From San Francisco to the Brazilian developers community.</option>
+			
+			<option value="/blog/fluid-iframe-and-images-without-javascript-plugins">Fluid iframe without use of javascript.</option>
+			
+			<option value="/blog/css-architecture-for-web-applications">CSS Architecture for Web Applications.</option>
+			
+			<option value="/blog/secrets-of-lea-verou-css">Secrets of Lea Verou about CSS.</option>
+			
+			<option value="/blog/inspirational-art-and-code-by-joshua-davis">Inspirational Art and Code by Joshua Davis.</option>
+			
+			<option value="/blog/the-filter-bubble-and-your-social-life-online">The filter bubble and your social life online.</option>
+			
+			<option value="/blog/lets-talk-about-rem-units">Let's talk about rem units.</option>
+			
+			<option value="/blog/two-years-ago-everything-started">Two years ago everything started.</option>
+			
+			<option value="/blog/what-technologies-im-using-to-blog">What technologies I'm using to blog?!</option>
+			
+			<option value="/blog/first-things-first">First things first.</option>
+			
+		</optgroup>
+		<option value="/lab">Lab</option>
+	</select>
+	<!-- mobile navigation / end -->
 
 	<!-- articles list -->
 	<ul id="articles-list" class="vh">
@@ -223,11 +193,11 @@
 
 <h2>Client - Side templating (the new kid in the block?!)</h2>
 
-<p>The client side consists in remove from the back to the client this template rendering into a very, very known technology called Javascript that runs on each user&#39;s browser making faster web apps and adding more control for you at your end.</p>
+<p>The client side consists in remove from the back to the client this template rendering into a very, very known technology called Javascript that runs on each user's browser making faster web apps and adding more control for you at your end.</p>
 
 <p>It has being very helpful for Single Page Applications where you can just update an section on your website without refresh the page or download all assets over again.</p>
 
-<p>At start the client side template will use placeholders as content using it&#39;s own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.</p>
+<p>At start the client side template will use placeholders as content using it's own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.</p>
 
 <h2>Simple JSON data example</h2>
 
@@ -248,7 +218,7 @@
 
 <h2>Simple Web app example</h2>
 
-<p>Here I&#39;m using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic.
+<p>Here I'm using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic.
 You can check out and download the Web app here <a href="http://git.io/tUfHyA" title="Handlebars.js app" target="_blank">http://git.io/tUfHyA</a></p>
 
 <h2>Handlebars.js template markup example</h2>
@@ -298,7 +268,7 @@ $(function() {
 <ul>
 <li>Heavy rendering on the users side (devices are not that good as you think they are).</li>
 <li>Organization is king.</li>
-<li>There&#39;s logic-less and logic templates (ask yourself how complex is my template?).</li>
+<li>There's logic-less and logic templates (ask yourself how complex is my template?).</li>
 </ul>
 
 <h2>Some links to client side template</h2>

@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     RedCloth (4.2.9)
     addressable (2.3.4)
@@ -14,7 +14,7 @@ GEM
     foreman (0.63.0)
       dotenv (>= 0.7)
       thor (>= 0.13.6)
-    heroku (2.39.3)
+    heroku (2.39.4)
       heroku-api (~> 0.3.7)
       launchy (>= 0.3.2)
       netrc (~> 0.7.7)
