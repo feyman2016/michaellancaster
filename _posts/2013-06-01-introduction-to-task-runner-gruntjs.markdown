@@ -45,7 +45,7 @@ Add this follow simple architecture to your project.
 <br>
 --- images
 
-Then you will need NodeJS on the computer/mac if you don't have go to the <a href="http://nodejs.org/" title="NodeJS website" target="_blank">NodeJS website</a> for installation information.
+Then you will need NodeJS if you don't have go to the <a href="http://nodejs.org/" title="NodeJS website" target="_blank">NodeJS website</a> for installation information.
 
 To make GruntJS work properly you will need some two specific files "package.json" used by <a href="https://npmjs.org/" title="npm website" target="_blank">npm</a> contain the information for the project where you list grunt and plugins used by your project as "devDependencies" and the "Gruntfile.js" where you set your tasks to run.
 
