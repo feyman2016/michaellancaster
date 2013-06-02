@@ -325,6 +325,13 @@ Now on you will just need to run "grunt watch" so every time you change somethin
 grunt watch
 </code></pre>
 
+and this is what you should see after run the command
+
+<pre><code data-language="ruby">
+Running "watch" task
+Waiting...
+</code></pre>
+
 To stop watch press "control + c" 
 
 ## Conclusion
