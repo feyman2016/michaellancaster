@@ -333,7 +333,7 @@ GruntJS is AWESOME and you can do much more complex things with it.
 <br>
 Check out the example on <a href="https://github.com/weblancaster/blog-examples/tree/master/GruntJS-app" title="example on github" target="blank">Github</a>.
 
-Hopefully you will have more time to play with new experiments.
+Now you have more time to play with new experiments.
 <br>
 Cheers!
 
