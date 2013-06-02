@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 		      files: ['assets/js/app.js', 'assets/style/sass/*.scss'],
 		      tasks: ['build'],
 		    },
-		},
+		}
 	});
 
 	// These plugins provide necessary tasks.

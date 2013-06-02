@@ -6,6 +6,343 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Introduction to GruntJS</title>
+				<description>&lt;p&gt;Developers should be worry about write code but very often we got ourself doing a lot of repetitive and boring tasks.
+Cleaning the code, minifying, combining, generating and so on so forth.&lt;/p&gt;
+
+&lt;p&gt;How many time would you save not doing those tasks? today I will show you the introduction use to help you on your daily bases development work flow.&lt;/p&gt;
+
+&lt;p&gt;There&amp;#39;s a answer and it&amp;#39;s called GruntJS I have been using a while and I got say &amp;quot;It&amp;#39;s true love&amp;quot; I can watch for changes on my files, run tests, minify, pre-process SASS, minify images and the list goes on take at look on the plugins at &lt;a href=&quot;http://gruntjs.com/plugins&quot; title=&quot;GruntJS plugins&quot; target=&quot;_blank&quot;&gt;GruntJS plugins&lt;/a&gt; and for more information and further reference you MUST go to &lt;a href=&quot;http://gruntjs.com&quot; title=&quot;GruntJS&quot; target=&quot;_blank&quot;&gt;GruntJS website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s say we want to watch for changes on the js files and HTML markup minify both and concatenate all js files in one single file.&lt;/p&gt;
+
+&lt;h2&gt;Let&amp;#39;s get start&lt;/h2&gt;
+
+&lt;p&gt;Create a folder on your desktop (or whatever you want to) and let&amp;#39;s call it GruntJS-app.
+&lt;br&gt;
+Add this follow simple architecture to your project.
+&lt;br&gt;&lt;br&gt;
+- GruntJS-app
+&lt;br&gt;
+-- dist // html destination
+&lt;br&gt;
+-- src // html source
+&lt;br&gt;
+--- index.html
+&lt;br&gt;
+--- internal.html
+&lt;br&gt;
+-- assets
+&lt;br&gt;
+--- js
+&lt;br&gt;
+---- main.js
+&lt;br&gt;
+---- app.js
+&lt;br&gt;
+---- module.js
+&lt;br&gt;
+--- css
+&lt;br&gt;
+--- images&lt;/p&gt;
+
+&lt;p&gt;Then you will need NodeJS on the computer/mac if you don&amp;#39;t have go to the &lt;a href=&quot;http://nodejs.org/&quot; title=&quot;NodeJS website&quot; target=&quot;_blank&quot;&gt;NodeJS website&lt;/a&gt; for installation information.&lt;/p&gt;
+
+&lt;p&gt;To make GruntJS work properly you will need some two specific files &amp;quot;package.json&amp;quot; used by &lt;a href=&quot;https://npmjs.org/&quot; title=&quot;npm website&quot; target=&quot;_blank&quot;&gt;npm&lt;/a&gt; contain the information for the project where you list grunt and plugins used by your project as &amp;quot;devDependencies&amp;quot; and the &amp;quot;Gruntfile.js&amp;quot; where you set your tasks to run.&lt;/p&gt;
+
+&lt;p&gt;So let&amp;#39;s add to the project GruntJS-app
+&lt;br&gt;&lt;br&gt;
+- GruntJS-app
+&lt;br&gt;
+-- dist // html destination
+&lt;br&gt;
+-- src // html source
+&lt;br&gt;
+--- index.html
+&lt;br&gt;
+--- internal.html
+&lt;br&gt;
+-- assets
+&lt;br&gt;
+--- js
+&lt;br&gt;
+---- main.js
+&lt;br&gt;
+---- app.js
+&lt;br&gt;
+---- module.js
+&lt;br&gt;
+--- css
+&lt;br&gt;
+--- images
+&lt;br&gt;
+-- package.json // added new file
+&lt;br&gt;
+-- Gruntfile.js // added new file&lt;/p&gt;
+
+&lt;h2&gt;Installing GruntJS&lt;/h2&gt;
+
+&lt;p&gt;On your root project folder run the command line&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
+sudo npm install -g grunt-cli
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you have the grunt command line installed globally to your project&lt;/p&gt;
+
+&lt;h2&gt;Configuring GruntJS (Gruntfile.js)&lt;/h2&gt;
+
+&lt;p&gt;the basic structure to configure your Gruntfile.js file is simple.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+module.exports = function(grunt) {
+
+    grunt.initConfig({
+        
+    });
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Configuring the package.json&lt;/h2&gt;
+
+&lt;p&gt;You can add tons of information on you package json and you can check all information &lt;a href=&quot;http://package.json.nodejitsu.com/&quot; title=&quot;package json reference information&quot; target=&quot;blank&quot;&gt;here&lt;/a&gt; but in this case let&amp;#39;s keep it as simple as possible.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;json&quot;&gt;
+{
+    &quot;name&quot;: &quot;GruntJS-app&quot;,
+    &quot;title&quot;: &quot;GruntJS-app&quot;,
+    &quot;description&quot;: &quot;Simple introduction to GruntJS set up&quot;,
+    &quot;author&quot;: &quot;your name&quot;,
+    &quot;homepage&quot;: &quot;your project website&quot;,
+    &quot;version&quot;: &quot;0.0.1&quot;,
+    &quot;devDependencies&quot;: {
+        &quot;grunt&quot;: &quot;~0.4.1&quot;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Adding plugins to use as task&lt;/h2&gt;
+
+&lt;p&gt;Remember that we want to &amp;quot;watch&amp;quot; for changes minify both HTML, js files and concatenate all js files in one single file&lt;/p&gt;
+
+&lt;p&gt;Now on you wont need to go manually to package.json to add the plugins as devDependencies because you are going to run the command on your terminal to add it automatically.&lt;/p&gt;
+
+&lt;p&gt;First let&amp;#39;s install Uglify&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
+npm install grunt-contrib-uglify --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And enable the plugin inside of Gruntfile.js&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+grunt.loadNpmTasks('grunt-contrib-uglify');
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now Gruntfile.js looks like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+module.exports = function(grunt) {
+
+    grunt.initConfig({
+
+    });
+
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Install htmlmin&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
+npm install grunt-contrib-htmlmin --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Enable the plugin&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+grunt.loadNpmTasks('grunt-contrib-htmlmin');
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now Gruntfile.js looks like this&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+module.exports = function(grunt) {
+
+    grunt.initConfig({
+
+    });
+
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Setting the tasks&lt;/h2&gt;
+
+&lt;p&gt;On your Gruntfile.js you will define the configuration for your tasks (check out the plugins documentation for configuration) as should be and the task register.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+module.exports = function(grunt) {
+
+    grunt.initConfig({
+
+        uglify: {
+            my_target: {
+              files: {
+                'assets/js/app.min.js': // destination
+                ['assets/js/app.js', 'assets/js/main.js', 'assets/js/module.js'] // source
+              }
+            }
+        },
+
+        htmlmin: {
+            dist: {
+                options: {
+                removeComments: true,
+                collapseWhitespace: true
+            },
+            files: {
+                    'dist/index.html': 'src/index.html', // destination
+                    'dist/internal.html': 'src/internal.html' // source
+                }
+            }
+        }
+
+    });
+
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+
+    grunt.registerTask('build', ['htmlmin', 'uglify']);
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Running the tasks&lt;/h2&gt;
+
+&lt;p&gt;Make sure you have all the npm installed&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
+npm install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run the task&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
+grunt build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Done! This is what you should have as a response.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
+Running &quot;htmlmin:dist&quot; (htmlmin) task
+File dist/index.html created.
+File dist/internal.html created.
+
+Running &quot;uglify:my_target&quot; (uglify) task
+File &quot;assets/js/app.min.js&quot; created.
+
+Done, without errors.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Adding and configuring watch&lt;/h2&gt;
+
+&lt;p&gt;Remember &amp;quot;no waste of time&amp;quot; with repetitive tasks right? so to not need run &amp;quot;grunt build&amp;quot; every time after changes let&amp;#39;s add the plugin watch.&lt;/p&gt;
+
+&lt;p&gt;Install watch&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
+npm install grunt-contrib-watch --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Enable the plugin and configure the watch task&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+grunt.loadNpmTasks('grunt-contrib-watch');
+
+grunt.event.on('watch', function(action, filepath) {
+  grunt.log.writeln(filepath + ' has ' + action);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now Gruntfile.js looks like this (check out the plugin documentation for configuration).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+module.exports = function(grunt) {
+
+    grunt.initConfig({
+
+        uglify: {
+            my_target: {
+              files: {
+                'assets/js/app.min.js': // destination
+                ['assets/js/app.js', 'assets/js/main.js', 'assets/js/module.js'] // source
+              }
+            }
+        },
+
+        htmlmin: {
+            dist: {
+                options: {
+                removeComments: true,
+                collapseWhitespace: true
+            },
+            files: {
+                    'dist/index.html': 'src/index.html', // destination
+                    'dist/internal.html': 'src/internal.html' // source
+                }
+            }
+        },
+
+        watch: {
+            src: {
+              files: ['src/*.html', 'assets/js/*.js', 'assets/css/*.css', '!assets/js/app.min.js'], // ! means not
+              tasks: ['build'],
+            },
+        }
+
+    });
+
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+
+    grunt.registerTask('build', ['htmlmin', 'uglify']);
+
+    grunt.event.on('watch', function(action, filepath) {
+      grunt.log.writeln(filepath + ' has ' + action);
+    });
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now on you will just need to run &amp;quot;grunt watch&amp;quot; so every time you change something in the files set up to watch will run the task &amp;quot;build&amp;quot;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
+grunt watch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To stop watch press &amp;quot;control + c&amp;quot; &lt;/p&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;GruntJS is AWESOME and you can do much more complex things with it.
+&lt;br&gt;
+Check out the example on &lt;a href=&quot;https://github.com/weblancaster/blog-examples/tree/master/GruntJS-app&quot; title=&quot;example on github&quot; target=&quot;blank&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hopefully you will have more time to play with new experiments.
+&lt;br&gt;
+Cheers!&lt;/p&gt;
+</description>
+				<published>Sat Jun 01 00:00:00 -0500 2013</published>
+				<link>http://bymichaellancaster.com//blog/introduction-to-task-runner-gruntjs</link>
+			</item>
+		
+			<item>
 				<title>Basic overview of client - side templating</title>
 				<description>&lt;p&gt;Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. are used to render templates and show content, but lately about two or three years ago we could noticed that developers and companies are changing this using client side templating.&lt;/p&gt;
 
@@ -17,11 +354,11 @@
 
 &lt;h2&gt;Client - Side templating (the new kid in the block?!)&lt;/h2&gt;
 
-&lt;p&gt;The client side consists in remove from the back to the client this template rendering into a very, very known technology called Javascript that runs on each user&#39;s browser making faster web apps and adding more control for you at your end.&lt;/p&gt;
+&lt;p&gt;The client side consists in remove from the back to the client this template rendering into a very, very known technology called Javascript that runs on each user&amp;#39;s browser making faster web apps and adding more control for you at your end.&lt;/p&gt;
 
 &lt;p&gt;It has being very helpful for Single Page Applications where you can just update an section on your website without refresh the page or download all assets over again.&lt;/p&gt;
 
-&lt;p&gt;At start the client side template will use placeholders as content using it&#39;s own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.&lt;/p&gt;
+&lt;p&gt;At start the client side template will use placeholders as content using it&amp;#39;s own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.&lt;/p&gt;
 
 &lt;h2&gt;Simple JSON data example&lt;/h2&gt;
 
@@ -42,7 +379,7 @@
 
 &lt;h2&gt;Simple Web app example&lt;/h2&gt;
 
-&lt;p&gt;Here I&#39;m using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic.
+&lt;p&gt;Here I&amp;#39;m using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic.
 You can check out and download the Web app here &lt;a href=&quot;http://git.io/tUfHyA&quot; title=&quot;Handlebars.js app&quot; target=&quot;_blank&quot;&gt;http://git.io/tUfHyA&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2&gt;Handlebars.js template markup example&lt;/h2&gt;
@@ -58,16 +395,16 @@ You can check out and download the Web app here &lt;a href=&quot;http://git.io/t
 &lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
 function showNewsFromYahooAPI() {
   $.ajax({
-        url: &#39;http://query.yahooapis.com/v1/public/yql?q=select%20title%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&amp;format=json&amp;callback=&#39;,
-        dataType: &#39;json&#39;
+        url: 'http://query.yahooapis.com/v1/public/yql?q=select%20title%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&amp;format=json&amp;callback=',
+        dataType: 'json'
     }).done(function(data){
       var
         query = data.query.results,
-        source = $(&#39;#myTemplate&#39;).html(),
+        source = $('#myTemplate').html(),
         compiledTemplate = Handlebars.compile(source),
         result = compiledTemplate(query);
 
-      $(&#39;#content&#39;).html(result);
+      $('#content').html(result);
     });
 }
 
@@ -92,7 +429,7 @@ $(function() {
 &lt;ul&gt;
 &lt;li&gt;Heavy rendering on the users side (devices are not that good as you think they are).&lt;/li&gt;
 &lt;li&gt;Organization is king.&lt;/li&gt;
-&lt;li&gt;There&#39;s logic-less and logic templates (ask yourself how complex is my template?).&lt;/li&gt;
+&lt;li&gt;There&amp;#39;s logic-less and logic templates (ask yourself how complex is my template?).&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2&gt;Some links to client side template&lt;/h2&gt;
@@ -122,7 +459,7 @@ The client-side templating throwdown: mustache, handlebars, dust.js, and more &l
 
 &lt;p&gt;Cheers!&lt;/p&gt;
 </description>
-				<published>2013-04-07 00:00:00 -0500</published>
+				<published>Sun Apr 07 00:00:00 -0500 2013</published>
 				<link>http://bymichaellancaster.com//blog/basic-overview-of-client-side-templating</link>
 			</item>
 		
@@ -130,7 +467,7 @@ The client-side templating throwdown: mustache, handlebars, dust.js, and more &l
 				<title>From San Francisco to the Brazilian developers community.</title>
 				<description>&lt;p&gt;I went to the HTML5 Developers Conference in San Francisco (01 Apr 13 to 03 Apr 13) and there I met some awesome developers from Brazil and as they are very active to help the developers community in Brazil with speaks, presentations and events they decided record a chat with me talking about how it is work in US, how I got a job here and some good tips for those that want to try this adventure.&lt;/p&gt;
 
-&lt;p&gt;The awesome developers from Brazil including myself and the Principal Mozilla&#39;s Evangelist Christian Heilmann, we had a great dinner. ;)&lt;/p&gt;
+&lt;p&gt;The awesome developers from Brazil including myself and the Principal Mozilla&amp;#39;s Evangelist Christian Heilmann, we had a great dinner. ;)&lt;/p&gt;
 
 &lt;div class=&quot;fluidImg&quot;&gt;
 &lt;img src=&quot;/assets/images/post-images/sf-dinner.jpg&quot; alt=&quot;Brazilian developers and Christian Heilmann&quot;&gt;
@@ -140,7 +477,7 @@ The client-side templating throwdown: mustache, handlebars, dust.js, and more &l
 
 &lt;h2&gt;The chat&lt;/h2&gt;
 
-&lt;p&gt;The video isn&#39;t in a good quality but the content is the important.&lt;/p&gt;
+&lt;p&gt;The video isn&amp;#39;t in a good quality but the content is the important.&lt;/p&gt;
 
 &lt;div class=&quot;fluidMedia&quot;&gt;
     &lt;iframe src=&quot;https://www.youtube.com/embed/73RVbGcZQXk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt; &lt;/iframe&gt;
@@ -150,7 +487,7 @@ The client-side templating throwdown: mustache, handlebars, dust.js, and more &l
 
 &lt;p&gt;Thanks to all my friends from Brazil shared this to help the developers that thinks to come work in US.&lt;/p&gt;
 </description>
-				<published>2013-04-06 00:00:00 -0500</published>
+				<published>Sat Apr 06 00:00:00 -0500 2013</published>
 				<link>http://bymichaellancaster.com//blog/from-san-francisco-to-the-brazilian-developers-community</link>
 			</item>
 		
@@ -203,7 +540,7 @@ The client-side templating throwdown: mustache, handlebars, dust.js, and more &l
 
 &lt;p&gt;Cheers!&lt;/p&gt;
 </description>
-				<published>2013-03-12 00:00:00 -0500</published>
+				<published>Tue Mar 12 00:00:00 -0500 2013</published>
 				<link>http://bymichaellancaster.com//blog/fluid-iframe-and-images-without-javascript-plugins</link>
 			</item>
 		
@@ -244,9 +581,9 @@ The client-side templating throwdown: mustache, handlebars, dust.js, and more &l
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Yeah! people still doing this approach specifying &amp;quot;ID&#39;s&amp;quot; for every element on the page and that kind of architecture &amp;quot;id&#39;s&amp;quot; has no problem for browser rendering or for Javascript developers concerned about performance or make his life easier.&lt;/p&gt;
+&lt;p&gt;Yeah! people still doing this approach specifying &amp;quot;ID&amp;#39;s&amp;quot; for every element on the page and that kind of architecture &amp;quot;id&amp;#39;s&amp;quot; has no problem for browser rendering or for Javascript developers concerned about performance or make his life easier.&lt;/p&gt;
 
-&lt;p&gt;But as a point of view of good CSS architecture that&#39;s not DRY, reusable, modular, scalable and depending on the project this can get pretty messy and heavy. So, never do that way ok?!&lt;/p&gt;
+&lt;p&gt;But as a point of view of good CSS architecture that&amp;#39;s not DRY, reusable, modular, scalable and depending on the project this can get pretty messy and heavy. So, never do that way ok?!&lt;/p&gt;
 
 &lt;h2&gt;More bad examples&lt;/h2&gt;
 
@@ -287,7 +624,7 @@ ul.button-group-yellow li div p a {
 &lt;ul&gt;
 &lt;li&gt;All members has to work together but this is not a job for Designers, Software engineers. This is a job Front End Engineers.&lt;/li&gt;
 &lt;li&gt;CSS is code therefore size and rendering matters.&lt;/li&gt;
-&lt;li&gt;Avoid specificity &amp;quot;ID&#39;s&amp;quot;.&lt;/li&gt;
+&lt;li&gt;Avoid specificity &amp;quot;ID&amp;#39;s&amp;quot;.&lt;/li&gt;
 &lt;li&gt;Avoid long descendants selectors (nesting).&lt;/li&gt;
 &lt;li&gt;Avoid tag-qualify.&lt;/li&gt;
 &lt;li&gt;Browsers render your CSS going right to left.&lt;/li&gt;
@@ -328,9 +665,9 @@ header#header {
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Use DRY (don&#39;t repeat yourself methodology), modular groups, scalable, readable and maintainable.&lt;/li&gt;
+&lt;li&gt;Use DRY (don&amp;#39;t repeat yourself methodology), modular groups, scalable, readable and maintainable.&lt;/li&gt;
 &lt;li&gt;Make it well documented (readable for humans not machines).&lt;/li&gt;
-&lt;li&gt;Use CSS preprocessors (It doesn&#39;t mean you are going to have a good CSS architecture).&lt;/li&gt;
+&lt;li&gt;Use CSS preprocessors (It doesn&amp;#39;t mean you are going to have a good CSS architecture).&lt;/li&gt;
 &lt;li&gt;More developers = more problems so write a Doc &amp;amp; Stylesheets guide for your team.&lt;/li&gt;
 &lt;li&gt;Comments are KING. They wont be there afterwards because you will minify so use wisely.&lt;/li&gt;
 &lt;li&gt;Find the patterns in your design and apply OOCSS method (works great for me).&lt;/li&gt;
@@ -400,7 +737,7 @@ header#header {
 &lt;p&gt;I always had concern about my classes notation name, how should I name semantically meaningful? how should I show this on the HTML? How I will better transfer/show by notation name my HTML structure?.. &lt;br&gt;
 &lt;strong&gt;One of the most important ideas of classes notation name is try to transfer/show the HTML structure reading the classes names on the CSS file&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Example, Let&#39;s say we have one module.&lt;/p&gt;
+&lt;p&gt;Example, Let&amp;#39;s say we have one module.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code data-language=&quot;css&quot;&gt;
 .promo-box {
@@ -420,14 +757,14 @@ header#header {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;I even don&#39;t need to show you the HTML markup to make you understand the HTML structure, can you see the possibilities here?!&lt;/p&gt;
+&lt;p&gt;I even don&amp;#39;t need to show you the HTML markup to make you understand the HTML structure, can you see the possibilities here?!&lt;/p&gt;
 
-&lt;h2&gt;I&#39;m changing to..&lt;/h2&gt;
+&lt;h2&gt;I&amp;#39;m changing to..&lt;/h2&gt;
 
-&lt;p&gt;One week before I write this post I saw the speak of &lt;a href=&quot;http://nicolasgallagher.com/&quot; target=&quot;_blank&quot; title=&quot;&quot;&gt;Nicolas Gallagher&lt;/a&gt; about &amp;quot;Questioning good practices&amp;quot; (I highly recommend) in his speak he also showed a &lt;a href=&quot;http://www.yandex.com/&quot; target=&quot;_blank&quot; title=&quot;Russian Search engine&quot;&gt;Russian Search engine&lt;/a&gt; classes notation name and It&#39;s true my notation is fashionable at the moment.&lt;/p&gt;
+&lt;p&gt;One week before I write this post I saw the speak of &lt;a href=&quot;http://nicolasgallagher.com/&quot; target=&quot;_blank&quot; title=&quot;&quot;&gt;Nicolas Gallagher&lt;/a&gt; about &amp;quot;Questioning good practices&amp;quot; (I highly recommend) in his speak he also showed a &lt;a href=&quot;http://www.yandex.com/&quot; target=&quot;_blank&quot; title=&quot;Russian Search engine&quot;&gt;Russian Search engine&lt;/a&gt; classes notation name and It&amp;#39;s true my notation is fashionable at the moment.&lt;/p&gt;
 
 &lt;p&gt;All made sense. So now on I will use this non-fashionable YET classes notation name but answering the same questions I told you before.&lt;br&gt;
-what are you talking about Michael? Here&#39;s a new example of that module above.&lt;/p&gt;
+what are you talking about Michael? Here&amp;#39;s a new example of that module above.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code data-language=&quot;css&quot;&gt;
 .promoBox {
@@ -456,15 +793,15 @@ Lastly we have &amp;quot;promoBox--round&amp;quot; with two dashes that means ex
 
 &lt;h2&gt;Final thoughts&lt;/h2&gt;
 
-&lt;p&gt;There&#39;s no absolute way to write, give classes name notation or build &amp;quot;The god master CSS architecture&amp;quot; but there&#39;s definitely great practices to make a great Web application and it all depends on your team and the focus on your Web application goals.&lt;/p&gt;
+&lt;p&gt;There&amp;#39;s no absolute way to write, give classes name notation or build &amp;quot;The god master CSS architecture&amp;quot; but there&amp;#39;s definitely great practices to make a great Web application and it all depends on your team and the focus on your Web application goals.&lt;/p&gt;
 </description>
-				<published>2013-03-08 00:00:00 -0600</published>
+				<published>Fri Mar 08 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/css-architecture-for-web-applications</link>
 			</item>
 		
 			<item>
 				<title>Secrets of Lea Verou about CSS.</title>
-				<description>&lt;p&gt;I&#39;m not sure when it was but in the end of 2011 or beginning of 2012 I saw &lt;a href=&quot;http://lea.verou.me/&quot; title=&quot;Lea Verou&quot; target=&quot;_blank&quot;&gt;Lea Verou&lt;/a&gt; talking about &amp;quot;CSS3 Secrets: 10 things you might not know about CSS3&amp;quot; and it was great see how many great techniques we can use to achieve our &lt;br&gt; client - side goals.&lt;/p&gt;
+				<description>&lt;p&gt;I&amp;#39;m not sure when it was but in the end of 2011 or beginning of 2012 I saw &lt;a href=&quot;http://lea.verou.me/&quot; title=&quot;Lea Verou&quot; target=&quot;_blank&quot;&gt;Lea Verou&lt;/a&gt; talking about &amp;quot;CSS3 Secrets: 10 things you might not know about CSS3&amp;quot; and it was great see how many great techniques we can use to achieve our &lt;br&gt; client - side goals.&lt;/p&gt;
 
 &lt;h2&gt;10 things you might not know about CSS3&lt;/h2&gt;
 
@@ -486,7 +823,7 @@ Lastly we have &amp;quot;promoBox--round&amp;quot; with two dashes that means ex
 
 &lt;p&gt;As you can see she is a Client - Side hacker specifically in CSS and always bringing new ideas and techniques to solve common problems we used to solve with complex javascript code and hacks.&lt;/p&gt;
 </description>
-				<published>2013-03-03 00:00:00 -0600</published>
+				<published>Sun Mar 03 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/secrets-of-lea-verou-css</link>
 			</item>
 		
@@ -494,28 +831,28 @@ Lastly we have &amp;quot;promoBox--round&amp;quot; with two dashes that means ex
 				<title>Inspirational Art and Code by Joshua Davis.</title>
 				<description>&lt;p&gt;A friend of mine shared this great talk by Joshua Davis at W3Conf in San Francisco.
 &lt;br&gt;
-Joshua&#39;s work is very inspirational and he can do very cool things using processing.js to generate forms.&lt;/p&gt;
+Joshua&amp;#39;s work is very inspirational and he can do very cool things using processing.js to generate forms.&lt;/p&gt;
 
-&lt;p&gt;Don&#39;t forget to check out his website &lt;a href=&quot;http://www.joshuadavis.com/&quot; title=&quot;Joshua Davis&quot; target=&quot;_blank&quot;&gt;Joshua Davis&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Don&amp;#39;t forget to check out his website &lt;a href=&quot;http://www.joshuadavis.com/&quot; title=&quot;Joshua Davis&quot; target=&quot;_blank&quot;&gt;Joshua Davis&lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;fluidMedia&quot;&gt;
     &lt;iframe src=&quot;https://www.youtube.com/embed/LJS4fBjdPM4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt; &lt;/iframe&gt;
 &lt;/div&gt;
 </description>
-				<published>2013-02-28 00:00:00 -0600</published>
+				<published>Thu Feb 28 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/inspirational-art-and-code-by-joshua-davis</link>
 			</item>
 		
 			<item>
 				<title>The filter bubble and your social life online.</title>
 				<description>&lt;p&gt;At the same time Internet give us liberty to think and see different points about our world in culture, politics, nature, life in general the internet is made by &amp;quot;man&amp;quot; and we have our own perspective of the world.
-Therefore we are doing the same exactly mistakes we are doing offline it&#39;s just another digital space 1 and 0&#39;s.&lt;/p&gt;
+Therefore we are doing the same exactly mistakes we are doing offline it&amp;#39;s just another digital space 1 and 0&amp;#39;s.&lt;/p&gt;
 
-&lt;p&gt;It&#39;s sort of funny sometimes how we push things turning every person the &amp;quot;product of the environment&amp;quot; even on digital.&lt;/p&gt;
+&lt;p&gt;It&amp;#39;s sort of funny sometimes how we push things turning every person the &amp;quot;product of the environment&amp;quot; even on digital.&lt;/p&gt;
 
-&lt;p&gt;I&#39;ll never deny that technology in particular internet changed the world for better but I still think we could do much better when we start to change our mindset as a &amp;quot;person&amp;quot; for the community.&lt;/p&gt;
+&lt;p&gt;I&amp;#39;ll never deny that technology in particular internet changed the world for better but I still think we could do much better when we start to change our mindset as a &amp;quot;person&amp;quot; for the community.&lt;/p&gt;
 
-&lt;p&gt;Watching this great video we can see that people don&#39;t loose their old habits to live in their &amp;quot;boxes&amp;quot; and continue to create their &amp;quot;Extended Mind&amp;quot;&lt;/p&gt;
+&lt;p&gt;Watching this great video we can see that people don&amp;#39;t loose their old habits to live in their &amp;quot;boxes&amp;quot; and continue to create their &amp;quot;Extended Mind&amp;quot;&lt;/p&gt;
 
 &lt;h2&gt;Are we going backwards?!&lt;/h2&gt;
 
@@ -534,7 +871,7 @@ Therefore we are doing the same exactly mistakes we are doing offline it&#39;s j
 &lt;p&gt;&lt;br&gt;
 Both videos are great to inspired us to think about almost everything surround us in the digital life.&lt;/p&gt;
 </description>
-				<published>2013-02-27 00:00:00 -0600</published>
+				<published>Wed Feb 27 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/the-filter-bubble-and-your-social-life-online</link>
 			</item>
 		
@@ -542,7 +879,7 @@ Both videos are great to inspired us to think about almost everything surround u
 				<title>Let's talk about rem units.</title>
 				<description>&lt;h2&gt;The past/present&lt;/h2&gt;
 
-&lt;p&gt;I could talk a lot about all the principal units we have been using but let&#39;s get this straight we have been using &amp;quot;px&amp;quot; since ever and this approach just doesn&#39;t work anymore or scale.&lt;/p&gt;
+&lt;p&gt;I could talk a lot about all the principal units we have been using but let&amp;#39;s get this straight we have been using &amp;quot;px&amp;quot; since ever and this approach just doesn&amp;#39;t work anymore or scale.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code data-language=&quot;css&quot;&gt;
 .parent {
@@ -554,9 +891,9 @@ Both videos are great to inspired us to think about almost everything surround u
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Now with the popularity and acceptance of the Responsive Design (web applications accessible in any devices) developers and designers are thinking more about scale things and make it fit to their user&#39;s device.
+&lt;p&gt;Now with the popularity and acceptance of the Responsive Design (web applications accessible in any devices) developers and designers are thinking more about scale things and make it fit to their user&amp;#39;s device.
 Style sheets that use relative units can more easily scale from one device environment to another.
-Therefore we started to scale the font-size transforming pixel in em&#39;s using this math child / parent = em&#39;s voila!!&lt;/p&gt;
+Therefore we started to scale the font-size transforming pixel in em&amp;#39;s using this math child / parent = em&amp;#39;s voila!!&lt;/p&gt;
 
 &lt;pre&gt;&lt;code data-language=&quot;css&quot;&gt;
 .parent {
@@ -568,9 +905,9 @@ Therefore we started to scale the font-size transforming pixel in em&#39;s using
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Oh! wait. Do we have to repeat this math going through element parent by element parent to give their child the right em&#39;s values? It&#39;s hard to believe but yes we do.&lt;/p&gt;
+&lt;p&gt;Oh! wait. Do we have to repeat this math going through element parent by element parent to give their child the right em&amp;#39;s values? It&amp;#39;s hard to believe but yes we do.&lt;/p&gt;
 
-&lt;p&gt;Now when your wife, girlfriend, dog (whatever) asked you why you are loosing hair and getting bald that&#39;s your answer &amp;quot;I use px to calculate em&#39;s Baby!&amp;quot;&lt;/p&gt;
+&lt;p&gt;Now when your wife, girlfriend, dog (whatever) asked you why you are loosing hair and getting bald that&amp;#39;s your answer &amp;quot;I use px to calculate em&amp;#39;s Baby!&amp;quot;&lt;/p&gt;
 
 &lt;h2&gt;The present/future&lt;/h2&gt;
 
@@ -620,18 +957,18 @@ child {
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Let&#39;s go now change all our style sheets and make it good for all users and developers!!&lt;/p&gt;
+&lt;p&gt;Let&amp;#39;s go now change all our style sheets and make it good for all users and developers!!&lt;/p&gt;
 </description>
-				<published>2013-02-26 00:00:00 -0600</published>
+				<published>Tue Feb 26 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/lets-talk-about-rem-units</link>
 			</item>
 		
 			<item>
 				<title>Two years ago everything started.</title>
-				<description>&lt;p&gt;While I cook my pasta I write this post so I&#39;ll be short.&lt;/p&gt;
+				<description>&lt;p&gt;While I cook my pasta I write this post so I&amp;#39;ll be short.&lt;/p&gt;
 
 &lt;p&gt;For my first job I did a test and got my first paid job as a Front End Developer Jr
-It was hard because we had so many projects and things to do that I wasn&#39;t used to (Mostly developers used to get there around 9:30 am and leave around 9:30 pm) I used to get home at 1:00 am so I had time to eat fast, shower and get some rest to another day.
+It was hard because we had so many projects and things to do that I wasn&amp;#39;t used to (Mostly developers used to get there around 9:30 am and leave around 9:30 pm) I used to get home at 1:00 am so I had time to eat fast, shower and get some rest to another day.
 I had my senior developer supporting and protecting me like a father and I could learn a lot from him not just technical stuff but how to act in certain situations.&lt;/p&gt;
 
 &lt;p&gt;After 5 months of my hard core work and a lot of growth this same senior developer indicated me to another company DBR.ag to work as a consultant for some months in a big ongoing project at Chamber of Electric Energy Commercialization in Brazil.
@@ -641,15 +978,15 @@ At the Agency I started to think in process to help our work flow so I suggested
 I also developed a simple HTML5 markup framework as a good practice to all developers follow and it was very fun.
 After some months HP called us to come back to CCEE and help the JSP developers with client side mostly with JS/jQuery.&lt;/p&gt;
 
-&lt;p&gt;The rest you can guess reading the about me page so let&#39;s talk about some other topics now.&lt;/p&gt;
+&lt;p&gt;The rest you can guess reading the about me page so let&amp;#39;s talk about some other topics now.&lt;/p&gt;
 
 &lt;h2&gt;Outdated Developers&lt;/h2&gt;
 
 &lt;p&gt;I had great senior developers, but all of them had something in common they were kind of outdated about the new stuff and things we could use maybe because of the hard work flow, family, laziness whatever I just know one of the things that makes difference in a great professional to a good one is his ability to make things better not just getting it done but making it better so I put in my head always look for make it better and stay update to new things that could help improve my job.&lt;/p&gt;
 
-&lt;h2&gt;How I&#39;m doing it&lt;/h2&gt;
+&lt;h2&gt;How I&amp;#39;m doing it&lt;/h2&gt;
 
-&lt;p&gt;I&#39;m always evaluating myself and looking new ways to improve myself in being a better professional.
+&lt;p&gt;I&amp;#39;m always evaluating myself and looking new ways to improve myself in being a better professional.
 Lately (around 6 months) I discovered the best way &amp;quot;for me&amp;quot; to learn better is read as much as I can about something new that I want to learn before actually try it so I will have like an 360 point of view, a better understanding of it.&lt;/p&gt;
 
 &lt;h2&gt;Something that I try follow to keep me productive.&lt;/h2&gt;
@@ -661,66 +998,14 @@ Lately (around 6 months) I discovered the best way &amp;quot;for me&amp;quot; to
         &lt;li&gt;Keep focus wake up and think about your tasks for the day that you have to get done.&lt;/li&gt;
         &lt;li&gt;First do it, then do it right, then do it better&lt;/li&gt;
         &lt;li&gt;Follow the most active and productive guys in your field, stay updated, read, talk, discuss about it when is possible.&lt;/li&gt;
-        &lt;li&gt;Make experiments. Don&#39;t have time? make time experiments are very important to expand your view outside of the &quot;work box&quot;&lt;/li&gt;
+        &lt;li&gt;Make experiments. Don't have time? make time experiments are very important to expand your view outside of the &quot;work box&quot;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/p&gt;
 
 &lt;p&gt;and this work is what keep me awake at night learning new things when everybody else is sleeping.&lt;/p&gt;
 </description>
-				<published>2013-02-25 00:00:00 -0600</published>
+				<published>Mon Feb 25 00:00:00 -0600 2013</published>
 				<link>http://bymichaellancaster.com//blog/two-years-ago-everything-started</link>
-			</item>
-		
-			<item>
-				<title>What technologies I'm using to blog?!</title>
-				<description>&lt;p&gt;I needed a new look and as I said in my last (first) post I love to learn and experiment new things and at the same time I&#39;m not very fan of Wordpress as a developer point of view either. &lt;br&gt;
-I agree it is a good CMS/Blog Tool that helps us delivery great products in short time for clients therefore it&#39;s good for business but Wordpress &amp;quot;themes&amp;quot; has a bunch of ugly, messy code and sometimes happens to be infected by other plugins/scripts causing headaches or even worst.&lt;/p&gt;
-
-&lt;h2&gt;Long story short&lt;/h2&gt;
-
-&lt;p&gt;
-I started looking for something more elegant that I could use git to deploy
-So I tried Github Pages and Jekyll a &quot;blog-aware, static site generator in Ruby&quot; that uses Liquid template to process the templates.
-But I would do experiments with Node.js and Ruby someday so I choose &lt;a href=&quot;http://www.heroku.com&quot; title=&quot;Heroku&quot; target=&quot;_blank&quot;&gt;Heroku&lt;/a&gt; (cloud application platform for build, deploy, and run cloud apps using Ruby, Node.js, Clojure, Java, Python and Scala).
-&lt;/p&gt;
-
-&lt;p&gt;I Can run and test locally, pretty simple.
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-foreman start
-&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
-
-&lt;p&gt;And After see my changes I want to deploy directly to my cloud.&lt;/p&gt;
-
-&lt;p&gt;&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-git add .
-git commit -m &amp;quot;my message&amp;quot;
-git push origin master
-&lt;/code&gt;&lt;/pre&gt;
-Done! Beautiful! Everything up and running.&lt;/p&gt;
-
-&lt;h3&gt;In the Back-End&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Heroku Server (AWESOME cloud application platform).&lt;/li&gt;
-&lt;li&gt;Ruby (Jekyll, liquid template).&lt;/li&gt;
-&lt;li&gt;Git to deploy to my Heroku Cloud.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;In the Front-End&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;HTML5 (Markup).&lt;/li&gt;
-&lt;li&gt;CSS3 (SASS/COMPASS) Modular Development Based.&lt;/li&gt;
-&lt;li&gt;Responsive Design.&lt;/li&gt;
-&lt;li&gt;JS (jQuery).&lt;/li&gt;
-&lt;li&gt;Markdown (Blogging).&lt;/li&gt;
-&lt;li&gt;Disqus (comments).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I may do a better explanation how it works further on but for now I need some posts.&lt;/p&gt;
-</description>
-				<published>2013-01-30 00:00:00 -0600</published>
-				<link>http://bymichaellancaster.com//blog/what-technologies-im-using-to-blog</link>
 			</item>
 		
 	</channel>

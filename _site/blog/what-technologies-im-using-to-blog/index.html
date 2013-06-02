@@ -63,6 +63,8 @@
 		<option value="/about">About</option>
 		<optgroup label="Articles">
 			
+			<option value="/blog/introduction-to-task-runner-gruntjs">Introduction to GruntJS</option>
+			
 			<option value="/blog/basic-overview-of-client-side-templating">Basic overview of client - side templating</option>
 			
 			<option value="/blog/from-san-francisco-to-the-brazilian-developers-community">From San Francisco to the Brazilian developers community.</option>
@@ -92,6 +94,13 @@
 
 	<!-- articles list -->
 	<ul id="articles-list" class="vh">
+		
+		<li>
+			<a href="/blog/introduction-to-task-runner-gruntjs" title="Introduction to GruntJS">
+				<h2 class="ui-tit-02">Introduction to GruntJS</h2>
+				<span class="ui-date">01 Jun 2013</span>
+			</a>
+		</li>
 		
 		<li>
 			<a href="/blog/basic-overview-of-client-side-templating" title="Basic overview of client - side templating">
@@ -183,8 +192,8 @@
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>I needed a new look and as I said in my last (first) post I love to learn and experiment new things and at the same time I'm not very fan of Wordpress as a developer point of view either. <br>
-I agree it is a good CMS/Blog Tool that helps us delivery great products in short time for clients therefore it's good for business but Wordpress &quot;themes&quot; has a bunch of ugly, messy code and sometimes happens to be infected by other plugins/scripts causing headaches or even worst.</p>
+	<div class="ui-copy"><p>I needed a new look and as I said in my last (first) post I love to learn and experiment new things and at the same time I&#39;m not very fan of Wordpress as a developer point of view either. <br>
+I agree it is a good CMS/Blog Tool that helps us delivery great products in short time for clients therefore it&#39;s good for business but Wordpress &quot;themes&quot; has a bunch of ugly, messy code and sometimes happens to be infected by other plugins/scripts causing headaches or even worst.</p>
 
 <h2>Long story short</h2>
 
@@ -201,12 +210,13 @@ foreman start
 
 <p>And After see my changes I want to deploy directly to my cloud.</p>
 
-<p><pre><code data-language="ruby">
+<pre><code data-language="ruby">
 git add .
-git commit -m &quot;my message&quot;
+git commit -m "my message"
 git push origin master
 </code></pre>
-Done! Beautiful! Everything up and running.</p>
+
+<p>Done! Beautiful! Everything up and running.</p>
 
 <h3>In the Back-End</h3>
 
