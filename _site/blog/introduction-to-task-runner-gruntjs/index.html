@@ -192,18 +192,19 @@
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>Developers should be worry about write code but very often we got ourself doing a lot of repetitive and boring tasks.
-Cleaning the code, minifying, combining, generating and so on so forth.</p>
+	<div class="ui-copy"><p>Which developer never wasted time doing repetitive and boring tasks instead of being focused on what we do best &quot;Code&quot;.</p>
+
+<p>Developers should be worry about write code but very often we got ourself doing a lot of repetitive and boring tasks like cleaning the code, minifying, combining, generating and so on so forth.</p>
 
 <p>How many time would you save not doing those tasks? today I will show you the introduction use to help you on your daily bases development work flow.</p>
 
-<p>There&#39;s a answer and it&#39;s called GruntJS I have been using a while and I got say &quot;It&#39;s true love&quot; I can watch for changes on my files, run tests, minify, pre-process SASS, minify images and the list goes on take at look on the plugins at <a href="http://gruntjs.com/plugins" title="GruntJS plugins" target="_blank">GruntJS plugins</a> and for more information and further reference you MUST go to <a href="http://gruntjs.com" title="GruntJS" target="_blank">GruntJS website</a>.</p>
+<p>There's a answer and it's called GruntJS I have been using a while and I got say &quot;It's true love&quot; I can watch for changes on my files, run tests, minify, pre-process SASS, minify images and the list goes on take at look on the plugins at <a href="http://gruntjs.com/plugins" title="GruntJS plugins" target="_blank">GruntJS plugins</a> and for more information and further reference you MUST go to <a href="http://gruntjs.com" title="GruntJS" target="_blank">GruntJS website</a>.</p>
 
-<p>Let&#39;s say we want to watch for changes on the js files and HTML markup minify both and concatenate all js files in one single file.</p>
+<p>Let's say we want to watch for changes on the js files and HTML markup minify both and concatenate all js files in one single file.</p>
 
-<h2>Let&#39;s get start</h2>
+<h2>Let's get start</h2>
 
-<p>Create a folder on your desktop (or whatever you want to) and let&#39;s call it GruntJS-app.
+<p>Create a folder on your desktop (or whatever you want to) and let's call it GruntJS-app.
 <br>
 Add this follow simple architecture to your project.
 <br><br>
@@ -231,11 +232,11 @@ Add this follow simple architecture to your project.
 <br>
 --- images</p>
 
-<p>Then you will need NodeJS on the computer/mac if you don&#39;t have go to the <a href="http://nodejs.org/" title="NodeJS website" target="_blank">NodeJS website</a> for installation information.</p>
+<p>Then you will need NodeJS if you don't have go to the <a href="http://nodejs.org/" title="NodeJS website" target="_blank">NodeJS website</a> for installation information.</p>
 
 <p>To make GruntJS work properly you will need some two specific files &quot;package.json&quot; used by <a href="https://npmjs.org/" title="npm website" target="_blank">npm</a> contain the information for the project where you list grunt and plugins used by your project as &quot;devDependencies&quot; and the &quot;Gruntfile.js&quot; where you set your tasks to run.</p>
 
-<p>So let&#39;s add to the project GruntJS-app
+<p>So let's add to the project GruntJS-app
 <br><br>
 - GruntJS-app
 <br>
@@ -291,7 +292,7 @@ module.exports = function(grunt) {
 
 <h2>Configuring the package.json</h2>
 
-<p>You can add tons of information on you package json and you can check all information <a href="http://package.json.nodejitsu.com/" title="package json reference information" target="blank">here</a> but in this case let&#39;s keep it as simple as possible.</p>
+<p>You can add tons of information on you package json and you can check all information <a href="http://package.json.nodejitsu.com/" title="package json reference information" target="blank">here</a> but in this case let's keep it as simple as possible.</p>
 
 <pre><code data-language="json">
 {
@@ -313,7 +314,7 @@ module.exports = function(grunt) {
 
 <p>Now on you wont need to go manually to package.json to add the plugins as devDependencies because you are going to run the command on your terminal to add it automatically.</p>
 
-<p>First let&#39;s install Uglify</p>
+<p>First let's install Uglify</p>
 
 <pre><code data-language="ruby">
 npm install grunt-contrib-uglify --save-dev
@@ -436,7 +437,7 @@ Done, without errors.
 
 <h2>Adding and configuring watch</h2>
 
-<p>Remember &quot;no waste of time&quot; with repetitive tasks right? so to not need run &quot;grunt build&quot; every time after changes let&#39;s add the plugin watch.</p>
+<p>Remember &quot;no waste of time&quot; with repetitive tasks right? so to not need run &quot;grunt build&quot; every time after changes let's add the plugin watch.</p>
 
 <p>Install watch</p>
 
@@ -511,6 +512,13 @@ module.exports = function(grunt) {
 grunt watch
 </code></pre>
 
+<p>and this is what you should see after run the command</p>
+
+<pre><code data-language="ruby">
+Running "watch" task
+Waiting...
+</code></pre>
+
 <p>To stop watch press &quot;control + c&quot; </p>
 
 <h2>Conclusion</h2>
@@ -519,7 +527,7 @@ grunt watch
 <br>
 Check out the example on <a href="https://github.com/weblancaster/blog-examples/tree/master/GruntJS-app" title="example on github" target="blank">Github</a>.</p>
 
-<p>Hopefully you will have more time to play with new experiments.
+<p>Now you have more time to play with new experiments.
 <br>
 Cheers!</p>
 </div>

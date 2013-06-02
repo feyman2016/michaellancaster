@@ -45,7 +45,9 @@ You can check out and download the Web app here <a href="http://git.io/tUfHyA" t
 
 ## Handlebars.js template markup example
 
-<script src="https://gist.github.com/weblancaster/5329561.js"> </script>
+<div class="fluidImg">
+<img src="/assets/images/post-images/client-side.png" alt="Brazilian developers and Christian Heilmann">
+</div>
 
 <br/>
 
