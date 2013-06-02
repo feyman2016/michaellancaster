@@ -5,8 +5,9 @@ title: Introduction to GruntJS
 excerpt: Which developer never wasted time doing repetitive and boring tasks instead of being focused on what we do best "Code".
 ---
 
-Developers should be worry about write code but very often we got ourself doing a lot of repetitive and boring tasks.
-Cleaning the code, minifying, combining, generating and so on so forth.
+Which developer never wasted time doing repetitive and boring tasks instead of being focused on what we do best "Code".
+
+Developers should be worry about write code but very often we got ourself doing a lot of repetitive and boring tasks like cleaning the code, minifying, combining, generating and so on so forth.
 
 How many time would you save not doing those tasks? today I will show you the introduction use to help you on your daily bases development work flow.
 
