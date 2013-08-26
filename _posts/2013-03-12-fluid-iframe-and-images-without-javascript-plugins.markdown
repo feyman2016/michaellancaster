@@ -24,7 +24,7 @@ This is a technique of positioning a element inside of another using "position: 
 <pre><code data-language="css">
 .fluidMedia {
 	position: relative;
-	padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 */
+	padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
 	padding-top: 30px;
 	height: 0;
 	overflow: hidden;
