@@ -2,7 +2,7 @@
 layout: post
 title: Tonight's inspiration
 
-excerpt: I haven't posted anything a while which is a shame but I had good reasons and I should be doing a post about it on my next post but this post is made to show what inspire me in some nights, what makes me think how wonderful world is and how much we cna learn from it.
+excerpt: I haven't posted anything a while which is a shame but I had good reasons and I should be doing why on my next post but this post is made to show what inspire me in some nights, what makes me think how wonderful world is and how much we cna learn from it.
 ---
  
 I haven't posted anything a while which is a shame but I had good reasons and I should be doing a post about it on my next post but this post is made to show what inspire me love this world what makes me think how wonderful things are and how much we can learn from our world.
@@ -60,7 +60,7 @@ The way the speaker approach the subject is a very creative and interesting thin
 
 <br>
 
-It all may not make sense to you. But I felt like I should post them.
+If it all doesn't makes sense to you don't worry lot of things in life doesn't makes sense.
 
 
 
