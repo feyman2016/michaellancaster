@@ -48,4 +48,6 @@ Example <a href="/blog/secrets-of-lea-verou-css/" title="fluid iframe example">h
 - Chrome 6+
 - Safari 5+
 
+You can know more about it on <a href="http://alistapart.com/article/creating-intrinsic-ratios-for-video" target="_blank" title="A List Apart">A List Apart</a> great article.
+
 Cheers!
