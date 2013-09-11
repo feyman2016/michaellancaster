@@ -9,7 +9,7 @@ excerpt: A month ago was the event Lollapalooza in Chicago and some co-workers f
 
 ## What is Lollagram?
 
-[from the Application] Lollagram is a labor of love that’s designed to help you keep track of the Lollapalooza experience, through the eyes (or, more accurately, snapshots) of music lovers on the ground at Grant Park. Lollagram takes advantage of the Instagram Real Time API and aggregates the moments at Lollapalooza, creating a visual record of the bands, food, people, and city that make up this great musical tradition. With 45 million photos being uploaded to Instagram each day, we're excited to present snapshots from Lollapalooza 2013.
+[from the Application] <a href="http://www.lollagram.com" target="_blank" title="Lollagram - real time lollapalooza">Lollagram</a>  is a labor of love that’s designed to help you keep track of the Lollapalooza experience, through the eyes (or, more accurately, snapshots) of music lovers on the ground at Grant Park. Lollagram takes advantage of the Instagram Real Time API and aggregates the moments at Lollapalooza, creating a visual record of the bands, food, people, and city that make up this great musical tradition. With 45 million photos being uploaded to Instagram each day, we're excited to present snapshots from Lollapalooza 2013.
 
 ## The new version
 
@@ -19,7 +19,7 @@ The old version of Lollagram was a simple website built in PHP where you needed 
 
 While I was working for Golinharris I was also working on my side projects/experiments using NodeJS so I think two weeks before the event I started to talk with my co-worker and designer Daniel Branca that I was thinking to use cutting edge technologies to do a real time Application therefore much more engaging.
 
-I was also about to leave the company to another company and I had one more week at Golinharris but I really wanted to work on it for fun and learning to use technologies like NodeJs, Socket.io, Client Side template (HandlebarsJs) and responsive web design (Yes I did for "free").
+I was also about to leave the company to another company and I had one more week at Golinharris but I really wanted to work on it for fun and learning to use technologies like NodeJs, Socket.io, Client Side template (HandlebarsJs) and responsive web design where the user can follow on their smartphone, tablet, desktop or even on TV (and Yes I did for "free").
 
 I never had work with real time Application so I started to read and do some experiments with Socket.io coding a real time chat (as most developers do).
 After understand the basic concept of Socket.io "Real Time" and discuss all the most important details of the Application with Dan (the designer) I started code the Application.
