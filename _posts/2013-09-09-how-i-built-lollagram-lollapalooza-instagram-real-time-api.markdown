@@ -82,7 +82,6 @@ On my method "mostRecent" the Socket.io on the client receives the data and pars
 <pre><code data-language="javascript">
 mostRecent: function() {
     socket.on('firstShow', function (data) {
-        var clean = $('imgContent').find('a').remove();
         var
             query = data,
             source = $('#firstShow-tpl').html(),
