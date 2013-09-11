@@ -165,8 +165,6 @@ Instagram.subscriptions.unsubscribe({ id: '#######' });
 
 ### Final thoughts
 
-The way I put here sounds like it was easy but wasn't that easy.
-
 - Work with Real Time is pretty cool and fun.
 - Instagram real time API isn't great but does the job.
 - Work in three different important things in one week is possible with one pack of monster energetic and less than four hours of sleep.
