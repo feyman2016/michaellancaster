@@ -166,7 +166,7 @@ Instagram.subscriptions.unsubscribe({ id: '#######' });
 
 - Work with Real Time is pretty cool and fun.
 - Instagram real time API isn't great but does the job.
-- Work in three different important things in one week is possible with one pack of monster energetic and less than four hours of sleep.
+- Work in three different important things in one week is possible with one pack with ten monster energetic drink and less than four hours of sleep per night.
 - People love to share pictures. People love to see pictures.
 
 Check out the source code on <a href="https://github.com/weblancaster/instagram-real-time" target="_blank" title="github Lollagram - real time lollagram cosuming Instagram real time API">Lollagram source code.</a>
