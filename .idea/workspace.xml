@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="724935ab-5c30-40e6-a18d-b205514314f5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2013-09-18-when-facebook-recruiter-email-me.markdown" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/draft/2013-02-06-why-should-you-be-using-css-preprocessors-in-particular-sass.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/draft/2013-03-05-going-through-basics-web-mobile-development.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/draft/2013-02-06-why-should-you-be-using-css-preprocessors-in-particular-sass.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/draft/2013-03-05-going-through-basics-web-mobile-development.markdown" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/about/index.html" afterPath="$PROJECT_DIR$/_site/about/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archive.html" afterPath="$PROJECT_DIR$/_site/archive.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/basic-overview-of-client-side-templating/index.html" afterPath="$PROJECT_DIR$/_site/blog/basic-overview-of-client-side-templating/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/css-architecture-for-web-applications/index.html" afterPath="$PROJECT_DIR$/_site/blog/css-architecture-for-web-applications/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/first-things-first/index.html" afterPath="$PROJECT_DIR$/_site/blog/first-things-first/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/fluid-iframe-and-images-without-javascript-plugins/index.html" afterPath="$PROJECT_DIR$/_site/blog/fluid-iframe-and-images-without-javascript-plugins/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/from-san-francisco-to-the-brazilian-developers-community/index.html" afterPath="$PROJECT_DIR$/_site/blog/from-san-francisco-to-the-brazilian-developers-community/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/how-i-built-lollagram-lollapalooza-instagram-real-time-api/index.html" afterPath="$PROJECT_DIR$/_site/blog/how-i-built-lollagram-lollapalooza-instagram-real-time-api/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/inspirational-art-and-code-by-joshua-davis/index.html" afterPath="$PROJECT_DIR$/_site/blog/inspirational-art-and-code-by-joshua-davis/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/introduction-to-task-runner-gruntjs/index.html" afterPath="$PROJECT_DIR$/_site/blog/introduction-to-task-runner-gruntjs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/lets-talk-about-rem-units/index.html" afterPath="$PROJECT_DIR$/_site/blog/lets-talk-about-rem-units/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/secrets-of-lea-verou-css/index.html" afterPath="$PROJECT_DIR$/_site/blog/secrets-of-lea-verou-css/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/the-filter-bubble-and-your-social-life-online/index.html" afterPath="$PROJECT_DIR$/_site/blog/the-filter-bubble-and-your-social-life-online/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/tonights-inspiration/index.html" afterPath="$PROJECT_DIR$/_site/blog/tonights-inspiration/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/two-years-ago-everything-started/index.html" afterPath="$PROJECT_DIR$/_site/blog/two-years-ago-everything-started/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/what-technologies-im-using-to-blog/index.html" afterPath="$PROJECT_DIR$/_site/blog/what-technologies-im-using-to-blog/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/lab/index.html" afterPath="$PROJECT_DIR$/_site/lab/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/sitemap.xml" afterPath="$PROJECT_DIR$/_site/sitemap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about/index.html" afterPath="$PROJECT_DIR$/about/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2013-09-18-when-facebook-recruiter-email-me.markdown" afterPath="$PROJECT_DIR$/_posts/2013-09-18-when-facebook-recruiter-email-me.markdown" />
     </list>
     <ignored path="michaellancaster.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,7 +28,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="126" selection-start="3305" selection-end="3305" vertical-scroll-proportion="0.83756346">
+            <state line="44" column="155" selection-start="3187" selection-end="3187" vertical-scroll-proportion="0.78341794">
               <folding />
             </state>
           </provider>
@@ -322,7 +297,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="126" selection-start="3305" selection-end="3305" vertical-scroll-proportion="0.83756346">
+        <state line="44" column="155" selection-start="3187" selection-end="3187" vertical-scroll-proportion="0.78341794">
           <folding />
         </state>
       </provider>

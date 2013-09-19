@@ -42,7 +42,7 @@ I spent "eight hours" working on the challenge and I was going well until I star
 Monday after work I tried fix again those bugs but I couldn't figure out how..anyway after look what was (5am) trying to make it perfect I took a shower..
 And thought about it. I'm glad he got interested on my skills but I need to be realistic, I'm pretty sure I'm going to get in the next level (as we say world class) soon but not now..
 
-I sent him an email thanking him for the opportunity and telling about it. I will finish the challenge but I feel like I'm at the Facebook level.
+I sent an email thanking him for the opportunity and telling about it. I will finish the challenge but I feel like I'm not at Facebook engineers level "yet".
 
 All this made me even more excited about my future and my goals.. so I'm predicting (planning) a very good and quick growth in my skills in the next months..
 
