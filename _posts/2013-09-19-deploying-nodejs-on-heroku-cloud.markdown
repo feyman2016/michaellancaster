@@ -7,6 +7,8 @@ excerpt: As a developer I have been always curious to learn and try new technolo
 
 [post under improvements]
 
+As a developer I have been always curious to learn and try new technologies that can improve my skill and help me build better Web Applications..So today I'm going to try help you set up a simple Node.js server on Heroku Cloud using my small open source project aims deploy even faster Node.js applications.
+
 ## Why Heroku
 
 <a href="http://www.heroku.com" target=""_blank title="">Heroku</a> is a cloud application platform where you can build and deploy web apps
