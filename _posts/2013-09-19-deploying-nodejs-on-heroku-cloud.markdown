@@ -76,6 +76,8 @@ Oh wait! What is this?
 <img src="/assets/images/post-images/heroku-404.png" alt="Heroku 404">
 </div>
 
+<br>
+
 To make your Web App run on Heroku you need to run your Web App in one of those languages I said right on the beginning of this post.
 
 Today we are going to run and deploy a simple Node.js/Express.js Application..since I have been using Heroku and Node.js for all my personal/aside projects I created a Express.js boilerplate to run and deploy fast and easy with <a href="/blog/introduction-to-task-runner-gruntjs/" target="_blank" title="introduction to Grunt.js">Grunt.js</a> included so you can watch for changes on your files to minify CSS and uglify JS. I also included static assets and NO Jade (jade is native on Express.js) so you can code your normal HTML instead of Jade.
@@ -96,6 +98,8 @@ You should see something like the image below.. notice that not every log is sho
 <div class="fluidImg">
 <img src="/assets/images/post-images/success-image.png" alt="success image">
 </div>
+
+<br>
 
 All Node dependencies are installed and now you can start run your server.
 
@@ -124,6 +128,8 @@ This is the message you should get.
 <img src="/assets/images/post-images/grunt-build.png" alt="grunt build">
 </div>
 
+<br>
+
 But still not quite good enough because we would need to build every time we did any change.
 So let's start to watch for changes on the files.
 
@@ -137,7 +143,9 @@ Now every time you do any change and save the file grunt you build automatically
 <img src="/assets/images/post-images/grunt-watch.png" alt="grunt watch">
 </div>
 
-Ok. That's pretty cool.
+<br>
+
+Ok. That's pretty cool right?!.
 
 ## Deploying and Running on Heroku
 
@@ -161,6 +169,8 @@ and this is what happened..
 <img src="/assets/images/post-images/no-support.png" alt="no support">
 </div>
 
+<br>
+
 If you read the message you will see "Push rejected, no Cedar-supported app detected" so let's add support to make this baby work..
 Every Web App on Heroku needs a file to tell Heroku what are we deploying..
 
@@ -176,11 +186,15 @@ heroku ps:scale web=1
 <img src="/assets/images/post-images/cedar.png" alt="no support">
 </div>
 
-Repeat the push process.. after do the push process again "git add ." "git commit" and "git push origin master" a bunch of message will log and the final logs would be like this image below.. now you can access your Web App URL in my case is <a href="http://deployed-nodejs-app.herokuapp.com/" title="my how to deploy node.js to Heroku post">deployed-nodejs-app</a>.
+<br>
+
+Repeat the push process.. after do the push process again "git add ." "git commit" and "git push origin master" a bunch of message will log and the final logs would be like this image below.. now you can access your Web App URL in my case is <a href="http://deployed-nodejs-app.herokuapp.com/" title="my how to deploy node.js to Heroku post" target="_blank">deployed-nodejs-app</a>.
 
 <div class="fluidImg">
 <img src="/assets/images/post-images/pushed.png" alt="Web app deployed">
 </div>
+
+<br>
 
 And this is how we deploy Node.js to Heroku.. fast and easy.
 
