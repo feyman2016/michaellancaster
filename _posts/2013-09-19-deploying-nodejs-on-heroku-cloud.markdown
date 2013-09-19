@@ -29,8 +29,7 @@ Node.js makes a much smaller footprint on your web server It allocates web serve
 
 ## Heroku set up
 
-I'm going to assume you have account on Heroku (it's free) and the <a href="https://toolbelt.heroku.com/" title="toolbelt kit" target="_blank">toolbelt kit</a> installed as well,
-you also have <a href="http://Nodejs.org/" title="Node.js" target="_blank">Node.js</a> installed.
+I'm going to assume you have account on Heroku (it's free) and the <a href="https://toolbelt.heroku.com/" title="toolbelt kit" target="_blank">toolbelt kit</a> installed and you also have <a href="http://Nodejs.org/" title="Node.js" target="_blank">Node.js</a> installed.
 
 ## Let's get it start
 
