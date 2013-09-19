@@ -34,7 +34,7 @@ applying the same test for more than three years"
 I spoke with my friend that works for them which gave me some very good suggestions "Test your code, then test it again and then test again"..
 
 Oh I forgot to tell that as always work was very busy and I had to do some more work when I get home from work and my birthday would be in two days.. what hell?! excuses? this is not how my personality works. <br>
-so I worked more than 12hs on my birthday to get my stuff tested and done..
+so I worked more than 12hs on my birthday to get my stuff tested and done (at my actual job)..
 
 On sunday I started the challenge and looked like was pretty simple..haha but no. It's not simple at all (heavely focus on logic and some algorithms) so it's a great way to hire awesome engineers.
 I spent "eight hours" working on the challenge and I was going well until I started to test my code and find bugs..I wanted it perfect!
