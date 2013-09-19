@@ -6,6 +6,90 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Deploying Node.js server on Heroku Cloud</title>
+				<description>&lt;h2&gt;Why Heroku&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.heroku.com&quot; target=&quot;&quot;_blank title=&quot;&quot;&gt;Heroku&lt;/a&gt; is a cloud application platform where you can build and deploy web apps
+with the technologies you know as Java, Ruby, Closure, Node.js, Python and Scala..Heroku uses integration with Git so you can deploy your Application
+simply pushing to master. Oh and It&#39;s FREE!&lt;/p&gt;
+
+&lt;p&gt;I have four web apps hosted on heroku but two are for public access this blog/portfolio running on Ruby and Lollagram running on Node.js.&lt;/p&gt;
+
+&lt;h2&gt;Why Node.js&lt;/h2&gt;
+
+&lt;p&gt;It&#39;s Javascript...on the Server!&lt;/p&gt;
+
+&lt;iframe src=&quot;http://giphy.com/embed/13k1e8OMVO2a3K&quot; frameBorder=&quot;0&quot; allowFullScreen=&quot;allowFullScreen&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;No, But seriously. Javascript is well known by us Front End Developers/Engineers and even designers. &lt;br&gt;
+That&#39;s already one good reason but the main &amp;quot;real&amp;quot; reasons are Node.js is all about making event-driven (Ajax can be done on the server side), low-latency, non-blocking I/O...perfect for real time. &lt;br&gt;
+Node.js makes a much smaller footprint on your web server It allocates web server resources on an as-needed basis, not pre-allocating a large chunk of resources for each user. For example, Apache might assign 8MB to a user, while Node assigns 8KB.&lt;/p&gt;
+
+&lt;h2&gt;Basic set up&lt;/h2&gt;
+
+&lt;p&gt;I&#39;m going to assume you have account on Heroku (it&#39;s free) and the &lt;a href=&quot;https://toolbelt.heroku.com/&quot; title=&quot;toolbelt kit&quot; target=&quot;_blank&quot;&gt;toolbelt kit&lt;/a&gt; installed as well,
+you also have &lt;a href=&quot;http://Nodejs.org/&quot; title=&quot;Node.js&quot; target=&quot;_blank&quot;&gt;Node.js&lt;/a&gt; installed.&lt;/p&gt;
+
+&lt;h2&gt;Let&#39;s get it start&lt;/h2&gt;
+
+&lt;p&gt;First of all (after everything installed) create a new folder (whatever-name-you-want) then open your terminal go to your folder and type..&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
+git init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
+git add .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
+git commit -m &quot;first commit&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you have git initialized..time to create a Heroku app. &lt;br&gt;
+First thing you need to login to Heroku (remember that we are doing everything from the command line on terminal)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
+heroku login
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
+heroku create name-of-your-app
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Done! You just need to push your code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
+git push
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can access your Web App url on www.your-app-name.heroku.com&lt;/p&gt;
+
+&lt;p&gt;Oh wait! What is this?&lt;/p&gt;
+
+&lt;div class=&quot;fluidImg&quot;&gt;
+&lt;img src=&quot;/assets/images/post-images/heroku-404.png&quot; alt=&quot;Heroku 404&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To make your Web App run on Heroku you need to run your Web App in one of those languages I said right on the beginning of this post.&lt;/p&gt;
+
+&lt;p&gt;Today we are going to run and deploy a simple Node.js/Express.js Application..since I have been using Heroku and Node.js for all my personal/aside projects I created &lt;br&gt;
+this Express.js boilerplate to run and deploy fast and easy the Application with static assets and NO jade (jade is native on Express.js).&lt;/p&gt;
+
+&lt;p&gt;Go to my Github repository &lt;a href=&quot;https://github.com/weblancaster/expressjs-static-boilerplate&quot; target=&quot;_blank&quot; title=&quot;Express.js static boilerplate&quot;&gt;Express.js static boilerplate&lt;/a&gt; and
+download the zip file then extract inside of&lt;/p&gt;
+</description>
+				<published>2013-09-19 00:00:00 -0500</published>
+				<link>http://bymichaellancaster.com//blog/deploying-nodejs-on-heroku-cloud</link>
+			</item>
+		
+			<item>
 				<title>When a Facebook recruiter email me</title>
 				<description>&lt;h2&gt;Very brief&lt;/h2&gt;
 
@@ -15,7 +99,7 @@
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;One thing that I wasn&#39;t expecting &amp;quot;now&amp;quot; before I turn 23 years old was a recruiter of one of the biggest companies in the planet called Facebook email me
+&lt;p&gt;One thing that I wasn&#39;t expecting &amp;quot;now&amp;quot; before turn 23 years old was a recruiter of one of the biggest companies in the planet called Facebook email me
 interested on my Skills..&lt;/p&gt;
 
 &lt;p&gt;We changed some emails and we scheduled a phone call..the phone was as most of the phone interviews are. quite general questions about life and work..
@@ -36,7 +120,7 @@ applying the same test for more than three years&amp;quot;&lt;/p&gt;
 &lt;p&gt;I spoke with my friend that works for them which gave me some very good suggestions &amp;quot;Test your code, then test it again and then test again&amp;quot;..&lt;/p&gt;
 
 &lt;p&gt;Oh I forgot to tell that as always work was very busy and I had to do some more work when I get home from work and my birthday would be in two days.. what hell?! excuses? this is not how my personality works. &lt;br&gt;
-so I worked more than 12hs on my birthday to get my stuff tested and done..&lt;/p&gt;
+so I worked more than 12hs on my birthday to get my stuff tested and done (at my actual job)..&lt;/p&gt;
 
 &lt;p&gt;On sunday I started the challenge and looked like was pretty simple..haha but no. It&#39;s not simple at all (heavely focus on logic and some algorithms) so it&#39;s a great way to hire awesome engineers.
 I spent &amp;quot;eight hours&amp;quot; working on the challenge and I was going well until I started to test my code and find bugs..I wanted it perfect!&lt;/p&gt;
@@ -44,7 +128,7 @@ I spent &amp;quot;eight hours&amp;quot; working on the challenge and I was going
 &lt;p&gt;Monday after work I tried fix again those bugs but I couldn&#39;t figure out how..anyway after look what was (5am) trying to make it perfect I took a shower..
 And thought about it. I&#39;m glad he got interested on my skills but I need to be realistic, I&#39;m pretty sure I&#39;m going to get in the next level (as we say world class) soon but not now..&lt;/p&gt;
 
-&lt;p&gt;I sent him an email thanking him for the opportunity and telling about it. I will finish the challenge but I feel like I&#39;m at the Facebook level.&lt;/p&gt;
+&lt;p&gt;I sent an email thanking him for the opportunity and telling about it. I will finish the challenge but I feel like I&#39;m not at Facebook engineers level &amp;quot;yet&amp;quot;.&lt;/p&gt;
 
 &lt;p&gt;All this made me even more excited about my future and my goals.. so I&#39;m predicting (planning) a very good and quick growth in my skills in the next months..&lt;/p&gt;
 
@@ -1122,22 +1206,6 @@ Lastly we have &amp;quot;promoBox--round&amp;quot; with two dashes that means ex
 </description>
 				<published>2013-03-03 00:00:00 -0600</published>
 				<link>http://bymichaellancaster.com//blog/secrets-of-lea-verou-css</link>
-			</item>
-		
-			<item>
-				<title>Inspirational Art and Code by Joshua Davis.</title>
-				<description>&lt;p&gt;A friend of mine shared this great talk by Joshua Davis at W3Conf in San Francisco.
-&lt;br&gt;
-Joshua&#39;s work is very inspirational and he can do very cool things using processing.js to generate forms.&lt;/p&gt;
-
-&lt;p&gt;Don&#39;t forget to check out his website &lt;a href=&quot;http://www.joshuadavis.com/&quot; title=&quot;Joshua Davis&quot; target=&quot;_blank&quot;&gt;Joshua Davis&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-    &lt;iframe src=&quot;https://www.youtube.com/embed/LJS4fBjdPM4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt; &lt;/iframe&gt;
-&lt;/div&gt;
-</description>
-				<published>2013-02-28 00:00:00 -0600</published>
-				<link>http://bymichaellancaster.com//blog/inspirational-art-and-code-by-joshua-davis</link>
 			</item>
 		
 	</channel>
