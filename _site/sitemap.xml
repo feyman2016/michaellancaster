@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+      <loc>http://bymichaellancaster.com/blog/when-facebook-recruiter-email-me</loc>
+      <lastmod>2013-09-18</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://bymichaellancaster.com/blog/how-i-built-lollagram-lollapalooza-instagram-real-time-api</loc>
       <lastmod>2013-09-09</lastmod>
       <changefreq>never</changefreq>

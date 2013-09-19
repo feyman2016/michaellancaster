@@ -6,12 +6,61 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>When a Facebook recruiter email me</title>
+				<description>&lt;h2&gt;Very brief&lt;/h2&gt;
+
+&lt;div class=&quot;fluidImg&quot;&gt;
+&lt;img src=&quot;/assets/images/post-images/fb.png&quot; alt=&quot;Email from facebook recruiter&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;One thing that I wasn&#39;t expecting &amp;quot;now&amp;quot; before I turn 23 years old was a recruiter of one of the biggest companies in the planet called Facebook email me
+interested on my Skills..&lt;/p&gt;
+
+&lt;p&gt;We changed some emails and we scheduled a phone call..the phone was as most of the phone interviews are. quite general questions about life and work..
+He also asked me some &amp;quot;simple&amp;quot; technical questions and them asked me if I was interested to go to the next process..&lt;/p&gt;
+
+&lt;p&gt;What do you think I said??! &lt;br&gt;
+I see myself as a &amp;quot;child&amp;quot; always learning and I have been doing it as much as I can (specially in the last three months) without forget I have a life to live and to have fun..but this is what I really like to do so at least five days of seven days
+of the week I&#39;m studying/reading, coding experiments and trying to colaborate with open source projects..I have goals and I&#39;m accomplishing step by step.&lt;/p&gt;
+
+&lt;p&gt;No doubt I&#39;m going to accomplish my next goals..but I follow some engineers from Facebook and I have a friend which works for them..
+they are great references as professionals and I&#39;m not at their level &amp;quot;yet&amp;quot;..So I told him all that but I was totally willing to take the challenge. who doesn&#39;t love challenges?!&lt;/p&gt;
+
+&lt;p&gt;One thing that he told me was the company Facebook knows that people can learn and become great in a few months or a year..and they are always open to re-open oportunities.&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;Before get the challenge I did some research about the process..and was said that the second test is the hardest one..and they have been
+applying the same test for more than three years&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;I spoke with my friend that works for them which gave me some very good suggestions &amp;quot;Test your code, then test it again and then test again&amp;quot;..&lt;/p&gt;
+
+&lt;p&gt;Oh I forgot to tell that as always work was very busy and I had to do some more work when I get home from work and my birthday would be in two days.. what hell?! excuses? this is not how my personality works. &lt;br&gt;
+so I worked more than 12hs on my birthday to get my stuff tested and done..&lt;/p&gt;
+
+&lt;p&gt;On sunday I started the challenge and looked like was pretty simple..haha but no. It&#39;s not simple at all (heavely focus on logic and some algorithms) so it&#39;s a great way to hire awesome engineers.
+I spent &amp;quot;eight hours&amp;quot; working on the challenge and I was going well until I started to test my code and find bugs..I wanted it perfect!&lt;/p&gt;
+
+&lt;p&gt;Monday after work I tried fix again those bugs but I couldn&#39;t figure out how..anyway after look what was (5am) trying to make it perfect I took a shower..
+And thought about it. I&#39;m glad he got interested on my skills but I need to be realistic, I&#39;m pretty sure I&#39;m going to get in the next level (as we say world class) soon but not now..&lt;/p&gt;
+
+&lt;p&gt;I sent him an email thanking him for the opportunity and telling about it. I will finish the challenge but I feel like I&#39;m at the Facebook level.&lt;/p&gt;
+
+&lt;p&gt;All this made me even more excited about my future and my goals.. so I&#39;m predicting (planning) a very good and quick growth in my skills in the next months..&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt; Failure is part of real life and you NEED to go through to get where you want..life is about learning and discovering yourself. &lt;/strong&gt;&lt;/p&gt;
+</description>
+				<published>2013-09-18 00:00:00 -0500</published>
+				<link>http://bymichaellancaster.com//blog/when-facebook-recruiter-email-me</link>
+			</item>
+		
+			<item>
 				<title>How I built Lollagram with Instagram real time API</title>
 				<description>&lt;p&gt;[post under improvements]&lt;/p&gt;
 
 &lt;h2&gt;What is Lollagram?&lt;/h2&gt;
 
-&lt;p&gt;[from the Application] Lollagram is a labor of love that’s designed to help you keep track of the Lollapalooza experience, through the eyes (or, more accurately, snapshots) of music lovers on the ground at Grant Park. Lollagram takes advantage of the Instagram Real Time API and aggregates the moments at Lollapalooza, creating a visual record of the bands, food, people, and city that make up this great musical tradition. With 45 million photos being uploaded to Instagram each day, we&#39;re excited to present snapshots from Lollapalooza 2013.&lt;/p&gt;
+&lt;p&gt;[from the Application] &lt;a href=&quot;http://www.lollagram.com&quot; target=&quot;_blank&quot; title=&quot;Lollagram - real time lollapalooza&quot;&gt;Lollagram&lt;/a&gt;  is a labor of love that’s designed to help you keep track of the Lollapalooza experience, through the eyes (or, more accurately, snapshots) of music lovers on the ground at Grant Park. Lollagram takes advantage of the Instagram Real Time API and aggregates the moments at Lollapalooza, creating a visual record of the bands, food, people, and city that make up this great musical tradition. With 45 million photos being uploaded to Instagram each day, we&#39;re excited to present snapshots from Lollapalooza 2013.&lt;/p&gt;
 
 &lt;h2&gt;The new version&lt;/h2&gt;
 
@@ -21,7 +70,7 @@
 
 &lt;p&gt;While I was working for Golinharris I was also working on my side projects/experiments using NodeJS so I think two weeks before the event I started to talk with my co-worker and designer Daniel Branca that I was thinking to use cutting edge technologies to do a real time Application therefore much more engaging.&lt;/p&gt;
 
-&lt;p&gt;I was also about to leave the company to another company and I had one more week at Golinharris but I really wanted to work on it for fun and learning to use technologies like NodeJs, Socket.io, Client Side template (HandlebarsJs) and responsive web design (Yes I did for &amp;quot;free&amp;quot;).&lt;/p&gt;
+&lt;p&gt;I was also about to leave the company to another company and I had one more week at Golinharris but I really wanted to work on it for fun and learning to use technologies like NodeJs, Socket.io, Client Side template (HandlebarsJs) and responsive web design where the user can follow on their smartphone, tablet, desktop or even on TV (and Yes I did for &amp;quot;free&amp;quot;).&lt;/p&gt;
 
 &lt;p&gt;I never had work with real time Application so I started to read and do some experiments with Socket.io coding a real time chat (as most developers do).
 After understand the basic concept of Socket.io &amp;quot;Real Time&amp;quot; and discuss all the most important details of the Application with Dan (the designer) I started code the Application.&lt;/p&gt;
@@ -83,7 +132,6 @@ io.sockets.on(&#39;connection&#39;, function (socket) {
 &lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
 mostRecent: function() {
     socket.on(&#39;firstShow&#39;, function (data) {
-        var clean = $(&#39;imgContent&#39;).find(&#39;a&#39;).remove();
         var
             query = data,
             source = $(&#39;#firstShow-tpl&#39;).html(),
@@ -166,12 +214,10 @@ Instagram.subscriptions.unsubscribe({ id: &#39;#######&#39; });
 
 &lt;h3&gt;Final thoughts&lt;/h3&gt;
 
-&lt;p&gt;The way I put here sounds like it was easy but wasn&#39;t that easy.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Work with Real Time is pretty cool and fun.&lt;/li&gt;
 &lt;li&gt;Instagram real time API isn&#39;t great but does the job.&lt;/li&gt;
-&lt;li&gt;Work in three different important things in one week is possible with one pack of monster energetic and less than four hours of sleep.&lt;/li&gt;
+&lt;li&gt;Work in three different important things in one week is possible with one pack with ten monster energetic drink and less than four hours of sleep per night.&lt;/li&gt;
 &lt;li&gt;People love to share pictures. People love to see pictures.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1092,38 +1138,6 @@ Joshua&#39;s work is very inspirational and he can do very cool things using pro
 </description>
 				<published>2013-02-28 00:00:00 -0600</published>
 				<link>http://bymichaellancaster.com//blog/inspirational-art-and-code-by-joshua-davis</link>
-			</item>
-		
-			<item>
-				<title>The filter bubble and your social life online.</title>
-				<description>&lt;p&gt;At the same time Internet give us liberty to think and see different points about our world in culture, politics, nature, life in general the internet is made by &amp;quot;man&amp;quot; and we have our own perspective of the world.
-Therefore we are doing the same exactly mistakes we are doing offline it&#39;s just another digital space 1 and 0&#39;s.&lt;/p&gt;
-
-&lt;p&gt;It&#39;s sort of funny sometimes how we push things turning every person the &amp;quot;product of the environment&amp;quot; even on digital.&lt;/p&gt;
-
-&lt;p&gt;I&#39;ll never deny that technology in particular internet changed the world for better but I still think we could do much better when we start to change our mindset as a &amp;quot;person&amp;quot; for the community.&lt;/p&gt;
-
-&lt;p&gt;Watching this great video we can see that people don&#39;t loose their old habits to live in their &amp;quot;boxes&amp;quot; and continue to create their &amp;quot;Extended Mind&amp;quot;&lt;/p&gt;
-
-&lt;h2&gt;Are we going backwards?!&lt;/h2&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-    &lt;iframe src=&quot;https://www.youtube.com/embed/B8ofWFx525s&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt; &lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;I also suggest..&lt;/h2&gt;
-
-&lt;p&gt;you to watch this incredible documentary called &lt;a href=&quot;http://internetrising.net/&quot; title=&quot;internet rising&quot; target=&quot;_blanc&quot;&gt;&amp;quot;Internet Rising&amp;quot;&lt;/a&gt; investigating the evolving relationships between the Internet and collective consciousness of humanity. It provokes many questions about ancient and modern paradoxes of life. You definitely should check it out.&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-    &lt;iframe src=&quot;https://www.youtube.com/embed/pMh8oBdKkK4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt; &lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;
-Both videos are great to inspired us to think about almost everything surround us in the digital life.&lt;/p&gt;
-</description>
-				<published>2013-02-27 00:00:00 -0600</published>
-				<link>http://bymichaellancaster.com//blog/the-filter-bubble-and-your-social-life-online</link>
 			</item>
 		
 	</channel>
