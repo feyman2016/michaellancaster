@@ -13,7 +13,7 @@ excerpt: One thing that I wasn't expecting "now" was a recruiter of one of the b
 
 <br>
 
-One thing that I wasn't expecting "now" before I turn 23 years old was a recruiter of one of the biggest companies in the planet called Facebook email me
+One thing that I wasn't expecting "now" before turn 23 years old was a recruiter of one of the biggest companies in the planet called Facebook email me
 interested on my Skills..
 
 We changed some emails and we scheduled a phone call..the phone was as most of the phone interviews are. quite general questions about life and work..
