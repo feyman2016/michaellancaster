@@ -20,7 +20,7 @@ So last night I decided re-write entirely using better Design pattern and better
 
 Check out on Github <a href="http://www.github/weblancaster/jet" target=""_blank title="Jet js">Jet.js</a>
 
-My goal here is to make the Web Application faster therefore download scripts asynchronously (non-block), better organized script dependency and very very lightweight.
+My goal here is to make the Web Application faster therefore <strong> download scripts asynchronously (non-block), better organized script dependency and very very lightweight</strong>.
 
 Below is the code to make the "magic" happen..just a few lines of code.
 
