@@ -14,7 +14,7 @@ After see the code at my perspective one of the problems were all the plugins (w
 
 I decided create a very lightweight library (called modular-script-loader) to solve that problem downloading scripts asynchronously (non-block) and on demand (not for all the pages).
 
-So last night I decided re-write entirely using better Design pattern and better clean code I also gave a better name "Jet.js".
+So last night I decided re-write entirely using better Design pattern and cleaner code I also gave a better name "Jet.js".
 
 ### Code
 
