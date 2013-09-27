@@ -18,7 +18,7 @@ So last night I decided re-write entirely using better Design pattern and cleane
 
 ### Code
 
-Check out on Github <a href="http://www.github/weblancaster/jet" target=""_blank title="Jet js">Jet.js</a>
+Check out on Github <a href="http://www.github.com/weblancaster/jet" target=""_blank title="Jet js">Jet.js</a>
 
 My goal here is to make the Web Application faster therefore <strong> download scripts asynchronously (non-block), better organized script dependency and very very lightweight</strong>.
 
