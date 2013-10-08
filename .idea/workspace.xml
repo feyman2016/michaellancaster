@@ -67,7 +67,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -78,52 +78,16 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="michaellancaster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="michaellancaster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="michaellancaster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="michaellancaster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="michaellancaster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="draft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="web-ide.project.structure" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../booking-dot-com" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -222,79 +186,67 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/_posts/2013-09-19-deploying-nodejs-on-heroku-cloud.markdown">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="2838" selection-end="2838" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="61" column="0" selection-start="2838" selection-end="2838" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-09-19-deploying-nodejs-on-heroku-cloud.markdown">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="13" selection-start="2504" selection-end="2504" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="61" column="13" selection-start="2504" selection-end="2504" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-06-01-introduction-to-task-runner-gruntjs.markdown">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="0" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.22673436" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-04-06-from-san-francisco-to-the-brazilian-developers-community.markdown">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-04-06-from-san-francisco-to-the-brazilian-developers-community.markdown">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="1035" selection-end="1167" vertical-scroll-proportion="0.29780033" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-09-09-how-i-built-lollagram-lollapalooza-instagram-real-time-api.markdown">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-09-09-how-i-built-lollagram-lollapalooza-instagram-real-time-api.markdown">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="0" selection-start="4338" selection-end="4591" vertical-scroll-proportion="0.3790186" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2013-09-18-when-facebook-recruiter-email-me.markdown">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2013-09-18-when-facebook-recruiter-email-me.markdown">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="242" selection-end="353" vertical-scroll-proportion="0.18612522" />
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/about/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="24" selection-start="530" selection-end="530" vertical-scroll-proportion="-0.64">
-          <folding />
-        </state>
+        <state line="16" column="24" selection-start="530" selection-end="530" vertical-scroll-proportion="-0.64" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2013-09-19-deploying-nodejs-on-heroku-cloud.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="6" selection-start="3204" selection-end="3204" vertical-scroll-proportion="-13.090909" />
+      </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="6" selection-start="3204" selection-end="3204" vertical-scroll-proportion="-13.090909">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lab/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="134" selection-end="134" vertical-scroll-proportion="0.22614841">
-          <folding />
-        </state>
+        <state line="8" column="24" selection-start="134" selection-end="134" vertical-scroll-proportion="0.22614841" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/draft/2013-09-24-javascript-script-dependency-loader-on-demand.markdown.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="0.1632653">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="0.1632653" />
       </provider>
     </entry>
   </component>

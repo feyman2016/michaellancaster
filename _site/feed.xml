@@ -16,13 +16,13 @@ After see the code at my perspective one of the problems were all the plugins (w
 
 &lt;p&gt;I decided create a very lightweight library (called modular-script-loader) to solve that problem downloading scripts asynchronously (non-block) and on demand (not for all the pages).&lt;/p&gt;
 
-&lt;p&gt;So last night I decided re-write entirely using better Design pattern and better clean code I also gave a better name &amp;quot;Jet.js&amp;quot;.&lt;/p&gt;
+&lt;p&gt;So last night I decided re-write entirely using better Design pattern and cleaner code I also gave a better name &amp;quot;Jet.js&amp;quot;.&lt;/p&gt;
 
 &lt;h3&gt;Code&lt;/h3&gt;
 
-&lt;p&gt;Check out on Github &lt;a href=&quot;http://www.github/weblancaster/jet&quot; target=&quot;&quot;_blank title=&quot;Jet js&quot;&gt;Jet.js&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Check out on Github &lt;a href=&quot;http://www.github.com/weblancaster/jet&quot; target=&quot;&quot;_blank title=&quot;Jet js&quot;&gt;Jet.js&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;My goal here is to make the Web Application faster therefore download scripts asynchronously (non-block), better organized script dependency and very very lightweight.&lt;/p&gt;
+&lt;p&gt;My goal here is to make the Web Application faster therefore &lt;strong&gt; download scripts asynchronously (non-block), better organized script dependency and very very lightweight&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Below is the code to make the &amp;quot;magic&amp;quot; happen..just a few lines of code.&lt;/p&gt;
 
@@ -181,7 +181,7 @@ var dependency2 = new Jet.App;
 &lt;p&gt;If you found any bug or want to contribute or want to give me any opinion feel free to do that.&lt;/p&gt;
 </description>
 				<published>2013-09-24 00:00:00 -0500</published>
-				<link>http://bymichaellancaster.com//blog/javascript-script-dependency-loader-on-demand.markdown</link>
+				<link>http://bymichaellancaster.com//blog/javascript-script-dependency-loader-on-demand</link>
 			</item>
 		
 			<item>
