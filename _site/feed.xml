@@ -6,6 +6,22 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>We are influenced by people</title>
+				<description>&lt;h3&gt;Understand the people&lt;/h3&gt;
+
+&lt;p&gt;Be a great programmer isn&#39;t just about know how to code. It&#39;s about questioning what surround us to try understand solve things. The pragmatic programmer is a book that I&#39;m looking for to read after finish Javascript Web Applications..but for now this is what I would like to share related to the topic of this book.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;quot;You’re a Pragmatic Programmer. You aren’t wedded to any particular technology, but you have a broad enough background in the science, and your experience with practical projects allows you to choose good solutions in particular situations. Theory and practice combine to make you strong. You adjust your approach to suit the current circumstances and environment. And you do this continuously as the work progresses. Pragmatic Programmers get the job done, and do it well.&amp;quot;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;fluidMedia&quot;&gt;
+    &lt;iframe src=&quot;//www.youtube.com/embed/vPj4zxhy8wI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt; &lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+				<published>2013-10-15 00:00:00 -0500</published>
+				<link>http://bymichaellancaster.com//blog/we-are-influenced-by-people</link>
+			</item>
+		
+			<item>
 				<title>My Micro-Library called Jet.js</title>
 				<description>&lt;p&gt;My love for Javascript just get bigger and also my knowledge but that&#39;s not what I&#39;m going to blog about today.. at this time I&#39;m going to post about the Micro-Library I created Jet.js&lt;/p&gt;
 
@@ -1221,261 +1237,6 @@ The client-side templating throwdown: mustache, handlebars, dust.js, and more &l
 </description>
 				<published>2013-03-12 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/fluid-iframe-and-images-without-javascript-plugins</link>
-			</item>
-		
-			<item>
-				<title>CSS Architecture for Web Applications.</title>
-				<description>&lt;p&gt;Write CSS is more complex than some developers, software engineers and designers think and If you are a &amp;quot;Dogma&amp;quot; &amp;quot;best practice&amp;quot; person this post might hurt your feelings.&lt;/p&gt;
-
-&lt;p&gt;Bad CSS architecture can make Web applications slower (500ms slower = 20% drop in traffic for Google) &lt;br&gt; (100ms slower = 1% drop in sales for amazon), messy and unmaintainable for the team, waste of time trying to find something to fix another thing and the list goes on.&lt;/p&gt;
-
-&lt;p&gt;All the bad examples showed here for good or for bad I had the pleasure to work with in some project.&lt;/p&gt;
-
-&lt;h2&gt;The bad examples first&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;css&quot;&gt;
-#header {
-    property: value;
-    property: value;
-}
-
-#logo {
-    property: value;
-    property: value;
-}
-
-#menu {
-    property: value;
-    property: value;
-}
-
-#search {
-    property: value;
-    property: value;
-}
-
-#bt-yellow {
-    property: value;
-    property: value;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Yeah! people still doing this approach specifying &amp;quot;ID&#39;s&amp;quot; for every element on the page and that kind of architecture &amp;quot;id&#39;s&amp;quot; has no problem for browser rendering or for Javascript developers concerned about performance or make his life easier.&lt;/p&gt;
-
-&lt;p&gt;But as a point of view of good CSS architecture that&#39;s not DRY, reusable, modular, scalable and depending on the project this can get pretty messy and heavy. So, never do that way ok?!&lt;/p&gt;
-
-&lt;h2&gt;More bad examples&lt;/h2&gt;
-
-&lt;p&gt;My second experience with a different way to write CSS architecture was when I worked as a consultant on a ongoing big Web Application. &lt;br&gt;
-At this point the initial developers started kind of in a &amp;quot;good&amp;quot; way making like a mixed code between SMACSS and their own judgments. &lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;css&quot;&gt;
-ul.button-group-yellow {
-    property: value;
-    property: value;
-}
-
-ul.button-group-yellow li {
-    property: value;
-    property: value;
-}
-
-ul.button-group-yellow li div {
-    property: value;
-    property: value;
-}
-
-ul.button-group-yellow li div p {
-    property: value;
-    property: value;
-}
-
-ul.button-group-yellow li div p a {
-    property: value;
-    property: value;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I confess we had a bunch of modular groups forcing DRY methodology but look at those terrible long descendants selectors (nesting), tag-qualify and this approach is very bad for browser rendering/performance, not scalable and gets/got pretty messy after all.&lt;/p&gt;
-
-&lt;h2&gt;Some good tips&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;All members has to work together but this is not a job for Designers, Software engineers. This is a job Front End Engineers.&lt;/li&gt;
-&lt;li&gt;CSS is code therefore size and rendering matters.&lt;/li&gt;
-&lt;li&gt;Avoid specificity &amp;quot;ID&#39;s&amp;quot;.&lt;/li&gt;
-&lt;li&gt;Avoid long descendants selectors (nesting).&lt;/li&gt;
-&lt;li&gt;Avoid tag-qualify.&lt;/li&gt;
-&lt;li&gt;Browsers render your CSS going right to left.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;css&quot;&gt;
-#header div ul li p a {
-    /* the browser render/algorithm go through all your elements starting at &quot;a&quot; element to find the matches */
-    property: value;
-    property: value;
-}
-
-#header a {
-    /* better than the first example */
-    /* but still not good enough */
-    property: value;
-    property: value;
-}
-
-header#header {
-    /* yet not good. tag-qualify is very very hard to happen to actually use them */
-    property: value;
-    property: value;
-}
-
-#header {
-    /* good for performance but not good for modular, DRY, scalable */
-    property: value;
-    property: value;
-}
-
-/* if you need to qualify your selector use quasi tag-qualify methodology */
-/* header */ .header {
-    /* always prefer/use classes they are fast, reusable, scalable, modular, easy to maintain */
-    property: value;
-    property: value;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Use DRY (don&#39;t repeat yourself methodology), modular groups, scalable, readable and maintainable.&lt;/li&gt;
-&lt;li&gt;Make it well documented (readable for humans not machines).&lt;/li&gt;
-&lt;li&gt;Use CSS preprocessors (It doesn&#39;t mean you are going to have a good CSS architecture).&lt;/li&gt;
-&lt;li&gt;More developers = more problems so write a Doc &amp;amp; Stylesheets guide for your team.&lt;/li&gt;
-&lt;li&gt;Comments are KING. They wont be there afterwards because you will minify so use wisely.&lt;/li&gt;
-&lt;li&gt;Find the patterns in your design and apply OOCSS method (works great for me).&lt;/li&gt;
-&lt;li&gt;Rule sets in specific order (example how I do it below).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;css&quot;&gt;
-/* ==========================================================================
-#   SCSS/COMPASS Modular Project Based.
-#   @settings ( COMPASS, Variables, Functions, Mixins, etc... )
-#   @base ( regular elements )
-#   @helpers ( layout helpers )
-#   @layout ( layout template, grid structure )
-#   @skin ( modules, background, colors, typography.. )
-#   @media-queries ( content-driven breakpoints )
-#   @ie ( IE fixes )
-========================================================================== */
-
-
-/* ==========================================================================
-@settings
-========================================================================== */
-@import &quot;_settings&quot;;
-
-/* ==========================================================================
-@base
-========================================================================== */
-@import &quot;_base&quot;;
-
-/* ==========================================================================
-@helpers
-========================================================================== */
-@import &quot;_helpers&quot;;
-
-/* ==========================================================================
-@layout
-========================================================================== */
-@import &quot;_layout&quot;;
-
-/* ==========================================================================
-@skin
-========================================================================== */
-@import &quot;_skin&quot;;
-
-/* ==========================================================================
-@media-queries
-========================================================================== */
-@import &quot;_media-queries&quot;;
-
-/* ==========================================================================
-@ie
-========================================================================== */
-@import &quot;_ie&quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;Another great tips. From BEM methodology&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fast-to-develop, long-lived projects. It should be possible to develop and launch the first version of a website quickly with an architecture that helps to maintain it in the long run.&lt;/li&gt;
-&lt;li&gt;Team scalability. Adding new people to a product team should improve speed, not decrease it. We need to be able to assign new members to a team without a steep learning curve.&lt;/li&gt;
-&lt;li&gt;Code should be well-structured for a project to remain maintainable over time and team changes.&lt;/li&gt;
-&lt;li&gt;Code reuse. To maintain UI consistency and minimize development effort on typical interface components, those components have to be easily reusable. The source code should not have contextual dependency on the other code, it should be easy to move that code to another place.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Our fashionable way&lt;/h2&gt;
-
-&lt;p&gt;I always had concern about my classes notation name, how should I name semantically meaningful? how should I show this on the HTML? How I will better transfer/show by notation name my HTML structure?.. &lt;br&gt;
-&lt;strong&gt;One of the most important ideas of classes notation name is try to transfer/show the HTML structure reading the classes names on the CSS file&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Example, Let&#39;s say we have one module.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;css&quot;&gt;
-.promo-box {
-    property: value;
-}
-.promo-box-inner {
-    property: value;
-}
-.promo-box-img {
-    property: value;
-}
-.promo-box-tit {
-    property: value;
-}
-.promo-box-txt {
-    property: value;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I even don&#39;t need to show you the HTML markup to make you understand the HTML structure, can you see the possibilities here?!&lt;/p&gt;
-
-&lt;h2&gt;I&#39;m changing to..&lt;/h2&gt;
-
-&lt;p&gt;One week before I write this post I saw the speak of &lt;a href=&quot;http://nicolasgallagher.com/&quot; target=&quot;_blank&quot; title=&quot;&quot;&gt;Nicolas Gallagher&lt;/a&gt; about &amp;quot;Questioning good practices&amp;quot; (I highly recommend) in his speak he also showed a &lt;a href=&quot;http://www.yandex.com/&quot; target=&quot;_blank&quot; title=&quot;Russian Search engine&quot;&gt;Russian Search engine&lt;/a&gt; classes notation name and It&#39;s true my notation is fashionable at the moment.&lt;/p&gt;
-
-&lt;p&gt;All made sense. So now on I will use this non-fashionable YET classes notation name but answering the same questions I told you before.&lt;br&gt;
-what are you talking about Michael? Here&#39;s a new example of that module above.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;css&quot;&gt;
-.promoBox {
-    property: value;
-}
-.promoBox-inner {
-    property: value;
-}
-.promoBox-inner-img {
-    property: value;
-}
-.promoBox-inner-tit {
-    property: value;
-}
-.promoBox-inner-txt {
-    property: value;
-}
-
-.promoBox--round {
-    property: value;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here we have our module &amp;quot;promoBox&amp;quot;, the &amp;quot;promoBox-inner&amp;quot; with one dash means it is a child of &amp;quot;promoBox&amp;quot;, the &amp;quot;promoBox-inner-img&amp;quot; means it is child of &amp;quot;promoBox-inner&amp;quot; that it is child of &amp;quot;promoBox&amp;quot; and so on. &lt;br&gt;
-Lastly we have &amp;quot;promoBox--round&amp;quot; with two dashes that means extended/modifier. Beautiful right?!&lt;/p&gt;
-
-&lt;h2&gt;Final thoughts&lt;/h2&gt;
-
-&lt;p&gt;There&#39;s no absolute way to write, give classes name notation or build &amp;quot;The god master CSS architecture&amp;quot; but there&#39;s definitely great practices to make a great Web application and it all depends on your team and the focus on your Web application goals.&lt;/p&gt;
-</description>
-				<published>2013-03-08 00:00:00 -0600</published>
-				<link>http://bymichaellancaster.com//blog/css-architecture-for-web-applications</link>
 			</item>
 		
 	</channel>
