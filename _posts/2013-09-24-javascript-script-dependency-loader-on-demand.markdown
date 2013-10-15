@@ -102,7 +102,7 @@ Below is the code to make the "magic" happen..just a few lines of code.
             init: function(name, url, callback) {
                 this.widgets();
 
-                if ( arguments.lentgh < 2 ) {
+                if ( arguments.length < 2 ) {
                     return false
                 }
 
