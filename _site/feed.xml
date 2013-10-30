@@ -7,9 +7,7 @@
 		
 			<item>
 				<title>We are influenced by people</title>
-				<description>&lt;h3&gt;Understand the people&lt;/h3&gt;
-
-&lt;p&gt;Be a great programmer isn&#39;t just about know how to code. It&#39;s about questioning what surround us to try understand solve things. The pragmatic programmer is a book that I&#39;m looking for to read after finish Javascript Web Applications..but for now this is what I would like to share related to the topic of this book.&lt;/p&gt;
+				<description>&lt;p&gt;It&#39;s about questioning what surround us to try understand things. The pragmatic programmer is a book that I&#39;m looking forward to read after finish Javascript Web Applications..but for now this is what I would like to share related to the topic of this book.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&amp;quot;You’re a Pragmatic Programmer. You aren’t wedded to any particular technology, but you have a broad enough background in the science, and your experience with practical projects allows you to choose good solutions in particular situations. Theory and practice combine to make you strong. You adjust your approach to suit the current circumstances and environment. And you do this continuously as the work progresses. Pragmatic Programmers get the job done, and do it well.&amp;quot;&lt;/strong&gt;&lt;/p&gt;
 
@@ -120,7 +118,7 @@ After see the code at my perspective one of the problems were all the plugins (w
             init: function(name, url, callback) {
                 this.widgets();
 
-                if ( arguments.lentgh &lt; 2 ) {
+                if ( arguments.length &lt; 2 ) {
                     return false
                 }
 
@@ -159,15 +157,9 @@ After see the code at my perspective one of the problems were all the plugins (w
 &lt;p&gt;I would suggest you create a JS file which has all your widgets been called.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-    // jQuery
-var dependency1 = new Jet.App;
-    dependency1.init(&#39;widget-jquery&#39;, &#39;http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js&#39;, function() {
-        console.log(&#39;jquery loaded&#39;);
-    });
-
 // Cycle
-var dependency2 = new Jet.App;
-    dependency2.init(&#39;widget-cycle&#39;, &#39;http://malsup.github.io/jquery.cycle.all.js&#39;, function() {
+var dependency1 = new Jet.App;
+    dependency1.init(&#39;widget-cycle&#39;, &#39;http://malsup.github.io/jquery.cycle.all.js&#39;, function() {
         console.log(&#39;cycle loaded&#39;);
         $(&#39;#outdoor-context-content&#39;).cycle({
             fx: &#39;fade&#39;
