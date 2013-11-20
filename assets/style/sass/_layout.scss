@@ -19,49 +19,6 @@ aside
 	}
 }
 
-.home #aside {
-	-webkit-animation: $slideR;
-	-moz-animation: $slideR;
-	-ms-animation: $slideR;
-	-o-animation: $slideR;
-}
-
-@-webkit-keyframes slideR {
-	from {
-		@include transform(translate(-250px, 0));
-	}
-	to {
-		@include transform(translate(0, 0));
-	}
-}
-
-@-moz-keyframes slideR {
-	from {
-		@include transform(translate(-250px, 0));
-	}
-	to {
-		@include transform(translate(0, 0));
-	}
-}
-
-@-ms-keyframes slideR {
-	from {
-		@include transform(translate(-250px, 0));
-	}
-	to {
-		@include transform(translate(0, 0));
-	}
-}
-
-@-o-keyframes slideR {
-	from {
-		@include transform(translate(-250px, 0));
-	}
-	to {
-		@include transform(translate(0, 0));
-	}
-}
-
 
 /*
 =========================
@@ -73,15 +30,22 @@ article list
 	position: fixed;
 	bottom: 0;
 	top: 0;
-	left: -250px;
+	//left: -250px;
 	width: 200px;
 	box-shadow: 4px 0px 6px -1px #fff, inset 0px 7px 8px -1px rgba(0, 0, 0, 0.3);
 	padding: 15px 0;
-	overflow-y: scroll; 
+	overflow-y: scroll;
+    -webkit-transform: translate(-250px, 0);
+    -moz-transform: translate(-250px, 0);
+    -ms-transform: translate(-250px, 0);
+    transform: translate(-250px, 0);
 	@include transition(all .2s ease);
 
-	&.active { 
-		left: 240px;
+	&.active {
+      -webkit-transform: translate(240px, 0);
+      -moz-transform: translate(240px, 0);
+      -ms-transform: translate(240px, 0);
+      transform: translate(240px, 0);
 	}
 
 	& li {
