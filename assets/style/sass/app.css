@@ -1,0 +1,62 @@
+/*
+Syntax error: File to import not found or unreadable: compass/css3.
+              Load path: /Users/cappexdev/Sites/github/michaellancaster/assets/style/sass
+        on line 2 of _settings.scss
+        from line 18 of app.scss
+
+1: @charset "utf-8";
+2: /* ==========================================================================
+3: #   SCSS/COMPASS Modular Project Based.
+4: # 	@settings ( COMPASS, Variables, Functions, Mixins, etc... )
+5: # 	@base ( regular elements )
+6: # 	@layout ( layout template, grid structure )
+7: # 	@skin ( background, colors, typography )
+
+Backtrace:
+_settings.scss:2
+app.scss:18
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/import_node.rb:45:in `import'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:227:in `block in visit_import'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:227:in `map'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:227:in `visit_import'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/tree/root_node.rb:20:in `render'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/engine.rb:315:in `_render'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/engine.rb:262:in `render'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/plugin.rb:81:in `update_stylesheets'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/exec.rb:443:in `watch_or_update'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/exec.rb:326:in `process_result'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/exec.rb:41:in `parse'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/lib/sass/exec.rb:21:in `parse!'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/gems/sass-3.2.12/bin/scss:9:in `<top (required)>'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/bin/scss:23:in `load'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/bin/scss:23:in `<main>'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/bin/ruby_noexec_wrapper:14:in `eval'
+/Users/cappexdev/.rvm/gems/ruby-2.0.0-p195/bin/ruby_noexec_wrapper:14:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: compass/css3.\A               Load path: /Users/cappexdev/Sites/github/michaellancaster/assets/style/sass\A         on line 2 of _settings.scss\A         from line 18 of app.scss\A \A 1: @charset \"utf-8\";\A 2: /* ==========================================================================\A 3: #   SCSS/COMPASS Modular Project Based.\A 4: # 	@settings ( COMPASS, Variables, Functions, Mixins, etc... )\A 5: # 	@base ( regular elements )\A 6: # 	@layout ( layout template, grid structure )\A 7: # 	@skin ( background, colors, typography )"; }
