@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+      <loc>http://bymichaellancaster.com/blog/playstation4-alert-using-best-buy-api-nodejs-socketio-nedb</loc>
+      <lastmod>2013-12-12</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://bymichaellancaster.com/blog/chicago-through-instagram-chicagogram-us</loc>
       <lastmod>2013-12-10</lastmod>
       <changefreq>never</changefreq>
