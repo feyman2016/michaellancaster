@@ -2,10 +2,10 @@
 layout: post
 title: Why I like GulpJS more than GruntJS
 
-excerpt: 2013 was the year of GruntJS (I have a post about it) but since 2014 started a new kid on the block appeared and has been shining..
+excerpt: 2013 was the year of GruntJS (I have a post about it) but beginning of 2014 a new cool kid on the block show up..
 ---
 
-2013 was the year of GruntJS (I have a post about it) but since 2014 started a new kid on the block been shining..
+2013 was the year of GruntJS (I have a post about it) but beginning of 2014 a new cool kid on the block show up
 
 This post is just an FYI instead of a tutorial and for those that don't know GruntJS please take a look here <a href="http://www.bymichaellancaster.com/blog/introduction-to-task-runner-gruntjs/" target="_blank" title="GruntJS">GruntJS post</a>.
 
