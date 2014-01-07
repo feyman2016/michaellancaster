@@ -56,6 +56,4 @@ gulp.task('default', function() {
 });
 </code></pre>
 
-<br> 
-
 Cheers!
