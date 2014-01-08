@@ -11,8 +11,8 @@
 API&#39;s when I saw this DOM method called insertAdjacentHTML..it&#39;s &amp;quot;innerHTML&amp;quot; brothers but cooler and faster.&lt;/p&gt;
 
 &lt;p&gt;Here you can compare the performance between &amp;quot;innerHTML&amp;quot; and &amp;quot;insertAdjacentHTML&amp;quot; &lt;a href=&quot;http://jsperf
-.com/insertadjacenthtml-perf/3&quot; target=&quot;_blank&quot; title=&quot;innerHTML vs insertAdjacentHTMl&quot;&gt;here&lt;/a&gt; and gets better its
-&lt;strong&gt;supported for all browsers&lt;/strong&gt;.&lt;/p&gt;
+.com/insertadjacenthtml-perf/3&quot; target=&quot;_blank&quot; title=&quot;innerHTML vs insertAdjacentHTMl&quot;&gt;here&lt;/a&gt; and gets better
+its &lt;strong&gt;supported in all browsers&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Besides the performance another difference is that &amp;quot;innerHTML&amp;quot; will overwrite the content inside the element when
 &amp;quot;insertAdjacentHTML&amp;quot; will add to the specified position.&lt;/p&gt;
@@ -56,7 +56,7 @@ App.insertElement(&#39;beforeend&#39;, content3);
 App.insertElement(&#39;afterend&#39;, content4);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Here&#39;s an example how it works &lt;a href=&quot;http://jsfiddle.net/ftZyn/&quot; target=&quot;_blank&quot; title=&quot;how insertAdjacentHTMl works&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here&#39;s a example how it works &lt;a href=&quot;http://jsfiddle.net/ftZyn/&quot; target=&quot;_blank&quot; title=&quot;how insertAdjacentHTMl works&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Enjoy the tip.&lt;/p&gt;
 </description>
