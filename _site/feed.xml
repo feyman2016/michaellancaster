@@ -6,6 +6,124 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>DOM insert HTML method you might not know</title>
+				<description>&lt;p&gt;Everybody knows/use &amp;quot;innerHTML&amp;quot; to insert HTML but I was looking at the MDN website jumping between Web
+API&#39;s when I saw this DOM method called insertAdjacentHTML..it&#39;s &amp;quot;innerHTML&amp;quot; brothers but cooler and faster.&lt;/p&gt;
+
+&lt;p&gt;Here you can compare the performance between &amp;quot;innerHTML&amp;quot; and &amp;quot;insertAdjacentHTML&amp;quot; &lt;a href=&quot;http://jsperf
+.com/insertadjacenthtml-perf/3&quot; target=&quot;_blank&quot; title=&quot;innerHTML vs insertAdjacentHTMl&quot;&gt;here&lt;/a&gt; and gets better its
+&lt;strong&gt;supported for all browsers&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Besides the performance another difference is that &amp;quot;innerHTML&amp;quot; will overwrite the content inside the element when
+&amp;quot;insertAdjacentHTML&amp;quot; will add to the specified position.&lt;/p&gt;
+
+&lt;p&gt;It&#39;s been out there for a while now even John Resig has an &lt;a href=&quot;http://ejohn.org/blog/dom-insertadjacenthtml/&quot;
+target=&quot;_blank&quot; title=&quot;insertAdjacentHTML post John Resig&quot;&gt;post&lt;/a&gt; about it back in 2008.&lt;/p&gt;
+
+&lt;p&gt;It&#39;s very simple to use you are going to need to pass one of the positions (below) and then pass the content.&lt;/p&gt;
+
+&lt;h4&gt;Positions&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;quot;beforebegin&amp;quot; (insert before the element)&lt;/li&gt;
+&lt;li&gt;&amp;quot;afterend&amp;quot; (insert after the element)&lt;/li&gt;
+&lt;li&gt;&amp;quot;afterbegin&amp;quot; (insert inside element after begin)&lt;/li&gt;
+&lt;li&gt;&amp;quot;beforeend&amp;quot; (insert inside element before end)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let&#39;s say we have a method that do the job for us just passing the &amp;quot;position&amp;quot; and where&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+(function() {
+    window.App = window.App || {};
+
+    window.App = {
+        insertElement: function(where, content) {
+            var elDiv = document.getElementById(&#39;wrapper&#39;);
+                elDiv.insertAdjacentHTML(where, content)
+        }
+    }
+})(window);
+
+var content1 = &#39;&lt;p id=&quot;ct1&quot;&gt;this is a paragrag a &quot;beforebegin&quot; element&lt;/p&gt;&#39;;
+var content2 = &#39;&lt;p id=&quot;ct2&quot;&gt;this is a paragrag a &quot;afterbegin&quot; element&lt;/p&gt;&#39;;
+var content3 = &#39;&lt;p id=&quot;ct3&quot;&gt;this is a paragrag a &quot;beforeend&quot; element&lt;/p&gt;&#39;;
+var content4 = &#39;&lt;p id=&quot;ct4&quot;&gt;this is a paragrag a &quot;afterend&quot; element&lt;/p&gt;&#39;;
+
+App.insertElement(&#39;beforebegin&#39;, content1);
+App.insertElement(&#39;afterbegin&#39;, content2);
+App.insertElement(&#39;beforeend&#39;, content3);
+App.insertElement(&#39;afterend&#39;, content4);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here&#39;s an example how it works &lt;a href=&quot;http://jsfiddle.net/ftZyn/&quot; target=&quot;_blank&quot; title=&quot;how insertAdjacentHTMl works&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Enjoy the tip.&lt;/p&gt;
+</description>
+				<published>2014-01-08 00:00:00 -0600</published>
+				<link>http://bymichaellancaster.com//blog/DOM-insert-html-method-you-might-not-know-about</link>
+			</item>
+		
+			<item>
+				<title>Why I like GulpJS more than GruntJS</title>
+				<description>&lt;p&gt;2013 was the year of GruntJS (I have a post about it) but beginning of 2014 a new cool kid on the block show up&lt;/p&gt;
+
+&lt;p&gt;This post is just an FYI instead of a tutorial and for those that don&#39;t know GruntJS please take a look here &lt;a href=&quot;http://www.bymichaellancaster.com/blog/introduction-to-task-runner-gruntjs/&quot; target=&quot;_blank&quot; title=&quot;GruntJS&quot;&gt;GruntJS post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;When I saw GulpJS at first I said just another task runner.. but then I read the code to see how it works and I got very excited. Why?
+First because uses Streams (Streams is an very important part of NodeJS) which makes faster than GruntJS.. second because if you have been writing NodeJs applications you can notice that GruntJS isn&#39;t very let&#39;s say &amp;quot;pretty&amp;quot; (but works great) but on the other hand GulpJS is like write an NodeJS application making very very easy to &amp;quot;install&amp;quot; and use. I loved.&lt;/p&gt;
+
+&lt;p&gt;Here&#39;s how a GruntJS file looks like &lt;a href=&quot;https://github.com/weblancaster/blog-examples/blob/master/GruntJS-app&quot; target=&quot;_blank&quot; title=&quot;GruntJS&quot;&gt;GruntJS code example&lt;/a&gt; and here how &lt;a href=&quot;https://github.com/weblancaster/blog-examples/tree/master/gulpjs-example&quot; target=&quot;_blank&quot; title=&quot;GulpJS&quot;&gt;GulpJS code example &lt;/a&gt; looks like&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://gulpjs.com&quot; target=&quot;_blank&quot; title=&quot;GulpJS website&quot;&gt; GulpJS website &lt;/a&gt; for more information.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+// Require modules
+var gulp = require(&#39;gulp&#39;)
+    , uglify = require(&#39;gulp-uglify&#39;)
+    , minifyHTML = require(&#39;gulp-minify-html&#39;)
+    , sass = require(&#39;gulp-sass&#39;);
+
+// Here&#39;s the tasks
+gulp.task(&#39;build&#39;, function(){
+    var dist = &#39;dist/&#39;
+        , dirPublic = &#39;public/&#39;
+        , distStylesheets = dist + dirPublic + &#39;stylesheets/&#39;
+        , distJavascripts = dist + dirPublic + &#39;javascripts/&#39;;
+
+    gulp.src(&#39;public/stylesheets/scss/*.scss&#39;)
+        .pipe(sass())
+        .pipe(gulp.dest(distStylesheets));
+
+    gulp.src(&#39;*.html&#39;)
+        .pipe(minifyHTML())
+        .pipe(gulp.dest(dist))
+
+    gulp.src(&#39;public/javascripts/*.js&#39;)
+        .pipe(uglify())
+        .pipe(gulp.dest(distJavascripts))
+});
+
+// Gulp watch for file changes
+gulp.task(&#39;default&#39;, function() {
+    gulp.watch([
+        &#39;public/stylesheets/scss/**&#39;,
+        &#39;public/javascripts/*.js&#39;,
+        &#39;*.html&#39;,
+        &#39;!dist/**&#39;
+    ], function(event) {
+        gulp.run(&#39;build&#39;);
+    });
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+</description>
+				<published>2014-01-06 00:00:00 -0600</published>
+				<link>http://bymichaellancaster.com//blog/why-i-like-gulpjs-more-than-gruntjs</link>
+			</item>
+		
+			<item>
 				<title>PS4 Alerts using BBY API</title>
 				<description>&lt;p&gt;Long story short.. I didn&#39;t want to check Best Buy every day to see if PS4 is available..
 So I built this Web Application &lt;a href=&quot;http://ps4alerts.herokuapp.com/&quot; target=&quot;_blank&quot; title=&quot;Be notified when PlayStation 4 is available at Bes Buy&quot;&gt;PS4 Alerts!&lt;/a&gt; to check every one (1) minute Best Buy Data and if find any PS4 available in store or online will send me an email notification with a direct link to the product.&lt;/p&gt;
@@ -678,474 +796,6 @@ The way the speaker approach the subject is a very creative and interesting thin
 </description>
 				<published>2013-08-25 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/tonights-inspiration</link>
-			</item>
-		
-			<item>
-				<title>Introduction to GruntJS</title>
-				<description>&lt;p&gt;Which developer never wasted time doing repetitive and boring tasks instead of being focused on what we do best &amp;quot;Code&amp;quot;.&lt;/p&gt;
-
-&lt;p&gt;Developers should be worry about write code but very often we got ourself doing a lot of repetitive and boring tasks like cleaning the code, minifying, combining, generating and so on so forth.&lt;/p&gt;
-
-&lt;p&gt;How many time would you save not doing those tasks? today I will show you the introduction use to help you on your daily bases development work flow.&lt;/p&gt;
-
-&lt;p&gt;There&#39;s a answer and it&#39;s called GruntJS I have been using a while and I got say &amp;quot;It&#39;s true love&amp;quot; I can watch for changes on my files, run tests, minify, pre-process SASS, minify images and the list goes on take at look on the plugins at &lt;a href=&quot;http://gruntjs.com/plugins&quot; title=&quot;GruntJS plugins&quot; target=&quot;_blank&quot;&gt;GruntJS plugins&lt;/a&gt; and for more information and further reference you MUST go to &lt;a href=&quot;http://gruntjs.com&quot; title=&quot;GruntJS&quot; target=&quot;_blank&quot;&gt;GruntJS website&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Let&#39;s say we want to watch for changes on the js files and HTML markup minify both and concatenate all js files in one single file.&lt;/p&gt;
-
-&lt;h2&gt;Let&#39;s get start&lt;/h2&gt;
-
-&lt;p&gt;Create a folder on your desktop (or whatever you want to) and let&#39;s call it GruntJS-app.
-&lt;br&gt;
-Add this follow simple architecture to your project.
-&lt;br&gt;&lt;br&gt;
-- GruntJS-app
-&lt;br&gt;
--- dist // html destination
-&lt;br&gt;
--- src // html source
-&lt;br&gt;
---- index.html
-&lt;br&gt;
---- internal.html
-&lt;br&gt;
--- assets
-&lt;br&gt;
---- js
-&lt;br&gt;
----- main.js
-&lt;br&gt;
----- app.js
-&lt;br&gt;
----- module.js
-&lt;br&gt;
---- css
-&lt;br&gt;
---- images&lt;/p&gt;
-
-&lt;p&gt;Then you will need NodeJS if you don&#39;t have go to the &lt;a href=&quot;http://nodejs.org/&quot; title=&quot;NodeJS website&quot; target=&quot;_blank&quot;&gt;NodeJS website&lt;/a&gt; for installation information.&lt;/p&gt;
-
-&lt;p&gt;To make GruntJS work properly you will need some two specific files &amp;quot;package.json&amp;quot; used by &lt;a href=&quot;https://npmjs.org/&quot; title=&quot;npm website&quot; target=&quot;_blank&quot;&gt;npm&lt;/a&gt; contain the information for the project where you list grunt and plugins used by your project as &amp;quot;devDependencies&amp;quot; and the &amp;quot;Gruntfile.js&amp;quot; where you set your tasks to run.&lt;/p&gt;
-
-&lt;p&gt;So let&#39;s add to the project GruntJS-app
-&lt;br&gt;&lt;br&gt;
-- GruntJS-app
-&lt;br&gt;
--- dist // html destination
-&lt;br&gt;
--- src // html source
-&lt;br&gt;
---- index.html
-&lt;br&gt;
---- internal.html
-&lt;br&gt;
--- assets
-&lt;br&gt;
---- js
-&lt;br&gt;
----- main.js
-&lt;br&gt;
----- app.js
-&lt;br&gt;
----- module.js
-&lt;br&gt;
---- css
-&lt;br&gt;
---- images
-&lt;br&gt;
--- package.json // added new file
-&lt;br&gt;
--- Gruntfile.js // added new file&lt;/p&gt;
-
-&lt;h2&gt;Installing GruntJS&lt;/h2&gt;
-
-&lt;p&gt;On your root project folder run the command line&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-sudo npm install -g grunt-cli
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now you have the grunt command line installed globally to your project&lt;/p&gt;
-
-&lt;h2&gt;Configuring GruntJS (Gruntfile.js)&lt;/h2&gt;
-
-&lt;p&gt;the basic structure to configure your Gruntfile.js file is simple.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-module.exports = function(grunt) {
-
-    grunt.initConfig({
-        
-    });
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;Configuring the package.json&lt;/h2&gt;
-
-&lt;p&gt;You can add tons of information on you package json and you can check all information &lt;a href=&quot;http://package.json.nodejitsu.com/&quot; title=&quot;package json reference information&quot; target=&quot;blank&quot;&gt;here&lt;/a&gt; but in this case let&#39;s keep it as simple as possible.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;json&quot;&gt;
-{
-    &quot;name&quot;: &quot;GruntJS-app&quot;,
-    &quot;title&quot;: &quot;GruntJS-app&quot;,
-    &quot;description&quot;: &quot;Simple introduction to GruntJS set up&quot;,
-    &quot;author&quot;: &quot;your name&quot;,
-    &quot;homepage&quot;: &quot;your project website&quot;,
-    &quot;version&quot;: &quot;0.0.1&quot;,
-    &quot;devDependencies&quot;: {
-        &quot;grunt&quot;: &quot;~0.4.1&quot;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;Adding plugins to use as task&lt;/h2&gt;
-
-&lt;p&gt;Remember that we want to &amp;quot;watch&amp;quot; for changes minify both HTML, js files and concatenate all js files in one single file&lt;/p&gt;
-
-&lt;p&gt;Now on you wont need to go manually to package.json to add the plugins as devDependencies because you are going to run the command on your terminal to add it automatically.&lt;/p&gt;
-
-&lt;p&gt;First let&#39;s install Uglify&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-npm install grunt-contrib-uglify --save-dev
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And enable the plugin inside of Gruntfile.js&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-grunt.loadNpmTasks(&#39;grunt-contrib-uglify&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now Gruntfile.js looks like this&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-module.exports = function(grunt) {
-
-    grunt.initConfig({
-
-    });
-
-    grunt.loadNpmTasks(&#39;grunt-contrib-uglify&#39;);
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Install htmlmin&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-npm install grunt-contrib-htmlmin --save-dev
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Enable the plugin&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-grunt.loadNpmTasks(&#39;grunt-contrib-htmlmin&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now Gruntfile.js looks like this&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-module.exports = function(grunt) {
-
-    grunt.initConfig({
-
-    });
-
-    grunt.loadNpmTasks(&#39;grunt-contrib-uglify&#39;);
-    grunt.loadNpmTasks(&#39;grunt-contrib-htmlmin&#39;);
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;Setting the tasks&lt;/h2&gt;
-
-&lt;p&gt;On your Gruntfile.js you will define the configuration for your tasks (check out the plugins documentation for configuration) as should be and the task register.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-module.exports = function(grunt) {
-
-    grunt.initConfig({
-
-        uglify: {
-            my_target: {
-              files: {
-                &#39;assets/js/app.min.js&#39;: // destination
-                [&#39;assets/js/app.js&#39;, &#39;assets/js/main.js&#39;, &#39;assets/js/module.js&#39;] // source
-              }
-            }
-        },
-
-        htmlmin: {
-            dist: {
-                options: {
-                removeComments: true,
-                collapseWhitespace: true
-            },
-            files: {
-                    &#39;dist/index.html&#39;: &#39;src/index.html&#39;, // destination
-                    &#39;dist/internal.html&#39;: &#39;src/internal.html&#39; // source
-                }
-            }
-        }
-
-    });
-
-    grunt.loadNpmTasks(&#39;grunt-contrib-uglify&#39;);
-    grunt.loadNpmTasks(&#39;grunt-contrib-htmlmin&#39;);
-
-    grunt.registerTask(&#39;build&#39;, [&#39;htmlmin&#39;, &#39;uglify&#39;]);
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;Running the tasks&lt;/h2&gt;
-
-&lt;p&gt;Make sure you have all the npm installed&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-npm install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Run the task&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-grunt build
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Done! This is what you should have as a response.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-Running &quot;htmlmin:dist&quot; (htmlmin) task
-File dist/index.html created.
-File dist/internal.html created.
-
-Running &quot;uglify:my_target&quot; (uglify) task
-File &quot;assets/js/app.min.js&quot; created.
-
-Done, without errors.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;Adding and configuring watch&lt;/h2&gt;
-
-&lt;p&gt;Remember &amp;quot;no waste of time&amp;quot; with repetitive tasks right? so to not need run &amp;quot;grunt build&amp;quot; every time after changes let&#39;s add the plugin watch.&lt;/p&gt;
-
-&lt;p&gt;Install watch&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-npm install grunt-contrib-watch --save-dev
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Enable the plugin and configure the watch task&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-grunt.loadNpmTasks(&#39;grunt-contrib-watch&#39;);
-
-grunt.event.on(&#39;watch&#39;, function(action, filepath) {
-  grunt.log.writeln(filepath + &#39; has &#39; + action);
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now Gruntfile.js looks like this (check out the plugin documentation for configuration).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-module.exports = function(grunt) {
-
-    grunt.initConfig({
-
-        uglify: {
-            my_target: {
-              files: {
-                &#39;assets/js/app.min.js&#39;: // destination
-                [&#39;assets/js/app.js&#39;, &#39;assets/js/main.js&#39;, &#39;assets/js/module.js&#39;] // source
-              }
-            }
-        },
-
-        htmlmin: {
-            dist: {
-                options: {
-                removeComments: true,
-                collapseWhitespace: true
-            },
-            files: {
-                    &#39;dist/index.html&#39;: &#39;src/index.html&#39;, // destination
-                    &#39;dist/internal.html&#39;: &#39;src/internal.html&#39; // source
-                }
-            }
-        },
-
-        watch: {
-            src: {
-              files: [&#39;src/*.html&#39;, &#39;assets/js/*.js&#39;, &#39;assets/css/*.css&#39;, &#39;!assets/js/app.min.js&#39;], // ! means not
-              tasks: [&#39;build&#39;],
-            },
-        }
-
-    });
-
-    grunt.loadNpmTasks(&#39;grunt-contrib-uglify&#39;);
-    grunt.loadNpmTasks(&#39;grunt-contrib-htmlmin&#39;);
-    grunt.loadNpmTasks(&#39;grunt-contrib-watch&#39;);
-
-    grunt.registerTask(&#39;build&#39;, [&#39;htmlmin&#39;, &#39;uglify&#39;]);
-
-    grunt.event.on(&#39;watch&#39;, function(action, filepath) {
-      grunt.log.writeln(filepath + &#39; has &#39; + action);
-    });
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now on you will just need to run &amp;quot;grunt watch&amp;quot; so every time you change something in the files set up to watch will run the task &amp;quot;build&amp;quot;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-grunt watch
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and this is what you should see after run the command&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-Running &quot;watch&quot; task
-Waiting...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To stop watch press &amp;quot;control + c&amp;quot; &lt;/p&gt;
-
-&lt;h2&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;GruntJS is AWESOME and you can do much more complex things with it.
-&lt;br&gt;
-Check out the example on &lt;a href=&quot;https://github.com/weblancaster/blog-examples/tree/master/GruntJS-app&quot; title=&quot;example on github&quot; target=&quot;blank&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now you have more time to play with new experiments.
-&lt;br&gt;
-Cheers!&lt;/p&gt;
-</description>
-				<published>2013-06-01 00:00:00 -0500</published>
-				<link>http://bymichaellancaster.com//blog/introduction-to-task-runner-gruntjs</link>
-			</item>
-		
-			<item>
-				<title>Basic overview of client - side templating</title>
-				<description>&lt;p&gt;Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. are used to render templates and show content, but lately about two or three years ago we could noticed that developers and companies are changing this using client side templating.&lt;/p&gt;
-
-&lt;h2&gt;Server - Side templating (the common way)&lt;/h2&gt;
-
-&lt;p&gt;So as I mentioned before back end technologies like Java, Ruby, PHP.. has being used to render the template from the back to the the client side and this approach consists in literally render on the server using one of those technologies and through it into the client - side.&lt;/p&gt;
-
-&lt;p&gt;Two things are very clear to me. First we have to consume the server (imagine if you have to render lots of time), Second is the bandwidth request so the template and the data has to be downloaded into the client side (slow and request bandwidth).&lt;/p&gt;
-
-&lt;h2&gt;Client - Side templating (the new kid in the block?!)&lt;/h2&gt;
-
-&lt;p&gt;The client side consists in remove from the back to the client this template rendering into a very, very known technology called Javascript that runs on each user&#39;s browser making faster web apps and adding more control for you at your end.&lt;/p&gt;
-
-&lt;p&gt;It has being very helpful for Single Page Applications where you can just update an section on your website without refresh the page or download all assets over again.&lt;/p&gt;
-
-&lt;p&gt;At start the client side template will use placeholders as content using it&#39;s own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.&lt;/p&gt;
-
-&lt;h2&gt;Simple JSON data example&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;json&quot;&gt;
-{
-  &quot;client&quot;: {
-    &quot;name&quot;: &quot;Michael lancaster&quot;,
-    &quot;name&quot;: &quot;John Due&quot;
-  },
-  &quot;occupation&quot;: {
-    &quot;description&quot;: &quot;Front End Engineer&quot;,
-    &quot;description&quot;: &quot;Jornalist&quot;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is very human readable right?!&lt;/p&gt;
-
-&lt;h2&gt;Simple Web app example&lt;/h2&gt;
-
-&lt;p&gt;Here I&#39;m using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic.
-You can check out and download the Web app here &lt;a href=&quot;http://git.io/tUfHyA&quot; title=&quot;Handlebars.js app&quot; target=&quot;_blank&quot;&gt;http://git.io/tUfHyA&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2&gt;Handlebars.js template markup example&lt;/h2&gt;
-
-&lt;div class=&quot;fluidImg&quot;&gt;
-&lt;img src=&quot;/assets/images/post-images/client-side.png&quot; alt=&quot;Brazilian developers and Christian Heilmann&quot;&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
-
-&lt;h2&gt;App JS file&lt;/h2&gt;
-
-&lt;p&gt;On my app.js file I requested the JSON data, replaced the template placeholders, rendered/compiled the template and appended into the HTML element.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-function showNewsFromYahooAPI() {
-  $.ajax({
-        url: &#39;http://query.yahooapis.com/v1/public/yql?q=select%20title%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&amp;format=json&amp;callback=&#39;,
-        dataType: &#39;json&#39;
-    }).done(function(data){
-      var
-        query = data.query.results,
-        source = $(&#39;#myTemplate&#39;).html(),
-        compiledTemplate = Handlebars.compile(source),
-        result = compiledTemplate(query);
-
-      $(&#39;#content&#39;).html(result);
-    });
-}
-
-$(function() {
-    showNewsFromYahooAPI();
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;Who uses client side templating?!&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Linkedin (Dust.js)&lt;/li&gt;
-&lt;li&gt;USAToday (Underscore.js)&lt;/li&gt;
-&lt;li&gt;Walmart Mobile (Underscore.js)&lt;/li&gt;
-&lt;li&gt;Hulu (Handlebars.js)&lt;/li&gt;
-&lt;li&gt;Groupon (Mustache.js)&lt;/li&gt;
-&lt;li&gt;And many, many others.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Be aware of..&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Heavy rendering on the users side (devices are not that good as you think they are).&lt;/li&gt;
-&lt;li&gt;Organization is king.&lt;/li&gt;
-&lt;li&gt;There&#39;s logic-less and logic templates (ask yourself how complex is my template?).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Some links to client side template&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://handlebarsjs.com/&quot; title=&quot;Handlebarsjs&quot; target=&quot;_blank&quot;&gt;http://handlebarsjs.com/&lt;/a&gt;
-  &lt;br&gt;
-&lt;a href=&quot;http://mustache.github.io/&quot; title=&quot;Mustachejs&quot; target=&quot;_blank&quot;&gt;http://mustache.github.io/&lt;/a&gt;
-  &lt;br&gt;
-&lt;a href=&quot;http://akdubya.github.io/dustjs/&quot; title=&quot;Dustjs&quot; target=&quot;_blank&quot;&gt;http://akdubya.github.io/dustjs/&lt;/a&gt;
-  &lt;br&gt;
-&lt;a href=&quot;http://documentcloud.github.io/underscore/#template&quot; title=&quot;Underscorejs&quot; target=&quot;_blank&quot;&gt;http://documentcloud.github.io/underscore/#template&lt;/a&gt;
-  &lt;br&gt;
-&lt;a href=&quot;https://github.com/jquery/jquery-tmpl&quot; title=&quot;jQuery tmpl&quot; target=&quot;_blank&quot;&gt;https://github.com/jquery/jquery-tmpl&lt;/a&gt;
-  &lt;br&gt;
-and many others like Jade, Haml-js, Eco, etc.&lt;/p&gt;
-
-&lt;h2&gt;I suggest you read..&lt;/h2&gt;
-
-&lt;p&gt;
-Smashing Magazine - Client-Side Templating &lt;a href=&quot;http://coding.smashingmagazine.com/2012/12/05/client-side-templating/&quot; title=&quot;Smashing magazine: client side templating&quot; target=&quot;_blank&quot;&gt;click here.&lt;/a&gt;
-    &lt;br&gt;
-Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates &lt;a href=&quot;http://engineering.linkedin.com/frontend/leaving-jsps-dust-moving-linkedin-dustjs-client-side-templates&quot; title=&quot;Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates&quot; target=&quot;_blank&quot;&gt;click here.&lt;/a&gt;
-    &lt;br&gt;
-The client-side templating throwdown: mustache, handlebars, dust.js, and more &lt;a href=&quot;http://engineering.linkedin.com/frontend/client-side-templating-throwdown-mustache-handlebars-dustjs-and-more&quot; title=&quot;The client-side templating throwdown: mustache, handlebars, dust.js, and more&quot; target=&quot;_blank&quot;&gt;click here.&lt;/a&gt;
-
-&lt;/p&gt;
-
-&lt;p&gt;Cheers!&lt;/p&gt;
-</description>
-				<published>2013-04-07 00:00:00 -0500</published>
-				<link>http://bymichaellancaster.com//blog/basic-overview-of-client-side-templating</link>
 			</item>
 		
 	</channel>

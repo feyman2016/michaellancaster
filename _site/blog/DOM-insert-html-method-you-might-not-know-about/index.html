@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> Basic overview of client - side templating |  Michael Lancaster Web Engineer based in Chicago - IL</title>
+    <title> DOM insert HTML method you might not know |  Michael Lancaster Web Engineer based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" Basic overview of client - side templating |  Michael Lancaster Web Engineer based in Chicago - IL">
+    <meta name="description" content=" DOM insert HTML method you might not know |  Michael Lancaster Web Engineer based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Blog by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
@@ -276,131 +276,67 @@
 
 		<article class="post">
 
-    <h2 class="ui-tit-01">Basic overview of client - side templating</h2>
+    <h2 class="ui-tit-01">DOM insert HTML method you might not know</h2>
 
-    <span class="ui-date db">07 Apr 13</span>
+    <span class="ui-date db">08 Jan 14</span>
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. are used to render templates and show content, but lately about two or three years ago we could noticed that developers and companies are changing this using client side templating.</p>
+	<div class="ui-copy"><p>Everybody knows/use &quot;innerHTML&quot; to insert HTML but I was looking at the MDN website jumping between Web
+API's when I saw this DOM method called insertAdjacentHTML..it's &quot;innerHTML&quot; brothers but cooler and faster.</p>
 
-<h2>Server - Side templating (the common way)</h2>
+<p>Here you can compare the performance between &quot;innerHTML&quot; and &quot;insertAdjacentHTML&quot; <a href="http://jsperf
+.com/insertadjacenthtml-perf/3" target="_blank" title="innerHTML vs insertAdjacentHTMl">here</a> and gets better its
+<strong>supported for all browsers</strong>.</p>
 
-<p>So as I mentioned before back end technologies like Java, Ruby, PHP.. has being used to render the template from the back to the the client side and this approach consists in literally render on the server using one of those technologies and through it into the client - side.</p>
+<p>Besides the performance another difference is that &quot;innerHTML&quot; will overwrite the content inside the element when
+&quot;insertAdjacentHTML&quot; will add to the specified position.</p>
 
-<p>Two things are very clear to me. First we have to consume the server (imagine if you have to render lots of time), Second is the bandwidth request so the template and the data has to be downloaded into the client side (slow and request bandwidth).</p>
+<p>It's been out there for a while now even John Resig has an <a href="http://ejohn.org/blog/dom-insertadjacenthtml/"
+target="_blank" title="insertAdjacentHTML post John Resig">post</a> about it back in 2008.</p>
 
-<h2>Client - Side templating (the new kid in the block?!)</h2>
+<p>It's very simple to use you are going to need to pass one of the positions (below) and then pass the content.</p>
 
-<p>The client side consists in remove from the back to the client this template rendering into a very, very known technology called Javascript that runs on each user's browser making faster web apps and adding more control for you at your end.</p>
+<h4>Positions</h4>
 
-<p>It has being very helpful for Single Page Applications where you can just update an section on your website without refresh the page or download all assets over again.</p>
+<ul>
+<li>&quot;beforebegin&quot; (insert before the element)</li>
+<li>&quot;afterend&quot; (insert after the element)</li>
+<li>&quot;afterbegin&quot; (insert inside element after begin)</li>
+<li>&quot;beforeend&quot; (insert inside element before end)</li>
+</ul>
 
-<p>At start the client side template will use placeholders as content using it's own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.</p>
-
-<h2>Simple JSON data example</h2>
-
-<pre><code data-language="json">
-{
-  "client": {
-    "name": "Michael lancaster",
-    "name": "John Due"
-  },
-  "occupation": {
-    "description": "Front End Engineer",
-    "description": "Jornalist"
-  }
-}
-</code></pre>
-
-<p>This is very human readable right?!</p>
-
-<h2>Simple Web app example</h2>
-
-<p>Here I'm using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic.
-You can check out and download the Web app here <a href="http://git.io/tUfHyA" title="Handlebars.js app" target="_blank">http://git.io/tUfHyA</a></p>
-
-<h2>Handlebars.js template markup example</h2>
-
-<div class="fluidImg">
-<img src="/assets/images/post-images/client-side.png" alt="Brazilian developers and Christian Heilmann">
-</div>
-
-<p><br/></p>
-
-<h2>App JS file</h2>
-
-<p>On my app.js file I requested the JSON data, replaced the template placeholders, rendered/compiled the template and appended into the HTML element.</p>
+<p>Let's say we have a method that do the job for us just passing the &quot;position&quot; and where</p>
 
 <pre><code data-language="javascript">
-function showNewsFromYahooAPI() {
-  $.ajax({
-        url: 'http://query.yahooapis.com/v1/public/yql?q=select%20title%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&format=json&callback=',
-        dataType: 'json'
-    }).done(function(data){
-      var
-        query = data.query.results,
-        source = $('#myTemplate').html(),
-        compiledTemplate = Handlebars.compile(source),
-        result = compiledTemplate(query);
+(function() {
+    window.App = window.App || {};
 
-      $('#content').html(result);
-    });
-}
+    window.App = {
+        insertElement: function(where, content) {
+            var elDiv = document.getElementById('wrapper');
+                elDiv.insertAdjacentHTML(where, content)
+        }
+    }
+})(window);
 
-$(function() {
-    showNewsFromYahooAPI();
-});
+var content1 = '<p id="ct1">this is a paragrag a "beforebegin" element</p>';
+var content2 = '<p id="ct2">this is a paragrag a "afterbegin" element</p>';
+var content3 = '<p id="ct3">this is a paragrag a "beforeend" element</p>';
+var content4 = '<p id="ct4">this is a paragrag a "afterend" element</p>';
+
+App.insertElement('beforebegin', content1);
+App.insertElement('afterbegin', content2);
+App.insertElement('beforeend', content3);
+App.insertElement('afterend', content4);
 </code></pre>
 
-<h2>Who uses client side templating?!</h2>
+<p>Here's an example how it works <a href="http://jsfiddle.net/ftZyn/" target="_blank" title="how insertAdjacentHTMl works">link</a>.</p>
 
-<ul>
-<li>Linkedin (Dust.js)</li>
-<li>USAToday (Underscore.js)</li>
-<li>Walmart Mobile (Underscore.js)</li>
-<li>Hulu (Handlebars.js)</li>
-<li>Groupon (Mustache.js)</li>
-<li>And many, many others.</li>
-</ul>
-
-<h2>Be aware of..</h2>
-
-<ul>
-<li>Heavy rendering on the users side (devices are not that good as you think they are).</li>
-<li>Organization is king.</li>
-<li>There's logic-less and logic templates (ask yourself how complex is my template?).</li>
-</ul>
-
-<h2>Some links to client side template</h2>
-
-<p><a href="http://handlebarsjs.com/" title="Handlebarsjs" target="_blank">http://handlebarsjs.com/</a>
-  <br>
-<a href="http://mustache.github.io/" title="Mustachejs" target="_blank">http://mustache.github.io/</a>
-  <br>
-<a href="http://akdubya.github.io/dustjs/" title="Dustjs" target="_blank">http://akdubya.github.io/dustjs/</a>
-  <br>
-<a href="http://documentcloud.github.io/underscore/#template" title="Underscorejs" target="_blank">http://documentcloud.github.io/underscore/#template</a>
-  <br>
-<a href="https://github.com/jquery/jquery-tmpl" title="jQuery tmpl" target="_blank">https://github.com/jquery/jquery-tmpl</a>
-  <br>
-and many others like Jade, Haml-js, Eco, etc.</p>
-
-<h2>I suggest you read..</h2>
-
-<p>
-Smashing Magazine - Client-Side Templating <a href="http://coding.smashingmagazine.com/2012/12/05/client-side-templating/" title="Smashing magazine: client side templating" target="_blank">click here.</a>
-    <br>
-Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates <a href="http://engineering.linkedin.com/frontend/leaving-jsps-dust-moving-linkedin-dustjs-client-side-templates" title="Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates" target="_blank">click here.</a>
-    <br>
-The client-side templating throwdown: mustache, handlebars, dust.js, and more <a href="http://engineering.linkedin.com/frontend/client-side-templating-throwdown-mustache-handlebars-dustjs-and-more" title="The client-side templating throwdown: mustache, handlebars, dust.js, and more" target="_blank">click here.</a>
-
-</p>
-
-<p>Cheers!</p>
+<p>Enjoy the tip.</p>
 </div>
 
-    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2013</small></span> -->
+    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2014</small></span> -->
 
             <div id="disqus_thread"></div>
 		    <script type="text/javascript">

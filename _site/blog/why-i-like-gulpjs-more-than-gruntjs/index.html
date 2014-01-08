@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> Basic overview of client - side templating |  Michael Lancaster Web Engineer based in Chicago - IL</title>
+    <title> Why I like GulpJS more than GruntJS |  Michael Lancaster Web Engineer based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" Basic overview of client - side templating |  Michael Lancaster Web Engineer based in Chicago - IL">
+    <meta name="description" content=" Why I like GulpJS more than GruntJS |  Michael Lancaster Web Engineer based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Blog by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
@@ -276,131 +276,67 @@
 
 		<article class="post">
 
-    <h2 class="ui-tit-01">Basic overview of client - side templating</h2>
+    <h2 class="ui-tit-01">Why I like GulpJS more than GruntJS</h2>
 
-    <span class="ui-date db">07 Apr 13</span>
+    <span class="ui-date db">06 Jan 14</span>
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. are used to render templates and show content, but lately about two or three years ago we could noticed that developers and companies are changing this using client side templating.</p>
+	<div class="ui-copy"><p>2013 was the year of GruntJS (I have a post about it) but beginning of 2014 a new cool kid on the block show up</p>
 
-<h2>Server - Side templating (the common way)</h2>
+<p>This post is just an FYI instead of a tutorial and for those that don't know GruntJS please take a look here <a href="http://www.bymichaellancaster.com/blog/introduction-to-task-runner-gruntjs/" target="_blank" title="GruntJS">GruntJS post</a>.</p>
 
-<p>So as I mentioned before back end technologies like Java, Ruby, PHP.. has being used to render the template from the back to the the client side and this approach consists in literally render on the server using one of those technologies and through it into the client - side.</p>
+<p>When I saw GulpJS at first I said just another task runner.. but then I read the code to see how it works and I got very excited. Why?
+First because uses Streams (Streams is an very important part of NodeJS) which makes faster than GruntJS.. second because if you have been writing NodeJs applications you can notice that GruntJS isn't very let's say &quot;pretty&quot; (but works great) but on the other hand GulpJS is like write an NodeJS application making very very easy to &quot;install&quot; and use. I loved.</p>
 
-<p>Two things are very clear to me. First we have to consume the server (imagine if you have to render lots of time), Second is the bandwidth request so the template and the data has to be downloaded into the client side (slow and request bandwidth).</p>
+<p>Here's how a GruntJS file looks like <a href="https://github.com/weblancaster/blog-examples/blob/master/GruntJS-app" target="_blank" title="GruntJS">GruntJS code example</a> and here how <a href="https://github.com/weblancaster/blog-examples/tree/master/gulpjs-example" target="_blank" title="GulpJS">GulpJS code example </a> looks like</p>
 
-<h2>Client - Side templating (the new kid in the block?!)</h2>
-
-<p>The client side consists in remove from the back to the client this template rendering into a very, very known technology called Javascript that runs on each user's browser making faster web apps and adding more control for you at your end.</p>
-
-<p>It has being very helpful for Single Page Applications where you can just update an section on your website without refresh the page or download all assets over again.</p>
-
-<p>At start the client side template will use placeholders as content using it's own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.</p>
-
-<h2>Simple JSON data example</h2>
-
-<pre><code data-language="json">
-{
-  "client": {
-    "name": "Michael lancaster",
-    "name": "John Due"
-  },
-  "occupation": {
-    "description": "Front End Engineer",
-    "description": "Jornalist"
-  }
-}
-</code></pre>
-
-<p>This is very human readable right?!</p>
-
-<h2>Simple Web app example</h2>
-
-<p>Here I'm using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic.
-You can check out and download the Web app here <a href="http://git.io/tUfHyA" title="Handlebars.js app" target="_blank">http://git.io/tUfHyA</a></p>
-
-<h2>Handlebars.js template markup example</h2>
-
-<div class="fluidImg">
-<img src="/assets/images/post-images/client-side.png" alt="Brazilian developers and Christian Heilmann">
-</div>
-
-<p><br/></p>
-
-<h2>App JS file</h2>
-
-<p>On my app.js file I requested the JSON data, replaced the template placeholders, rendered/compiled the template and appended into the HTML element.</p>
+<p>Check out the <a href="https://gulpjs.com" target="_blank" title="GulpJS website"> GulpJS website </a> for more information.</p>
 
 <pre><code data-language="javascript">
-function showNewsFromYahooAPI() {
-  $.ajax({
-        url: 'http://query.yahooapis.com/v1/public/yql?q=select%20title%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&format=json&callback=',
-        dataType: 'json'
-    }).done(function(data){
-      var
-        query = data.query.results,
-        source = $('#myTemplate').html(),
-        compiledTemplate = Handlebars.compile(source),
-        result = compiledTemplate(query);
+// Require modules
+var gulp = require('gulp')
+    , uglify = require('gulp-uglify')
+    , minifyHTML = require('gulp-minify-html')
+    , sass = require('gulp-sass');
 
-      $('#content').html(result);
+// Here's the tasks
+gulp.task('build', function(){
+    var dist = 'dist/'
+        , dirPublic = 'public/'
+        , distStylesheets = dist + dirPublic + 'stylesheets/'
+        , distJavascripts = dist + dirPublic + 'javascripts/';
+
+    gulp.src('public/stylesheets/scss/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest(distStylesheets));
+
+    gulp.src('*.html')
+        .pipe(minifyHTML())
+        .pipe(gulp.dest(dist))
+
+    gulp.src('public/javascripts/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest(distJavascripts))
+});
+
+// Gulp watch for file changes
+gulp.task('default', function() {
+    gulp.watch([
+        'public/stylesheets/scss/**',
+        'public/javascripts/*.js',
+        '*.html',
+        '!dist/**'
+    ], function(event) {
+        gulp.run('build');
     });
-}
-
-$(function() {
-    showNewsFromYahooAPI();
 });
 </code></pre>
-
-<h2>Who uses client side templating?!</h2>
-
-<ul>
-<li>Linkedin (Dust.js)</li>
-<li>USAToday (Underscore.js)</li>
-<li>Walmart Mobile (Underscore.js)</li>
-<li>Hulu (Handlebars.js)</li>
-<li>Groupon (Mustache.js)</li>
-<li>And many, many others.</li>
-</ul>
-
-<h2>Be aware of..</h2>
-
-<ul>
-<li>Heavy rendering on the users side (devices are not that good as you think they are).</li>
-<li>Organization is king.</li>
-<li>There's logic-less and logic templates (ask yourself how complex is my template?).</li>
-</ul>
-
-<h2>Some links to client side template</h2>
-
-<p><a href="http://handlebarsjs.com/" title="Handlebarsjs" target="_blank">http://handlebarsjs.com/</a>
-  <br>
-<a href="http://mustache.github.io/" title="Mustachejs" target="_blank">http://mustache.github.io/</a>
-  <br>
-<a href="http://akdubya.github.io/dustjs/" title="Dustjs" target="_blank">http://akdubya.github.io/dustjs/</a>
-  <br>
-<a href="http://documentcloud.github.io/underscore/#template" title="Underscorejs" target="_blank">http://documentcloud.github.io/underscore/#template</a>
-  <br>
-<a href="https://github.com/jquery/jquery-tmpl" title="jQuery tmpl" target="_blank">https://github.com/jquery/jquery-tmpl</a>
-  <br>
-and many others like Jade, Haml-js, Eco, etc.</p>
-
-<h2>I suggest you read..</h2>
-
-<p>
-Smashing Magazine - Client-Side Templating <a href="http://coding.smashingmagazine.com/2012/12/05/client-side-templating/" title="Smashing magazine: client side templating" target="_blank">click here.</a>
-    <br>
-Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates <a href="http://engineering.linkedin.com/frontend/leaving-jsps-dust-moving-linkedin-dustjs-client-side-templates" title="Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates" target="_blank">click here.</a>
-    <br>
-The client-side templating throwdown: mustache, handlebars, dust.js, and more <a href="http://engineering.linkedin.com/frontend/client-side-templating-throwdown-mustache-handlebars-dustjs-and-more" title="The client-side templating throwdown: mustache, handlebars, dust.js, and more" target="_blank">click here.</a>
-
-</p>
 
 <p>Cheers!</p>
 </div>
 
-    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2013</small></span> -->
+    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2014</small></span> -->
 
             <div id="disqus_thread"></div>
 		    <script type="text/javascript">

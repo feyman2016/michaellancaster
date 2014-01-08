@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+      <loc>http://bymichaellancaster.com/blog/DOM-insert-html-method-you-might-not-know-about</loc>
+      <lastmod>2014-01-08</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
+      <loc>http://bymichaellancaster.com/blog/why-i-like-gulpjs-more-than-gruntjs</loc>
+      <lastmod>2014-01-06</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://bymichaellancaster.com/blog/playstation4-alert-using-best-buy-api-nodejs-socketio-nedb</loc>
       <lastmod>2013-12-12</lastmod>
       <changefreq>never</changefreq>
