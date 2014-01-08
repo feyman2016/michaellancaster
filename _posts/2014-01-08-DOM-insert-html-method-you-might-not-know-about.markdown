@@ -8,6 +8,7 @@ excerpt: Everybody knows/use "innerHTML" to insert HTML but I was looking at the
 Everybody knows/use "innerHTML" to insert HTML but I was looking at the MDN website jumping between Web
 API's when I saw this DOM method called insertAdjacentHTML..it's "innerHTML" brothers but cooler and
 <strong>faster</strong>.
+<br>
 Besides the performance another difference is that "innerHTML" will overwrite the content inside the element when
 "insertAdjacentHTML" will add to the specified position.
 
