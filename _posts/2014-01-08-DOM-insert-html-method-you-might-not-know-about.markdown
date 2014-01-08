@@ -8,13 +8,12 @@ excerpt: Everybody knows/use "innerHTML" to insert HTML but I was looking at the
 Everybody knows/use "innerHTML" to insert HTML but I was looking at the MDN website jumping between Web
 API's when I saw this DOM method called insertAdjacentHTML..it's "innerHTML" brothers but cooler and
 <strong>faster</strong>.
+Besides the performance another difference is that "innerHTML" will overwrite the content inside the element when
+"insertAdjacentHTML" will add to the specified position.
 
 Here you can compare the performance between "innerHTML" and "insertAdjacentHTML" <a href="http://jsperf
 .com/insertadjacenthtml-perf/3" target="_blank" title="innerHTML vs insertAdjacentHTMl">here</a> and gets better
 its <strong>supported in all browsers</strong>.
-
-Besides the performance another difference is that "innerHTML" will overwrite the content inside the element when
-"insertAdjacentHTML" will add to the specified position.
 
 It's been out there for a while now even John Resig has an <a href="http://ejohn.org/blog/dom-insertadjacenthtml/"
 target="_blank" title="insertAdjacentHTML post John Resig">post</a> about it back in 2008.
@@ -52,6 +51,6 @@ App.insertElement('beforeend', content3);
 App.insertElement('afterend', content4);
 </code></pre>
 
-Here's a example how it works <a href="http://jsfiddle.net/ftZyn/" target="_blank" title="how insertAdjacentHTMl works">link</a>.
+Here's a example how it works <a href="http://jsfiddle.net/ftZyn/1/" target="_blank" title="how insertAdjacentHTMl works">link</a>.
 
 Enjoy the tip.
