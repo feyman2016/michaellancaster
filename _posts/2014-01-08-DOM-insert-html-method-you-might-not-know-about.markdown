@@ -6,7 +6,8 @@ excerpt: Everybody knows/use "innerHTML" to insert HTML but I was looking at the
 ---
 
 Everybody knows/use "innerHTML" to insert HTML but I was looking at the MDN website jumping between Web
-API's when I saw this DOM method called insertAdjacentHTML..it's "innerHTML" brothers but cooler and faster.
+API's when I saw this DOM method called insertAdjacentHTML..it's "innerHTML" brothers but cooler and
+<strong>faster</strong>.
 
 Here you can compare the performance between "innerHTML" and "insertAdjacentHTML" <a href="http://jsperf
 .com/insertadjacenthtml-perf/3" target="_blank" title="innerHTML vs insertAdjacentHTMl">here</a> and gets better
@@ -29,7 +30,7 @@ It's very simple to use you are going to need to pass one of the positions (belo
 Let's say we have a method that do the job for us just passing the "position" and where
 
 <pre><code data-language="javascript">
-(function() {
+(function(window) {
 	window.App = window.App || {};
 
 	window.App = {
