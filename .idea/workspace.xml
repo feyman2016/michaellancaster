@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="724935ab-5c30-40e6-a18d-b205514314f5" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2014-01-08-DOM-insert-html-you-did-not-know-about.markdown" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/blog/when-facebook-recruiter-email-me/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/node_modules/grunt-contrib-compass/AUTHORS" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/node_modules/grunt-contrib-compass/CHANGELOG" afterPath="" />
@@ -20,32 +21,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/node_modules/grunt-contrib-compass/node_modules/grunt-lib-contrib/node_modules/zlib-browserify/zlib.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/node_modules/grunt-contrib-compass/node_modules/grunt-lib-contrib/package.json" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/node_modules/grunt-contrib-compass/node_modules/grunt-lib-contrib/test/lib_test.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/archive.html" afterPath="$PROJECT_DIR$/_site/archive.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/about/index.html" afterPath="$PROJECT_DIR$/_site/about/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/basic-overview-of-client-side-templating/index.html" afterPath="$PROJECT_DIR$/_site/blog/basic-overview-of-client-side-templating/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/chicago-through-instagram-chicagogram-us/index.html" afterPath="$PROJECT_DIR$/_site/blog/chicago-through-instagram-chicagogram-us/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/css-architecture-for-web-applications/index.html" afterPath="$PROJECT_DIR$/_site/blog/css-architecture-for-web-applications/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/css-bad-and-good-practices-good-tips/index.html" afterPath="$PROJECT_DIR$/_site/blog/css-bad-and-good-practices-good-tips/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/deploying-nodejs-on-heroku-cloud/index.html" afterPath="$PROJECT_DIR$/_site/blog/deploying-nodejs-on-heroku-cloud/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/first-things-first/index.html" afterPath="$PROJECT_DIR$/_site/blog/first-things-first/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/fluid-iframe-and-images-without-javascript-plugins/index.html" afterPath="$PROJECT_DIR$/_site/blog/fluid-iframe-and-images-without-javascript-plugins/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/from-san-francisco-to-the-brazilian-developers-community/index.html" afterPath="$PROJECT_DIR$/_site/blog/from-san-francisco-to-the-brazilian-developers-community/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/how-i-built-lollagram-lollapalooza-instagram-real-time-api/index.html" afterPath="$PROJECT_DIR$/_site/blog/how-i-built-lollagram-lollapalooza-instagram-real-time-api/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/inspirational-art-and-code-by-joshua-davis/index.html" afterPath="$PROJECT_DIR$/_site/blog/inspirational-art-and-code-by-joshua-davis/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/introduction-to-task-runner-gruntjs/index.html" afterPath="$PROJECT_DIR$/_site/blog/introduction-to-task-runner-gruntjs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/javascript-script-dependency-loader-on-demand/index.html" afterPath="$PROJECT_DIR$/_site/blog/javascript-script-dependency-loader-on-demand/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/lets-talk-about-rem-units/index.html" afterPath="$PROJECT_DIR$/_site/blog/lets-talk-about-rem-units/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/playstation4-alert-using-best-buy-api-nodejs-socketio-nedb/index.html" afterPath="$PROJECT_DIR$/_site/blog/playstation4-alert-using-best-buy-api-nodejs-socketio-nedb/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/secrets-of-lea-verou-css/index.html" afterPath="$PROJECT_DIR$/_site/blog/secrets-of-lea-verou-css/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/the-filter-bubble-and-your-social-life-online/index.html" afterPath="$PROJECT_DIR$/_site/blog/the-filter-bubble-and-your-social-life-online/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/tonights-inspiration/index.html" afterPath="$PROJECT_DIR$/_site/blog/tonights-inspiration/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/two-years-ago-everything-started/index.html" afterPath="$PROJECT_DIR$/_site/blog/two-years-ago-everything-started/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/we-are-influenced-by-people/index.html" afterPath="$PROJECT_DIR$/_site/blog/we-are-influenced-by-people/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/what-technologies-im-using-to-blog/index.html" afterPath="$PROJECT_DIR$/_site/blog/what-technologies-im-using-to-blog/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/lab/index.html" afterPath="$PROJECT_DIR$/_site/lab/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/sitemap.xml" afterPath="$PROJECT_DIR$/_site/sitemap.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2014-01-08-DOM-insert-html-method-you-might-not-know-about.markdown" afterPath="$PROJECT_DIR$/_posts/2014-01-08-DOM-insert-html-method-you-might-not-know-about.markdown" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="michaellancaster.iws" />
@@ -116,7 +92,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="8" selection-start="2291" selection-end="2291" vertical-scroll-proportion="0.78494626" vertical-offset="357" max-vertical-offset="915">
+            <state line="12" column="24" selection-start="728" selection-end="728" vertical-scroll-proportion="0.24731183" vertical-offset="42" max-vertical-offset="915">
               <folding />
             </state>
           </provider>
@@ -456,7 +432,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="8" selection-start="2291" selection-end="2291" vertical-scroll-proportion="0.78494626" vertical-offset="357" max-vertical-offset="915">
+        <state line="12" column="24" selection-start="728" selection-end="728" vertical-scroll-proportion="0.24731183" vertical-offset="42" max-vertical-offset="915">
           <folding />
         </state>
       </provider>
