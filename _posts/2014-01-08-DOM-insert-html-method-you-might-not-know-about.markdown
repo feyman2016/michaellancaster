@@ -21,22 +21,26 @@ target="_blank" title="insertAdjacentHTML post John Resig">post</a> about it bac
 
 It's very simple to use you are going to need to pass one of the positions (below) and then pass the content.
 
-#### Positions
+#### Position
 - "beforebegin" (insert before the element)
 - "afterend" (insert after the element)
 - "afterbegin" (insert inside element after begin)
 - "beforeend" (insert inside element before end)
 
-Let's say we have a method that do the job for us just passing the "position" and where
+<pre><code data-language="javascript">
+element.insertAdjacentHTML("position", "content");
+</code></pre>
+
+Let's say we have a method that do the job for us when we pass the "position" and "content".
 
 <pre><code data-language="javascript">
 (function(window) {
 	window.App = window.App || {};
 
 	window.App = {
-		insertElement: function(where, content) {
+		insertElement: function(position, content) {
 			var elDiv = document.getElementById('wrapper');
-				elDiv.insertAdjacentHTML(where, content)
+				elDiv.insertAdjacentHTML(position, content)
 		}
 	}
 })(window);
@@ -52,6 +56,6 @@ App.insertElement('beforeend', content3);
 App.insertElement('afterend', content4);
 </code></pre>
 
-Here's a example how it works <a href="http://jsfiddle.net/ftZyn/1/" target="_blank" title="how insertAdjacentHTMl works">link</a>.
+Here's a example how it works <a href="http://jsfiddle.net/ftZyn/2/" target="_blank" title="how insertAdjacentHTMl works">link</a>.
 
 Enjoy the tip.
