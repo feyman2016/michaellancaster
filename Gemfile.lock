@@ -37,6 +37,7 @@ GEM
       syntax (>= 1.0.0)
     mime-types (1.23)
     netrc (0.7.7)
+    newrelic_rpm (3.7.1.182)
     posix-spawn (0.3.6)
     rack (1.5.2)
     rake (10.0.4)
@@ -57,6 +58,7 @@ DEPENDENCIES
   foreman
   heroku
   jekyll (~> 0.11.2)
+  newrelic_rpm
   rake
   redcarpet (~> 1.9)
   shotgun
