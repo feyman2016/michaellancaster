@@ -283,21 +283,22 @@
     <!-- <span class="category">Category: </span> -->
 
 	<div class="ui-copy"><p>Everybody knows/use &quot;innerHTML&quot; to insert HTML but I was looking at the MDN website jumping between Web
-API's when I saw this DOM method called insertAdjacentHTML..it's &quot;innerHTML&quot; brothers but cooler and faster.</p>
+API's when I saw this DOM method called insertAdjacentHTML..it's &quot;innerHTML&quot; brothers but cooler and
+<strong>faster</strong>.
+<br>
+Besides the performance another difference is that &quot;innerHTML&quot; will overwrite the content inside the element when
+&quot;insertAdjacentHTML&quot; will add to the specified position.</p>
 
 <p>Here you can compare the performance between &quot;innerHTML&quot; and &quot;insertAdjacentHTML&quot; <a href="http://jsperf
 .com/insertadjacenthtml-perf/3" target="_blank" title="innerHTML vs insertAdjacentHTMl">here</a> and gets better
 its <strong>supported in all browsers</strong>.</p>
-
-<p>Besides the performance another difference is that &quot;innerHTML&quot; will overwrite the content inside the element when
-&quot;insertAdjacentHTML&quot; will add to the specified position.</p>
 
 <p>It's been out there for a while now even John Resig has an <a href="http://ejohn.org/blog/dom-insertadjacenthtml/"
 target="_blank" title="insertAdjacentHTML post John Resig">post</a> about it back in 2008.</p>
 
 <p>It's very simple to use you are going to need to pass one of the positions (below) and then pass the content.</p>
 
-<h4>Positions</h4>
+<h4>Position</h4>
 
 <ul>
 <li>&quot;beforebegin&quot; (insert before the element)</li>
@@ -306,16 +307,20 @@ target="_blank" title="insertAdjacentHTML post John Resig">post</a> about it bac
 <li>&quot;beforeend&quot; (insert inside element before end)</li>
 </ul>
 
-<p>Let's say we have a method that do the job for us just passing the &quot;position&quot; and where</p>
+<pre><code data-language="javascript">
+element.insertAdjacentHTML("position", "content");
+</code></pre>
+
+<p>Let's say we have a method that do the job for us when we pass the &quot;position&quot; and &quot;content&quot;.</p>
 
 <pre><code data-language="javascript">
-(function() {
+(function(window) {
     window.App = window.App || {};
 
     window.App = {
-        insertElement: function(where, content) {
+        insertElement: function(position, content) {
             var elDiv = document.getElementById('wrapper');
-                elDiv.insertAdjacentHTML(where, content)
+                elDiv.insertAdjacentHTML(position, content)
         }
     }
 })(window);
@@ -331,7 +336,7 @@ App.insertElement('beforeend', content3);
 App.insertElement('afterend', content4);
 </code></pre>
 
-<p>Here's a example how it works <a href="http://jsfiddle.net/ftZyn/" target="_blank" title="how insertAdjacentHTMl works">link</a>.</p>
+<p>Here's a example how it works <a href="http://jsfiddle.net/ftZyn/2/" target="_blank" title="how insertAdjacentHTMl works">link</a>.</p>
 
 <p>Enjoy the tip.</p>
 </div>
