@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="724935ab-5c30-40e6-a18d-b205514314f5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/newrelic.yml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="michaellancaster.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,7 +69,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="73" selection-start="613" selection-end="613" vertical-scroll-proportion="0.2006689" vertical-offset="0" max-vertical-offset="598">
+            <state line="8" column="25" selection-start="565" selection-end="565" vertical-scroll-proportion="0.2006689" vertical-offset="0" max-vertical-offset="598">
               <folding />
             </state>
           </provider>
@@ -405,7 +404,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="73" selection-start="613" selection-end="613" vertical-scroll-proportion="0.2006689" vertical-offset="0" max-vertical-offset="598">
+        <state line="8" column="25" selection-start="565" selection-end="565" vertical-scroll-proportion="0.2006689" vertical-offset="0" max-vertical-offset="598">
           <folding />
         </state>
       </provider>
