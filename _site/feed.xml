@@ -2,27 +2,28 @@
 <rss version="2.0">
 	<channel>
 		<title>Michael Lancaster</title>
-		<description>Front End Developer/HTML5 Soldier</description>
+		<description>Front End Developer/Web Engineer</description>
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
 				<title>DOM insert HTML method you might not know</title>
 				<description>&lt;p&gt;Everybody knows/use &amp;quot;innerHTML&amp;quot; to insert HTML but I was looking at the MDN website jumping between Web
-API&#39;s when I saw this DOM method called insertAdjacentHTML..it&#39;s &amp;quot;innerHTML&amp;quot; brothers but cooler and faster.&lt;/p&gt;
+API&#39;s when I saw this DOM method called insertAdjacentHTML..it&#39;s &amp;quot;innerHTML&amp;quot; brothers but cooler and
+&lt;strong&gt;faster&lt;/strong&gt;.
+&lt;br&gt;
+Besides the performance another difference is that &amp;quot;innerHTML&amp;quot; will overwrite the content inside the element when
+&amp;quot;insertAdjacentHTML&amp;quot; will add to the specified position.&lt;/p&gt;
 
 &lt;p&gt;Here you can compare the performance between &amp;quot;innerHTML&amp;quot; and &amp;quot;insertAdjacentHTML&amp;quot; &lt;a href=&quot;http://jsperf
 .com/insertadjacenthtml-perf/3&quot; target=&quot;_blank&quot; title=&quot;innerHTML vs insertAdjacentHTMl&quot;&gt;here&lt;/a&gt; and gets better
 its &lt;strong&gt;supported in all browsers&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Besides the performance another difference is that &amp;quot;innerHTML&amp;quot; will overwrite the content inside the element when
-&amp;quot;insertAdjacentHTML&amp;quot; will add to the specified position.&lt;/p&gt;
 
 &lt;p&gt;It&#39;s been out there for a while now even John Resig has an &lt;a href=&quot;http://ejohn.org/blog/dom-insertadjacenthtml/&quot;
 target=&quot;_blank&quot; title=&quot;insertAdjacentHTML post John Resig&quot;&gt;post&lt;/a&gt; about it back in 2008.&lt;/p&gt;
 
 &lt;p&gt;It&#39;s very simple to use you are going to need to pass one of the positions (below) and then pass the content.&lt;/p&gt;
 
-&lt;h4&gt;Positions&lt;/h4&gt;
+&lt;h4&gt;Position&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&amp;quot;beforebegin&amp;quot; (insert before the element)&lt;/li&gt;
@@ -31,16 +32,20 @@ target=&quot;_blank&quot; title=&quot;insertAdjacentHTML post John Resig&quot;&g
 &lt;li&gt;&amp;quot;beforeend&amp;quot; (insert inside element before end)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Let&#39;s say we have a method that do the job for us just passing the &amp;quot;position&amp;quot; and where&lt;/p&gt;
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+element.insertAdjacentHTML(&quot;position&quot;, &quot;content&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Let&#39;s say we have a method that do the job for us when we pass the &amp;quot;position&amp;quot; and &amp;quot;content&amp;quot;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-(function() {
+(function(window) {
     window.App = window.App || {};
 
     window.App = {
-        insertElement: function(where, content) {
+        insertElement: function(position, content) {
             var elDiv = document.getElementById(&#39;wrapper&#39;);
-                elDiv.insertAdjacentHTML(where, content)
+                elDiv.insertAdjacentHTML(position, content)
         }
     }
 })(window);
@@ -56,7 +61,7 @@ App.insertElement(&#39;beforeend&#39;, content3);
 App.insertElement(&#39;afterend&#39;, content4);
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Here&#39;s a example how it works &lt;a href=&quot;http://jsfiddle.net/ftZyn/&quot; target=&quot;_blank&quot; title=&quot;how insertAdjacentHTMl works&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here&#39;s a example how it works &lt;a href=&quot;http://jsfiddle.net/ftZyn/2/&quot; target=&quot;_blank&quot; title=&quot;how insertAdjacentHTMl works&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Enjoy the tip.&lt;/p&gt;
 </description>
