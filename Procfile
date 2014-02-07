@@ -1,1 +1,2 @@
-web: jekyll --server $PORT
+web: bundle exec passenger start -p $PORT --max-pool-size 3
+# web: jekyll --server $PORT
