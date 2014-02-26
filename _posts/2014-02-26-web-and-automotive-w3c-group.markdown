@@ -37,7 +37,7 @@ To know more about it please read <a href="http://www.teslamotors.com/roadster/t
 
 ## Model S 17-Inch Touchscreen Display
 
-As they say "the world's most advanced vehicle user interface" and I wont say no.
+As they say "the world's most advanced vehicle user interface" and I wont disagree.
 
 <div class="fluidMedia">
     <iframe src="//player.vimeo.com/video/61821553?title=0&amp;byline=0&amp;portrait=0" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
