@@ -6,6 +6,71 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Web and Automotive. WTF?!</title>
+				<description>&lt;h2&gt;it&#39;s all about mobility&lt;/h2&gt;
+
+&lt;p&gt;I have been very curious about developing any kind of software for cars.. but of course I would be much more interested in develop using Open Web Technologies perhaps HTML5/CSS3 and Javascript how AWESOME that would be?&lt;/p&gt;
+
+&lt;p&gt;Anyway. while trying to find any sort of material on something I can feed my mind about it I found some very interesting stuff and gathered all in one post.&lt;/p&gt;
+
+&lt;p&gt;So for those that don&#39;t know there&#39;s actually a W3C group to bring and to accelerate the adoption of Web technologies in the automotive industry.
+The group will focus on defining a Vehicle Data API that will create new opportunities for automotive services via the Web.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Some of the advantages of Web Applications&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Web technologies are well known and &amp;quot;well supported&amp;quot; by devices therefore would make the adoption &amp;quot;easier&amp;quot;.
+and since Web technologies are based on open standards, developers are not held hostage by particular vendors.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Challenges to adopt Web Technology in the Car&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Driver distraction the biggest one.. but can be solved by HMI (Human-Machine Interface) not displaying/allowing the driver interact with the UI while certain activities e.g car in movement.&lt;/p&gt;
+
+&lt;p&gt;Cost. Web Technologies has a very good Connectivity stack (Bluetooth, Wi-Fi or Cellular), TCP/IP Stack, Embedded Browser and to bring all this will increase software and hardware cost.&lt;/p&gt;
+
+&lt;h2&gt;Tesla and Vehicle Management System&lt;/h2&gt;
+
+&lt;p&gt;Tesla and the Vehicle Management System..you ask me why?! First of all I am a Elon Musk &amp;quot;superfan&amp;quot; not just because of his incredible desire to change the world but also because I&#39;m curious to know how they do to have such a incredible product/car.&lt;/p&gt;
+
+&lt;div class=&quot;fluidImg&quot;&gt;
+    &lt;img src=&quot;/assets/images/post-images/teslaVMS.png&quot; alt=&quot;Tesla Roadsters Vehicle Management System&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To know more about it please read &lt;a href=&quot;http://www.teslamotors.com/roadster/technology/firmware&quot; target=&quot;_blank&quot; title=&quot;Tesla Roadsters Vehicle Management System&quot;&gt;A Silicon Valley approach to vehicle software&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Model S 17-Inch Touchscreen Display&lt;/h2&gt;
+
+&lt;p&gt;As they say &amp;quot;the world&#39;s most advanced vehicle user interface&amp;quot; and I wont say no.&lt;/p&gt;
+
+&lt;div class=&quot;fluidMedia&quot;&gt;
+    &lt;iframe src=&quot;//player.vimeo.com/video/61821553?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt; &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagine the possibilities through the UX/UI using Open Web technologies.. It wont just take us to point A to point B anymore.&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;small&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/small&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;small&gt;&lt;a href=&quot;http://www.prnewswire.com/news-releases/genivi-alliance-teams-with-w3c-to-accelerate-adoption-of-web-technologies-in-the-automotive-industry-209315251.html&quot; target=&quot;_blank&quot; title=&quot;w3c and automotive&quot;&gt;http://www.prnewswire.com/news-releases/genivi-alliance-teams-with-w3c-to-accelerate-adoption-of-web-technologies-in-the-automotive-industry-209315251.html&lt;/a&gt;&lt;/small&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;small&gt;&lt;a href=&quot;http://www.w3.org/wiki/Web_and_Automotive&quot; target=&quot;_blank&quot; title=&quot;w3c and automotive&quot;&gt;http://www.w3.org/wiki/Web_and_Automotive&lt;/a&gt;&lt;/small&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;small&gt;&lt;a href=&quot;http://www.w3.org/2013/02/autobg.html.en&quot; target=&quot;_blank&quot; title=&quot;w3c and automotive&quot;&gt;http://www.w3.org/2013/02/autobg.html.en&lt;/a&gt;&lt;/small&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+</description>
+				<published>2014-02-26 00:00:00 -0600</published>
+				<link>http://bymichaellancaster.com//blog/web-and-automotive-w3c-group</link>
+			</item>
+		
+			<item>
 				<title>DOM insert HTML method you might not know</title>
 				<description>&lt;p&gt;Everybody knows/use &amp;quot;innerHTML&amp;quot; to insert HTML but I was looking at the MDN website jumping between Web
 API&#39;s when I saw this DOM method called insertAdjacentHTML..it&#39;s &amp;quot;innerHTML&amp;quot; brothers but cooler and
@@ -738,69 +803,6 @@ Instagram.subscriptions.unsubscribe({ id: &#39;#######&#39; });
 </description>
 				<published>2013-09-09 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/how-i-built-lollagram-lollapalooza-instagram-real-time-api</link>
-			</item>
-		
-			<item>
-				<title>Tonight's inspiration</title>
-				<description>&lt;p&gt;I haven&#39;t posted anything a while which is a shame but I had good reasons and I should be doing a post about it on my next post but this post is made to show what inspire me love this world what makes me think how wonderful things are and how much we can learn from our world.&lt;/p&gt;
-
-&lt;h2&gt;Love and Life&lt;/h2&gt;
-
-&lt;p&gt;Love. Perhaps just a word for some but at the same time very powerful. Love drives us to different things in life. Good things and bad things. Both..So many perspectives from different cultures and races but same origin. Your inside.&lt;/p&gt;
-
-&lt;p&gt;Love inspire me in some many different ways and I&#39;m not ashamed to say I believe in true love.
-And here it&#39;s very interesting to see some ways people want to express love.&lt;/p&gt;
-
-&lt;p&gt;You decide which one suits you.&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-  &lt;iframe src=&quot;//player.vimeo.com/video/22439234&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-  &lt;iframe src=&quot;//player.vimeo.com/video/35699279&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-  &lt;iframe src=&quot;//player.vimeo.com/video/71495477?color=f7f9fa&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-  &lt;iframe src=&quot;//player.vimeo.com/video/61361236&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;Technology and Inspiration&lt;/h2&gt;
-
-&lt;p&gt;Another thing that inspires me can, changed and has being changed the world as love for good or for bad. Technology..but on this post I will show you what inspired me tonight..&lt;/p&gt;
-
-&lt;p&gt;First one is how Netflix is delivering high quality WebKit based UIs to televisions, game consoles and Blu-ray players.
-this talk will discuss fluid animation with hardware acceleration, achieving high framerates using accelerated compositing, responding to constant user input, as well as balancing strategies for best performance on over 450 high-end to low-end devices.&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-  &lt;iframe src=&quot;//www.youtube.com/embed/xuMWhto62Eo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;Second one discuss how programming has being changing people and the future of programming.
-The way the speaker approach the subject is a very creative and interesting thing.&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-  &lt;iframe src=&quot;//player.vimeo.com/video/71278954?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;If it all doesn&#39;t makes sense to you don&#39;t worry lot of things in life doesn&#39;t makes sense.&lt;/p&gt;
-</description>
-				<published>2013-08-25 00:00:00 -0500</published>
-				<link>http://bymichaellancaster.com//blog/tonights-inspiration</link>
 			</item>
 		
 	</channel>
