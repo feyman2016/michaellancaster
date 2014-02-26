@@ -34,10 +34,7 @@ article list
 	box-shadow: 4px 0px 6px -1px #fff, inset 0px 7px 8px -1px rgba(0, 0, 0, 0.3);
 	padding: 15px 0;
 	overflow-y: scroll;
-    -webkit-transform: translate(-250px, 0);
-    -moz-transform: translate(-250px, 0);
-    -ms-transform: translate(-250px, 0);
-    transform: translate(-250px, 0);
+    @include transform(translate(-250px, 0));
 	@include transition(all .2s ease);
 
 	&.active {
