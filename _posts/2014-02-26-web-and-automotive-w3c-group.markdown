@@ -23,7 +23,7 @@ and since Web technologies are based on open standards, developers are not held 
 
 Driver distraction the biggest one.. but can be solved by HMI (Human-Machine Interface) standard guidelines on how the driver interact with the UI while certain behavior e.g car in movement.
 
-Cost. Web Technologies has a very good Connectivity stack (Bluetooth, Wi-Fi or Cellular), TCP/IP Stack, Embedded Browser and to bring all this will increase software and hardware cost.
+Cost. Web Technologies has a very good connectivity stack Bluetooth, Wi-Fi, Cellular, TCP/IP Stack, Embedded Browser and to bring all this will increase software and hardware cost.
 
 ## Tesla and Vehicle Management System
 
