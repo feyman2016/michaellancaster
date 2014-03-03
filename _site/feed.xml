@@ -6,6 +6,37 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Sublime Text 3 jump to definition/method</title>
+				<description>&lt;p&gt;Quick blog post to show you how to easily add the feature goto or jump to definition on Sublime text 3 with custom shortcut&lt;/p&gt;
+
+&lt;div class=&quot;fluidImg&quot;&gt;
+    &lt;img src=&quot;/assets/images/post-images/st3-goto-definition.gif&quot; alt=&quot;Sublime Text 3 jump to definition/method&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Simple steps&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;on sublime text 3&lt;/strong&gt;
+&lt;pre&gt;&lt;code data-language=&quot;HTML&quot;&gt;
+Sublime Text -&amp;gt; Preferences -&amp;gt; Key Bindings - User
+&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;Add the code below..&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;Javascript&quot;&gt;
+[
+    { &quot;keys&quot;: [&quot;shift+command+m&quot;], &quot;command&quot;: &quot;goto_definition&quot; }
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Save it and you are done. (ps: if did not work restart your Sublime Text 3).&lt;/p&gt;
+
+&lt;p&gt;Thanks.&lt;/p&gt;
+</description>
+				<published>2014-03-03 00:00:00 -0600</published>
+				<link>http://bymichaellancaster.com//blog/sublime-text-3-jump-to-definition-custom-shortcut</link>
+			</item>
+		
+			<item>
 				<title>Web and Automotive. WTF?!</title>
 				<description>&lt;p&gt;&lt;strong&gt;Updated version: 03/03/2014&lt;/strong&gt;&lt;/p&gt;
 
@@ -640,179 +671,6 @@ heroku ps:scale web=1
 </description>
 				<published>2013-09-19 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/deploying-nodejs-on-heroku-cloud</link>
-			</item>
-		
-			<item>
-				<title>How I built Lollagram with Instagram real time API</title>
-				<description>&lt;p&gt;[post under improvements]&lt;/p&gt;
-
-&lt;h2&gt;What is Lollagram?&lt;/h2&gt;
-
-&lt;p&gt;[from the Application] &lt;a href=&quot;http://www.lollagram.com&quot; target=&quot;_blank&quot; title=&quot;Lollagram - real time lollapalooza&quot;&gt;Lollagram&lt;/a&gt;  is a labor of love that’s designed to help you keep track of the Lollapalooza experience, through the eyes (or, more accurately, snapshots) of music lovers on the ground at Grant Park. Lollagram takes advantage of the Instagram Real Time API and aggregates the moments at Lollapalooza, creating a visual record of the bands, food, people, and city that make up this great musical tradition. With 45 million photos being uploaded to Instagram each day, we&#39;re excited to present snapshots from Lollapalooza 2013.&lt;/p&gt;
-
-&lt;h2&gt;The new version&lt;/h2&gt;
-
-&lt;p&gt;Check out the source code on &lt;a href=&quot;https://github.com/weblancaster/instagram-real-time&quot; target=&quot;_blank&quot; title=&quot;github Lollagram - real time lollagram cosuming Instagram real time API&quot;&gt;Lollagram source code.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The old version of Lollagram was a simple website built in PHP where you needed to click on the refresh button to pull the latest pictures shared on Instagram with the hashtags #lollapalooza #lollapalooza2012 or #lolla2012&lt;/p&gt;
-
-&lt;p&gt;While I was working for Golinharris I was also working on my side projects/experiments using NodeJS so I think two weeks before the event I started to talk with my co-worker and designer Daniel Branca that I was thinking to use cutting edge technologies to do a real time Application therefore much more engaging.&lt;/p&gt;
-
-&lt;p&gt;I was also about to leave the company to another company and I had one more week at Golinharris but I really wanted to work on it for fun and learning to use technologies like NodeJs, Socket.io, Client Side template (HandlebarsJs) and responsive web design where the user can follow on their smartphone, tablet, desktop or even on TV (and Yes I did for &amp;quot;free&amp;quot;).&lt;/p&gt;
-
-&lt;p&gt;I never had work with real time Application so I started to read and do some experiments with Socket.io coding a real time chat (as most developers do).
-After understand the basic concept of Socket.io &amp;quot;Real Time&amp;quot; and discuss all the most important details of the Application with Dan (the designer) I started code the Application.&lt;/p&gt;
-
-&lt;p&gt;As I said before at that time I was leaving the company to work for another company and I was also preparing my slides/speak for the biggest conference in Brazil for Front End Developers/Engineers which I was invited to speak (topic for another post) and it would be in the same day I had to release the Application.&lt;/p&gt;
-
-&lt;p&gt;So in one week I had to start at the new company understand the new workflow, finish Lollagram Application and finish my slides/speak for the conference in Brazil.&lt;/p&gt;
-
-&lt;h2&gt;The Application&lt;/h2&gt;
-
-&lt;p&gt;I&#39;m not going to describe in a lot of details it will be more a overview how I did it.&lt;/p&gt;
-
-&lt;p&gt;After understand how the Instagram real time API work I started to code the Back-end utilizing NodeJS (&lt;a href=&quot;http://expressjs.com/&quot; target=&quot;_blank&quot; title=&quot;ExpressJS Framework&quot;&gt;ExpressJS&lt;/a&gt;) and hosted on &lt;a href=&quot;http://www.heroku.com&quot; target=&quot;Heroku cloud&quot; title=&quot;Heroku cloud&quot;&gt;Heroku&lt;/a&gt; which is awesome and I could added monitoring to the server to debug and make sure everything on the server was/is running alright. &lt;br&gt;
-I tried to find code examples to gain some time but I found anything good enough. Or the code were too old or was developed PHP or RoR so I ended up utilizing the library called &lt;a href=&quot;https://github.com/mckelvey/instagram-node-lib&quot; targte=&quot;_blank&quot; title=&quot;Instagram node lib&quot;&gt;instagram-node-lib&lt;/a&gt; which helped me a lot and I gained some time.&lt;/p&gt;
-
-&lt;p&gt;After register my Application on Instagram and get my &amp;quot;client id&amp;quot; and &amp;quot;client secret&amp;quot; the most important things I needed to get it working was the steps below.&lt;/p&gt;
-
-&lt;p&gt;Remember I&#39;m using the &lt;a href=&quot;https://github.com/mckelvey/instagram-node-lib&quot; targte=&quot;_blank&quot; title=&quot;Instagram node lib&quot;&gt;instagram-node-lib&lt;/a&gt; so we don&#39;t need to do from scratch since time is/was very precious and we don&#39;t want to reinvent the wheel.&lt;/p&gt;
-
-&lt;h3&gt;Basic setup&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-Instagram.set(&#39;client_id&#39;, clientID);
-Instagram.set(&#39;client_secret&#39;, clientSecret);
-Instagram.set(&#39;callback_url&#39;, &#39;http://YOUR_URL.COM/callback&#39;);
-Instagram.set(&#39;redirect_uri&#39;, &#39;http://YOUR_URL.com&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;The Handshake&lt;/h3&gt;
-
-&lt;p&gt;The &lt;a href=&quot;http://en.wikipedia.org/wiki/Transmission_Control_Protocol&quot; target=&quot;&quot; title=&quot;Handshake&quot;&gt;Handshake&lt;/a&gt; is the confirmation connection between the servers.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-app.get(&#39;/callback&#39;, function(req, res){
-    var handshake =  Instagram.subscriptions.handshake(req, res);
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;First load&lt;/h3&gt;
-
-&lt;p&gt;When you access the Application for the first time you can noticed thirteen pictures are loaded.
-Here I request the latest shared pictures on Instagram with hashtag #lollapalooza and utilizing Socket.io I transmit it to the client side as json.&lt;/p&gt;
-
-&lt;p&gt;Server sends the data to the client side.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-io.sockets.on(&#39;connection&#39;, function (socket) {
-  Instagram.tags.recent({ 
-      name: &#39;lollapalooza&#39;,
-      complete: function(data) {
-        socket.emit(&#39;firstShow&#39;, { firstShow: data });
-      }
-  });
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;On my method &amp;quot;mostRecent&amp;quot; the Socket.io on the client receives the data and parse/process using client side templating (HandlebarsJs) and append to the Application showing the latest pictures shared on Instagram.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-mostRecent: function() {
-    socket.on(&#39;firstShow&#39;, function (data) {
-        var
-            query = data,
-            source = $(&#39;#firstShow-tpl&#39;).html(),
-            compiledTemplate = Handlebars.compile(source),
-            result = compiledTemplate(query),
-            imgWrap = $(&#39;#imgContent&#39;);
-
-        imgWrap.html(result);
-    });
-},
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Subscribing to hashtags&lt;/h3&gt;
-
-&lt;p&gt;To receive the last updates from Instagram as real time first I needed to subscribe to the hashtags.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-Instagram.subscriptions.subscribe({
-  object: &#39;tag&#39;,
-  object_id: &#39;lollapalooza&#39;,
-  aspect: &#39;media&#39;,
-  callback_url: &#39;http://YOUR_URL.com/callback&#39;,
-  type: &#39;subscription&#39;,
-  id: &#39;#&#39;
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Real time &amp;quot;time&amp;quot;&lt;/h3&gt;
-
-&lt;p&gt;After subscribe to the hashtags I started to receive &amp;quot;notifications&amp;quot; from Instagram when someone shared pictures with the hashtags subscribed which is pretty cool specially when lots of people share and makes even more engaging.&lt;/p&gt;
-
-&lt;p&gt;One thing that I noticed is that Instagram real time API is unstable and if you go to the google groups where developers post problems and discuss solutions you can see there&#39;s a lot to get better.
-Another thing is that you can receive 5000 &amp;quot;notifications&amp;quot; per hour and if you pass the limit the Instagram block your Application.&lt;/p&gt;
-
-&lt;p&gt;Here I send the url to the client side to make the Ajax request but theres another way to do it which is access the json response from Instagram &amp;quot;notification&amp;quot; on the server and get the last image to send to the client.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-app.post(&#39;/callback&#39;, function(req, res) {
-    var data = req.body;
-
-    data.forEach(function(tag) {
-      var url = &#39;https://api.instagram.com/v1/tags/&#39; + tag.object_id + &#39;/media/recent?client_id=479edbf0004c42758987cf0244afd3ef&#39;;
-      sendMessage(url);
-
-    });
-    res.end();
-});
-
-function sendMessage(url) {
-  io.sockets.emit(&#39;show&#39;, { show: url });
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;On the client side I receive the data &amp;quot;url&amp;quot; and do Ajax request then I call my method to render the client side template.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-getData: function() {
-    var self = this;
-    socket.on(&#39;show&#39;, function(data) {
-        var url = data.show;
-        $.ajax({
-            url: url,
-            type: &#39;POST&#39;,
-            crossDomain: true,
-            dataType: &#39;jsonp&#39;
-        }).done(function (data) {
-            self.renderTemplate(data);
-        }); 
-    });
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;How to unsubscribe&lt;/h3&gt;
-
-&lt;p&gt;To unsubscribe is easy it just need the tag &amp;quot;ID&amp;quot; and done.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-Instagram.subscriptions.unsubscribe({ id: &#39;#######&#39; });
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Final thoughts&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Work with Real Time is pretty cool and fun.&lt;/li&gt;
-&lt;li&gt;Instagram real time API isn&#39;t great but does the job.&lt;/li&gt;
-&lt;li&gt;Work in three different important things in one week is possible with one pack with ten monster energetic drink and less than four hours of sleep per night.&lt;/li&gt;
-&lt;li&gt;People love to share pictures. People love to see pictures.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Check out the source code on &lt;a href=&quot;https://github.com/weblancaster/instagram-real-time&quot; target=&quot;_blank&quot; title=&quot;github Lollagram - real time lollagram cosuming Instagram real time API&quot;&gt;Lollagram source code.&lt;/a&gt;&lt;/p&gt;
-</description>
-				<published>2013-09-09 00:00:00 -0500</published>
-				<link>http://bymichaellancaster.com//blog/how-i-built-lollagram-lollapalooza-instagram-real-time-api</link>
 			</item>
 		
 	</channel>
