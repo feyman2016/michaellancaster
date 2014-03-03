@@ -5,6 +5,16 @@ title: Web and Automotive. WTF?!
 excerpt: I have been very curious about developing any kind of software for cars.. but of course I would be much more interested in develop using Open Web Technologies perhaps HTML5/CSS3 and Javascript how AWESOME that would be?
 ---
 
+<strong>Updated version: 03/03/2014</strong>
+
+## As predicted..
+
+Looks like isn't just me excited to see applications on cars.. Apple announced <a href="https://www.apple.com/ios/carplay/" target="_blank" title="CarPlay">CarPlay</a>.
+<br>
+You can read more on <a href="http://techcrunch.com/2014/03/03/apples-new-carplay-system-will-turn-tens-of-millions-of-cars-into-iphone-accessories/" target="_blank" title="Apple’s New CarPlay System Will Turn Tens Of Millions Of Cars Into iPhone Accessories">TechCrunch</a>.
+
+<strong>Original version: 02/26/2014</strong>
+
 ## it's all about mobility
 
 I have been very curious about developing any kind of software for cars.. but of course I would be much more interested in develop using Open Web Technologies perhaps HTML5/CSS3 and Javascript how AWESOME that would be?
@@ -63,8 +73,3 @@ Imagine the possibilities through the UX/UI using Open Web technologies.. It won
 </ul>
 
 Cheers!
-
-
-
-
-

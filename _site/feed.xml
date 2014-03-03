@@ -7,7 +7,17 @@
 		
 			<item>
 				<title>Web and Automotive. WTF?!</title>
-				<description>&lt;h2&gt;it&#39;s all about mobility&lt;/h2&gt;
+				<description>&lt;p&gt;&lt;strong&gt;Updated version: 03/03/2014&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2&gt;As predicted..&lt;/h2&gt;
+
+&lt;p&gt;Looks like isn&#39;t just me excited to see applications on cars.. Apple announced &lt;a href=&quot;https://www.apple.com/ios/carplay/&quot; target=&quot;_blank&quot; title=&quot;CarPlay&quot;&gt;CarPlay&lt;/a&gt;.
+&lt;br&gt;
+You can read more on &lt;a href=&quot;http://techcrunch.com/2014/03/03/apples-new-carplay-system-will-turn-tens-of-millions-of-cars-into-iphone-accessories/&quot; target=&quot;_blank&quot; title=&quot;Apple’s New CarPlay System Will Turn Tens Of Millions Of Cars Into iPhone Accessories&quot;&gt;TechCrunch&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Original version: 02/26/2014&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2&gt;it&#39;s all about mobility&lt;/h2&gt;
 
 &lt;p&gt;I have been very curious about developing any kind of software for cars.. but of course I would be much more interested in develop using Open Web Technologies perhaps HTML5/CSS3 and Javascript how AWESOME that would be?&lt;/p&gt;
 
@@ -23,9 +33,9 @@ and since Web technologies are based on open standards, developers are not held 
 
 &lt;p&gt;&lt;strong&gt;Challenges to adopt Web Technology in the Car&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Driver distraction the biggest one.. but can be solved by HMI (Human-Machine Interface) not displaying/allowing the driver interact with the UI while certain activities e.g car in movement.&lt;/p&gt;
+&lt;p&gt;Driver distraction the biggest one.. but can be solved by HMI (Human-Machine Interface) standard guidelines on how the driver interact with the UI while certain behavior e.g car in movement.&lt;/p&gt;
 
-&lt;p&gt;Cost. Web Technologies has a very good Connectivity stack (Bluetooth, Wi-Fi or Cellular), TCP/IP Stack, Embedded Browser and to bring all this will increase software and hardware cost.&lt;/p&gt;
+&lt;p&gt;Cost. Web Technologies has a very good connectivity stack Bluetooth, Wi-Fi, Cellular, TCP/IP Stack, Embedded Browser and to bring all this will increase software and hardware cost.&lt;/p&gt;
 
 &lt;h2&gt;Tesla and Vehicle Management System&lt;/h2&gt;
 
@@ -39,7 +49,7 @@ and since Web technologies are based on open standards, developers are not held 
 
 &lt;h2&gt;Model S 17-Inch Touchscreen Display&lt;/h2&gt;
 
-&lt;p&gt;As they say &amp;quot;the world&#39;s most advanced vehicle user interface&amp;quot; and I wont say no.&lt;/p&gt;
+&lt;p&gt;As they say &amp;quot;the world&#39;s most advanced vehicle user interface&amp;quot; and I wont disagree.&lt;/p&gt;
 
 &lt;div class=&quot;fluidMedia&quot;&gt;
     &lt;iframe src=&quot;//player.vimeo.com/video/61821553?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt; &lt;/iframe&gt;
