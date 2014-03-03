@@ -18,7 +18,8 @@ In Sublime Text 3
 Sublime Text -> Preferences -> Key Bindings - User
 </code></pre>
 
-Add the code below..
+You can add any shortcut you want since it's not already being use for another action so you don't overwrite the default shortcut settings.
+In my case I decide use `shift+command+m`..like below.
 
 <pre><code data-language="Javascript">
 [
