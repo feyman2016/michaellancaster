@@ -6,6 +6,112 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Sublime Text 3 jump to definition/method</title>
+				<description>&lt;p&gt;Quick blog post to show you how to easily add the feature goto or jump to definition on Sublime text 3 with custom shortcut&lt;/p&gt;
+
+&lt;div class=&quot;fluidImg&quot;&gt;
+    &lt;img src=&quot;/assets/images/post-images/st3-goto-definition.gif&quot; alt=&quot;Sublime Text 3 jump to definition/method&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Simple steps&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;on sublime text 3&lt;/strong&gt;
+&lt;pre&gt;&lt;code data-language=&quot;HTML&quot;&gt;
+Sublime Text -&amp;gt; Preferences -&amp;gt; Key Bindings - User
+&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;Add the code below..&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;Javascript&quot;&gt;
+[
+    { &quot;keys&quot;: [&quot;shift+command+m&quot;], &quot;command&quot;: &quot;goto_definition&quot; }
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Save it and you are done. (ps: if did not work restart your Sublime Text 3).&lt;/p&gt;
+
+&lt;p&gt;Thanks.&lt;/p&gt;
+</description>
+				<published>2014-03-03 00:00:00 -0600</published>
+				<link>http://bymichaellancaster.com//blog/sublime-text-3-jump-to-definition-custom-shortcut</link>
+			</item>
+		
+			<item>
+				<title>Web and Automotive. WTF?!</title>
+				<description>&lt;p&gt;&lt;strong&gt;Updated version: 03/03/2014&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2&gt;As predicted..&lt;/h2&gt;
+
+&lt;p&gt;Looks like isn&#39;t just me excited to see applications on cars.. Apple announced &lt;a href=&quot;https://www.apple.com/ios/carplay/&quot; target=&quot;_blank&quot; title=&quot;CarPlay&quot;&gt;CarPlay&lt;/a&gt;.
+&lt;br&gt;
+You can read more on &lt;a href=&quot;http://techcrunch.com/2014/03/03/apples-new-carplay-system-will-turn-tens-of-millions-of-cars-into-iphone-accessories/&quot; target=&quot;_blank&quot; title=&quot;Apple’s New CarPlay System Will Turn Tens Of Millions Of Cars Into iPhone Accessories&quot;&gt;TechCrunch&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Original version: 02/26/2014&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2&gt;it&#39;s all about mobility&lt;/h2&gt;
+
+&lt;p&gt;I have been very curious about developing any kind of software for cars.. but of course I would be much more interested in develop using Open Web Technologies perhaps HTML5/CSS3 and Javascript how AWESOME that would be?&lt;/p&gt;
+
+&lt;p&gt;Anyway. while trying to find any sort of material on something I can feed my mind about it I found some very interesting stuff and gathered all in one post.&lt;/p&gt;
+
+&lt;p&gt;So for those that don&#39;t know there&#39;s actually a W3C group to bring and to accelerate the adoption of Web technologies in the automotive industry.
+The group will focus on defining a Vehicle Data API that will create new opportunities for automotive services via the Web.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Some of the advantages of Web Applications&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Web technologies are well known and &amp;quot;well supported&amp;quot; by devices therefore would make the adoption &amp;quot;easier&amp;quot;.
+and since Web technologies are based on open standards, developers are not held hostage by particular vendors.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Challenges to adopt Web Technology in the Car&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Driver distraction the biggest one.. but can be solved by HMI (Human-Machine Interface) standard guidelines on how the driver interact with the UI while certain behavior e.g car in movement.&lt;/p&gt;
+
+&lt;p&gt;Cost. Web Technologies has a very good connectivity stack Bluetooth, Wi-Fi, Cellular, TCP/IP Stack, Embedded Browser and to bring all this will increase software and hardware cost.&lt;/p&gt;
+
+&lt;h2&gt;Tesla and Vehicle Management System&lt;/h2&gt;
+
+&lt;p&gt;Tesla and the Vehicle Management System..you ask me why?! First of all I am a Elon Musk &amp;quot;superfan&amp;quot; not just because of his incredible desire to change the world but also because I&#39;m curious to know how they do to have such a incredible product/car.&lt;/p&gt;
+
+&lt;div class=&quot;fluidImg&quot;&gt;
+    &lt;img src=&quot;/assets/images/post-images/teslaVMS.png&quot; alt=&quot;Tesla Roadsters Vehicle Management System&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To know more about it please read &lt;a href=&quot;http://www.teslamotors.com/roadster/technology/firmware&quot; target=&quot;_blank&quot; title=&quot;Tesla Roadsters Vehicle Management System&quot;&gt;A Silicon Valley approach to vehicle software&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Model S 17-Inch Touchscreen Display&lt;/h2&gt;
+
+&lt;p&gt;As they say &amp;quot;the world&#39;s most advanced vehicle user interface&amp;quot; and I wont disagree.&lt;/p&gt;
+
+&lt;div class=&quot;fluidMedia&quot;&gt;
+    &lt;iframe src=&quot;//player.vimeo.com/video/61821553?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt; &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagine the possibilities through the UX/UI using Open Web technologies.. It wont just take us to point A to point B anymore.&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;small&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/small&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;small&gt;&lt;a href=&quot;http://www.prnewswire.com/news-releases/genivi-alliance-teams-with-w3c-to-accelerate-adoption-of-web-technologies-in-the-automotive-industry-209315251.html&quot; target=&quot;_blank&quot; title=&quot;w3c and automotive&quot;&gt;http://www.prnewswire.com/news-releases/genivi-alliance-teams-with-w3c-to-accelerate-adoption-of-web-technologies-in-the-automotive-industry-209315251.html&lt;/a&gt;&lt;/small&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;small&gt;&lt;a href=&quot;http://www.w3.org/wiki/Web_and_Automotive&quot; target=&quot;_blank&quot; title=&quot;w3c and automotive&quot;&gt;http://www.w3.org/wiki/Web_and_Automotive&lt;/a&gt;&lt;/small&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;small&gt;&lt;a href=&quot;http://www.w3.org/2013/02/autobg.html.en&quot; target=&quot;_blank&quot; title=&quot;w3c and automotive&quot;&gt;http://www.w3.org/2013/02/autobg.html.en&lt;/a&gt;&lt;/small&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+</description>
+				<published>2014-02-26 00:00:00 -0600</published>
+				<link>http://bymichaellancaster.com//blog/web-and-automotive-w3c-group</link>
+			</item>
+		
+			<item>
 				<title>DOM insert HTML method you might not know</title>
 				<description>&lt;p&gt;Everybody knows/use &amp;quot;innerHTML&amp;quot; to insert HTML but I was looking at the MDN website jumping between Web
 API&#39;s when I saw this DOM method called insertAdjacentHTML..it&#39;s &amp;quot;innerHTML&amp;quot; brothers but cooler and
@@ -565,242 +671,6 @@ heroku ps:scale web=1
 </description>
 				<published>2013-09-19 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/deploying-nodejs-on-heroku-cloud</link>
-			</item>
-		
-			<item>
-				<title>How I built Lollagram with Instagram real time API</title>
-				<description>&lt;p&gt;[post under improvements]&lt;/p&gt;
-
-&lt;h2&gt;What is Lollagram?&lt;/h2&gt;
-
-&lt;p&gt;[from the Application] &lt;a href=&quot;http://www.lollagram.com&quot; target=&quot;_blank&quot; title=&quot;Lollagram - real time lollapalooza&quot;&gt;Lollagram&lt;/a&gt;  is a labor of love that’s designed to help you keep track of the Lollapalooza experience, through the eyes (or, more accurately, snapshots) of music lovers on the ground at Grant Park. Lollagram takes advantage of the Instagram Real Time API and aggregates the moments at Lollapalooza, creating a visual record of the bands, food, people, and city that make up this great musical tradition. With 45 million photos being uploaded to Instagram each day, we&#39;re excited to present snapshots from Lollapalooza 2013.&lt;/p&gt;
-
-&lt;h2&gt;The new version&lt;/h2&gt;
-
-&lt;p&gt;Check out the source code on &lt;a href=&quot;https://github.com/weblancaster/instagram-real-time&quot; target=&quot;_blank&quot; title=&quot;github Lollagram - real time lollagram cosuming Instagram real time API&quot;&gt;Lollagram source code.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The old version of Lollagram was a simple website built in PHP where you needed to click on the refresh button to pull the latest pictures shared on Instagram with the hashtags #lollapalooza #lollapalooza2012 or #lolla2012&lt;/p&gt;
-
-&lt;p&gt;While I was working for Golinharris I was also working on my side projects/experiments using NodeJS so I think two weeks before the event I started to talk with my co-worker and designer Daniel Branca that I was thinking to use cutting edge technologies to do a real time Application therefore much more engaging.&lt;/p&gt;
-
-&lt;p&gt;I was also about to leave the company to another company and I had one more week at Golinharris but I really wanted to work on it for fun and learning to use technologies like NodeJs, Socket.io, Client Side template (HandlebarsJs) and responsive web design where the user can follow on their smartphone, tablet, desktop or even on TV (and Yes I did for &amp;quot;free&amp;quot;).&lt;/p&gt;
-
-&lt;p&gt;I never had work with real time Application so I started to read and do some experiments with Socket.io coding a real time chat (as most developers do).
-After understand the basic concept of Socket.io &amp;quot;Real Time&amp;quot; and discuss all the most important details of the Application with Dan (the designer) I started code the Application.&lt;/p&gt;
-
-&lt;p&gt;As I said before at that time I was leaving the company to work for another company and I was also preparing my slides/speak for the biggest conference in Brazil for Front End Developers/Engineers which I was invited to speak (topic for another post) and it would be in the same day I had to release the Application.&lt;/p&gt;
-
-&lt;p&gt;So in one week I had to start at the new company understand the new workflow, finish Lollagram Application and finish my slides/speak for the conference in Brazil.&lt;/p&gt;
-
-&lt;h2&gt;The Application&lt;/h2&gt;
-
-&lt;p&gt;I&#39;m not going to describe in a lot of details it will be more a overview how I did it.&lt;/p&gt;
-
-&lt;p&gt;After understand how the Instagram real time API work I started to code the Back-end utilizing NodeJS (&lt;a href=&quot;http://expressjs.com/&quot; target=&quot;_blank&quot; title=&quot;ExpressJS Framework&quot;&gt;ExpressJS&lt;/a&gt;) and hosted on &lt;a href=&quot;http://www.heroku.com&quot; target=&quot;Heroku cloud&quot; title=&quot;Heroku cloud&quot;&gt;Heroku&lt;/a&gt; which is awesome and I could added monitoring to the server to debug and make sure everything on the server was/is running alright. &lt;br&gt;
-I tried to find code examples to gain some time but I found anything good enough. Or the code were too old or was developed PHP or RoR so I ended up utilizing the library called &lt;a href=&quot;https://github.com/mckelvey/instagram-node-lib&quot; targte=&quot;_blank&quot; title=&quot;Instagram node lib&quot;&gt;instagram-node-lib&lt;/a&gt; which helped me a lot and I gained some time.&lt;/p&gt;
-
-&lt;p&gt;After register my Application on Instagram and get my &amp;quot;client id&amp;quot; and &amp;quot;client secret&amp;quot; the most important things I needed to get it working was the steps below.&lt;/p&gt;
-
-&lt;p&gt;Remember I&#39;m using the &lt;a href=&quot;https://github.com/mckelvey/instagram-node-lib&quot; targte=&quot;_blank&quot; title=&quot;Instagram node lib&quot;&gt;instagram-node-lib&lt;/a&gt; so we don&#39;t need to do from scratch since time is/was very precious and we don&#39;t want to reinvent the wheel.&lt;/p&gt;
-
-&lt;h3&gt;Basic setup&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-Instagram.set(&#39;client_id&#39;, clientID);
-Instagram.set(&#39;client_secret&#39;, clientSecret);
-Instagram.set(&#39;callback_url&#39;, &#39;http://YOUR_URL.COM/callback&#39;);
-Instagram.set(&#39;redirect_uri&#39;, &#39;http://YOUR_URL.com&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;The Handshake&lt;/h3&gt;
-
-&lt;p&gt;The &lt;a href=&quot;http://en.wikipedia.org/wiki/Transmission_Control_Protocol&quot; target=&quot;&quot; title=&quot;Handshake&quot;&gt;Handshake&lt;/a&gt; is the confirmation connection between the servers.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-app.get(&#39;/callback&#39;, function(req, res){
-    var handshake =  Instagram.subscriptions.handshake(req, res);
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;First load&lt;/h3&gt;
-
-&lt;p&gt;When you access the Application for the first time you can noticed thirteen pictures are loaded.
-Here I request the latest shared pictures on Instagram with hashtag #lollapalooza and utilizing Socket.io I transmit it to the client side as json.&lt;/p&gt;
-
-&lt;p&gt;Server sends the data to the client side.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-io.sockets.on(&#39;connection&#39;, function (socket) {
-  Instagram.tags.recent({ 
-      name: &#39;lollapalooza&#39;,
-      complete: function(data) {
-        socket.emit(&#39;firstShow&#39;, { firstShow: data });
-      }
-  });
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;On my method &amp;quot;mostRecent&amp;quot; the Socket.io on the client receives the data and parse/process using client side templating (HandlebarsJs) and append to the Application showing the latest pictures shared on Instagram.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-mostRecent: function() {
-    socket.on(&#39;firstShow&#39;, function (data) {
-        var
-            query = data,
-            source = $(&#39;#firstShow-tpl&#39;).html(),
-            compiledTemplate = Handlebars.compile(source),
-            result = compiledTemplate(query),
-            imgWrap = $(&#39;#imgContent&#39;);
-
-        imgWrap.html(result);
-    });
-},
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Subscribing to hashtags&lt;/h3&gt;
-
-&lt;p&gt;To receive the last updates from Instagram as real time first I needed to subscribe to the hashtags.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-Instagram.subscriptions.subscribe({
-  object: &#39;tag&#39;,
-  object_id: &#39;lollapalooza&#39;,
-  aspect: &#39;media&#39;,
-  callback_url: &#39;http://YOUR_URL.com/callback&#39;,
-  type: &#39;subscription&#39;,
-  id: &#39;#&#39;
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Real time &amp;quot;time&amp;quot;&lt;/h3&gt;
-
-&lt;p&gt;After subscribe to the hashtags I started to receive &amp;quot;notifications&amp;quot; from Instagram when someone shared pictures with the hashtags subscribed which is pretty cool specially when lots of people share and makes even more engaging.&lt;/p&gt;
-
-&lt;p&gt;One thing that I noticed is that Instagram real time API is unstable and if you go to the google groups where developers post problems and discuss solutions you can see there&#39;s a lot to get better.
-Another thing is that you can receive 5000 &amp;quot;notifications&amp;quot; per hour and if you pass the limit the Instagram block your Application.&lt;/p&gt;
-
-&lt;p&gt;Here I send the url to the client side to make the Ajax request but theres another way to do it which is access the json response from Instagram &amp;quot;notification&amp;quot; on the server and get the last image to send to the client.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-app.post(&#39;/callback&#39;, function(req, res) {
-    var data = req.body;
-
-    data.forEach(function(tag) {
-      var url = &#39;https://api.instagram.com/v1/tags/&#39; + tag.object_id + &#39;/media/recent?client_id=479edbf0004c42758987cf0244afd3ef&#39;;
-      sendMessage(url);
-
-    });
-    res.end();
-});
-
-function sendMessage(url) {
-  io.sockets.emit(&#39;show&#39;, { show: url });
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;On the client side I receive the data &amp;quot;url&amp;quot; and do Ajax request then I call my method to render the client side template.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-getData: function() {
-    var self = this;
-    socket.on(&#39;show&#39;, function(data) {
-        var url = data.show;
-        $.ajax({
-            url: url,
-            type: &#39;POST&#39;,
-            crossDomain: true,
-            dataType: &#39;jsonp&#39;
-        }).done(function (data) {
-            self.renderTemplate(data);
-        }); 
-    });
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;How to unsubscribe&lt;/h3&gt;
-
-&lt;p&gt;To unsubscribe is easy it just need the tag &amp;quot;ID&amp;quot; and done.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-Instagram.subscriptions.unsubscribe({ id: &#39;#######&#39; });
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Final thoughts&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Work with Real Time is pretty cool and fun.&lt;/li&gt;
-&lt;li&gt;Instagram real time API isn&#39;t great but does the job.&lt;/li&gt;
-&lt;li&gt;Work in three different important things in one week is possible with one pack with ten monster energetic drink and less than four hours of sleep per night.&lt;/li&gt;
-&lt;li&gt;People love to share pictures. People love to see pictures.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Check out the source code on &lt;a href=&quot;https://github.com/weblancaster/instagram-real-time&quot; target=&quot;_blank&quot; title=&quot;github Lollagram - real time lollagram cosuming Instagram real time API&quot;&gt;Lollagram source code.&lt;/a&gt;&lt;/p&gt;
-</description>
-				<published>2013-09-09 00:00:00 -0500</published>
-				<link>http://bymichaellancaster.com//blog/how-i-built-lollagram-lollapalooza-instagram-real-time-api</link>
-			</item>
-		
-			<item>
-				<title>Tonight's inspiration</title>
-				<description>&lt;p&gt;I haven&#39;t posted anything a while which is a shame but I had good reasons and I should be doing a post about it on my next post but this post is made to show what inspire me love this world what makes me think how wonderful things are and how much we can learn from our world.&lt;/p&gt;
-
-&lt;h2&gt;Love and Life&lt;/h2&gt;
-
-&lt;p&gt;Love. Perhaps just a word for some but at the same time very powerful. Love drives us to different things in life. Good things and bad things. Both..So many perspectives from different cultures and races but same origin. Your inside.&lt;/p&gt;
-
-&lt;p&gt;Love inspire me in some many different ways and I&#39;m not ashamed to say I believe in true love.
-And here it&#39;s very interesting to see some ways people want to express love.&lt;/p&gt;
-
-&lt;p&gt;You decide which one suits you.&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-  &lt;iframe src=&quot;//player.vimeo.com/video/22439234&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-  &lt;iframe src=&quot;//player.vimeo.com/video/35699279&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-  &lt;iframe src=&quot;//player.vimeo.com/video/71495477?color=f7f9fa&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-  &lt;iframe src=&quot;//player.vimeo.com/video/61361236&quot; width=&quot;500&quot; height=&quot;281&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;Technology and Inspiration&lt;/h2&gt;
-
-&lt;p&gt;Another thing that inspires me can, changed and has being changed the world as love for good or for bad. Technology..but on this post I will show you what inspired me tonight..&lt;/p&gt;
-
-&lt;p&gt;First one is how Netflix is delivering high quality WebKit based UIs to televisions, game consoles and Blu-ray players.
-this talk will discuss fluid animation with hardware acceleration, achieving high framerates using accelerated compositing, responding to constant user input, as well as balancing strategies for best performance on over 450 high-end to low-end devices.&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-  &lt;iframe src=&quot;//www.youtube.com/embed/xuMWhto62Eo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;Second one discuss how programming has being changing people and the future of programming.
-The way the speaker approach the subject is a very creative and interesting thing.&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-  &lt;iframe src=&quot;//player.vimeo.com/video/71278954?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;If it all doesn&#39;t makes sense to you don&#39;t worry lot of things in life doesn&#39;t makes sense.&lt;/p&gt;
-</description>
-				<published>2013-08-25 00:00:00 -0500</published>
-				<link>http://bymichaellancaster.com//blog/tonights-inspiration</link>
 			</item>
 		
 	</channel>

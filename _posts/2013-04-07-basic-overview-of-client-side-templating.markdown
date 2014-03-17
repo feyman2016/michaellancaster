@@ -2,22 +2,22 @@
 layout: post
 title: Basic overview of client - side templating
 
-excerpt: Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. are used to render templates and show content, but lately about two or three years ago we could noticed that developers and companies are changing this using client side templating.
+excerpt: Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. are using to render templates and show content/html, but lately about two or three years ago we could noticed that developers and companies are changing this using client side templating.
 ---
 
-Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. are used to render templates and show content, but lately about two or three years ago we could noticed that developers and companies are changing this using client side templating.
+Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. are using to render templates and show content/html, but lately about two or three years ago we could noticed that developers and companies are changing this using client side templating.
 
 ## Server - Side templating (the common way)
 
-So as I mentioned before back end technologies like Java, Ruby, PHP.. has being used to render the template from the back to the the client side and this approach consists in literally render on the server using one of those technologies and through it into the client - side.
+So as I mentioned before back end technologies like Java, Ruby, PHP.. has being using templates to render content/HTML from the back to the the client side and this approach consists in literally render on the server using one of those technologies and through it into the client - side.
 
 Two things are very clear to me. First we have to consume the server (imagine if you have to render lots of time), Second is the bandwidth request so the template and the data has to be downloaded into the client side (slow and request bandwidth).
 
 ## Client - Side templating (the new kid in the block?!)
 
-The client side consists in remove from the back to the client this template rendering into a very, very known technology called Javascript that runs on each user's browser making faster web apps and adding more control for you at your end.
+The client side consists in removing the job of rendering on the back and adding the job to the client using Javascript that runs on each user's browser making faster web apps and adding more control for you at your end.
 
-It has being very helpful for Single Page Applications where you can just update an section on your website without refresh the page or download all assets over again.
+It has being very helpful for Single Page Applications where you can just update an section on your website without refresh the page or download assets all over again.
 
 At start the client side template will use placeholders as content using it's own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.
 
