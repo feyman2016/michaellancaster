@@ -5,9 +5,17 @@ title: Web and Automotive. WTF?!
 excerpt: I have been very curious about developing any kind of software for cars.. but of course I would be much more interested in develop using Open Web Technologies perhaps HTML5/CSS3 and Javascript how AWESOME that would be?
 ---
 
+<strong>Updated version: 04/07/2014</strong>
+
+## And there's more..
+
+W3C business group published a very nice material about the Vehicle Information API and how could/can work.
+<br>
+Pretty exciting! To know more <a href="https://rawgit.com/w3c/automotive-bg/master/snapshots/vehicle_spec_snapshot20140425.html" target="_blank" title="W3C business group - Vehicle Information API">click here</a>.
+
 <strong>Updated version: 03/03/2014</strong>
 
-## As predicted..
+## As imagined..
 
 Looks like isn't just me excited to see applications on cars.. Apple announced <a href="https://www.apple.com/ios/carplay/" target="_blank" title="CarPlay">CarPlay</a>.
 <br>
