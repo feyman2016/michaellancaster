@@ -2,10 +2,10 @@
 layout: post
 title: Soundnode App - Soundcloud for Desktop developer release
 
-excerpt: Last night I decided to release as a Beta Developer a project I have been working in the last week and make available as Open Source.
+excerpt: Last night I decided to release as beta version for Developer a project I have been working in the last week and make available as Open Source.
 ---
 
-Last night I decided to release as a Beta Developer a project I have been working in the last week and make available as Open Source.
+Last night I decided to release as beta version for Developer a project I have been working in the last week and make available as Open Source.
 
 ## Intro..
 
