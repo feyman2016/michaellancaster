@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+      <loc>http://bymichaellancaster.com/blog/soundcloud-for-desktop-win-mac-released-soundnode-app</loc>
+      <lastmod>2014-06-19</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
+      <loc>http://bymichaellancaster.com/blog/soundnode-soundcloud-for-desktop-dev-release</loc>
+      <lastmod>2014-05-13</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://bymichaellancaster.com/blog/sublime-text-3-jump-to-definition-custom-shortcut</loc>
       <lastmod>2014-03-03</lastmod>
       <changefreq>never</changefreq>
