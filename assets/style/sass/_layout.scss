@@ -61,7 +61,7 @@ article list
 		&:hover {
 			background: rgba(0, 0, 0, 0.2);
 
-			& .ui-tit-02, 
+			& .ui-tit-02,
 			& .ui-date { color: $fc-white; }
 		}
 	}
@@ -135,10 +135,10 @@ fluid media (images and videos)
 	height: 0;
 	overflow: hidden;
 
-	& iframe, 
+	& iframe,
 	& img {
 		position: absolute;
-		top: 0; 
+		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
@@ -146,9 +146,9 @@ fluid media (images and videos)
 }
 
 .fluidImg {
-	
+
 	img {
-		max-width: 600px;
+		max-width: 1000px;
 		width: 100%;
 	}
 }

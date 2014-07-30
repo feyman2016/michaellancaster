@@ -6,12 +6,40 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Soundnode App - Soundcloud for desktop released</title>
+				<description>&lt;p&gt;Soundnode App - The Soundcloud for desktop beta released! &lt;br&gt;
+That being said you download the best version to your computer &lt;a href=&quot;http://www.soundnodeapp.com&quot; target=&quot;_blank&quot; title=&quot;Soundnode App - Soundcloud for desktop&quot;&gt;here&lt;/a&gt; and &lt;strong&gt;out of the box&lt;/strong&gt; click, authenticate your user and start to listen to songs.&lt;/p&gt;
+
+&lt;div class=&quot;fluidImg&quot;&gt;
+    &lt;img src=&quot;/assets/images/post-images/soundenode-0-1-0.png&quot; alt=&quot;Sublime Text 3 jump to definition/method&quot;&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Current Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Search&lt;/li&gt;
+&lt;li&gt;Keyboard shortcuts (not native for this release)
+Play/Pause &lt;code&gt;command+return&lt;/code&gt; or &lt;code&gt;space&lt;/code&gt;, Prev &lt;code&gt;command+left&lt;/code&gt;, Next &lt;code&gt;command+right&lt;/code&gt;, Volume down &lt;code&gt;command+down&lt;/code&gt;, Volume up &lt;code&gt;command+up&lt;/code&gt;, Cheat-sheet &lt;code&gt;shift+?&lt;/code&gt; (ps: use ctrl for Windows/PC user)&lt;/li&gt;
+&lt;li&gt;Listen to songs from your Streams, Likes, Tracks or Playlists&lt;/li&gt;
+&lt;li&gt;Automatic update available notification&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There&#39;s still known minor bugs which you can track on the &lt;a href=&quot;https://github.com/Soundnode/soundnode-app/issues&quot; target=&quot;_blank&quot; title=&quot;Soundnode App issues list&quot;&gt;issues list&lt;/a&gt; &lt;br&gt;
+and lots of features to come.&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+</description>
+				<published>2014-06-19 00:00:00 -0300</published>
+				<link>http://bymichaellancaster.com//blog/soundcloud-for-desktop-win-mac-released-soundnode-app</link>
+			</item>
+		
+			<item>
 				<title>Soundnode App - Soundcloud for Desktop developer release</title>
 				<description>&lt;p&gt;Last night I decided to release as beta version for Developer a project I have been working in the last week and make available as Open Source.&lt;/p&gt;
 
 &lt;h2&gt;Intro..&lt;/h2&gt;
 
-&lt;p&gt;Three years ago I started to work as a developer and one of the things I have been using since then is &lt;a href=&quot;http://www.soundcloud.com&quot; target=&quot;_blank&quot; title=&quot;Soundcloud&quot;&gt;Soundcloud&lt;/a&gt; I used to use their desktop application till the day they stopped support it. to know more about it &lt;a href=&quot;http://blog.soundcloud.com/2011/01/06/desktop/&quot; target=&quot;_blank&quot; title=&quot;Soundcloud desktop support&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Three years ago I started work as a developer and one of the things I have been using since then is &lt;a href=&quot;http://www.soundcloud.com&quot; target=&quot;_blank&quot; title=&quot;Soundcloud&quot;&gt;Soundcloud&lt;/a&gt; I used to use their desktop application till the day they stopped support it. to know more about it &lt;a href=&quot;http://blog.soundcloud.com/2011/01/06/desktop/&quot; target=&quot;_blank&quot; title=&quot;Soundcloud desktop support&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Turns out that I miss my native shortcuts while listening to Soundcloud on the web browser.. Therefore I decided to solve my problem but also release as open source so contributors can suggest &amp;quot;new&amp;quot; features.. and here it is.&lt;/p&gt;
 
@@ -21,7 +49,7 @@
 
 &lt;h2&gt;Why beta Developer release&lt;/h2&gt;
 
-&lt;p&gt;I built the core and passed the painful part but I have been working on other projects in parallel and I still want to release Soundnode App as fast as I can to the public so I thought that the community would help to get this project going faster than one man.&lt;/p&gt;
+&lt;p&gt;I built the core but I have been working on other projects in parallel and I still want to release Soundnode App as fast as I can to the public so I thought that the community would help to get this project going faster than one man.&lt;/p&gt;
 
 &lt;p&gt;The project is on the Github &lt;a href=&quot;https://github.com/Soundnode/soundnode-app&quot; target=&quot;_blank&quot; title=&quot;Soundnode App - Soundcloud for desktop&quot;&gt;Soundnode App&lt;/a&gt;.
 Constructive (or not) feedback is always welcome.&lt;/p&gt;
@@ -332,179 +360,6 @@ So I built this Web Application &lt;a href=&quot;http://ps4alerts.herokuapp.com/
 </description>
 				<published>2013-10-15 00:00:00 -0300</published>
 				<link>http://bymichaellancaster.com//blog/we-are-influenced-by-people</link>
-			</item>
-		
-			<item>
-				<title>My Micro-Library called Jet.js</title>
-				<description>&lt;p&gt;My love for Javascript just get bigger and also my knowledge but that&#39;s not what I&#39;m going to blog about today.. at this time I&#39;m going to post about the Micro-Library I created Jet.js&lt;/p&gt;
-
-&lt;h2&gt;Jet.js&lt;/h2&gt;
-
-&lt;p&gt;One of the senior developers at my former company was having some performance issues on a particular Web Application..
-After see the code at my perspective one of the problems were all the plugins (was more than 15) being download on the entire Application.&lt;/p&gt;
-
-&lt;p&gt;I decided create a very lightweight library (called modular-script-loader) to solve that problem downloading scripts asynchronously (non-block) and on demand (not for all the pages).&lt;/p&gt;
-
-&lt;p&gt;So last night I decided re-write entirely using better Design pattern and cleaner code I also gave a better name &amp;quot;Jet.js&amp;quot;.&lt;/p&gt;
-
-&lt;h3&gt;Code&lt;/h3&gt;
-
-&lt;p&gt;Check out on Github &lt;a href=&quot;http://www.github.com/weblancaster/jet&quot; target=&quot;&quot;_blank title=&quot;Jet js&quot;&gt;Jet.js&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;My goal here is to make the Web Application faster therefore &lt;strong&gt; download scripts asynchronously (non-block), better organized script dependency and very very lightweight&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Below is the code to make the &amp;quot;magic&amp;quot; happen..just a few lines of code.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-/*!
- * Jet.js (Micro-library)
- * Version: 0.3
- * http://git.io/LwFXlg
- * Released under the MIT license
- *
- * Author&#39;s name: Michael Lancaster
- * website: www.bymichaellancaster.com
- * Twitter: @weblancaster
- * Date: 24-09-2013
- */
-;(function(window, undefined) {
-
-    window.Jet = window.Jet || {};
-
-    Jet.App = (function() {
-        // PRIVATE
-
-        /**
-         * Responsible to inject widgets/scripts
-         * on the page
-         * @method inject
-         */
-         function inject(url, callback) {
-            var script = document.createElement(&quot;script&quot;);
-            script.type = &quot;text/javascript&quot;;
-
-            if (script.readyState){  //IE
-                script.onreadystatechange = function(){
-                    if ( script.readyState == &quot;loaded&quot; || script.readyState == &quot;complete&quot; ) {
-                        script.onreadystatechange = null;
-                        if ( callback !== undefined ) {
-                            callback();
-                        }
-                    }
-                };
-            } else {  //Others
-                script.onload = function(){
-                    if ( callback !== undefined ) {
-                        callback();
-                    }
-                };
-            }
-
-            script.src = url;
-            document.getElementsByTagName(&#39;body&#39;)[0].appendChild(script);
-        }
-
-        // PUBLIC
-        return {
-            /**
-             * Responsible to store all widgets
-             * as an array
-             * @property WIDGETS_COLLECTION
-             */
-            WIDGETS_COLLECTION: null,
-
-            /**
-             * Responsible to get widgets
-             * and transform in array
-             * and assign to the property
-             * @method widgets
-             */
-            widgets: function() {
-                var widgets = document.body.getAttribute(&#39;data-ui-widget&#39;),
-                    widgetsArr = widgets.split(&#39; &#39;);
-
-                this.WIDGETS_COLLECTION = widgetsArr;
-            },
-
-            /**
-             * Responsible for receive arguments and initialize widget
-             * @method init
-             */
-            init: function(name, url, callback) {
-                this.widgets();
-
-                if ( arguments.length &lt; 2 ) {
-                    return false
-                }
-
-                var widget = name,
-                    widgetCollection = this.WIDGETS_COLLECTION,
-                    widgetCollectionLength = widgetCollection.length,
-                    i = 0;
-
-                for ( ; i &lt; widgetCollectionLength; i++ ) {
-                    if ( widgetCollection[i].indexOf(widget) === 0 ) {
-                        inject(url, callback);
-                    }
-                }
-            }
-        }
-
-    });
-
-})(window);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;how to use&lt;/h3&gt;
-
-&lt;p&gt;Define what are the widgets you want to use on that page (on body element).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;html&quot;&gt;
-&lt; body data-ui-widget=&quot;widget-jquery widget-cycle&quot; &gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;include Jet.js on your page&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;html&quot;&gt;
-&lt;script src=&quot;js/jet.min.js&quot;&gt;&lt;/script&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I would suggest you create a JS file which has all your widgets been called.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-// Cycle
-var dependency1 = new Jet.App;
-    dependency1.init(&#39;widget-cycle&#39;, &#39;http://malsup.github.io/jquery.cycle.all.js&#39;, function() {
-        console.log(&#39;cycle loaded&#39;);
-        $(&#39;#outdoor-context-content&#39;).cycle({
-            fx: &#39;fade&#39;
-        });
-    });
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Done!&lt;/p&gt;
-
-&lt;h3&gt;Example of use&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Relatively small to medium Web Applications&lt;/li&gt;
-&lt;li&gt;Wordpress, Drupal, CMS&#39;s Web Applications in general&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;(Intended) browser support&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Google Chrome&lt;/li&gt;
-&lt;li&gt;Mozilla Firefox 3+&lt;/li&gt;
-&lt;li&gt;Apple Safari 4+&lt;/li&gt;
-&lt;li&gt;Opera 10+&lt;/li&gt;
-&lt;li&gt;Internet Explorer 7+&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you found any bug or want to contribute or want to give me any opinion feel free to do that.&lt;/p&gt;
-</description>
-				<published>2013-09-24 00:00:00 -0300</published>
-				<link>http://bymichaellancaster.com//blog/javascript-script-dependency-loader-on-demand</link>
 			</item>
 		
 	</channel>
