@@ -6,6 +6,33 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Soundnode App - Soundcloud for Desktop developer release</title>
+				<description>&lt;p&gt;Last night I decided to release as beta version for Developer a project I have been working in the last week and make available as Open Source.&lt;/p&gt;
+
+&lt;h2&gt;Intro..&lt;/h2&gt;
+
+&lt;p&gt;Three years ago I started to work as a developer and one of the things I have been using since then is &lt;a href=&quot;http://www.soundcloud.com&quot; target=&quot;_blank&quot; title=&quot;Soundcloud&quot;&gt;Soundcloud&lt;/a&gt; I used to use their desktop application till the day they stopped support it. to know more about it &lt;a href=&quot;http://blog.soundcloud.com/2011/01/06/desktop/&quot; target=&quot;_blank&quot; title=&quot;Soundcloud desktop support&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Turns out that I miss my native shortcuts while listening to Soundcloud on the web browser.. Therefore I decided to solve my problem but also release as open source so contributors can suggest &amp;quot;new&amp;quot; features.. and here it is.&lt;/p&gt;
+
+&lt;h2&gt;Soundnode App&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.soundnodeapp.com&quot; target=&quot;_blank&quot; title=&quot;Soundnode App - Soundcloud for desktop&quot;&gt;Soundnode App&lt;/a&gt; is a open source project to support Soundcloud for desktop (Windows/Mac) built with Node-Webkit, Node.js Angular.js and consuming Soundcloud API.&lt;/p&gt;
+
+&lt;h2&gt;Why beta Developer release&lt;/h2&gt;
+
+&lt;p&gt;I built the core and passed the painful part but I have been working on other projects in parallel and I still want to release Soundnode App as fast as I can to the public so I thought that the community would help to get this project going faster than one man.&lt;/p&gt;
+
+&lt;p&gt;The project is on the Github &lt;a href=&quot;https://github.com/Soundnode/soundnode-app&quot; target=&quot;_blank&quot; title=&quot;Soundnode App - Soundcloud for desktop&quot;&gt;Soundnode App&lt;/a&gt;.
+Constructive (or not) feedback is always welcome.&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+</description>
+				<published>2014-05-13 00:00:00 -0300</published>
+				<link>http://bymichaellancaster.com//blog/soundnode-soundcloud-for-desktop-dev-release</link>
+			</item>
+		
+			<item>
 				<title>Sublime Text 3 jump to definition/method</title>
 				<description>&lt;p&gt;Quick blog post to show you how to easily add the feature goto or jump to definition on Sublime text 3 with custom shortcut&lt;/p&gt;
 
@@ -15,12 +42,14 @@
 
 &lt;h2&gt;Simple steps&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;on sublime text 3&lt;/strong&gt;
+&lt;p&gt;In Sublime Text 3
 &lt;pre&gt;&lt;code data-language=&quot;HTML&quot;&gt;
 Sublime Text -&amp;gt; Preferences -&amp;gt; Key Bindings - User
 &lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
 
-&lt;p&gt;Add the code below..&lt;/p&gt;
+&lt;p&gt;You can add any shortcut you want since it&#39;s not in use already so you don&#39;t overwrite the default shortcut settings.
+&lt;br&gt;
+In my case I decided to use &amp;quot;shift+command+m&amp;quot;..as below.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code data-language=&quot;Javascript&quot;&gt;
 [
@@ -32,15 +61,23 @@ Sublime Text -&amp;gt; Preferences -&amp;gt; Key Bindings - User
 
 &lt;p&gt;Thanks.&lt;/p&gt;
 </description>
-				<published>2014-03-03 00:00:00 -0600</published>
+				<published>2014-03-03 00:00:00 -0300</published>
 				<link>http://bymichaellancaster.com//blog/sublime-text-3-jump-to-definition-custom-shortcut</link>
 			</item>
 		
 			<item>
 				<title>Web and Automotive. WTF?!</title>
-				<description>&lt;p&gt;&lt;strong&gt;Updated version: 03/03/2014&lt;/strong&gt;&lt;/p&gt;
+				<description>&lt;p&gt;&lt;strong&gt;Updated version: 04/07/2014&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2&gt;As predicted..&lt;/h2&gt;
+&lt;h2&gt;And there&#39;s more..&lt;/h2&gt;
+
+&lt;p&gt;W3C business group published a very nice material about the Vehicle Information API and how could/can work.
+&lt;br&gt;
+Pretty exciting! To know more &lt;a href=&quot;https://rawgit.com/w3c/automotive-bg/master/snapshots/vehicle_spec_snapshot20140425.html&quot; target=&quot;_blank&quot; title=&quot;W3C business group - Vehicle Information API&quot;&gt;click here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Updated version: 03/03/2014&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2&gt;As imagined..&lt;/h2&gt;
 
 &lt;p&gt;Looks like isn&#39;t just me excited to see applications on cars.. Apple announced &lt;a href=&quot;https://www.apple.com/ios/carplay/&quot; target=&quot;_blank&quot; title=&quot;CarPlay&quot;&gt;CarPlay&lt;/a&gt;.
 &lt;br&gt;
@@ -107,7 +144,7 @@ and since Web technologies are based on open standards, developers are not held 
 
 &lt;p&gt;Cheers!&lt;/p&gt;
 </description>
-				<published>2014-02-26 00:00:00 -0600</published>
+				<published>2014-02-26 00:00:00 -0300</published>
 				<link>http://bymichaellancaster.com//blog/web-and-automotive-w3c-group</link>
 			</item>
 		
@@ -171,7 +208,7 @@ App.insertElement(&#39;afterend&#39;, content4);
 
 &lt;p&gt;Enjoy the tip.&lt;/p&gt;
 </description>
-				<published>2014-01-08 00:00:00 -0600</published>
+				<published>2014-01-08 00:00:00 -0200</published>
 				<link>http://bymichaellancaster.com//blog/DOM-insert-html-method-you-might-not-know-about</link>
 			</item>
 		
@@ -230,7 +267,7 @@ gulp.task(&#39;default&#39;, function() {
 
 &lt;p&gt;Cheers!&lt;/p&gt;
 </description>
-				<published>2014-01-06 00:00:00 -0600</published>
+				<published>2014-01-06 00:00:00 -0200</published>
 				<link>http://bymichaellancaster.com//blog/why-i-like-gulpjs-more-than-gruntjs</link>
 			</item>
 		
@@ -253,7 +290,7 @@ So I built this Web Application &lt;a href=&quot;http://ps4alerts.herokuapp.com/
 
 &lt;p&gt;Be advised I built it in two nights..Enjoy!&lt;/p&gt;
 </description>
-				<published>2013-12-12 00:00:00 -0600</published>
+				<published>2013-12-12 00:00:00 -0200</published>
 				<link>http://bymichaellancaster.com//blog/playstation4-alert-using-best-buy-api-nodejs-socketio-nedb</link>
 			</item>
 		
@@ -265,7 +302,7 @@ So I built this Web Application &lt;a href=&quot;http://ps4alerts.herokuapp.com/
 
 &lt;p&gt;Enjoy!&lt;/p&gt;
 </description>
-				<published>2013-12-10 00:00:00 -0600</published>
+				<published>2013-12-10 00:00:00 -0200</published>
 				<link>http://bymichaellancaster.com//blog/chicago-through-instagram-chicagogram-us</link>
 			</item>
 		
@@ -279,7 +316,7 @@ So I built this Web Application &lt;a href=&quot;http://ps4alerts.herokuapp.com/
 
 &lt;p&gt;Feedback is always welcome.&lt;/p&gt;
 </description>
-				<published>2013-11-01 00:00:00 -0500</published>
+				<published>2013-11-01 00:00:00 -0200</published>
 				<link>http://bymichaellancaster.com//blog/css-bad-and-good-practices-good-tips</link>
 			</item>
 		
@@ -293,7 +330,7 @@ So I built this Web Application &lt;a href=&quot;http://ps4alerts.herokuapp.com/
     &lt;iframe src=&quot;//www.youtube.com/embed/vPj4zxhy8wI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt; &lt;/iframe&gt;
 &lt;/div&gt;
 </description>
-				<published>2013-10-15 00:00:00 -0500</published>
+				<published>2013-10-15 00:00:00 -0300</published>
 				<link>http://bymichaellancaster.com//blog/we-are-influenced-by-people</link>
 			</item>
 		
@@ -466,211 +503,8 @@ var dependency1 = new Jet.App;
 
 &lt;p&gt;If you found any bug or want to contribute or want to give me any opinion feel free to do that.&lt;/p&gt;
 </description>
-				<published>2013-09-24 00:00:00 -0500</published>
+				<published>2013-09-24 00:00:00 -0300</published>
 				<link>http://bymichaellancaster.com//blog/javascript-script-dependency-loader-on-demand</link>
-			</item>
-		
-			<item>
-				<title>Deploying Node.js server on Heroku Cloud</title>
-				<description>&lt;p&gt;[post under improvements]&lt;/p&gt;
-
-&lt;p&gt;As a developer I have been always curious to learn and try new technologies that can improve my skill and help me build better Web Applications..So today I&#39;m going to try help you set up a simple Node.js server on Heroku Cloud using my small open source project aims deploy even faster Node.js applications.&lt;/p&gt;
-
-&lt;h2&gt;Why Heroku&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.heroku.com&quot; target=&quot;&quot;_blank title=&quot;&quot;&gt;Heroku&lt;/a&gt; is a cloud application platform where you can build and deploy web apps
-with the technologies you know as Java, Ruby, Closure, Node.js, Python and Scala..Heroku uses integration with Git so you can deploy your Application
-simply pushing to master. Oh and It&#39;s FREE!&lt;/p&gt;
-
-&lt;p&gt;I have four web apps hosted on heroku but two are for public access this blog/portfolio running on Ruby and Lollagram running on Node.js.&lt;/p&gt;
-
-&lt;h2&gt;Why Node.js&lt;/h2&gt;
-
-&lt;p&gt;It&#39;s Javascript...on the Server!&lt;/p&gt;
-
-&lt;iframe src=&quot;http://giphy.com/embed/13k1e8OMVO2a3K&quot; frameBorder=&quot;0&quot; allowFullScreen=&quot;allowFullScreen&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;No, But seriously. Javascript is well known by us Front End Developers/Engineers and even designers. &lt;br&gt;
-That&#39;s already one good reason but the main &amp;quot;real&amp;quot; reasons are Node.js is all about making event-driven (Ajax can be done on the server side), low-latency, non-blocking I/O...perfect for real time. &lt;br&gt;
-Node.js makes a much smaller footprint on your web server It allocates web server resources on an as-needed basis, not pre-allocating a large chunk of resources for each user. For example, Apache might assign 8MB to a user, while Node assigns 8KB.&lt;/p&gt;
-
-&lt;h2&gt;Heroku set up&lt;/h2&gt;
-
-&lt;p&gt;I&#39;m going to assume you have account on Heroku (it&#39;s free) and the &lt;a href=&quot;https://toolbelt.heroku.com/&quot; title=&quot;toolbelt kit&quot; target=&quot;_blank&quot;&gt;toolbelt kit&lt;/a&gt; installed and you also have &lt;a href=&quot;http://Nodejs.org/&quot; title=&quot;Node.js&quot; target=&quot;_blank&quot;&gt;Node.js&lt;/a&gt; installed.&lt;/p&gt;
-
-&lt;h2&gt;Let&#39;s get it start&lt;/h2&gt;
-
-&lt;p&gt;First of all (after everything installed) create a new folder (whatever-name-you-want) then open your terminal go to your folder and type..&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-git init
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;then&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-git add .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;then&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-git commit -m &quot;first commit&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now you have git initialized..time to create a Heroku app. &lt;br&gt;
-First thing you need to login to Heroku (remember that we are doing everything from the command line on terminal)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-heroku login
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-heroku create name-of-your-app
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Done! You just need to push your code.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-git push
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can access your Web App url on www.your-app-name.heroku.com&lt;/p&gt;
-
-&lt;p&gt;Oh wait! What is this?&lt;/p&gt;
-
-&lt;div class=&quot;fluidImg&quot;&gt;
-&lt;img src=&quot;/assets/images/post-images/heroku-404.png&quot; alt=&quot;Heroku 404&quot;&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;To make your Web App run on Heroku you need to run your Web App in one of those languages I said right on the beginning of this post.&lt;/p&gt;
-
-&lt;p&gt;Today we are going to run and deploy a simple Node.js/Express.js Application..since I have been using Heroku and Node.js for all my personal/aside projects I created a Express.js boilerplate to run and deploy fast and easy with &lt;a href=&quot;/blog/introduction-to-task-runner-gruntjs/&quot; target=&quot;_blank&quot; title=&quot;introduction to Grunt.js&quot;&gt;Grunt.js&lt;/a&gt; included so you can watch for changes on your files to minify CSS and uglify JS. I also included static assets and NO Jade (jade is native on Express.js) so you can code your normal HTML instead of Jade.&lt;/p&gt;
-
-&lt;p&gt;Go to my Github repository &lt;a href=&quot;https://github.com/weblancaster/expressjs-static-boilerplate&quot; target=&quot;_blank&quot; title=&quot;Express.js static boilerplate&quot;&gt;Express.js static boilerplate&lt;/a&gt; and download the zip file then extract and copy everything has inside of &amp;quot;expressjs-static-boilerplate&amp;quot; folder to your Web App folder.&lt;/p&gt;
-
-&lt;h2&gt;Running Node.js&lt;/h2&gt;
-
-&lt;p&gt;After download my boilerplate let&#39;s install the dependencies and run our Node.js server&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-sudo npm install -g
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Enter your password.
-You should see something like the image below.. notice that not every log is showed on the image..&lt;/p&gt;
-
-&lt;div class=&quot;fluidImg&quot;&gt;
-&lt;img src=&quot;/assets/images/post-images/success-image.png&quot; alt=&quot;success image&quot;&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;All Node dependencies are installed and now you can start run your server.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-node server.js
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Or to not need to quit the server &amp;quot;control + c&amp;quot; every time you do any change I also added a monitor to the boilerplate so every time you do your changes and save the monitor you automatically re-run the server.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-nodemon server.js
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2&gt;Running Grunt.js&lt;/h2&gt;
-
-&lt;p&gt;After install all the Node.js dependencies you can start run your tasks to minify CSS and uglify JS. &lt;br&gt;
-Open a new tab on your terminal and run the command.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-grunt build
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is the message you should get.&lt;/p&gt;
-
-&lt;div class=&quot;fluidImg&quot;&gt;
-&lt;img src=&quot;/assets/images/post-images/grunt-build.png&quot; alt=&quot;grunt build&quot;&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;But still not quite good enough because we would need to build every time we did any change.
-So let&#39;s start to watch for changes on the files.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-grunt watch
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now every time you do any change and save the file grunt you build automatically.&lt;/p&gt;
-
-&lt;div class=&quot;fluidImg&quot;&gt;
-&lt;img src=&quot;/assets/images/post-images/grunt-watch.png&quot; alt=&quot;grunt watch&quot;&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;Ok. That&#39;s pretty cool right?!.&lt;/p&gt;
-
-&lt;h2&gt;Deploying and Running on Heroku&lt;/h2&gt;
-
-&lt;p&gt;Now let&#39;s push to Heroku and see if it works.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-git add .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-git commit -m &quot;added express boilerplate&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-git push origin master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and this is what happened..&lt;/p&gt;
-
-&lt;div class=&quot;fluidImg&quot;&gt;
-&lt;img src=&quot;/assets/images/post-images/no-support.png&quot; alt=&quot;no support&quot;&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;If you read the message you will see &amp;quot;Push rejected, no Cedar-supported app detected&amp;quot; so let&#39;s add support to make this baby work..
-Every Web App on Heroku needs a file to tell Heroku what are we deploying..&lt;/p&gt;
-
-&lt;p&gt;In this case we need a &amp;quot;Procfile&amp;quot;. So create a new file named &amp;quot;Procfile&amp;quot; and type &amp;quot;web: node server.js&amp;quot; save inside your app folder. &lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;Then you need to activate your server and tell Heroku to run 1 &amp;quot;Cedar&amp;quot; (one cedar is free hosting).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;ruby&quot;&gt;
-heroku ps:scale web=1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;div class=&quot;fluidImg&quot;&gt;
-&lt;img src=&quot;/assets/images/post-images/cedar.png&quot; alt=&quot;no support&quot;&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;Repeat the push process.. after do the push process again &amp;quot;git add .&amp;quot; &amp;quot;git commit&amp;quot; and &amp;quot;git push origin master&amp;quot; a bunch of message will log and the final logs would be like this image below.. now you can access your Web App URL in my case is &lt;a href=&quot;http://deployed-nodejs-app.herokuapp.com/&quot; title=&quot;my how to deploy node.js to Heroku post&quot; target=&quot;_blank&quot;&gt;deployed-nodejs-app&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;fluidImg&quot;&gt;
-&lt;img src=&quot;/assets/images/post-images/pushed.png&quot; alt=&quot;Web app deployed&quot;&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;And this is how we deploy Node.js to Heroku.. fast and easy.&lt;/p&gt;
-
-&lt;p&gt;Cheers!&lt;/p&gt;
-</description>
-				<published>2013-09-19 00:00:00 -0500</published>
-				<link>http://bymichaellancaster.com//blog/deploying-nodejs-on-heroku-cloud</link>
 			</item>
 		
 	</channel>
