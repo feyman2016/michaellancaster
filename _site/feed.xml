@@ -6,6 +6,48 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Speaking at Front in BH conference</title>
+				<description>&lt;p&gt;Last weekend I spoke at &lt;a href=&quot;http://frontinbh.com.br/&quot; target=&quot;_blank&quot; title=&quot;Front in BH 2014&quot;&gt;Front in BH 2014&lt;/a&gt; (in Belo Horizonte - Br) the biggest conference for Front End developers in Brazil.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Speakers and Conference staff&lt;/strong&gt;
+&lt;div class=&quot;fluidImg&quot;&gt;
+    &lt;img src=&quot;/assets/images/post-images/all-speakers-front-in-bh.jpg&quot; alt=&quot;All speakers at Front in BH 2014&quot;&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;I&#39;m going to start saying that the conference was amazing. The organization was incredibly great. The topic that each speaker spoke was very enjoyable and knowledgeable. &lt;br&gt;
+There was attendees from 4 different countries and at least 3 speakers were foreign as well known companies like Liferay, Github, Opera, Globo.com, Avenue Code and more.&lt;/p&gt;
+
+&lt;p&gt;The talks were from &amp;quot;&lt;code&gt;UI testing frameworks&lt;/code&gt;&amp;quot; &amp;quot;&lt;code&gt;Node.js&lt;/code&gt;&amp;quot; &amp;quot;&lt;code&gt;UX on Google Glass&lt;/code&gt;&amp;quot; &amp;quot;&lt;code&gt;Workflow for designers and developers&lt;/code&gt;&amp;quot; &amp;quot;&lt;code&gt;Polifylls&lt;/code&gt;&amp;quot; &amp;quot;&lt;code&gt;augmented reality on the Web&lt;/code&gt;&amp;quot; to more client-side/Javascript related topics.&lt;/p&gt;
+
+&lt;h3&gt;My talk&lt;/h3&gt;
+
+&lt;div class=&quot;fluidImg&quot;&gt;
+    &lt;img src=&quot;/assets/images/post-images/myself-speaking.jpg&quot; alt=&quot;Michael Lancaster on beyond the web with Nodewebkit&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;
+The title of my talk is/was &lt;code&gt;Beyond the Web&lt;/code&gt; where I exploited the difficulties of a Web developer on build native Apps for desktop or mobile (the talk was focused on desktop) and showed how this is easily possible nowadays with many App runtimes like Nodewebkit.&lt;/p&gt;
+
+&lt;p&gt;I was a bit nervous but I was more excited to present a good content to the attendees and show them new possibilities therefore I was prepared and happy to be there speaking about that topic to a such good crowd of people wanting to learn new things.&lt;/p&gt;
+
+&lt;p&gt;You can check out my slides on &lt;a href=&quot;https://speakerdeck.com/weblancaster/beyond-the-web-with-nodewebkit&quot; title=&quot;Beyond the Web with Nodewebkit by Michael Lancaster&quot; target=&quot;_blank&quot;&gt;Speaker deck&lt;/a&gt; or below.&lt;/p&gt;
+
+&lt;script async class=&quot;speakerdeck-embed&quot; data-id=&quot;015874f0f7460131223b568bbdf7fd4f&quot; data-ratio=&quot;1.33333333333333&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;br&gt;
+I had a wonderful experience. Now. I hope do more talks. &lt;br&gt;
+Cheers!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Attendees (the ones that stayed until the end), Speakers and conference staff&lt;/strong&gt;
+&lt;div class=&quot;fluidImg&quot;&gt;
+    &lt;img src=&quot;/assets/images/post-images/everybody.jpg&quot; alt=&quot;Attendees and speakers&quot;&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+				<published>2014-07-30 00:00:00 -0300</published>
+				<link>http://bymichaellancaster.com//blog/speaking-at-front-in-bh-conference-2014</link>
+			</item>
+		
+			<item>
 				<title>Soundnode App - Soundcloud for desktop released</title>
 				<description>&lt;p&gt;Soundnode App - The Soundcloud for desktop beta released! &lt;br&gt;
 That being said you download the best version to your computer &lt;a href=&quot;http://www.soundnodeapp.com&quot; target=&quot;_blank&quot; title=&quot;Soundnode App - Soundcloud for desktop&quot;&gt;here&lt;/a&gt; and &lt;strong&gt;out of the box&lt;/strong&gt; click, authenticate your user and start to listen to songs.&lt;/p&gt;
@@ -346,20 +388,6 @@ So I built this Web Application &lt;a href=&quot;http://ps4alerts.herokuapp.com/
 </description>
 				<published>2013-11-01 00:00:00 -0200</published>
 				<link>http://bymichaellancaster.com//blog/css-bad-and-good-practices-good-tips</link>
-			</item>
-		
-			<item>
-				<title>We are influenced by people</title>
-				<description>&lt;p&gt;It&#39;s about questioning what surround us to try understand things. The pragmatic programmer is a book that I&#39;m looking forward to read after finish Javascript Web Applications..but for now this is what I would like to share related to the topic of this book.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&amp;quot;You’re a Pragmatic Programmer. You aren’t wedded to any particular technology, but you have a broad enough background in the science, and your experience with practical projects allows you to choose good solutions in particular situations. Theory and practice combine to make you strong. You adjust your approach to suit the current circumstances and environment. And you do this continuously as the work progresses. Pragmatic Programmers get the job done, and do it well.&amp;quot;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;fluidMedia&quot;&gt;
-    &lt;iframe src=&quot;//www.youtube.com/embed/vPj4zxhy8wI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;allowfullscreen&quot;&gt; &lt;/iframe&gt;
-&lt;/div&gt;
-</description>
-				<published>2013-10-15 00:00:00 -0300</published>
-				<link>http://bymichaellancaster.com//blog/we-are-influenced-by-people</link>
 			</item>
 		
 	</channel>
