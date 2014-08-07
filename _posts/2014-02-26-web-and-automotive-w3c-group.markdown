@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Web and Automotive. WTF?!
+title: Web and Automotive.
 
 excerpt: I have been very curious about developing any kind of software for cars.. but of course I would be much more interested in develop using Open Web Technologies perhaps HTML5/CSS3 and Javascript how AWESOME that would be?
 ---
