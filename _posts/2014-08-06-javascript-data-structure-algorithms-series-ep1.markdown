@@ -15,6 +15,6 @@ What I want to do here it's not just help me learn more about it but also share 
 
 I'm not a Computer Scientist and this Series of posts wont be very advanced but I'm sure it will be worth.
 
-<small>ps: Reference on the book <a href="http://www.amazon.com/Structures-Algorithms-JavaScript-Michael-McMillan/dp/1449364934/ref=sr_1_1?ie=UTF8&qid=1407385377&sr=8-1&keywords=data+structures+and+algorithms+in+javascript" title="Data Structures and Algorithms with JavaScript" target="_blank">Data Structures and Algorithms with JavaScript</a> and some articles and videos.</small>
-
 Cheers!
+
+<small>* Reference on the book <a href="http://www.amazon.com/Structures-Algorithms-JavaScript-Michael-McMillan/dp/1449364934/ref=sr_1_1?ie=UTF8&qid=1407385377&sr=8-1&keywords=data+structures+and+algorithms+in+javascript" title="Data Structures and Algorithms with JavaScript" target="_blank">Data Structures and Algorithms with JavaScript</a> and some articles and videos.</small>
