@@ -5,8 +5,6 @@ title: Ep.1 Data Structures and Algorithms with JS
 excerpt: I don't have officially a Computer Science degree.. But clearly nowadays you wont need a (fancy) degree to be successful. You just need to be passionated to what you do and always want to be better/evolve.
 ---
 
-### Ep.1
-
 I don't have officially a Computer Science degree.. But clearly nowadays you wont need a (fancy) degree to be successful. You just need to be passionated to what you do and always want to be better/evolve.
 
 That being said I have been always trying to learn and evolve to be better on what I do which I love. And when I stop to think I remember that three years ago everything started and so many things was learned and as well so many things was forgotten to give focus to new knowledge.
