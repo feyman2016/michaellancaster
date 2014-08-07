@@ -13,6 +13,6 @@ Web applications has evolved to a much complex system and with that Developers/E
 
 What I want to do here it's not just help me learn more about it but also share the basics of Data Structures and Algorithms exploring some concepts with Javascript where what kind of Data Structure is more efficient than other or when certain Algorithm perform better than others.
 
-I'm not a Computer Scientist and this Series of posts wont be very advanced but I'm sure it will be worth it.
+I'm not a Computer Scientist and this Series of posts wont be very advanced but I'm sure it will be worth.
 
 Cheers!
