@@ -28,7 +28,7 @@ There was attendees from 4 different countries and at least 3 speakers were fore
 &lt;p&gt;&lt;br&gt;
 The title of my talk is/was &lt;code&gt;Beyond the Web&lt;/code&gt; where I exploited the difficulties of a Web developer on build native Apps for desktop or mobile (the talk was focused on desktop) and showed how this is easily possible nowadays with many App runtimes like Nodewebkit.&lt;/p&gt;
 
-&lt;p&gt;I was a bit nervous but I was more excited to present a good content to the attendees and show them new possibilities therefore I was prepared and happy to be there speaking about that topic to a such good crowd of people wanting to learn new things.&lt;/p&gt;
+&lt;p&gt;I was a bit nervous but I was more excited to present a nice content to the attendees and show them new possibilities therefore I was prepared and happy to be there speaking about that topic to a such good crowd of people wanting to learn new things.&lt;/p&gt;
 
 &lt;p&gt;You can check out my slides on &lt;a href=&quot;https://speakerdeck.com/weblancaster/beyond-the-web-with-nodewebkit&quot; title=&quot;Beyond the Web with Nodewebkit by Michael Lancaster&quot; target=&quot;_blank&quot;&gt;Speaker deck&lt;/a&gt; or below.&lt;/p&gt;
 
@@ -43,7 +43,7 @@ Cheers!&lt;/p&gt;
     &lt;img src=&quot;/assets/images/post-images/everybody.jpg&quot; alt=&quot;Attendees and speakers&quot;&gt;
 &lt;/div&gt;&lt;/p&gt;
 </description>
-				<published>2014-07-30 00:00:00 -0300</published>
+				<published>2014-07-30 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/speaking-at-front-in-bh-conference-2014</link>
 			</item>
 		
@@ -71,7 +71,7 @@ and lots of features to come.&lt;/p&gt;
 
 &lt;p&gt;Cheers!&lt;/p&gt;
 </description>
-				<published>2014-06-19 00:00:00 -0300</published>
+				<published>2014-06-19 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/soundcloud-for-desktop-win-mac-released-soundnode-app</link>
 			</item>
 		
@@ -98,7 +98,7 @@ Constructive (or not) feedback is always welcome.&lt;/p&gt;
 
 &lt;p&gt;Cheers!&lt;/p&gt;
 </description>
-				<published>2014-05-13 00:00:00 -0300</published>
+				<published>2014-05-13 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/soundnode-soundcloud-for-desktop-dev-release</link>
 			</item>
 		
@@ -131,7 +131,7 @@ In my case I decided to use &amp;quot;shift+command+m&amp;quot;..as below.&lt;/p
 
 &lt;p&gt;Thanks.&lt;/p&gt;
 </description>
-				<published>2014-03-03 00:00:00 -0300</published>
+				<published>2014-03-03 00:00:00 -0600</published>
 				<link>http://bymichaellancaster.com//blog/sublime-text-3-jump-to-definition-custom-shortcut</link>
 			</item>
 		
@@ -214,7 +214,7 @@ and since Web technologies are based on open standards, developers are not held 
 
 &lt;p&gt;Cheers!&lt;/p&gt;
 </description>
-				<published>2014-02-26 00:00:00 -0300</published>
+				<published>2014-02-26 00:00:00 -0600</published>
 				<link>http://bymichaellancaster.com//blog/web-and-automotive-w3c-group</link>
 			</item>
 		
@@ -278,7 +278,7 @@ App.insertElement(&#39;afterend&#39;, content4);
 
 &lt;p&gt;Enjoy the tip.&lt;/p&gt;
 </description>
-				<published>2014-01-08 00:00:00 -0200</published>
+				<published>2014-01-08 00:00:00 -0600</published>
 				<link>http://bymichaellancaster.com//blog/DOM-insert-html-method-you-might-not-know-about</link>
 			</item>
 		
@@ -337,7 +337,7 @@ gulp.task(&#39;default&#39;, function() {
 
 &lt;p&gt;Cheers!&lt;/p&gt;
 </description>
-				<published>2014-01-06 00:00:00 -0200</published>
+				<published>2014-01-06 00:00:00 -0600</published>
 				<link>http://bymichaellancaster.com//blog/why-i-like-gulpjs-more-than-gruntjs</link>
 			</item>
 		
@@ -360,7 +360,7 @@ So I built this Web Application &lt;a href=&quot;http://ps4alerts.herokuapp.com/
 
 &lt;p&gt;Be advised I built it in two nights..Enjoy!&lt;/p&gt;
 </description>
-				<published>2013-12-12 00:00:00 -0200</published>
+				<published>2013-12-12 00:00:00 -0600</published>
 				<link>http://bymichaellancaster.com//blog/playstation4-alert-using-best-buy-api-nodejs-socketio-nedb</link>
 			</item>
 		
@@ -372,7 +372,7 @@ So I built this Web Application &lt;a href=&quot;http://ps4alerts.herokuapp.com/
 
 &lt;p&gt;Enjoy!&lt;/p&gt;
 </description>
-				<published>2013-12-10 00:00:00 -0200</published>
+				<published>2013-12-10 00:00:00 -0600</published>
 				<link>http://bymichaellancaster.com//blog/chicago-through-instagram-chicagogram-us</link>
 			</item>
 		
@@ -386,7 +386,7 @@ So I built this Web Application &lt;a href=&quot;http://ps4alerts.herokuapp.com/
 
 &lt;p&gt;Feedback is always welcome.&lt;/p&gt;
 </description>
-				<published>2013-11-01 00:00:00 -0200</published>
+				<published>2013-11-01 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/css-bad-and-good-practices-good-tips</link>
 			</item>
 		
