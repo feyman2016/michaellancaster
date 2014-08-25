@@ -107,7 +107,7 @@ The example below we are going add the method to `validate` which is responsible
         var el = document.querySelector(field)
           , elVal = el.value;
           
-        if ( elFields[field].require || elVal === '' || elVal > elFields[field].maxlength ) {
+        if ( elFields[field].require || elVal === '' || elVal.length > elFields[field].maxlength ) {
           el.classList.add('invalid');
         }
       }
