@@ -6,6 +6,189 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Javascript Object Oriented simple form validation</title>
+				<description>&lt;p&gt;Today I want to show you how to build a simple form validation with Object Oriented programming in Javascript.&lt;/p&gt;
+
+&lt;h3&gt;Why Object Oriented&lt;/h3&gt;
+
+&lt;p&gt;Object Oriented programming aim to provide a model of programming based on Objects where an Object has both behaviors state (data) and behavior (code). &lt;br&gt;
+Therefore focus on Objects rather than actions and data rather than logic with that our advantages are a more clear modular structure, easier to maintain and modify since we can create more objects with small differences from the exiting ones.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The core concepts&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Objects&lt;/li&gt;
+&lt;li&gt;Classes&lt;/li&gt;
+&lt;li&gt;Data Abstraction and Encapsulation&lt;/li&gt;
+&lt;li&gt;Inheritance&lt;/li&gt;
+&lt;li&gt;Polymorphism&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;OO form validation&lt;/h2&gt;
+
+&lt;p&gt;Here&#39;s our simple form validation in javascript based on Object Oriented programming. &lt;br&gt;
+Our scenario: validate fields when form is submitted.&lt;/p&gt;
+
+&lt;p&gt;First things first... Let&#39;s create our class called &lt;code&gt;Validator&lt;/code&gt; and also create our constructor called as method &lt;code&gt;constructor&lt;/code&gt; which is responsible to setup our basic data.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;Javascript&quot;&gt;
+;(function(window, undefined) {
+  
+  var Validator = {
+    
+    constructor: function(form, config) {
+      this._elForm = form;
+      this._els = config.fields || {};
+    }
+  
+  }
+  
+})(window, undefined);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now let&#39;s create our initializer called &lt;code&gt;init&lt;/code&gt; and initialize the program adding a listener to the form using the info/data was passed to our constructor. &lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;Javascript&quot;&gt;
+;(function(window, undefined) {
+  
+  var Validator = {
+    
+    constructor: function(form, config) {
+      this._elForm = form;
+      this._els = config.fields || {};
+      
+      this.init();
+    },
+    
+    init: function() {
+      this.addFormListener();
+    },
+    
+    addFormListener: function() {
+        var formSelector = this._elForm
+          , elForm = document.querySelector(formSelector);
+          
+          elForm.addEventListener(&#39;submit&#39;, this.validate.bind(this), false);
+    }
+  
+  }
+  
+})(window, undefined);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The method called &lt;code&gt;addFormListener&lt;/code&gt; does what it&#39;s named.. we add a listener to the form to when submitted trigger a method and also chain a method called &lt;code&gt;bind&lt;/code&gt; which call the method &lt;code&gt;this.validate&lt;/code&gt; with the context of the class instead of send the object clicked &lt;code&gt;form&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The example below we are going add the method to &lt;code&gt;validate&lt;/code&gt; which is responsible to test against the field requirement &lt;code&gt;required&lt;/code&gt;, &lt;code&gt;empty&lt;/code&gt; or &lt;code&gt;maxlength&lt;/code&gt; and then add a CSS class to the input field.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;Javascript&quot;&gt;
+;(function(window, undefined) {
+  
+  var Validator = {
+    
+    constructor: function(form, config) {
+      this._elForm = form;
+      this._els = config.fields || {};
+      
+      this.init();
+    },
+    
+    init: function() {
+      this.addFormListener();
+    },
+    
+    addFormListener: function() {
+        var formSelector = this._elForm
+          , elForm = document.querySelector(formSelector);
+          
+          elForm.addEventListener(&#39;submit&#39;, this.validate.bind(this), false);
+    },
+    
+    validate: function(e) {
+      var elFields = this._els;
+      
+      for ( var field in elFields ) {
+        var el = document.querySelector(field)
+          , elVal = el.value;
+          
+        if ( elFields[field].require || elVal === &#39;&#39; || elVal &gt; elFields[field].maxlength ) {
+          el.classList.add(&#39;invalid&#39;);
+        }
+      }
+      
+      e.preventDefault();
+    }
+  
+  }
+  
+})(window, undefined);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We simply create a new object which are going to inherit directly from our class/object and call the constructor passing the &lt;code&gt;form ID&lt;/code&gt; and an Object containing an Object called &lt;code&gt;fields&lt;/code&gt; which contain all fields that need to be validate with our requirements &lt;code&gt;required&lt;/code&gt; and &lt;code&gt;maxlength&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;Javascript&quot;&gt;
+var form1 = Object.create(Validator);
+form1.constructor(&#39;#form1&#39;, {
+  fields: {
+    &#39;#fname&#39;: {
+      required: true,
+      maxlength: 20
+    },
+    &#39;#lname&#39;: {
+      maxlength: 10
+    }
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As a reference the HTML markup looks like this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;html&quot;&gt;
+&lt;form id=&quot;form1&quot;&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Person&lt;/legend&gt;
+        &lt;p&gt;
+            &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;
+            &lt;input type=&quot;text&quot; name=&quot;fname&quot; id=&quot;fname&quot; /&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;label for=&quot;lname&quot;&gt;Last name:&lt;/label&gt;
+            &lt;input type=&quot;text&quot; name=&quot;fname&quot; id=&quot;lname&quot; /&gt;
+        &lt;/p&gt;
+        &lt;input type=&quot;submit&quot; name=&quot;submit&quot; class=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that we can use a different design pattern to just the &lt;code&gt;constructor&lt;/code&gt; method be accessible, but let&#39;s keep it simple. &lt;br&gt;
+Also note that in ES6 this OO Approach are going to very clear on how to use the API.&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+</description>
+				<published>2014-08-25 00:00:00 -0500</published>
+				<link>http://bymichaellancaster.com//blog/javascript-object-oriented-simple-form-validation</link>
+			</item>
+		
+			<item>
+				<title>Ep.1 Data Structures and Algorithms with JS</title>
+				<description>&lt;p&gt;I don&#39;t have officially a Computer Science degree.. But clearly nowadays you wont need a (fancy) degree to be successful. You just need to be passionated to what you do and always want to be better/evolve.&lt;/p&gt;
+
+&lt;p&gt;That being said I have been always trying to learn and evolve to be better on what I do which I love. And when I stop to think I remember that three years ago everything started and so many things was learned and as well so many things was forgotten to give focus to new knowledge.&lt;/p&gt;
+
+&lt;p&gt;Web applications has evolved to a much complex system and with that Developers/Engineers are being &amp;quot;forced&amp;quot; to solve problems (could be the other way around) applying concepts of pure Computer Science which before you would just see on systems/programs using languages such as C, C++, Java and so on.&lt;/p&gt;
+
+&lt;p&gt;What I want to do here it&#39;s not just help me learn more about it but also share the basics of Data Structures and Algorithms exploring some concepts with Javascript where what kind of Data Structure is more efficient than other or when certain Algorithm perform better than others.&lt;/p&gt;
+
+&lt;p&gt;I&#39;m not a Computer Scientist and this Series of posts wont be very advanced but I&#39;m sure it will be worth.&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;* the mainly inspirationfor this series is based on the book &lt;a href=&quot;http://www.amazon.com/Structures-Algorithms-JavaScript-Michael-McMillan/dp/1449364934/ref=sr_1_1?ie=UTF8&amp;qid=1407385377&amp;sr=8-1&amp;keywords=data+structures+and+algorithms+in+javascript&quot; title=&quot;Data Structures and Algorithms with JavaScript&quot; target=&quot;_blank&quot;&gt;Data Structures and Algorithms with JavaScript&lt;/a&gt; but also articles/posts and videos to make sure that anything is misunderstood.&lt;/small&gt;&lt;/p&gt;
+</description>
+				<published>2014-08-06 00:00:00 -0500</published>
+				<link>http://bymichaellancaster.com//blog/javascript-data-structure-algorithms-series-ep1</link>
+			</item>
+		
+			<item>
 				<title>Speaking at Front in BH conference</title>
 				<description>&lt;p&gt;Last weekend I spoke at &lt;a href=&quot;http://frontinbh.com.br/&quot; target=&quot;_blank&quot; title=&quot;Front in BH 2014&quot;&gt;Front in BH 2014&lt;/a&gt; (in Belo Horizonte - Br) the biggest conference for Front End developers in Brazil.&lt;/p&gt;
 
@@ -136,7 +319,7 @@ In my case I decided to use &amp;quot;shift+command+m&amp;quot;..as below.&lt;/p
 			</item>
 		
 			<item>
-				<title>Web and Automotive. WTF?!</title>
+				<title>Web and Automotive.</title>
 				<description>&lt;p&gt;&lt;strong&gt;Updated version: 04/07/2014&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2&gt;And there&#39;s more..&lt;/h2&gt;
@@ -362,32 +545,6 @@ So I built this Web Application &lt;a href=&quot;http://ps4alerts.herokuapp.com/
 </description>
 				<published>2013-12-12 00:00:00 -0600</published>
 				<link>http://bymichaellancaster.com//blog/playstation4-alert-using-best-buy-api-nodejs-socketio-nedb</link>
-			</item>
-		
-			<item>
-				<title>Experience Chicago through Instagram</title>
-				<description>&lt;p&gt;Since the amount (just a few) of people sharing pictures on Instagram with Lollapalooza hashtag isn&#39;t the same as when the event was happening I decided to create &lt;a href=&quot;http://chicagogram.us&quot; target=&quot;&quot;_blank title=&quot;Chicagogram.us - Experience Chicago through Instagram&quot;&gt;Chicagogram.us&lt;/a&gt; with the hashtag #chicago #chicagogram therefore lots of people sharing different pictures of Chicago and selfies of course.&lt;/p&gt;
-
-&lt;p&gt;I&#39;m using the same code (I did some code refactor) and changed/removed some stuff from the layout as a developer standpoint.&lt;/p&gt;
-
-&lt;p&gt;Enjoy!&lt;/p&gt;
-</description>
-				<published>2013-12-10 00:00:00 -0600</published>
-				<link>http://bymichaellancaster.com//blog/chicago-through-instagram-chicagogram-us</link>
-			</item>
-		
-			<item>
-				<title>CSS Bad and Good practices</title>
-				<description>&lt;p&gt;Today I&#39;m sharing my presentation/slide about CSS bad and good practices and some really good tips. Hopefully this contribution to the community will help developers and designers make better products..FYI this can hurt your feeling.&lt;/p&gt;
-
-&lt;script async class=&quot;speakerdeck-embed&quot; data-id=&quot;ac560a10247001311e28167841e016d4&quot; data-ratio=&quot;1.33333333333333&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;Feedback is always welcome.&lt;/p&gt;
-</description>
-				<published>2013-11-01 00:00:00 -0500</published>
-				<link>http://bymichaellancaster.com//blog/css-bad-and-good-practices-good-tips</link>
 			</item>
 		
 	</channel>

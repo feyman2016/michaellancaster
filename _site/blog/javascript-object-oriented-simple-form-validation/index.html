@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> DOM insert HTML method you might not know |  Michael Lancaster Web Engineer based in Chicago - IL</title>
+    <title> Javascript Object Oriented simple form validation |  Michael Lancaster Web Engineer based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" DOM insert HTML method you might not know |  Michael Lancaster Web Engineer based in Chicago - IL">
+    <meta name="description" content=" Javascript Object Oriented simple form validation |  Michael Lancaster Web Engineer based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
-    <meta property="og:title" content="DOM insert HTML method you might not know by Michael Lancaster">
+    <meta property="og:title" content="Javascript Object Oriented simple form validation by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
 	<meta property="og:url" content="http://www.bymichaellancaster.com">
 	<meta property="og:image" content="http://www.bymichaellancaster.com/assets/images/cat-javascript.jpg">
@@ -339,69 +339,168 @@
 
 		<article class="post">
 
-    <h2 class="ui-tit-01">DOM insert HTML method you might not know</h2>
+    <h2 class="ui-tit-01">Javascript Object Oriented simple form validation</h2>
 
-    <span class="ui-date db">08 Jan 14</span>
+    <span class="ui-date db">25 Aug 14</span>
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>Everybody knows/use &quot;innerHTML&quot; to insert HTML but I was looking at the MDN website jumping between Web
-API's when I saw this DOM method called insertAdjacentHTML..it's &quot;innerHTML&quot; brothers but cooler and
-<strong>faster</strong>.
-<br>
-Besides the performance another difference is that &quot;innerHTML&quot; will overwrite the content inside the element when
-&quot;insertAdjacentHTML&quot; will add to the specified position.</p>
+	<div class="ui-copy"><p>Today I want to show you how to build a simple form validation with Object Oriented programming in Javascript.</p>
 
-<p>Here you can compare the performance between &quot;innerHTML&quot; and &quot;insertAdjacentHTML&quot; <a href="http://jsperf
-.com/insertadjacenthtml-perf/3" target="_blank" title="innerHTML vs insertAdjacentHTMl">here</a> and gets better
-its <strong>supported in all browsers</strong>.</p>
+<h3>Why Object Oriented</h3>
 
-<p>It's been out there for a while now even John Resig has an <a href="http://ejohn.org/blog/dom-insertadjacenthtml/"
-target="_blank" title="insertAdjacentHTML post John Resig">post</a> about it back in 2008.</p>
+<p>Object Oriented programming aim to provide a model of programming based on Objects where an Object has both behaviors state (data) and behavior (code). <br>
+Therefore focus on Objects rather than actions and data rather than logic with that our advantages are a more clear modular structure, easier to maintain and modify since we can create more objects with small differences from the exiting ones.</p>
 
-<p>It's very simple to use you are going to need to pass one of the positions (below) and then pass the content.</p>
-
-<h4>Position</h4>
+<p><strong>The core concepts</strong></p>
 
 <ul>
-<li>&quot;beforebegin&quot; (insert before the element)</li>
-<li>&quot;afterend&quot; (insert after the element)</li>
-<li>&quot;afterbegin&quot; (insert inside element after begin)</li>
-<li>&quot;beforeend&quot; (insert inside element before end)</li>
+<li>Objects</li>
+<li>Classes</li>
+<li>Data Abstraction and Encapsulation</li>
+<li>Inheritance</li>
+<li>Polymorphism</li>
 </ul>
 
-<pre><code data-language="javascript">
-element.insertAdjacentHTML("position", "content");
-</code></pre>
+<h2>OO form validation</h2>
 
-<p>Let's say we have a method that do the job for us when we pass the &quot;position&quot; and &quot;content&quot;.</p>
+<p>Here's our simple form validation in javascript based on Object Oriented programming. <br>
+Our scenario: validate fields when form is submitted.</p>
 
-<pre><code data-language="javascript">
-(function(window) {
-    window.App = window.App || {};
+<p>First things first... Let's create our class called <code>Validator</code> and also create our constructor called as method <code>constructor</code> which is responsible to setup our basic data.</p>
 
-    window.App = {
-        insertElement: function(position, content) {
-            var elDiv = document.getElementById('wrapper');
-                elDiv.insertAdjacentHTML(position, content)
-        }
+<pre><code data-language="Javascript">
+;(function(window, undefined) {
+  
+  var Validator = {
+    
+    constructor: function(form, config) {
+      this._elForm = form;
+      this._els = config.fields || {};
     }
-})(window);
-
-var content1 = '<p id="ct1">this is a paragrag a "beforebegin" element</p>';
-var content2 = '<p id="ct2">this is a paragrag a "afterbegin" element</p>';
-var content3 = '<p id="ct3">this is a paragrag a "beforeend" element</p>';
-var content4 = '<p id="ct4">this is a paragrag a "afterend" element</p>';
-
-App.insertElement('beforebegin', content1);
-App.insertElement('afterbegin', content2);
-App.insertElement('beforeend', content3);
-App.insertElement('afterend', content4);
+  
+  }
+  
+})(window, undefined);
 </code></pre>
 
-<p>Here's a example how it works <a href="http://jsfiddle.net/ftZyn/2/" target="_blank" title="how insertAdjacentHTMl works">link</a>.</p>
+<p>Now let's create our initializer called <code>init</code> and initialize the program adding a listener to the form using the info/data was passed to our constructor. <br></p>
 
-<p>Enjoy the tip.</p>
+<pre><code data-language="Javascript">
+;(function(window, undefined) {
+  
+  var Validator = {
+    
+    constructor: function(form, config) {
+      this._elForm = form;
+      this._els = config.fields || {};
+      
+      this.init();
+    },
+    
+    init: function() {
+      this.addFormListener();
+    },
+    
+    addFormListener: function() {
+        var formSelector = this._elForm
+          , elForm = document.querySelector(formSelector);
+          
+          elForm.addEventListener('submit', this.validate.bind(this), false);
+    }
+  
+  }
+  
+})(window, undefined);
+</code></pre>
+
+<p>The method called <code>addFormListener</code> does what it's named.. we add a listener to the form to when submitted trigger a method and also chain a method called <code>bind</code> which call the method <code>this.validate</code> with the context of the class instead of send the object clicked <code>form</code>.</p>
+
+<p>The example below we are going add the method to <code>validate</code> which is responsible to test against the field requirement <code>required</code>, <code>empty</code> or <code>maxlength</code> and then add a CSS class to the input field.</p>
+
+<pre><code data-language="Javascript">
+;(function(window, undefined) {
+  
+  var Validator = {
+    
+    constructor: function(form, config) {
+      this._elForm = form;
+      this._els = config.fields || {};
+      
+      this.init();
+    },
+    
+    init: function() {
+      this.addFormListener();
+    },
+    
+    addFormListener: function() {
+        var formSelector = this._elForm
+          , elForm = document.querySelector(formSelector);
+          
+          elForm.addEventListener('submit', this.validate.bind(this), false);
+    },
+    
+    validate: function(e) {
+      var elFields = this._els;
+      
+      for ( var field in elFields ) {
+        var el = document.querySelector(field)
+          , elVal = el.value;
+          
+        if ( elFields[field].require || elVal === '' || elVal > elFields[field].maxlength ) {
+          el.classList.add('invalid');
+        }
+      }
+      
+      e.preventDefault();
+    }
+  
+  }
+  
+})(window, undefined);
+</code></pre>
+
+<p>We simply create a new object which are going to inherit directly from our class/object and call the constructor passing the <code>form ID</code> and an Object containing an Object called <code>fields</code> which contain all fields that need to be validate with our requirements <code>required</code> and <code>maxlength</code>.</p>
+
+<pre><code data-language="Javascript">
+var form1 = Object.create(Validator);
+form1.constructor('#form1', {
+  fields: {
+    '#fname': {
+      required: true,
+      maxlength: 20
+    },
+    '#lname': {
+      maxlength: 10
+    }
+  }
+});
+</code></pre>
+
+<p>As a reference the HTML markup looks like this.</p>
+
+<pre><code data-language="html">
+<form id="form1">
+    <fieldset>
+        <legend>Person</legend>
+        <p>
+            <label for="fname">First name:</label>
+            <input type="text" name="fname" id="fname" />
+        </p>
+        <p>
+            <label for="lname">Last name:</label>
+            <input type="text" name="fname" id="lname" />
+        </p>
+        <input type="submit" name="submit" class="submit" value="Submit" />
+    </fieldset>
+</form>
+</code></pre>
+
+<p>Note that we can use a different design pattern to just the <code>constructor</code> method be accessible, but let's keep it simple. <br>
+Also note that in ES6 this OO Approach are going to very clear on how to use the API.</p>
+
+<p>Cheers!</p>
 </div>
 
     <!-- <span class="meta"><small>By Michael Lancaster &copy; 2014</small></span> -->

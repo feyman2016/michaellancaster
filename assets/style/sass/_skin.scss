@@ -42,6 +42,12 @@ UI
 
 	& p {
 		margin: 0 0 25px 0;
+
+		& code {
+			background: #eee;
+			padding: 0 2px;
+			font-style: italic;
+		}
 	}
 
 	& p:first-child, 
@@ -101,6 +107,12 @@ UI
 .tit-mg { margin: 0 0 10px 0; }
 
 .line-through { text-decoration: line-through; }
+
+.intro-series {
+	background: #eee;
+	padding: 10px;
+	margin: 10px 0;
+}
 
 /*
 =========================

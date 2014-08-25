@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> DOM insert HTML method you might not know |  Michael Lancaster Web Engineer based in Chicago - IL</title>
+    <title> Ep.1 Data Structures and Algorithms with JS |  Michael Lancaster Web Engineer based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" DOM insert HTML method you might not know |  Michael Lancaster Web Engineer based in Chicago - IL">
+    <meta name="description" content=" Ep.1 Data Structures and Algorithms with JS |  Michael Lancaster Web Engineer based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
-    <meta property="og:title" content="DOM insert HTML method you might not know by Michael Lancaster">
+    <meta property="og:title" content="Ep.1 Data Structures and Algorithms with JS by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
 	<meta property="og:url" content="http://www.bymichaellancaster.com">
 	<meta property="og:image" content="http://www.bymichaellancaster.com/assets/images/cat-javascript.jpg">
@@ -339,69 +339,25 @@
 
 		<article class="post">
 
-    <h2 class="ui-tit-01">DOM insert HTML method you might not know</h2>
+    <h2 class="ui-tit-01">Ep.1 Data Structures and Algorithms with JS</h2>
 
-    <span class="ui-date db">08 Jan 14</span>
+    <span class="ui-date db">06 Aug 14</span>
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>Everybody knows/use &quot;innerHTML&quot; to insert HTML but I was looking at the MDN website jumping between Web
-API's when I saw this DOM method called insertAdjacentHTML..it's &quot;innerHTML&quot; brothers but cooler and
-<strong>faster</strong>.
-<br>
-Besides the performance another difference is that &quot;innerHTML&quot; will overwrite the content inside the element when
-&quot;insertAdjacentHTML&quot; will add to the specified position.</p>
+	<div class="ui-copy"><p>I don't have officially a Computer Science degree.. But clearly nowadays you wont need a (fancy) degree to be successful. You just need to be passionated to what you do and always want to be better/evolve.</p>
 
-<p>Here you can compare the performance between &quot;innerHTML&quot; and &quot;insertAdjacentHTML&quot; <a href="http://jsperf
-.com/insertadjacenthtml-perf/3" target="_blank" title="innerHTML vs insertAdjacentHTMl">here</a> and gets better
-its <strong>supported in all browsers</strong>.</p>
+<p>That being said I have been always trying to learn and evolve to be better on what I do which I love. And when I stop to think I remember that three years ago everything started and so many things was learned and as well so many things was forgotten to give focus to new knowledge.</p>
 
-<p>It's been out there for a while now even John Resig has an <a href="http://ejohn.org/blog/dom-insertadjacenthtml/"
-target="_blank" title="insertAdjacentHTML post John Resig">post</a> about it back in 2008.</p>
+<p>Web applications has evolved to a much complex system and with that Developers/Engineers are being &quot;forced&quot; to solve problems (could be the other way around) applying concepts of pure Computer Science which before you would just see on systems/programs using languages such as C, C++, Java and so on.</p>
 
-<p>It's very simple to use you are going to need to pass one of the positions (below) and then pass the content.</p>
+<p>What I want to do here it's not just help me learn more about it but also share the basics of Data Structures and Algorithms exploring some concepts with Javascript where what kind of Data Structure is more efficient than other or when certain Algorithm perform better than others.</p>
 
-<h4>Position</h4>
+<p>I'm not a Computer Scientist and this Series of posts wont be very advanced but I'm sure it will be worth.</p>
 
-<ul>
-<li>&quot;beforebegin&quot; (insert before the element)</li>
-<li>&quot;afterend&quot; (insert after the element)</li>
-<li>&quot;afterbegin&quot; (insert inside element after begin)</li>
-<li>&quot;beforeend&quot; (insert inside element before end)</li>
-</ul>
+<p>Cheers!</p>
 
-<pre><code data-language="javascript">
-element.insertAdjacentHTML("position", "content");
-</code></pre>
-
-<p>Let's say we have a method that do the job for us when we pass the &quot;position&quot; and &quot;content&quot;.</p>
-
-<pre><code data-language="javascript">
-(function(window) {
-    window.App = window.App || {};
-
-    window.App = {
-        insertElement: function(position, content) {
-            var elDiv = document.getElementById('wrapper');
-                elDiv.insertAdjacentHTML(position, content)
-        }
-    }
-})(window);
-
-var content1 = '<p id="ct1">this is a paragrag a "beforebegin" element</p>';
-var content2 = '<p id="ct2">this is a paragrag a "afterbegin" element</p>';
-var content3 = '<p id="ct3">this is a paragrag a "beforeend" element</p>';
-var content4 = '<p id="ct4">this is a paragrag a "afterend" element</p>';
-
-App.insertElement('beforebegin', content1);
-App.insertElement('afterbegin', content2);
-App.insertElement('beforeend', content3);
-App.insertElement('afterend', content4);
-</code></pre>
-
-<p>Here's a example how it works <a href="http://jsfiddle.net/ftZyn/2/" target="_blank" title="how insertAdjacentHTMl works">link</a>.</p>
-
-<p>Enjoy the tip.</p>
+<p><small>* the mainly inspirationfor this series is based on the book <a href="http://www.amazon.com/Structures-Algorithms-JavaScript-Michael-McMillan/dp/1449364934/ref=sr_1_1?ie=UTF8&qid=1407385377&sr=8-1&keywords=data+structures+and+algorithms+in+javascript" title="Data Structures and Algorithms with JavaScript" target="_blank">Data Structures and Algorithms with JavaScript</a> but also articles/posts and videos to make sure that anything is misunderstood.</small></p>
 </div>
 
     <!-- <span class="meta"><small>By Michael Lancaster &copy; 2014</small></span> -->
