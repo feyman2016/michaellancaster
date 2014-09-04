@@ -110,7 +110,7 @@ Our scenario: validate fields when form is submitted.&lt;/p&gt;
         var el = document.querySelector(field)
           , elVal = el.value;
           
-        if ( elFields[field].require || elVal === &#39;&#39; || elVal &gt; elFields[field].maxlength ) {
+        if ( elFields[field].require || elVal === &#39;&#39; || elVal.length &gt; elFields[field].maxlength ) {
           el.classList.add(&#39;invalid&#39;);
         }
       }
