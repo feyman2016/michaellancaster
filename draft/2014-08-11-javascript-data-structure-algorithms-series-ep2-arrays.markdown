@@ -319,7 +319,7 @@ console.log(meetCondition) // true
 
 In the code above all elements are tested against the condition to check if they are less than 11 in our case all elements are less than 11 so the result returned is true.
 
-The method/function `Array.prototype.some()` works almost the same way as `Array.prototype.every()` but in this method case if at least one element meet the condition would return true.
+The method/function `Array.prototype.some()` works almost the same way as `Array.prototype.every()` but in this case if at least one element meet the condition would return true.
 
 <pre><code data-language="javascript">
 var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
@@ -331,13 +331,60 @@ var meetCondition = nums.some(function(element, index, array) {
 console.log(meetCondition) // true
 </code></pre>
 
-So in the code above our at least one element met the condition and returns `true`.
+The `Array.prototype.reduce()` method run a function against an accumulator for each element until reduce to one single value.
 
+<pre><code data-language="javascript">
+var nums = [100, 200, 300, 400];
 
+nums.reduce(function(a, b) {
+	console.log('a', a);
+   	console.log('b', b);
+   	console.log('result accumulated is: ', a + b);
+    return a + b;
+});
 
+// output
 
+// a 100
+// b 200
+// result accumulated is: 300
+// a 300
+// b 300
+// result accumulated is: 600
+// a 600
+// b 400
+// result accumulated is: 1000
+</code></pre>
 
+As you can see our method `Array.prototype.reduce()` receive a function with two arguments `previous value` and `current value` a + b which the result turns into the `accumulator` a and then calculate this result against the next in line which is b and so on so forth. <br>
+You can also pass `initial value` where it's going to turn into the `previous value` and the original `previous value` turn into `current value`.
 
+<pre><code data-language="javascript">
+var nums = [100, 200, 300, 400];
+
+nums.reduce(function(a, b) {
+	console.log('a', a);
+   	console.log('b', b);
+   	console.log('result accumulated is: ', a + b);
+    return a + b;
+}, 200);
+
+// output
+
+// a 200
+// b 100
+// result accumulated is: 300
+// a 300
+// b 200
+// result accumulated is: 500
+// a 500
+// b 300
+// result accumulated is: 800
+// a 800
+// b 400
+// result accumulated is: 1200
+// 1200
+</code></pre>
 
 
 
