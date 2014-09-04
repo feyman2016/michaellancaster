@@ -407,7 +407,7 @@ console.log(newArr);
 // ["Alaskan Klee Kai", "American Bulldog", "Pitbull"]
 </code></pre>
 
-The `Array.prototype.filter()` method work almost the same way as `Array.prototype.every()` but instead return an Array with the elements that met the condition `true`.
+The `Array.prototype.filter()` method works almost the same way as `Array.prototype.every()` but instead return an Array with the elements that met the condition `true`.
 
 <pre><code data-language="javascript">
 var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
