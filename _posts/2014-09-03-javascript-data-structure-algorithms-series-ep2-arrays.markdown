@@ -200,7 +200,7 @@ The code above I said .splice `from index 1, remove index 1, insert 'Bull Terrie
 So instead of use the length of an Array to add an element to the end or even harder to add an element to the beginning of an Array which you would have to iterate through the Array and shift the index from the end towards start.
 Anyway. Let's keep it simple with these two methods to add new elements to an Array `Array.prototype.push()` add to the end of an Array and `Array.prototype.unshift()` add to the beginning of an Array (Both methods accept multiple values/elements passed as arguments). <br>
 
-The `push()` function/method add a value/element to the Array.<br>
+The `push()` function/method add a value/element to the end of an Array.<br>
 Here's an example.
 
 <pre><code data-language="javascript">
@@ -211,7 +211,7 @@ dogs.push('Bull Terrier');
 console.log(dogs); // ["Alaskan Klee Kai", "American Bulldog", "Pitbull", "Bull Terrier"]
 </code></pre>
 
-The `unshift()` function/method add a value/element to the Array. <br>
+The `unshift()` function/method add a value/element to the beginning of an Array. <br>
 Here's an example.
 
 <pre><code data-language="javascript">
@@ -285,7 +285,7 @@ console.log(nums) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 ### Iterator methods
 
-The iterator methods/functions are going to be applied for each value/element and/or returning an new array, groups of values or just a value as result of the operation.
+The iterator methods/functions are going to be applied for each value/element and may or may not return a new array, groups of values or just a value as result of the operation.
 
 First let's talk about the `Array.prototype.forEach()` which receive a callback as argument and this callback has three arguments respectively `element`, `index`, `array being traversed` going to iterate on ascending order. <br>
 Here's an example using `Array.prototype.forEach()`.
@@ -387,7 +387,7 @@ nums.reduce(function(a, b) {
 
 There's also the possibility to use `Array.prototype.reduceRight()` which is going to perform the function on each element of the array from the end to start.
 
-the `Array.prototype.map()` method are going to return a new Array and works the same way `Array.prototype.forEach()` method works but return a new Array as the difference between the two methods.
+the `Array.prototype.map()` method works the same way `Array.prototype.forEach()` method works but return a new Array as the difference between the two methods.
 
 <pre><code data-language="javascript">
 var dogs = ['Alaskan Klee Kai', 'American Bulldog', 'Pitbull'];
