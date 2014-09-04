@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+      <loc>http://bymichaellancaster.com/blog/javascript-data-structure-algorithms-series-ep2-arrays</loc>
+      <lastmod>2014-09-03</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://bymichaellancaster.com/blog/javascript-object-oriented-simple-form-validation</loc>
       <lastmod>2014-08-25</lastmod>
       <changefreq>never</changefreq>

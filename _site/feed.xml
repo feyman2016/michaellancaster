@@ -6,6 +6,434 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Ep.2 Data Structures and Algorithms with JS - Arrays</title>
+				<description>&lt;div class=&quot;intro-series&quot;&gt;
+    This post is part of the series: Data Structures and Algorithms with JS therefore before continue to read I suggest you &lt;a href=&quot;/blog/javascript-data-structure-algorithms-series-ep1/&quot; title=&quot;Data Structures and Algorithms Ep.1&quot;&gt;the introduction&lt;/a&gt; to this series of posts if you haven&#39;t read yet. thanks.
+&lt;/div&gt;
+
+&lt;h3&gt;Brushing up on Arrays&lt;/h3&gt;
+
+&lt;p&gt;This is the second post on the series of Data Structure and Algorithms with JS - focused on Array. &lt;br&gt;
+Notice that this is a overview/start point for those that need to brush up your knowledge on Arrays where we are going to be using in the future on more complex topics.&lt;/p&gt;
+
+&lt;p&gt;Every programming language has sort of a built-in Array where you can access data via index and most of these languages has a strict type of Array which would be integer BUT not in Javascript, where Array is also an object which when integers used for index they are converted to strings. &lt;br&gt;
+And Array being an object means that it contain properties and functions you can use out of the box.&lt;/p&gt;
+
+&lt;p&gt;In Javascript we don&#39;t need to define the length of our Array as in C++ and we can have different types of values therefore making Arrays in Javascript flexible and easier to manipulate than other classic languages.&lt;/p&gt;
+
+&lt;h3&gt;Creating Arrays&lt;/h3&gt;
+
+&lt;p&gt;Let&#39;s create an Array with length zero:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var arr = []; // arr.length = 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now let&#39;s create an Array with some elements defined and length equal 5:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var arr = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]; // arr.length = 5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Array with different types would look like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var arr = [&#39;michael&#39;, &#39;lancaster&#39;, 23, true, null];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you want to verify if an object is an Array you can use the method &lt;code&gt;Arrays.isArray()&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var arr = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;];
+Array.isArray(arr); // true
+
+var str = &#39;Michael Lancaster&#39;;
+Array.isArray(str); // false
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Accessing&lt;/h3&gt;
+
+&lt;p&gt;Use the operator &lt;code&gt;[]&lt;/code&gt; passing the index to access the value/element.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var arr = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;];
+console.log( arr[2] ) // c
+console.log( arr[4] ) // e
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Also iterating through an Array sequentially&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var arr = [1, 2, 3, 4, 5];
+for ( var i = 0; i &lt; arr.length; i++ ) {
+    console.log(&#39;Index: &#39; + i, &#39;Value: &#39; + arr[i])
+}
+
+// outputs
+// Index: 0 Value: 1
+// Index: 1 Value: 2
+// Index: 2 Value: 3
+// Index: 3 Value: 4
+// Index: 4 Value: 5 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice on the sample above that the loop is controlled by the length of the Array &lt;code&gt;arr.length&lt;/code&gt; since in Javascript Array is an object and it can be modified so we guarantee that we have gone through all indexes.&lt;/p&gt;
+
+&lt;h3&gt;Array from String&lt;/h3&gt;
+
+&lt;p&gt;We can also create Arrays from strings defining a delimiter (&lt;code&gt;space&lt;/code&gt; in my case).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var str = &#39;Michael lancaster 23 and developer&#39;;
+var arr = str.split(&#39; &#39;); // [&quot;Michael&quot;, &quot;lancaster&quot;, &quot;23&quot;, &quot;and&quot;, &quot;developer&quot;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Object Copy&lt;/h3&gt;
+
+&lt;p&gt;There&#39;s several ways of Object copy &lt;code&gt;Shallow Copy&lt;/code&gt;, &lt;code&gt;Deep Copy&lt;/code&gt; and &lt;code&gt;Lazy Copy&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;Shallow Copy&lt;/code&gt; is when you assign &amp;quot;A = B&amp;quot; which has the disadvantage of when modifying Array B the Array A will also be modified with same values/elements as B no matter what. Here&#39;s an example of &lt;code&gt;Shallow Copy&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var arr1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var arr2 = arr1;
+console.log(arr2) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+arr1.push(&#39;michael&#39;);
+console.log(arr1) // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, &quot;michael&quot;]
+console.log(arr2) // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, &quot;michael&quot;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When we pushed a new value to the end of &lt;code&gt;arr1&lt;/code&gt; this change is reflected into &lt;code&gt;arr2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;A better way to do a copy would be the &lt;code&gt;Deep Copy&lt;/code&gt; which one don&#39;t depend on another but it&#39;s a slower operation. &lt;br&gt;
+Here&#39;s an example of &lt;code&gt;Deep Copy&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var arr1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var arr2 = [];
+
+function deepCopy(arr1, arr2) {
+    for ( var i = 0; i &lt; arr1.length; i++ ) {
+        arr2[i] = arr1[i];
+    }
+}
+
+deepCopy(arr1, arr2);
+
+console.log(arr1) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(arr2) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+arr1.push(&#39;michael&#39;)
+console.log(arr1) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, &quot;michael&quot;] 
+console.log(arr2) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the example above you can notice that the value pushed to &lt;code&gt;arr1&lt;/code&gt; do not reflected into &lt;code&gt;arr2&lt;/code&gt;.
+Now. &lt;code&gt;Lazy Copy&lt;/code&gt; is the combination of both operations.&lt;/p&gt;
+
+&lt;h3&gt;Array traversal and mutation operations&lt;/h3&gt;
+
+&lt;p&gt;Array is list-like and also a constructor that contains prototype methods to perform traversal and mutation operations such as:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Searching a value&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Searching a value can be done with the method &lt;code&gt;Array.prototype.indexOf()&lt;/code&gt; which perform an operation of comparing with &lt;code&gt;===&lt;/code&gt; the value passed to the function is found and return it&#39;s index position otherwise will return -1.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var languages = [&#39;Javascript&#39;, &#39;Java&#39;, &#39;C++&#39;, &#39;Go&#39;];
+languages.indexOf(&#39;C++&#39;) // 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice that this search operation using the &lt;code&gt;indexOf&lt;/code&gt; will return the just the position of the &lt;code&gt;first&lt;/code&gt; value encountered in the Array.
+You can also the &#39;lastIndexOf&#39; which will do the same but return the position of the last value encountered.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var languages = [&#39;Javascript&#39;, &#39;Java&#39;, &#39;C++&#39;, &#39;Go&#39;, &#39;Lua&#39;, &#39;C++&#39;];
+languages.lastIndexOf(&#39;C++&#39;) // 5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;String from Arrays&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There&#39;s two methods to return a string representation from an Array &lt;code&gt;Array.prototype.join()&lt;/code&gt; and &lt;code&gt;Array.prototype.toString()&lt;/code&gt;. &lt;br&gt;
+It&#39;s automatically delimited by commas but you can pass your delimiter on the method. Here&#39;s an example using &lt;code&gt;join&lt;/code&gt; and &lt;code&gt;toString&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var languages = [&#39;Javascript&#39;, &#39;Java&#39;, &#39;C++&#39;, &#39;Go&#39;, &#39;Lua&#39;];
+languages.join(); // &quot;Javascript,Java,C++,Go,Lua&quot;
+languages.toString(); // &quot;Javascript,Java,C++,Go,Lua&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;New Array from Array&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There&#39;s also multiple methods to create an Array from another Array &lt;code&gt;Array.prototype.concat()&lt;/code&gt; and &lt;code&gt;Array.prototype.splice()&lt;/code&gt;.
+The &lt;code&gt;Array.prototype.concat()&lt;/code&gt; method allow you to pass one or more Arrays/Values as argument to create a new Array.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var cats = [&#39;Abyssinian&#39;, &#39;Persian&#39;, &#39;Peterbald&#39;];
+var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+var birds = [&#39;Malleefowl&#39;, &#39;Maleo&#39;];
+
+var petAnimals = cats.concat(dogs, birds);
+console.log(petAnimals); // [&quot;Abyssinian&quot;, &quot;Persian&quot;, &quot;Peterbald&quot;, &quot;Alaskan Klee Kai&quot;, &quot;American Bulldog&quot;, &quot;Pitbull&quot;, &quot;Malleefowl&quot;, &quot;Maleo&quot;];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;Array.prototype.splice()&lt;/code&gt; takes two arguments (minimum) or more. You can also use to add new elements to the middle of an Array. &lt;br&gt;
+They are going to be used to mutate the Array therefore it can add new elements and/or remove old elements.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+var removedDogs = dogs.splice(2, 0, &quot;Bull Terrier&quot;);
+console.log(dogs); // [&quot;Alaskan Klee Kai&quot;, &quot;American Bulldog&quot;, &quot;Bull Terrier&quot;, &quot;Pitbull&quot;]
+console.log(removedDogs); // [] empty since no values/elements were removed
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;My arguments are &lt;code&gt;.splice(from index, remove, enter new element)&lt;/code&gt; so looking at my arguments we have insert a new value &lt;code&gt;Bull terrier&lt;/code&gt; remove &lt;code&gt;0&lt;/code&gt; and start at index &lt;code&gt;2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+var removedDogs = dogs.splice(1, 1, &quot;Bull Terrier&quot;);
+console.log(dogs); // [&quot;Alaskan Klee Kai&quot;, &quot;Bull Terrier&quot;, &quot;Pitbull&quot;]
+console.log(removedDogs); // [&quot;American Bulldog&quot;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The code above I said .splice &lt;code&gt;from index 1, remove index 1, insert &#39;Bull Terrier&#39;&lt;/code&gt; so now the variable &lt;code&gt;removedDogs&lt;/code&gt; contain the item removed from the index defined which in this case is &lt;code&gt;1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Adding elements/values to an Array&lt;/h3&gt;
+
+&lt;p&gt;So instead of use the length of an Array to add an element to the end or even harder to add an element to the beginning of an Array which you would have to iterate through the Array and shift the index from the end towards start.
+Anyway. Let&#39;s keep it simple with these two methods to add new elements to an Array &lt;code&gt;Array.prototype.push()&lt;/code&gt; add to the end of an Array and &lt;code&gt;Array.prototype.unshift()&lt;/code&gt; add to the beginning of an Array (Both methods accept multiple values/elements passed as arguments). &lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;push()&lt;/code&gt; function/method add a value/element to the Array.&lt;br&gt;
+Here&#39;s an example.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+console.log(dogs); // [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+
+dogs.push(&#39;Bull Terrier&#39;);
+console.log(dogs); // [&quot;Alaskan Klee Kai&quot;, &quot;American Bulldog&quot;, &quot;Pitbull&quot;, &quot;Bull Terrier&quot;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;unshift()&lt;/code&gt; function/method add a value/element to the Array. &lt;br&gt;
+Here&#39;s an example.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+console.log(dogs); // [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+
+dogs.unshift(&#39;American Bulldog&#39;);
+console.log(dogs); // [&quot;American Bulldog&quot;, &quot;Alaskan Klee Kai&quot;, &quot;American Bulldog&quot;, &quot;Pitbull&quot;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Removing elements/values from an Array&lt;/h3&gt;
+
+&lt;p&gt;There&#39;s also two methods to remove values/elements from an Array where you can remove the beginning using &lt;code&gt;Array.prototype.shift()&lt;/code&gt; or if you want to remove from the end you can use &lt;code&gt;Array.prototype.pop()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here&#39;s an example to remove the first element using the &lt;code&gt;Array.prototype.shift()&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+console.log(dogs); // [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+
+dogs.shift();
+console.log(dogs); // [ &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And here&#39;s an example to remove the last element using the &lt;code&gt;Array.prototype.pop()&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+console.log(dogs); // [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+
+dogs.pop();
+console.log(dogs); // [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Ordering/Sorting elements&lt;/h3&gt;
+
+&lt;p&gt;There&#39;s also two ways to order/sort an Array &lt;code&gt;Array.prototype.reverse()&lt;/code&gt; which are going to do what says and &lt;code&gt;Array.prototype.sort()&lt;/code&gt; to put elements in order but in this case the method &lt;code&gt;Array.prototype.sort()&lt;/code&gt; turns every value in strings so if you have numbers you are going to need to pass a function and order the numbers.&lt;/p&gt;
+
+&lt;p&gt;Here&#39;s an example of &lt;code&gt;Array.prototype.reverse()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+console.log(dogs); // [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+
+dogs.reverse();
+console.log(dogs); // [&quot;Pitbull&quot;, &quot;American Bulldog&quot;, &quot;Alaskan Klee Kai&quot;];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here&#39;s an example of &lt;code&gt;Array.prototype.sort()&lt;/code&gt; with strings.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var alphabet = [&#39;a&#39;, &#39;b&#39;, &#39;e&#39;, &#39;z&#39;, &#39;f&#39;, &#39;c&#39;];
+console.log(alphabet); // [&#39;a&#39;, &#39;b&#39;, &#39;e&#39;, &#39;z&#39;, &#39;f&#39;, &#39;c&#39;]
+
+alphabet.sort();
+console.log(alphabet); // [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;e&quot;, &quot;f&quot;, &quot;z&quot;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And here&#39;s an example of how to pass a function to &lt;code&gt;Array.prototype.sort()&lt;/code&gt; to order numbers.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var nums = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+console.log(nums) // [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+nums.sort(function(n1, n2) {
+  return n1 - n2;
+});
+
+console.log(nums) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Iterator methods&lt;/h3&gt;
+
+&lt;p&gt;The iterator methods/functions are going to be applied for each value/element and/or returning an new array, groups of values or just a value as result of the operation.&lt;/p&gt;
+
+&lt;p&gt;First let&#39;s talk about the &lt;code&gt;Array.prototype.forEach()&lt;/code&gt; which receive a callback as argument and this callback has three arguments respectively &lt;code&gt;element&lt;/code&gt;, &lt;code&gt;index&lt;/code&gt;, &lt;code&gt;array being traversed&lt;/code&gt; going to iterate on ascending order. &lt;br&gt;
+Here&#39;s an example using &lt;code&gt;Array.prototype.forEach()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+
+dogs.forEach(function(value, index, array) {
+    console.log(&#39;Dog breed: &#39; + value + &#39;, position: &#39; + index);
+});
+
+// outputs
+// Dog breed: Alaskan Klee Kai, position: 0
+// Dog breed: American Bulldog, position: 1
+// Dog breed: Pitbull, position: 2 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now it&#39;s time to show the &lt;code&gt;Array.prototype.every()&lt;/code&gt; which test a condition against each element and return true in case all elements meet the condition or false. &lt;br&gt;
+Also receives a callback as argument and this callback has three arguments respectively &lt;code&gt;element&lt;/code&gt;, &lt;code&gt;index&lt;/code&gt;, &lt;code&gt;array being traversed&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+var meetCondition = nums.every(function(element, index, array) {
+    return (element &lt; 11);
+});
+
+console.log(meetCondition) // true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the code above all elements are tested against the condition to check if they are less than 11 in our case all elements are less than 11 so the result returned is true.&lt;/p&gt;
+
+&lt;p&gt;The method/function &lt;code&gt;Array.prototype.some()&lt;/code&gt; works almost the same way as &lt;code&gt;Array.prototype.every()&lt;/code&gt; but in this case if at least one element meet the condition would return true.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+var meetCondition = nums.some(function(element, index, array) {
+    return (element === 11);
+});
+
+console.log(meetCondition) // true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;Array.prototype.reduce()&lt;/code&gt; method run a function against an accumulator for each element until reduce to one single value.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var nums = [100, 200, 300, 400];
+
+nums.reduce(function(a, b) {
+    console.log(&#39;a&#39;, a);
+    console.log(&#39;b&#39;, b);
+    console.log(&#39;result accumulated is: &#39;, a + b);
+    return a + b;
+});
+
+// output
+
+// a 100
+// b 200
+// result accumulated is: 300
+// a 300
+// b 300
+// result accumulated is: 600
+// a 600
+// b 400
+// result accumulated is: 1000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As you can see our method &lt;code&gt;Array.prototype.reduce()&lt;/code&gt; receive a function with two arguments &lt;code&gt;previous value&lt;/code&gt; and &lt;code&gt;current value&lt;/code&gt; a + b which the result turns into the &lt;code&gt;accumulator&lt;/code&gt; a and then calculate this result against the next in line which is b and so on so forth. &lt;br&gt;
+You can also pass &lt;code&gt;initial value&lt;/code&gt; where it&#39;s going to turn into the &lt;code&gt;previous value&lt;/code&gt; and the original &lt;code&gt;previous value&lt;/code&gt; turn into &lt;code&gt;current value&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var nums = [100, 200, 300, 400];
+
+nums.reduce(function(a, b) {
+    console.log(&#39;a&#39;, a);
+    console.log(&#39;b&#39;, b);
+    console.log(&#39;result accumulated is: &#39;, a + b);
+    return a + b;
+}, 200);
+
+// output
+
+// a 200
+// b 100
+// result accumulated is: 300
+// a 300
+// b 200
+// result accumulated is: 500
+// a 500
+// b 300
+// result accumulated is: 800
+// a 800
+// b 400
+// result accumulated is: 1200
+// 1200
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There&#39;s also the possibility to use &lt;code&gt;Array.prototype.reduceRight()&lt;/code&gt; which is going to perform the function on each element of the array from the end to start.&lt;/p&gt;
+
+&lt;p&gt;the &lt;code&gt;Array.prototype.map()&lt;/code&gt; method are going to return a new Array and works the same way &lt;code&gt;Array.prototype.forEach()&lt;/code&gt; method works but return a new Array as the difference between the two methods.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
+
+var newArr = dogs.map(function(value, index, array) {
+    console.log(&#39;Dog breed: &#39; + value + &#39;, position: &#39; + index);
+    return value;
+});
+
+console.log(newArr);
+
+// outputs
+// Dog breed: Alaskan Klee Kai, position: 0
+// Dog breed: American Bulldog, position: 1
+// Dog breed: Pitbull, position: 2 
+
+// [&quot;Alaskan Klee Kai&quot;, &quot;American Bulldog&quot;, &quot;Pitbull&quot;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;Array.prototype.filter()&lt;/code&gt; method work almost the same way as &lt;code&gt;Array.prototype.every()&lt;/code&gt; but instead return an Array with the elements that met the condition &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+var numsLessThan5 = nums.filter(function(element, index, array) {
+    return (element &lt; 5);
+});
+
+console.log(numsLessThan5) // [0, 1, 2, 3, 4] 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;That&#39;s it&lt;/h3&gt;
+
+&lt;p&gt;I hope you have brush up on your Array knowledge being aware of we can use and will use more complex approaches applying some of the topics I covered on this post. &lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;* Don&#39;t be shy. I appreciate any improvement and/or fix.&lt;/small&gt;&lt;/p&gt;
+</description>
+				<published>2014-09-03 00:00:00 -0500</published>
+				<link>http://bymichaellancaster.com//blog/javascript-data-structure-algorithms-series-ep2-arrays</link>
+			</item>
+		
+			<item>
 				<title>Javascript Object Oriented simple form validation</title>
 				<description>&lt;p&gt;Today I want to show you how to build a simple form validation with Object Oriented programming in Javascript.&lt;/p&gt;
 
@@ -170,19 +598,19 @@ Also note that in ES6 this OO Approach are going to very clear on how to use the
 		
 			<item>
 				<title>Ep.1 Data Structures and Algorithms with JS</title>
-				<description>&lt;p&gt;I don&#39;t have officially a Computer Science degree.. But clearly nowadays you wont need a (fancy) degree to be successful. You just need to be passionated to what you do and always want to be better/evolve.&lt;/p&gt;
+				<description>&lt;p&gt;I don&#39;t have officially a Computer Science degree.. But clearly nowadays you wont need a degree as engineer. You just need to be passionated to what you do and have that eager to learn and always evolve.&lt;/p&gt;
 
-&lt;p&gt;That being said I have been always trying to learn and evolve to be better on what I do which I love. And when I stop to think I remember that three years ago everything started and so many things was learned and as well so many things was forgotten to give focus to new knowledge.&lt;/p&gt;
+&lt;p&gt;That being said I have been always trying to learn and evolve to be better on what I do which I&#39;m passionated about.&lt;/p&gt;
 
-&lt;p&gt;Web applications has evolved to a much complex system and with that Developers/Engineers are being &amp;quot;forced&amp;quot; to solve problems (could be the other way around) applying concepts of pure Computer Science which before you would just see on systems/programs using languages such as C, C++, Java and so on.&lt;/p&gt;
+&lt;p&gt;Anyway. Web applications has evolved to a much complex system and with that Developers/Engineers are being &amp;quot;forced&amp;quot; to solve problems (could be the other way around) applying concepts of Computer Science which before you would just see on systems/programs using languages such as C, C++, Java and so on.&lt;/p&gt;
 
-&lt;p&gt;What I want to do here it&#39;s not just help me learn more about it but also share the basics of Data Structures and Algorithms exploring some concepts with Javascript where what kind of Data Structure is more efficient than other or when certain Algorithm perform better than others.&lt;/p&gt;
+&lt;p&gt;What I want to do here it&#39;s not just help me improve/evolve my knowledge also share the basics of Data Structures and Algorithms exploring some concepts with Javascript where what kind of Data Structure is more efficient than other or when certain Algorithm perform better than others.&lt;/p&gt;
 
-&lt;p&gt;I&#39;m not a Computer Scientist and this Series of posts wont be very advanced but I&#39;m sure it will be worth.&lt;/p&gt;
+&lt;p&gt;I&#39;m not a Computer Scientist and this Series of posts wont be very advanced but I&#39;m sure will be worthwhile.&lt;/p&gt;
 
 &lt;p&gt;Cheers!&lt;/p&gt;
 
-&lt;p&gt;&lt;small&gt;* the mainly inspirationfor this series is based on the book &lt;a href=&quot;http://www.amazon.com/Structures-Algorithms-JavaScript-Michael-McMillan/dp/1449364934/ref=sr_1_1?ie=UTF8&amp;qid=1407385377&amp;sr=8-1&amp;keywords=data+structures+and+algorithms+in+javascript&quot; title=&quot;Data Structures and Algorithms with JavaScript&quot; target=&quot;_blank&quot;&gt;Data Structures and Algorithms with JavaScript&lt;/a&gt; but also articles/posts and videos to make sure that anything is misunderstood.&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;* the mainly inspiration for this series is based on the book &lt;a href=&quot;http://www.amazon.com/Structures-Algorithms-JavaScript-Michael-McMillan/dp/1449364934/ref=sr_1_1?ie=UTF8&amp;qid=1407385377&amp;sr=8-1&amp;keywords=data+structures+and+algorithms+in+javascript&quot; title=&quot;Data Structures and Algorithms with JavaScript&quot; target=&quot;_blank&quot;&gt;Data Structures and Algorithms with JavaScript&lt;/a&gt;, articles/posts and videos around the Web.&lt;/small&gt;&lt;/p&gt;
 </description>
 				<published>2014-08-06 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/javascript-data-structure-algorithms-series-ep1</link>
@@ -522,29 +950,6 @@ gulp.task(&#39;default&#39;, function() {
 </description>
 				<published>2014-01-06 00:00:00 -0600</published>
 				<link>http://bymichaellancaster.com//blog/why-i-like-gulpjs-more-than-gruntjs</link>
-			</item>
-		
-			<item>
-				<title>PS4 Alerts using BBY API</title>
-				<description>&lt;p&gt;Long story short.. I didn&#39;t want to check Best Buy every day to see if PS4 is available..
-So I built this Web Application &lt;a href=&quot;http://ps4alerts.herokuapp.com/&quot; target=&quot;_blank&quot; title=&quot;Be notified when PlayStation 4 is available at Bes Buy&quot;&gt;PS4 Alerts!&lt;/a&gt; to check every one (1) minute Best Buy Data and if find any PS4 available in store or online will send me an email notification with a direct link to the product.&lt;/p&gt;
-
-&lt;p&gt;I also added one feature as subscription so more people can be notified as well.&lt;/p&gt;
-
-&lt;h3&gt;Specs&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Node.js/Express.js (Backend/Server)&lt;/li&gt;
-&lt;li&gt;Socket.io (Real time communication with the client)&lt;/li&gt;
-&lt;li&gt;Handlebars.js (as backend template view)&lt;/li&gt;
-&lt;li&gt;NeDB (Database)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://bbyopen.com/&quot; target=&quot;_blank&quot; title=&quot;Best Buy open API&quot;&gt;BBYOpen API&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Be advised I built it in two nights..Enjoy!&lt;/p&gt;
-</description>
-				<published>2013-12-12 00:00:00 -0600</published>
-				<link>http://bymichaellancaster.com//blog/playstation4-alert-using-best-buy-api-nodejs-socketio-nedb</link>
 			</item>
 		
 	</channel>
