@@ -184,7 +184,7 @@ console.log(dogs); // ["Alaskan Klee Kai", "American Bulldog", "Bull Terrier", "
 console.log(removedDogs); // [] empty since no values/elements were removed
 </code></pre>
 
-My arguments are `.splice(from index, remove, enter new element)` so looking at my arguments we have insert a new value `Bull terrier` remove `0` and start at index `2`.
+Above the order of my arguments are `.splice(from index, remove, enter new element)` so looking at my arguments we have inserted a new value `Bull terrier` removed `0` and started at index `2`.
 
 <pre><code data-language="javascript">
 var dogs = ['Alaskan Klee Kai', 'American Bulldog', 'Pitbull'];
