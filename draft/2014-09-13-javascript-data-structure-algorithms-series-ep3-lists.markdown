@@ -2,7 +2,7 @@
 layout: post
 title: Ep.2 Data Structures and Algorithms with JS - Lists
 
-excerpt: Ok so let's start get into some topics we haven't been using in the usual JS world. Lists is what I'm going to talk about on this post today. Notice that this is a overview/start point for those that want to learn more about it and use on the future.
+excerpt: Let's get start and see how data structures can help us design better software solutions...today I'm going to talk briefly about Lists
 ---
 
 <div class="intro-series">
@@ -10,28 +10,13 @@ excerpt: Ok so let's start get into some topics we haven't been using in the usu
     This post is part of the series: Data Structures and Algorithms with JS therefore before continue to read I suggest you <a href="/blog/javascript-data-structure-algorithms-series-ep1/" title="Data Structures and Algorithms Ep.1">the introduction</a> to this series of posts if you haven't read yet. thanks.
 </div>
 
-Ok so let's start get into some topics we haven't been using in the usual JS world. Lists is what I'm going to talk about on this post today. Notice that this is a overview/start point for those that want to learn more about it and use on the future.
+Let's get start and see how data structures can help us design better software solutions...today I'm going to talk briefly about Lists
 
 ### Lists
 
-Answer out and loud what are lists? ... Yes that it. Lists are simply a collection of items by order/or not which could be To-Do list, Grocery shop list, Students list and so on.
+Answer out and loud what are lists? ... Yes that's it. Lists are simply a collection of items by order/or not which could be To-Do list, Grocery shop list, books list, Phone number list and so on.
 
-Lists can be what you do daily.. e.g:
-
-- Wake up
-- Breakfast
-- Brush your tooth
-- Take a shower
-- Go to work
-
-Or either a Grocery shop list
-
-- Carrots
-- Broccolis
-- Chicken
-- Orange Juice
-
-Now in computer programing lists are under the ADT (Abstract Data Type) and you are going to them when you wont perform complex tasks like ordering or search in the list.
+In computer programing lists are under the ADT (Abstract Data Type) category and are useful when search and sorted order **is not** in need which otherwise would perform a slow and complex data structure design.
 
 The list is an ordered sequence of data and each element in the list can be any data type where you are able to `insert` at beginning or after an element, `append` to the end, `read/modify` element at a position, `remove`, total elements in the list is at `listSize`, `toString` which return a string representation of the list, `toArray` which return an array representation of the list.
 
