@@ -14,11 +14,11 @@ Let's get start and see how data structures can help us design better software s
 
 ### Lists
 
-Answer out and loud what are lists? ... Yes that's it. Lists are simply a collection of items by order/or not which could be To-Do list, Grocery shop list, books list, Phone number list and so on.
+Answer out and loud what are lists? ... Yes that's it. Lists are simply a collection of items by order/or not what can be To-Do list, Grocery shop list, books list, Phone number list and so on.
 
-In computer programing lists are under the ADT (Abstract Data Type) category and are useful when search and sorted order **is not** in need which otherwise would perform a slow and complex data structure design.
+In computer programing Lists are under the ADT (Abstract Data Type) category and are useful when search and sorted order **is not** in need which otherwise would perform a slow and complex data structure design.
 
-The list is an ordered sequence of data and each element in the list can be any data type where you are able to `insert` at beginning or after an element, `append` to the end, `read/modify` element at a position, `remove`, total elements in the list is at `listSize`, `toString` which return a string representation of the list, `toArray` which return an array representation of the list.
+The List is an ordered sequence of data and each element in the List can be of any data type where you are able to `insert` at beginning or after an element, `append` to the end, `read/modify` element at a position, `remove`, total elements in the list is at `listSize`, `toString` which return a string representation of the list, `toArray` which return an array representation of the list.
 
 <pre><code data-language="javascript">
 var arr = []; // arr.length = 0
