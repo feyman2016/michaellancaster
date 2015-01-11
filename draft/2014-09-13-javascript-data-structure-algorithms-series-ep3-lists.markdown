@@ -22,18 +22,23 @@ A list is said to be `empty` when it contains no elements. The number of element
 
 The basic operations we want on a list is to increase and decrease in size adding and removing new elements..We also want to add or remove elements on any position of the list.. access the element value either to just read or change it.. Access the next or prev based on the current element.. we also want to be able to create new lists or clear one.
 
-Ok lets put our actions on the table.
+So here's our actions.
 
-- `position` Current position in the list where any action will take place
-- `current` returns the current position in the list
-- `clear` Remove all elements of the list
-- `insert` Insert an element at any position without removing another element
-- `append` Append an element to the end of the list
-- `remove` Remove an element from the list
-- `length` Number of elements in the list
-- `find` Find an element in the list
-- `front` Front set current position to first element in the list
-- `end` End set current position to last element in the list
+- `position` current position in the list where any action will take place
+- `currPos` return the position of the current element
+- `clear` remove all elements of the list
+- `insert` an element at any position without removing another element
+- `append` an element to the end of the list
+- `remove` an element from the list
+- `length` number of elements in the list
+- `find` an element in the list and return the position of the element
+- `contains` an element in the list return boolean
+- `front` set current position to first element in the list
+- `end` set current position to last element in the list
+- 'prev' set the current position one step left of the current position, no change if already at beginning
+- 'next' set the current position one step right of the current position, no change if already at end
+- `moveTo` move current position to specified position
+- `to String` return string representation of the list
 
 <pre><code data-language="javascript">
 var arr = []; // arr.length = 0
