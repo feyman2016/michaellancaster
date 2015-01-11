@@ -14,11 +14,26 @@ Let's get start and see how data structures can help us design better software s
 
 ### Lists
 
-Answer out and loud what are lists? ... Yes that's it. Lists are simply a collection of items by order/or not what can be To-Do list, Grocery shop list, books list, Phone number list and so on.
+Answer out and loud what are lists? ... Yes that's it. We all intuitively understand what lists are but to be more clear Lists are simply a collection of items therefore a To-Do list, Grocery shop list, book list, Phone number list and so on.
 
-In computer programing Lists are under the ADT (Abstract Data Type) category and are useful when search and sorted order **is not** in need which otherwise would perform a slow and complex data structure design.
+In computer programing Lists are under the ADT (Abstract Data Type) category and can have order/or not (each element has your position) where the element can be duplicated or there's no restrictions on different data types but usually assumed to have the same data type so lists are useful when search and sorted order **isn't** in need which otherwise would perform a slow and complex data structure design.
 
-The List is an ordered sequence of data and each element in the List can be of any data type where you are able to `insert` at beginning or after an element, `append` to the end, `read/modify` element at a position, `remove`, total elements in the list is at `listSize`, `toString` which return a string representation of the list, `toArray` which return an array representation of the list.
+A list is said to be `empty` when it contains no elements. The number of elements currently stored is called the `length` of the list. The beginning of the list is called the `head`, the end of the list is called the `tail`.
+
+The basic operations we want on a list is to increase and decrease in size adding and removing new elements..We also want to add or remove elements on any position of the list.. access the element value either to just read or change it.. Access the next or prev based on the current element.. we also want to be able to create new lists or clear one.
+
+Ok lets put our actions on the table.
+
+- `position` Current position in the list where any action will take place
+- `current` returns the current position in the list
+- `clear` Remove all elements of the list
+- `insert` Insert an element at any position without removing another element
+- `append` Append an element to the end of the list
+- `remove` Remove an element from the list
+- `length` Number of elements in the list
+- `find` Find an element in the list
+- `front` Front set current position to first element in the list
+- `end` End set current position to last element in the list
 
 <pre><code data-language="javascript">
 var arr = []; // arr.length = 0
