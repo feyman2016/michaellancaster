@@ -36,8 +36,8 @@ So here's our actions.
 - `contains` an element in the list return boolean
 - `front` set current position to first element in the list
 - `end` set current position to last element in the list
-- 'prev' set the current position one step left of the current position, no change if already at beginning
-- 'next' set the current position one step right of the current position, no change if already at end
+- `prev` set the current position one step left of the current position, no change if already at beginning
+- `next` set the current position one step right of the current position, no change if already at end
 - `moveTo` move current position to specified position
 - `to String` return string representation of the list
 - `getElement` return element of the current position in the list
