@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ep.2 Data Structures and Algorithms with JS - Lists
+title: Ep.3 Data Structures and Algorithms with JS - Lists
 
 excerpt: Let's get start and see how data structures can help us design better software solutions...today I'm going to talk briefly about Lists
 ---
@@ -326,6 +326,6 @@ movies.debug({
 });
 </code></pre>
 
-And this is the 3st post about Data Structures and Algorithms - Lists.
+And this is was the Ep.3 about Data Structures and Algorithms - Lists.
 
 Cheers!
