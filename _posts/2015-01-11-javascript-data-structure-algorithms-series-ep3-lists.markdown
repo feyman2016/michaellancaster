@@ -275,10 +275,10 @@ List.prototype.debug = function (options) {
         console.log('List size >>', this.listSize );
     }
     if ( options.contains ) {
-        console.log('Contains element', this.contains(options.contains) );
+        console.log('Contains element >>', this.contains(options.contains) );
     }
     if ( options.isEmpty ) {
-        console.log('is empty', this.isEmpty() );
+        console.log('is empty >>', this.isEmpty() );
     }
 }
 </code></pre>
