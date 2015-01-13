@@ -34,8 +34,8 @@ So here's our actions.
 - `length` number of elements in the list
 - `find` an element in the list and return the position of the element
 - `contains` an element in the list return boolean
-- `front` set current position to first element in the list
-- `end` set current position to last element in the list
+- `head` set current position to first element in the list
+- `tail` set current position to last element in the list
 - `prev` set the current position one step left of the current position, no change if already at beginning
 - `next` set the current position one step right of the current position, no change if already at end
 - `moveTo` move current position to specified position
@@ -174,9 +174,9 @@ List.prototype.prev = function () {
 };
 
 /**
- * Set current position on step left/back in the list
- * if not at the first element
- * @method prev
+ * Set current position on step right in the list
+ * if not at the end/tail element
+ * @method next
  */
 List.prototype.next = function () {
     if ( this.position !== (this.listSize - 1) ) {
@@ -302,10 +302,10 @@ movies.append('G.I Joe');
 movies.append('Interstellar');
 
 // move action
-movies.end();
+movies.tail();
 movies.prev();
 movies.moveTo(4);
-movies.front();
+movies.head();
 
 // delete action
 movies.remove('G.I Joe');
