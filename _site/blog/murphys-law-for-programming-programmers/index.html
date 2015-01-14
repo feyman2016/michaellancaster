@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> Basic overview of client - side templating |  Michael Lancaster Web Engineer based in Chicago - IL</title>
+    <title> Murphy's law for programmers |  Michael Lancaster Web Engineer based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" Basic overview of client - side templating |  Michael Lancaster UI Engineer based in Chicago - IL">
+    <meta name="description" content=" Murphy's law for programmers |  Michael Lancaster UI Engineer based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
-    <meta property="og:title" content="Basic overview of client - side templating by Michael Lancaster">
+    <meta property="og:title" content="Murphy's law for programmers by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
 	<meta property="og:url" content="http://www.bymichaellancaster.com">
 	<meta property="og:image" content="http://www.bymichaellancaster.com/assets/images/cat-javascript.jpg">
@@ -375,131 +375,57 @@
 
 		<article class="post">
 
-    <h2 class="ui-tit-01">Basic overview of client - side templating</h2>
+    <h2 class="ui-tit-01">Murphy's law for programmers</h2>
 
-    <span class="ui-date db">07 Apr 13</span>
+    <span class="ui-date db">21 Nov 14</span>
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. are using to render templates and show content/html, but lately about two or three years ago we could noticed that developers and companies are changing this using client side templating.</p>
-
-<h2>Server - Side templating (the common way)</h2>
-
-<p>So as I mentioned before back end technologies like Java, Ruby, PHP.. has being using templates to render content/HTML from the back to the the client side and this approach consists in literally render on the server using one of those technologies and through it into the client - side.</p>
-
-<p>Two things are very clear to me. First we have to consume the server (imagine if you have to render lots of time), Second is the bandwidth request so the template and the data has to be downloaded into the client side (slow and request bandwidth).</p>
-
-<h2>Client - Side templating (the new kid in the block?!)</h2>
-
-<p>The client side consists in removing the job of rendering on the back and adding the job to the client using Javascript that runs on each user's browser making faster web apps and adding more control for you at your end.</p>
-
-<p>It has being very helpful for Single Page Applications where you can just update an section on your website without refresh the page or download assets all over again.</p>
-
-<p>At start the client side template will use placeholders as content using it's own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.</p>
-
-<h2>Simple JSON data example</h2>
-
-<pre><code data-language="json">
-{
-  "client": {
-    "name": "Michael lancaster",
-    "name": "John Due"
-  },
-  "occupation": {
-    "description": "Front End Engineer",
-    "description": "Jornalist"
-  }
-}
-</code></pre>
-
-<p>This is very human readable right?!</p>
-
-<h2>Simple Web app example</h2>
-
-<p>Here I'm using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic.
-You can check out and download the Web app here <a href="http://git.io/tUfHyA" title="Handlebars.js app" target="_blank">http://git.io/tUfHyA</a></p>
-
-<h2>Handlebars.js template markup example</h2>
-
-<div class="fluidImg">
-<img src="/assets/images/post-images/client-side.png" alt="Brazilian developers and Christian Heilmann">
-</div>
-
-<p><br/></p>
-
-<h2>App JS file</h2>
-
-<p>On my app.js file I requested the JSON data, replaced the template placeholders, rendered/compiled the template and appended into the HTML element.</p>
-
-<pre><code data-language="javascript">
-function showNewsFromYahooAPI() {
-  $.ajax({
-        url: 'http://query.yahooapis.com/v1/public/yql?q=select%20title%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&format=json&callback=',
-        dataType: 'json'
-    }).done(function(data){
-      var
-        query = data.query.results,
-        source = $('#myTemplate').html(),
-        compiledTemplate = Handlebars.compile(source),
-        result = compiledTemplate(query);
-
-      $('#content').html(result);
-    });
-}
-
-$(function() {
-    showNewsFromYahooAPI();
-});
-</code></pre>
-
-<h2>Who uses client side templating?!</h2>
+	<div class="ui-copy"><p>Murphy's law in the life of a programmer useful for every Friday 5pm EOD.</p>
 
 <ul>
-<li>Linkedin (Dust.js)</li>
-<li>USAToday (Underscore.js)</li>
-<li>Walmart Mobile (Underscore.js)</li>
-<li>Hulu (Handlebars.js)</li>
-<li>Groupon (Mustache.js)</li>
-<li>And many, many others.</li>
+<li>1. Any given program, when running, is obsolete. </li>
+<li>2. Any given program costs more and takes longer. </li>
+<li>3. If any program is useful, it will have to be changed. </li>
+<li>4. If a program is useless, it will have to be documented. </li>
+<li>5. Any given program will expand to fill all available memory. </li>
+<li>6. The value of a program is proportional to the weight of its output. </li>
+<li>7. Program complexity always grows until it exceeds the capability of the programmer who must maintain it. </li>
+<li>8. If a test installation functions perfectly, all subsequent systems will malfunction. </li>
+<li>9. Job control cards that positively cannot be arranged in improper order will be.</li>
+<li>10. If the input editor has been designed to reject all bad input, an ingenious idiot will discover a method to get bad data past it.</li>
+<li>11. Profanity is the one language all programmers know best.</li>
+<li>12. Adding manpower to a late software project makes it later.</li>
+<li>13. A carelessly planned project takes three times longer to complete than expected; a carefully planned project takes only twice as long.</li>
+<li>14. (Lubarsky's Law of Cybernetic Entomology) There is always one more bug.</li>
+<li>15. It is impossible to make any program foolproof because fools are so ingenious.</li>
+<li>16. When things are going well, something will go wrong.</li>
+<li>17. When things just can't get any worse, they will.</li>
+<li>18. Anytime things appear to be going well, you have overlooked something.</li>
+<li>19. Test functions and their tests should be reproducible -- they should all fail in the same way.</li>
+<li>20. If it looks easy, it's tough.</li>
+<li>21. If it looks tough, it's damn near impossible.</li>
+<li>22. You always find any bug in the last place you look.</li>
+<li>23. Anything can be made to work if you fiddle with it long enough.</li>
+<li>24. A terminal usually works better if you plug it in. </li>
+<li>25. If all else fails, read the documentation.</li>
+<li>26. If you do not understand a particular word in a piece of technical writing, ignore it. The piece will make perfect sense without it.</li>
+<li>27. No matter how much you do, you'll never do enough.</li>
+<li>28. What you don't do is always more important than what you do.</li>
+<li>29. Procrastination avoids boredom; one never has the feeling that there is nothing important to do.</li>
+<li>30. Always leave room to add an explanation if it doesn't work out.</li>
+<li>31. No amount of genius can overcome a preoccupation with detail.</li>
+<li>32. Nothing is impossible for a man who doesn't have to do it himself.</li>
+<li>33. If builders built buildings the way programmers write programs, then the first woodpecker than came along would destroy civilization.</li>
+<li>34. Programmers will act rational when all other possibilities have been exhausted.</li>
 </ul>
-
-<h2>Be aware of..</h2>
-
-<ul>
-<li>Heavy rendering on the users side (devices are not that good as you think they are).</li>
-<li>Organization is king.</li>
-<li>There's logic-less and logic templates (ask yourself how complex is my template?).</li>
-</ul>
-
-<h2>Some links to client side template</h2>
-
-<p><a href="http://handlebarsjs.com/" title="Handlebarsjs" target="_blank">http://handlebarsjs.com/</a>
-  <br>
-<a href="http://mustache.github.io/" title="Mustachejs" target="_blank">http://mustache.github.io/</a>
-  <br>
-<a href="http://akdubya.github.io/dustjs/" title="Dustjs" target="_blank">http://akdubya.github.io/dustjs/</a>
-  <br>
-<a href="http://documentcloud.github.io/underscore/#template" title="Underscorejs" target="_blank">http://documentcloud.github.io/underscore/#template</a>
-  <br>
-<a href="https://github.com/jquery/jquery-tmpl" title="jQuery tmpl" target="_blank">https://github.com/jquery/jquery-tmpl</a>
-  <br>
-and many others like Jade, Haml-js, Eco, etc.</p>
-
-<h2>I suggest you read..</h2>
-
-<p>
-Smashing Magazine - Client-Side Templating <a href="http://coding.smashingmagazine.com/2012/12/05/client-side-templating/" title="Smashing magazine: client side templating" target="_blank">click here.</a>
-    <br>
-Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates <a href="http://engineering.linkedin.com/frontend/leaving-jsps-dust-moving-linkedin-dustjs-client-side-templates" title="Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates" target="_blank">click here.</a>
-    <br>
-The client-side templating throwdown: mustache, handlebars, dust.js, and more <a href="http://engineering.linkedin.com/frontend/client-side-templating-throwdown-mustache-handlebars-dustjs-and-more" title="The client-side templating throwdown: mustache, handlebars, dust.js, and more" target="_blank">click here.</a>
-
-</p>
 
 <p>Cheers!</p>
+
+<p><small>* From <a href="http://www.murphys-laws.com/murphy/murphy-computer.html" title="Murphy's law for programmers" target="_blank">Murphy's law site</a>.</small></p>
 </div>
 
-    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2013</small></span> -->
+    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2014</small></span> -->
 
             <div id="disqus_thread"></div>
 		    <script type="text/javascript">

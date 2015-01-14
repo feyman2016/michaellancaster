@@ -8,7 +8,7 @@
     <title> Ep.2 Data Structures and Algorithms with JS - Arrays |  Michael Lancaster Web Engineer based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" Ep.2 Data Structures and Algorithms with JS - Arrays |  Michael Lancaster Web Engineer based in Chicago - IL">
+    <meta name="description" content=" Ep.2 Data Structures and Algorithms with JS - Arrays |  Michael Lancaster UI Engineer based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Ep.2 Data Structures and Algorithms with JS - Arrays by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
@@ -34,9 +34,9 @@
 		<header id="header">
 			<h1 class="logo cf">
 				<a href="/" title="Michael Lancaster - Front End Developer/HTML5 Soldier">
-					<img src="/assets/images/img-profile.jpg" alt="Michael Lancaster - Front End Developer/HTML5 Soldier" class="db fl">
+					<img src="/assets/images/pic-new.jpg" width="50" height="57" alt="Michael Lancaster - UI Engineer" class="db fl">
 					<span class="tit-author db">Michael Lancaster</span>
-					<small class="role-author db">Web Engineer</small>
+					<small class="role-author db">UI Engineer</small>
 				</a>
 			</h1>
 
@@ -62,6 +62,12 @@
 		<option value="/">Home</option>
 		<option value="/about">About</option>
 		<optgroup label="Articles">
+			
+			<option value="/blog/javascript-data-structure-algorithms-series-ep3-lists">Ep.3 Data Structures and Algorithms with JS - Lists</option>
+			
+			<option value="/blog/murphys-law-for-programming-programmers">Murphy's law for programmers</option>
+			
+			<option value="/blog/migrate-jekyll-to-ghost-built-with-nodejs">Migrating Jekyll to Ghost</option>
 			
 			<option value="/blog/javascript-data-structure-algorithms-series-ep2-arrays">Ep.2 Data Structures and Algorithms with JS - Arrays</option>
 			
@@ -130,6 +136,27 @@
 
 	<!-- articles list -->
 	<ul id="articles-list" class="vh">
+		
+		<li>
+			<a href="/blog/javascript-data-structure-algorithms-series-ep3-lists" title="Ep.3 Data Structures and Algorithms with JS - Lists">
+				<h2 class="ui-tit-02">Ep.3 Data Structures and Algorithms with JS - Lists</h2>
+				<span class="ui-date">11 Jan 2015</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="/blog/murphys-law-for-programming-programmers" title="Murphy's law for programmers">
+				<h2 class="ui-tit-02">Murphy's law for programmers</h2>
+				<span class="ui-date">21 Nov 2014</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="/blog/migrate-jekyll-to-ghost-built-with-nodejs" title="Migrating Jekyll to Ghost">
+				<h2 class="ui-tit-02">Migrating Jekyll to Ghost</h2>
+				<span class="ui-date">04 Nov 2014</span>
+			</a>
+		</li>
 		
 		<li>
 			<a href="/blog/javascript-data-structure-algorithms-series-ep2-arrays" title="Ep.2 Data Structures and Algorithms with JS - Arrays">
@@ -533,7 +560,7 @@ console.log(dogs); // ["Alaskan Klee Kai", "American Bulldog", "Bull Terrier", "
 console.log(removedDogs); // [] empty since no values/elements were removed
 </code></pre>
 
-<p>My arguments are <code>.splice(from index, remove, enter new element)</code> so looking at my arguments we have insert a new value <code>Bull terrier</code> remove <code>0</code> and start at index <code>2</code>.</p>
+<p>Above the order of my arguments are <code>.splice(from index, remove, enter new element)</code> so looking at my arguments we have inserted a new value <code>Bull terrier</code> removed <code>0</code> and started at index <code>2</code>.</p>
 
 <pre><code data-language="javascript">
 var dogs = ['Alaskan Klee Kai', 'American Bulldog', 'Pitbull'];
@@ -549,7 +576,7 @@ console.log(removedDogs); // ["American Bulldog"]
 <p>So instead of use the length of an Array to add an element to the end or even harder to add an element to the beginning of an Array which you would have to iterate through the Array and shift the index from the end towards start.
 Anyway. Let's keep it simple with these two methods to add new elements to an Array <code>Array.prototype.push()</code> add to the end of an Array and <code>Array.prototype.unshift()</code> add to the beginning of an Array (Both methods accept multiple values/elements passed as arguments). <br></p>
 
-<p>The <code>push()</code> function/method add a value/element to the Array.<br>
+<p>The <code>push()</code> function/method add a value/element to the end of an Array.<br>
 Here's an example.</p>
 
 <pre><code data-language="javascript">
@@ -560,7 +587,7 @@ dogs.push('Bull Terrier');
 console.log(dogs); // ["Alaskan Klee Kai", "American Bulldog", "Pitbull", "Bull Terrier"]
 </code></pre>
 
-<p>The <code>unshift()</code> function/method add a value/element to the Array. <br>
+<p>The <code>unshift()</code> function/method add a value/element to the beginning of an Array. <br>
 Here's an example.</p>
 
 <pre><code data-language="javascript">
@@ -634,7 +661,7 @@ console.log(nums) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 <h3>Iterator methods</h3>
 
-<p>The iterator methods/functions are going to be applied for each value/element and/or returning an new array, groups of values or just a value as result of the operation.</p>
+<p>The iterator methods/functions are going to be applied for each value/element and may or may not return a new array, groups of values or just a value as result of the operation.</p>
 
 <p>First let's talk about the <code>Array.prototype.forEach()</code> which receive a callback as argument and this callback has three arguments respectively <code>element</code>, <code>index</code>, <code>array being traversed</code> going to iterate on ascending order. <br>
 Here's an example using <code>Array.prototype.forEach()</code>.</p>
@@ -736,7 +763,7 @@ nums.reduce(function(a, b) {
 
 <p>There's also the possibility to use <code>Array.prototype.reduceRight()</code> which is going to perform the function on each element of the array from the end to start.</p>
 
-<p>the <code>Array.prototype.map()</code> method are going to return a new Array and works the same way <code>Array.prototype.forEach()</code> method works but return a new Array as the difference between the two methods.</p>
+<p>the <code>Array.prototype.map()</code> method works the same way <code>Array.prototype.forEach()</code> method works but return a new Array as the difference between the two methods.</p>
 
 <pre><code data-language="javascript">
 var dogs = ['Alaskan Klee Kai', 'American Bulldog', 'Pitbull'];
@@ -756,7 +783,7 @@ console.log(newArr);
 // ["Alaskan Klee Kai", "American Bulldog", "Pitbull"]
 </code></pre>
 
-<p>The <code>Array.prototype.filter()</code> method work almost the same way as <code>Array.prototype.every()</code> but instead return an Array with the elements that met the condition <code>true</code>.</p>
+<p>The <code>Array.prototype.filter()</code> method works almost the same way as <code>Array.prototype.every()</code> but instead return an Array with the elements that met the condition <code>true</code>.</p>
 
 <pre><code data-language="javascript">
 var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -774,7 +801,7 @@ console.log(numsLessThan5) // [0, 1, 2, 3, 4]
 
 <p>Cheers!</p>
 
-<p><small>* Don't be shy. I appreciate any improvement and/or fix.</small></p>
+<p><small>* Don't be shy. I will appreciate any improvement and/or fix.</small></p>
 </div>
 
     <!-- <span class="meta"><small>By Michael Lancaster &copy; 2014</small></span> -->
