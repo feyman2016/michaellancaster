@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ep.3 Data Structures and Algorithms with JS - Lists
+title: Ep.4 Data Structures and Algorithms with JS - Stacks
 
 excerpt: Let's talk about Pringles tube today..I meant Stack data structure another ADT used to solve problems
 ---
