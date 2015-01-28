@@ -53,7 +53,7 @@ Stack.prototype.push = function(element) {
  * @method pop
  */
 Stack.prototype.pop = function() {
-  return this.stack[this.top--];
+  return this.stack[--this.top];
 }
 
 /**
