@@ -90,7 +90,7 @@ var arr = str.split(' '); // ["Michael", "lancaster", "23", "and", "developer"]
 
 There's several ways of Object copy `Shallow Copy`, `Deep Copy` and `Lazy Copy`.
 
-The `Shallow Copy` is when you assign "A = B" which has the disadvantage of when modifying Array B the Array A will also be modified with same values/elements as B no matter what. Here's an example of `Shallow Copy`.
+The `Shallow Copy` is when you assign "A = B" which has the disadvantage of when updating Array A the Array B will also be modified with same updates as A no matter what. Here's an example of `Shallow Copy`.
 
 <pre><code data-language="javascript">
 var arr1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
