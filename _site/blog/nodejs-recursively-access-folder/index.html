@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> Basic overview of client - side templating |  Michael Lancaster Web Engineer based in Chicago - IL</title>
+    <title> Accessing folder recursively with Node.js |  Michael Lancaster Web Engineer based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" Basic overview of client - side templating |  Michael Lancaster UI Engineer based in Chicago - IL">
+    <meta name="description" content=" Accessing folder recursively with Node.js |  Michael Lancaster UI Engineer based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
-    <meta property="og:title" content="Basic overview of client - side templating by Michael Lancaster">
+    <meta property="og:title" content="Accessing folder recursively with Node.js by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
 	<meta property="og:url" content="http://www.bymichaellancaster.com">
 	<meta property="og:image" content="http://www.bymichaellancaster.com/assets/images/cat-javascript.jpg">
@@ -20,6 +20,7 @@
     <!-- style -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/style/app.css">
 
     <!-- RSS feed -->
@@ -34,9 +35,9 @@
 		<header id="header">
 			<h1 class="logo cf">
 				<a href="/" title="Michael Lancaster - Front End Developer/HTML5 Soldier">
-					<img src="/assets/images/pic-new.jpg" width="50" height="57" alt="Michael Lancaster - UI Engineer" class="db fl">
+					<img src="/assets/images/pic-new.jpg" width="50" height="57" alt="Michael Lancaster - Senior Developer" class="db fl">
 					<span class="tit-author db">Michael Lancaster</span>
-					<small class="role-author db">UI Engineer</small>
+					<small class="role-author db">Senior Developer</small>
 				</a>
 			</h1>
 
@@ -46,9 +47,26 @@
 		<!-- nav -->
 		<nav id="nav">
 			<ul class="menu">
-				<li><a href="/about" title="Life, Work.." class="db">About</a></li>
-				<li><a href="#articles-list" title="Code, Technology, Random stuff and afins" class="db" id="bt-show-articles">Articles</a></li>
-				<li><a href="/lab" title="Some experiments" class="db">Lab</a></li>
+				<li>
+					<a href="/about" title="Life, Work.." class="db">
+						<i class="fa fa-user"></i> About
+					</a>
+				</li>
+				<li>
+					<a href="#articles-list" title="Code, Technology, Random stuff and afins" class="db" id="bt-show-articles">
+						<i class="fa fa-book"></i> Articles
+					</a>
+				</li>
+				<li>
+					<a href="/lab" title="Some experiments" class="db">
+						<i class="fa fa-flask"></i> Lab
+					</a>
+				</li>
+				<li>
+					<a href="/talks" title="Talks and conferences" class="db">
+						<i class="fa fa-microphone"></i> Talks
+					</a>
+				</li>
 			</ul>
 		</nav>
 		<!-- nav / end -->
@@ -62,6 +80,10 @@
 		<option value="/">Home</option>
 		<option value="/about">About</option>
 		<optgroup label="Articles">
+			
+			<option value="/blog/nodejs-recursively-access-folder">Accessing folder recursively with Node.js</option>
+			
+			<option value="/blog/javascript-data-structure-algorithms-series-ep4-stack">Ep.4 Data Structures and Algorithms with JS - Stacks</option>
 			
 			<option value="/blog/javascript-data-structure-algorithms-series-ep3-lists">Ep.3 Data Structures and Algorithms with JS - Lists</option>
 			
@@ -107,8 +129,6 @@
 			
 			<option value="/blog/introduction-to-task-runner-gruntjs">Introduction to GruntJS</option>
 			
-			<option value="/blog/basic-overview-of-client-side-templating">Basic overview of client - side templating</option>
-			
 			<option value="/blog/from-san-francisco-to-the-brazilian-developers-community">From San Francisco to the Brazilian developers community.</option>
 			
 			<option value="/blog/fluid-iframe-and-images-without-javascript-plugins">Fluid iframe without use of javascript.</option>
@@ -136,6 +156,20 @@
 
 	<!-- articles list -->
 	<ul id="articles-list" class="vh">
+		
+		<li>
+			<a href="/blog/nodejs-recursively-access-folder" title="Accessing folder recursively with Node.js">
+				<h2 class="ui-tit-02">Accessing folder recursively with Node.js</h2>
+				<span class="ui-date">28 Jan 2015</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="/blog/javascript-data-structure-algorithms-series-ep4-stack" title="Ep.4 Data Structures and Algorithms with JS - Stacks">
+				<h2 class="ui-tit-02">Ep.4 Data Structures and Algorithms with JS - Stacks</h2>
+				<span class="ui-date">26 Jan 2015</span>
+			</a>
+		</li>
 		
 		<li>
 			<a href="/blog/javascript-data-structure-algorithms-series-ep3-lists" title="Ep.3 Data Structures and Algorithms with JS - Lists">
@@ -292,13 +326,6 @@
 		</li>
 		
 		<li>
-			<a href="/blog/basic-overview-of-client-side-templating" title="Basic overview of client - side templating">
-				<h2 class="ui-tit-02">Basic overview of client - side templating</h2>
-				<span class="ui-date">07 Apr 2013</span>
-			</a>
-		</li>
-		
-		<li>
 			<a href="/blog/from-san-francisco-to-the-brazilian-developers-community" title="From San Francisco to the Brazilian developers community.">
 				<h2 class="ui-tit-02">From San Francisco to the Brazilian developers community.</h2>
 				<span class="ui-date">06 Apr 2013</span>
@@ -375,131 +402,57 @@
 
 		<article class="post">
 
-    <h2 class="ui-tit-01">Basic overview of client - side templating</h2>
+    <h2 class="ui-tit-01">Accessing folder recursively with Node.js</h2>
 
-    <span class="ui-date db">07 Apr 13</span>
+    <span class="ui-date db">28 Jan 15</span>
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. are using to render templates and show content/html, but lately about two or three years ago we could noticed that developers and companies are changing this using client side templating.</p>
-
-<h2>Server - Side templating (the common way)</h2>
-
-<p>So as I mentioned before back end technologies like Java, Ruby, PHP.. has being using templates to render content/HTML from the back to the the client side and this approach consists in literally render on the server using one of those technologies and through it into the client - side.</p>
-
-<p>Two things are very clear to me. First we have to consume the server (imagine if you have to render lots of time), Second is the bandwidth request so the template and the data has to be downloaded into the client side (slow and request bandwidth).</p>
-
-<h2>Client - Side templating (the new kid in the block?!)</h2>
-
-<p>The client side consists in removing the job of rendering on the back and adding the job to the client using Javascript that runs on each user's browser making faster web apps and adding more control for you at your end.</p>
-
-<p>It has being very helpful for Single Page Applications where you can just update an section on your website without refresh the page or download assets all over again.</p>
-
-<p>At start the client side template will use placeholders as content using it's own tags and after your JS download the JSON data another very known technology (fast and simple to read) the template will be rendered/compiled, the placeholders will be replaced to data from the JSON and lastly the HTML markup you be appended into the HTML element.</p>
-
-<h2>Simple JSON data example</h2>
-
-<pre><code data-language="json">
-{
-  "client": {
-    "name": "Michael lancaster",
-    "name": "John Due"
-  },
-  "occupation": {
-    "description": "Front End Engineer",
-    "description": "Jornalist"
-  }
-}
-</code></pre>
-
-<p>This is very human readable right?!</p>
-
-<h2>Simple Web app example</h2>
-
-<p>Here I'm using the Yahoo YQL API requesting the JSON data and rendering on the page using Handlebars.js with a little of logic.
-You can check out and download the Web app here <a href="http://git.io/tUfHyA" title="Handlebars.js app" target="_blank">http://git.io/tUfHyA</a></p>
-
-<h2>Handlebars.js template markup example</h2>
-
-<div class="fluidImg">
-<img src="/assets/images/post-images/client-side.png" alt="Brazilian developers and Christian Heilmann">
-</div>
-
-<p><br/></p>
-
-<h2>App JS file</h2>
-
-<p>On my app.js file I requested the JSON data, replaced the template placeholders, rendered/compiled the template and appended into the HTML element.</p>
+	<div class="ui-copy"><p>A very quick post on how to access folders recursively with Node.js. <br>
+This code was taken from Grunt.js src code with a slight change made by myself.</p>
 
 <pre><code data-language="javascript">
-function showNewsFromYahooAPI() {
-  $.ajax({
-        url: 'http://query.yahooapis.com/v1/public/yql?q=select%20title%20from%20rss%20where%20url%3D%22http%3A%2F%2Frss.news.yahoo.com%2Frss%2Ftopstories%22&format=json&callback=',
-        dataType: 'json'
-    }).done(function(data){
-      var
-        query = data.query.results,
-        source = $('#myTemplate').html(),
-        compiledTemplate = Handlebars.compile(source),
-        result = compiledTemplate(query);
+var fs = require('fs');
+var path = require('path');
 
-      $('#content').html(result);
-    });
-}
+// Windows?
+var win32 = process.platform === 'win32';
+// Normalize \\ paths to / paths.
+function unixifyPath(filepath) {
+  if (win32) {
+    return filepath.replace(/\\/g, '/');
+  } else {
+    return filepath;
+  }
+};
 
-$(function() {
-    showNewsFromYahooAPI();
-});
+// Recurse into a directory, executing callback for each file.
+function walk(rootdir, callback, subdir) {
+  var abspath = subdir ? path.join(rootdir, subdir) : rootdir;
+  fs.readdirSync(abspath).forEach(function(filename) {
+    var filepath = path.join(abspath, filename);
+    if (fs.statSync(filepath).isDirectory()) {
+      walk(rootdir, callback, unixifyPath(path.join(subdir || '', filename || '')));
+    } else {
+      callback(unixifyPath(filepath), rootdir, subdir, filename);
+    }
+  });
+};
+
 </code></pre>
 
-<h2>Who uses client side templating?!</h2>
+<p>How to use?</p>
 
-<ul>
-<li>Linkedin (Dust.js)</li>
-<li>USAToday (Underscore.js)</li>
-<li>Walmart Mobile (Underscore.js)</li>
-<li>Hulu (Handlebars.js)</li>
-<li>Groupon (Mustache.js)</li>
-<li>And many, many others.</li>
-</ul>
-
-<h2>Be aware of..</h2>
-
-<ul>
-<li>Heavy rendering on the users side (devices are not that good as you think they are).</li>
-<li>Organization is king.</li>
-<li>There's logic-less and logic templates (ask yourself how complex is my template?).</li>
-</ul>
-
-<h2>Some links to client side template</h2>
-
-<p><a href="http://handlebarsjs.com/" title="Handlebarsjs" target="_blank">http://handlebarsjs.com/</a>
-  <br>
-<a href="http://mustache.github.io/" title="Mustachejs" target="_blank">http://mustache.github.io/</a>
-  <br>
-<a href="http://akdubya.github.io/dustjs/" title="Dustjs" target="_blank">http://akdubya.github.io/dustjs/</a>
-  <br>
-<a href="http://documentcloud.github.io/underscore/#template" title="Underscorejs" target="_blank">http://documentcloud.github.io/underscore/#template</a>
-  <br>
-<a href="https://github.com/jquery/jquery-tmpl" title="jQuery tmpl" target="_blank">https://github.com/jquery/jquery-tmpl</a>
-  <br>
-and many others like Jade, Haml-js, Eco, etc.</p>
-
-<h2>I suggest you read..</h2>
-
-<p>
-Smashing Magazine - Client-Side Templating <a href="http://coding.smashingmagazine.com/2012/12/05/client-side-templating/" title="Smashing magazine: client side templating" target="_blank">click here.</a>
-    <br>
-Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates <a href="http://engineering.linkedin.com/frontend/leaving-jsps-dust-moving-linkedin-dustjs-client-side-templates" title="Leaving JSPs in the dust: moving LinkedIn to dust.js client-side templates" target="_blank">click here.</a>
-    <br>
-The client-side templating throwdown: mustache, handlebars, dust.js, and more <a href="http://engineering.linkedin.com/frontend/client-side-templating-throwdown-mustache-handlebars-dustjs-and-more" title="The client-side templating throwdown: mustache, handlebars, dust.js, and more" target="_blank">click here.</a>
-
-</p>
+<pre><code data-language="javascript">
+walk('./pathTofolder', function(filepath, rootdir, subdir, filename) {
+  console.log('Filepath', filepath);
+});
+</code>></pre>
 
 <p>Cheers!</p>
 </div>
 
-    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2013</small></span> -->
+    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2015</small></span> -->
 
             <div id="disqus_thread"></div>
 		    <script type="text/javascript">

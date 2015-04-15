@@ -20,6 +20,7 @@
     <!-- style -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/style/app.css">
 
     <!-- RSS feed -->
@@ -34,9 +35,9 @@
 		<header id="header">
 			<h1 class="logo cf">
 				<a href="/" title="Michael Lancaster - Front End Developer/HTML5 Soldier">
-					<img src="/assets/images/pic-new.jpg" width="50" height="57" alt="Michael Lancaster - UI Engineer" class="db fl">
+					<img src="/assets/images/pic-new.jpg" width="50" height="57" alt="Michael Lancaster - Senior Developer" class="db fl">
 					<span class="tit-author db">Michael Lancaster</span>
-					<small class="role-author db">UI Engineer</small>
+					<small class="role-author db">Senior Developer</small>
 				</a>
 			</h1>
 
@@ -46,9 +47,26 @@
 		<!-- nav -->
 		<nav id="nav">
 			<ul class="menu">
-				<li><a href="/about" title="Life, Work.." class="db">About</a></li>
-				<li><a href="#articles-list" title="Code, Technology, Random stuff and afins" class="db" id="bt-show-articles">Articles</a></li>
-				<li><a href="/lab" title="Some experiments" class="db">Lab</a></li>
+				<li>
+					<a href="/about" title="Life, Work.." class="db">
+						<i class="fa fa-user"></i> About
+					</a>
+				</li>
+				<li>
+					<a href="#articles-list" title="Code, Technology, Random stuff and afins" class="db" id="bt-show-articles">
+						<i class="fa fa-book"></i> Articles
+					</a>
+				</li>
+				<li>
+					<a href="/lab" title="Some experiments" class="db">
+						<i class="fa fa-flask"></i> Lab
+					</a>
+				</li>
+				<li>
+					<a href="/talks" title="Talks and conferences" class="db">
+						<i class="fa fa-microphone"></i> Talks
+					</a>
+				</li>
 			</ul>
 		</nav>
 		<!-- nav / end -->
@@ -62,6 +80,10 @@
 		<option value="/">Home</option>
 		<option value="/about">About</option>
 		<optgroup label="Articles">
+			
+			<option value="/blog/nodejs-recursively-access-folder">Accessing folder recursively with Node.js</option>
+			
+			<option value="/blog/javascript-data-structure-algorithms-series-ep4-stack">Ep.4 Data Structures and Algorithms with JS - Stacks</option>
 			
 			<option value="/blog/javascript-data-structure-algorithms-series-ep3-lists">Ep.3 Data Structures and Algorithms with JS - Lists</option>
 			
@@ -107,8 +129,6 @@
 			
 			<option value="/blog/introduction-to-task-runner-gruntjs">Introduction to GruntJS</option>
 			
-			<option value="/blog/basic-overview-of-client-side-templating">Basic overview of client - side templating</option>
-			
 			<option value="/blog/from-san-francisco-to-the-brazilian-developers-community">From San Francisco to the Brazilian developers community.</option>
 			
 			<option value="/blog/fluid-iframe-and-images-without-javascript-plugins">Fluid iframe without use of javascript.</option>
@@ -136,6 +156,20 @@
 
 	<!-- articles list -->
 	<ul id="articles-list" class="vh">
+		
+		<li>
+			<a href="/blog/nodejs-recursively-access-folder" title="Accessing folder recursively with Node.js">
+				<h2 class="ui-tit-02">Accessing folder recursively with Node.js</h2>
+				<span class="ui-date">28 Jan 2015</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="/blog/javascript-data-structure-algorithms-series-ep4-stack" title="Ep.4 Data Structures and Algorithms with JS - Stacks">
+				<h2 class="ui-tit-02">Ep.4 Data Structures and Algorithms with JS - Stacks</h2>
+				<span class="ui-date">26 Jan 2015</span>
+			</a>
+		</li>
 		
 		<li>
 			<a href="/blog/javascript-data-structure-algorithms-series-ep3-lists" title="Ep.3 Data Structures and Algorithms with JS - Lists">
@@ -292,13 +326,6 @@
 		</li>
 		
 		<li>
-			<a href="/blog/basic-overview-of-client-side-templating" title="Basic overview of client - side templating">
-				<h2 class="ui-tit-02">Basic overview of client - side templating</h2>
-				<span class="ui-date">07 Apr 2013</span>
-			</a>
-		</li>
-		
-		<li>
 			<a href="/blog/from-san-francisco-to-the-brazilian-developers-community" title="From San Francisco to the Brazilian developers community.">
 				<h2 class="ui-tit-02">From San Francisco to the Brazilian developers community.</h2>
 				<span class="ui-date">06 Apr 2013</span>
@@ -374,6 +401,34 @@
 	<div id="content">
 
 		
+	
+	<article class="post">
+
+		<h2 class="ui-tit-01"><a href="/blog/nodejs-recursively-access-folder" title="Accessing folder recursively with Node.js">Accessing folder recursively with Node.js</a></h2>
+		<span class="ui-date db">28 Jan 2015</span>
+	
+		<div class="ui-copy">
+			<p>A very quick post on how to access folders recursively with Node.js.</p>
+
+			<a href="/blog/nodejs-recursively-access-folder" title="Accessing folder recursively with Node.js" class="ui-a-01 dib">Read more</a>
+		</div>
+	</article>
+	
+
+	
+	<article class="post">
+
+		<h2 class="ui-tit-01"><a href="/blog/javascript-data-structure-algorithms-series-ep4-stack" title="Ep.4 Data Structures and Algorithms with JS - Stacks">Ep.4 Data Structures and Algorithms with JS - Stacks</a></h2>
+		<span class="ui-date db">26 Jan 2015</span>
+	
+		<div class="ui-copy">
+			<p>Let's talk about Pringles tube today..I meant Stack data structure another ADT used to solve problems</p>
+
+			<a href="/blog/javascript-data-structure-algorithms-series-ep4-stack" title="Ep.4 Data Structures and Algorithms with JS - Stacks" class="ui-a-01 dib">Read more</a>
+		</div>
+	</article>
+	
+
 	
 	<article class="post">
 
@@ -678,20 +733,6 @@
 			<p>Which developer never wasted time doing repetitive and boring tasks instead of being focused on what we do best "Code".</p>
 
 			<a href="/blog/introduction-to-task-runner-gruntjs" title="Introduction to GruntJS" class="ui-a-01 dib">Read more</a>
-		</div>
-	</article>
-	
-
-	
-	<article class="post">
-
-		<h2 class="ui-tit-01"><a href="/blog/basic-overview-of-client-side-templating" title="Basic overview of client - side templating">Basic overview of client - side templating</a></h2>
-		<span class="ui-date db">07 Apr 2013</span>
-	
-		<div class="ui-copy">
-			<p>Template rendering is very common on the web applications when we talk about back end development where technologies like Java, Ruby, PHP.. are using to render templates and show content/html, but lately about two or three years ago we could noticed that developers and companies are changing this using client side templating.</p>
-
-			<a href="/blog/basic-overview-of-client-side-templating" title="Basic overview of client - side templating" class="ui-a-01 dib">Read more</a>
 		</div>
 	</article>
 	

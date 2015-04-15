@@ -20,6 +20,7 @@
     <!-- style -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/style/app.css">
 
     <!-- RSS feed -->
@@ -34,9 +35,9 @@
 		<header id="header">
 			<h1 class="logo cf">
 				<a href="/" title="Michael Lancaster - Front End Developer/HTML5 Soldier">
-					<img src="/assets/images/pic-new.jpg" width="50" height="57" alt="Michael Lancaster - UI Engineer" class="db fl">
+					<img src="/assets/images/pic-new.jpg" width="50" height="57" alt="Michael Lancaster - Senior Developer" class="db fl">
 					<span class="tit-author db">Michael Lancaster</span>
-					<small class="role-author db">UI Engineer</small>
+					<small class="role-author db">Senior Developer</small>
 				</a>
 			</h1>
 
@@ -46,9 +47,26 @@
 		<!-- nav -->
 		<nav id="nav">
 			<ul class="menu">
-				<li><a href="/about" title="Life, Work.." class="db">About</a></li>
-				<li><a href="#articles-list" title="Code, Technology, Random stuff and afins" class="db" id="bt-show-articles">Articles</a></li>
-				<li><a href="/lab" title="Some experiments" class="db">Lab</a></li>
+				<li>
+					<a href="/about" title="Life, Work.." class="db">
+						<i class="fa fa-user"></i> About
+					</a>
+				</li>
+				<li>
+					<a href="#articles-list" title="Code, Technology, Random stuff and afins" class="db" id="bt-show-articles">
+						<i class="fa fa-book"></i> Articles
+					</a>
+				</li>
+				<li>
+					<a href="/lab" title="Some experiments" class="db">
+						<i class="fa fa-flask"></i> Lab
+					</a>
+				</li>
+				<li>
+					<a href="/talks" title="Talks and conferences" class="db">
+						<i class="fa fa-microphone"></i> Talks
+					</a>
+				</li>
 			</ul>
 		</nav>
 		<!-- nav / end -->
@@ -62,6 +80,10 @@
 		<option value="/">Home</option>
 		<option value="/about">About</option>
 		<optgroup label="Articles">
+			
+			<option value="/blog/nodejs-recursively-access-folder">Accessing folder recursively with Node.js</option>
+			
+			<option value="/blog/javascript-data-structure-algorithms-series-ep4-stack">Ep.4 Data Structures and Algorithms with JS - Stacks</option>
 			
 			<option value="/blog/javascript-data-structure-algorithms-series-ep3-lists">Ep.3 Data Structures and Algorithms with JS - Lists</option>
 			
@@ -107,8 +129,6 @@
 			
 			<option value="/blog/introduction-to-task-runner-gruntjs">Introduction to GruntJS</option>
 			
-			<option value="/blog/basic-overview-of-client-side-templating">Basic overview of client - side templating</option>
-			
 			<option value="/blog/from-san-francisco-to-the-brazilian-developers-community">From San Francisco to the Brazilian developers community.</option>
 			
 			<option value="/blog/fluid-iframe-and-images-without-javascript-plugins">Fluid iframe without use of javascript.</option>
@@ -136,6 +156,20 @@
 
 	<!-- articles list -->
 	<ul id="articles-list" class="vh">
+		
+		<li>
+			<a href="/blog/nodejs-recursively-access-folder" title="Accessing folder recursively with Node.js">
+				<h2 class="ui-tit-02">Accessing folder recursively with Node.js</h2>
+				<span class="ui-date">28 Jan 2015</span>
+			</a>
+		</li>
+		
+		<li>
+			<a href="/blog/javascript-data-structure-algorithms-series-ep4-stack" title="Ep.4 Data Structures and Algorithms with JS - Stacks">
+				<h2 class="ui-tit-02">Ep.4 Data Structures and Algorithms with JS - Stacks</h2>
+				<span class="ui-date">26 Jan 2015</span>
+			</a>
+		</li>
 		
 		<li>
 			<a href="/blog/javascript-data-structure-algorithms-series-ep3-lists" title="Ep.3 Data Structures and Algorithms with JS - Lists">
@@ -292,13 +326,6 @@
 		</li>
 		
 		<li>
-			<a href="/blog/basic-overview-of-client-side-templating" title="Basic overview of client - side templating">
-				<h2 class="ui-tit-02">Basic overview of client - side templating</h2>
-				<span class="ui-date">07 Apr 2013</span>
-			</a>
-		</li>
-		
-		<li>
 			<a href="/blog/from-san-francisco-to-the-brazilian-developers-community" title="From San Francisco to the Brazilian developers community.">
 				<h2 class="ui-tit-02">From San Francisco to the Brazilian developers community.</h2>
 				<span class="ui-date">06 Apr 2013</span>
@@ -377,7 +404,6 @@
 	<h1 class="ui-tit-01 tit-mg">About me</h1>
 	<!-- title / end -->
 
-	<!-- professional -->
 	<section>
 
 		<p class="ui-txt-01">
@@ -385,10 +411,9 @@
 		</p>
 
 		<p class="ui-txt-01">
-			Working as UI Engineer at <a href="http://www.leoburnett.com/" class="ui-a-01 line-through" title="Leo Burnett Worldwide/Chicago" target="_blank">Leo Burnett Worldwide</a> <a href="http://www.orbitz.com/" class="ui-a-01" title="Orbitz Worldwide - Airline Tickets, Cheap Hotels, Car Rentals, Vacations & Cruises" target="_blank">Orbitz Worldwide</a>.
+			Working as Senior Developer at <a href="http://www.isobar.com" class="ui-a-01" title="Isobar" target="_blank">Isobar</a>, previously I worked at Orbitz (UI Engineer) and Leo Burnett (Associate Web Engineer).
 			<br>
-			I was also jr Front End Engineer consultant for HP in Brazil helping JSP developers
-			<br>And worked in two other Agencies building things for various size companies in the industry of Sugar, Oleo, Bank, clothes, health, education and more.
+			I have also worked as jr Front End Engineer consultant for HP in Brazil helping JSP developers and two other Agencies building things for various size companies in the industry of Sugar, Oleo, Bank, clothes, health, education and more.
 		</p>
 
 		<p class="ui-txt-01">
@@ -400,8 +425,8 @@
 			<ul>
 				<li><strong class="ui-strong db">Specialties:</strong></li>
 				<li>- HTML5</li>
-				<li>- CSS3</li>
-				<li>- JS</li>
+				<li>- CSS3 (SASS/LESS - CSS Design patterns)</li>
+				<li>- JS (Vanilla/Angular/React/jQuery/Backbone/Grunt/Gulp/Require/Bower/Hybrid)</li>
 				<li>- Git</li>
 				<li>- Responsive Design, mobile friendly</li>
 				<li>- Performance and UI/UX.</li>
@@ -411,8 +436,9 @@
 		<p class="ui-txt-01">
 			<ul>
 				<li><strong class="ui-strong db">Current interests:</strong></li>
-				<li>- Front End Ops</li>
-				<li>- Node.js</li>
+				<li>- Node.js (Express.js/MongoDB)</li>
+				<li>- Front End Ops (deployment, CI, testing)</li>
+				<li>- Data Structures and Algorithms</li>
 			</ul>
 		</p>
 
@@ -445,6 +471,7 @@
 		</li>
 	</ul>
 
+</section>
 
 	</div>
 

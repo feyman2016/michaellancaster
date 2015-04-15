@@ -20,13 +20,14 @@
     <!-- style -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/style/app.css">
 
     <!-- RSS feed -->
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{site.baseurl}}/feed.xml" />
 </head>
 
-<body class="{% if page.title == 'About' %}about{% endif %}{% if page.title == 'Lab' %}lab{% endif %}{% if page.title == 'Home' %}home{% endif %}" data-ui-widget="{% if page.header == 'Articles' %}widget-rainbow{% endif %}">
+<body class="{% if page.title == 'About' %}about{% endif %}{% if page.title == 'Lab' %}lab{% endif %}{% if page.title == 'Talks' %}talks{% endif %}{% if page.title == 'Home' %}home{% endif %}" data-ui-widget="{% if page.header == 'Articles' %}widget-rainbow{% endif %}">
 
 	<!-- aside -->
 	<aside id="aside">
@@ -34,9 +35,9 @@
 		<header id="header">
 			<h1 class="logo cf">
 				<a href="{{site.baseurl}}/" title="Michael Lancaster - Front End Developer/HTML5 Soldier">
-					<img src="{{site.baseurl}}/assets/images/pic-new.jpg" width="50" height="57" alt="Michael Lancaster - UI Engineer" class="db fl">
+					<img src="{{site.baseurl}}/assets/images/pic-new.jpg" width="50" height="57" alt="Michael Lancaster - Senior Developer" class="db fl">
 					<span class="tit-author db">Michael Lancaster</span>
-					<small class="role-author db">UI Engineer</small>
+					<small class="role-author db">Senior Developer</small>
 				</a>
 			</h1>
 
@@ -46,9 +47,26 @@
 		<!-- nav -->
 		<nav id="nav">
 			<ul class="menu">
-				<li><a href="{{site.baseurl}}/about" title="Life, Work.." class="db">About</a></li>
-				<li><a href="#articles-list" title="Code, Technology, Random stuff and afins" class="db" id="bt-show-articles">Articles</a></li>
-				<li><a href="{{site.baseurl}}/lab" title="Some experiments" class="db">Lab</a></li>
+				<li>
+					<a href="{{site.baseurl}}/about" title="Life, Work.." class="db">
+						<i class="fa fa-user"></i> About
+					</a>
+				</li>
+				<li>
+					<a href="#articles-list" title="Code, Technology, Random stuff and afins" class="db" id="bt-show-articles">
+						<i class="fa fa-book"></i> Articles
+					</a>
+				</li>
+				<li>
+					<a href="{{site.baseurl}}/lab" title="Some experiments" class="db">
+						<i class="fa fa-flask"></i> Lab
+					</a>
+				</li>
+				<li>
+					<a href="{{site.baseurl}}/talks" title="Talks and conferences" class="db">
+						<i class="fa fa-microphone"></i> Talks
+					</a>
+				</li>
 			</ul>
 		</nav>
 		<!-- nav / end -->
@@ -67,6 +85,7 @@
 			{% endfor %}
 		</optgroup>
 		<option value="{{site.baseurl}}/lab">Lab</option>
+		<option value="{{site.baseurl}}/talks">Talks</option>
 	</select>
 	<!-- mobile navigation / end -->
 

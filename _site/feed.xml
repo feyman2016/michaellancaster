@@ -6,6 +6,176 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Accessing folder recursively with Node.js</title>
+				<description>&lt;p&gt;A very quick post on how to access folders recursively with Node.js. &lt;br&gt;
+This code was taken from Grunt.js src code with a slight change made by myself.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+var fs = require(&#39;fs&#39;);
+var path = require(&#39;path&#39;);
+
+// Windows?
+var win32 = process.platform === &#39;win32&#39;;
+// Normalize \\ paths to / paths.
+function unixifyPath(filepath) {
+  if (win32) {
+    return filepath.replace(/\\/g, &#39;/&#39;);
+  } else {
+    return filepath;
+  }
+};
+
+// Recurse into a directory, executing callback for each file.
+function walk(rootdir, callback, subdir) {
+  var abspath = subdir ? path.join(rootdir, subdir) : rootdir;
+  fs.readdirSync(abspath).forEach(function(filename) {
+    var filepath = path.join(abspath, filename);
+    if (fs.statSync(filepath).isDirectory()) {
+      walk(rootdir, callback, unixifyPath(path.join(subdir || &#39;&#39;, filename || &#39;&#39;)));
+    } else {
+      callback(unixifyPath(filepath), rootdir, subdir, filename);
+    }
+  });
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;How to use?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+walk(&#39;./pathTofolder&#39;, function(filepath, rootdir, subdir, filename) {
+  console.log(&#39;Filepath&#39;, filepath);
+});
+&lt;/code&gt;&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+</description>
+				<published>2015-01-28 00:00:00 -0600</published>
+				<link>http://bymichaellancaster.com//blog/nodejs-recursively-access-folder</link>
+			</item>
+		
+			<item>
+				<title>Ep.4 Data Structures and Algorithms with JS - Stacks</title>
+				<description>&lt;div class=&quot;intro-series&quot;&gt;
+    &lt;strong&gt;Be advised!&lt;/strong&gt; &lt;br&gt; 
+    This post is part of the series: Data Structures and Algorithms with JS therefore before continue to read I suggest you &lt;a href=&quot;/blog/javascript-data-structure-algorithms-series-ep1/&quot; title=&quot;Data Structures and Algorithms Ep.1&quot;&gt;the introduction&lt;/a&gt; to this series of posts if you haven&#39;t read yet. thanks.
+&lt;/div&gt;
+
+&lt;p&gt;Let&#39;s talk about Pringles tube today..I meant Stack data structure another ADT used to solve problems&lt;/p&gt;
+
+&lt;h3&gt;Stacks&lt;/h3&gt;
+
+&lt;p&gt;Stacks in Computer Science are not very different than in real world where is just another way to organize things.. for example let&#39;s say we have an Pringles tube so all those potatoes chips are organized as stack (LIFO - Last In First Out) which you can&#39;t have the bottom potatoes chips before eating the top of the stack and for that reason Stacks are a very good data structure because you add and remove just from one end. From the top.&lt;/p&gt;
+
+&lt;p&gt;That being said Stacks operation can be executed only from one end which is the top of the stack and the fundamental operations for Stacks are &lt;code&gt;push&lt;/code&gt; to add new element at the top of the stack, &lt;code&gt;pop&lt;/code&gt; to return and remove an element from the top of the stack.. Stacks also might have operations like &lt;code&gt;peek&lt;/code&gt; which returns the element in the top of the stack, &lt;code&gt;clear&lt;/code&gt; clean the stack removing all elements and &lt;code&gt;length&lt;/code&gt; which returns the size/length of the stack.&lt;/p&gt;
+
+&lt;p&gt;Therefore..&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;push&lt;/code&gt; add an element at the top of the stack&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pop&lt;/code&gt; return and remove an element at the top of the stack&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;peek&lt;/code&gt; return element at the top of the stack&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;clear&lt;/code&gt; clear the stack&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;length&lt;/code&gt; returns the size/length of the Stack&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That being said lets get our bellies full. I mean. our hands dirty (WAT).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+/**
+ * Stack constructor
+ * @class Stack
+ */
+function Stack() {
+    this.stack = [];
+    this.top = 0;
+}
+
+/**
+ * Add new element at the top of the stack
+ * @param element
+ * @method push
+ */
+Stack.prototype.push = function(element) {
+  this.stack[this.top++] = element;
+}
+
+/**
+ * Return and Remove element at the top of the stack
+ * @method pop
+ */
+Stack.prototype.pop = function() {
+  return this.stack[--this.top];
+}
+
+/**
+ * Clean stack
+ * @method clear
+ */
+Stack.prototype.clear = function() {
+  this.top = 0;
+  this.stack = [];
+}
+
+/**
+ * Return the size of the stack
+ * @method length
+ */
+Stack.prototype.length = function() {
+  return this.top;
+}
+
+/**
+ * Return top element in the stack
+ * @method top
+ */
+Stack.prototype.peek = function() {
+  return this.stack[this.top-1];
+}
+
+/**
+ * This method was created to log/debug the stack
+ * @debug
+ */
+Stack.prototype.debug = function (options) {
+    var options = options || {};
+        options.stack = options.stack || false;
+        options.peek = options.peek || false;
+
+    if ( options.list ) {
+        console.log(&#39;list &gt;&gt;&#39;, this.stack);
+    }
+  
+    if ( options.peek ) {
+      console.log(&#39;Top &gt;&gt;&#39;, this.peek());
+    }
+}
+
+var pringles = new Stack();
+pringles.push(&#39;potato chips 1&#39;);
+pringles.push(&#39;potato chips 2&#39;);
+pringles.push(&#39;potato chips 3&#39;);
+pringles.peek(); // returns potato chips 3
+pringles.pop();
+pringles.peek(); // returns potato chips 2
+pringles.clear();
+pringles.length(); // returns 0
+
+pringles.debug({
+  list: true,
+  peek: true
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;More examples to come on how to use Stacks but for now this was the Ep.4 about Data Structures and Algorithms - Stacks.&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+</description>
+				<published>2015-01-26 00:00:00 -0600</published>
+				<link>http://bymichaellancaster.com//blog/javascript-data-structure-algorithms-series-ep4-stack</link>
+			</item>
+		
+			<item>
 				<title>Ep.3 Data Structures and Algorithms with JS - Lists</title>
 				<description>&lt;div class=&quot;intro-series&quot;&gt;
     &lt;strong&gt;Be advised!&lt;/strong&gt; &lt;br&gt; 
@@ -490,7 +660,7 @@ var arr = str.split(&#39; &#39;); // [&quot;Michael&quot;, &quot;lancaster&quot;
 
 &lt;p&gt;There&#39;s several ways of Object copy &lt;code&gt;Shallow Copy&lt;/code&gt;, &lt;code&gt;Deep Copy&lt;/code&gt; and &lt;code&gt;Lazy Copy&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;The &lt;code&gt;Shallow Copy&lt;/code&gt; is when you assign &amp;quot;A = B&amp;quot; which has the disadvantage of when modifying Array B the Array A will also be modified with same values/elements as B no matter what. Here&#39;s an example of &lt;code&gt;Shallow Copy&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;Shallow Copy&lt;/code&gt; is when you assign &amp;quot;B = A&amp;quot; which has the disadvantage of when updating Array A the Array B will also be modified with same updates as A no matter what. Here&#39;s an example of &lt;code&gt;Shallow Copy&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
 var arr1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -1080,66 +1250,6 @@ and lots of features to come.&lt;/p&gt;
 </description>
 				<published>2014-06-19 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/soundcloud-for-desktop-win-mac-released-soundnode-app</link>
-			</item>
-		
-			<item>
-				<title>Soundnode App - Soundcloud for Desktop developer release</title>
-				<description>&lt;p&gt;Last night I decided to release as beta version for Developer a project I have been working in the last week and make available as Open Source.&lt;/p&gt;
-
-&lt;h2&gt;Intro..&lt;/h2&gt;
-
-&lt;p&gt;Three years ago I started work as a developer and one of the things I have been using since then is &lt;a href=&quot;http://www.soundcloud.com&quot; target=&quot;_blank&quot; title=&quot;Soundcloud&quot;&gt;Soundcloud&lt;/a&gt; I used to use their desktop application till the day they stopped support it. to know more about it &lt;a href=&quot;http://blog.soundcloud.com/2011/01/06/desktop/&quot; target=&quot;_blank&quot; title=&quot;Soundcloud desktop support&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Turns out that I miss my native shortcuts while listening to Soundcloud on the web browser.. Therefore I decided to solve my problem but also release as open source so contributors can suggest &amp;quot;new&amp;quot; features.. and here it is.&lt;/p&gt;
-
-&lt;h2&gt;Soundnode App&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.soundnodeapp.com&quot; target=&quot;_blank&quot; title=&quot;Soundnode App - Soundcloud for desktop&quot;&gt;Soundnode App&lt;/a&gt; is a open source project to support Soundcloud for desktop (Windows/Mac) built with Node-Webkit, Node.js Angular.js and consuming Soundcloud API.&lt;/p&gt;
-
-&lt;h2&gt;Why beta Developer release&lt;/h2&gt;
-
-&lt;p&gt;I built the core but I have been working on other projects in parallel and I still want to release Soundnode App as fast as I can to the public so I thought that the community would help to get this project going faster than one man.&lt;/p&gt;
-
-&lt;p&gt;The project is on the Github &lt;a href=&quot;https://github.com/Soundnode/soundnode-app&quot; target=&quot;_blank&quot; title=&quot;Soundnode App - Soundcloud for desktop&quot;&gt;Soundnode App&lt;/a&gt;.
-Constructive (or not) feedback is always welcome.&lt;/p&gt;
-
-&lt;p&gt;Cheers!&lt;/p&gt;
-</description>
-				<published>2014-05-13 00:00:00 -0500</published>
-				<link>http://bymichaellancaster.com//blog/soundnode-soundcloud-for-desktop-dev-release</link>
-			</item>
-		
-			<item>
-				<title>Sublime Text 3 jump to definition/method</title>
-				<description>&lt;p&gt;Quick blog post to show you how to easily add the feature goto or jump to definition on Sublime text 3 with custom shortcut&lt;/p&gt;
-
-&lt;div class=&quot;fluidImg&quot;&gt;
-    &lt;img src=&quot;/assets/images/post-images/st3-goto-definition.gif&quot; alt=&quot;Sublime Text 3 jump to definition/method&quot;&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;Simple steps&lt;/h2&gt;
-
-&lt;p&gt;In Sublime Text 3
-&lt;pre&gt;&lt;code data-language=&quot;HTML&quot;&gt;
-Sublime Text -&amp;gt; Preferences -&amp;gt; Key Bindings - User
-&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
-
-&lt;p&gt;You can add any shortcut you want since it&#39;s not in use already so you don&#39;t overwrite the default shortcut settings.
-&lt;br&gt;
-In my case I decided to use &amp;quot;shift+command+m&amp;quot;..as below.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;Javascript&quot;&gt;
-[
-    { &quot;keys&quot;: [&quot;shift+command+m&quot;], &quot;command&quot;: &quot;goto_definition&quot; }
-]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Save it and you are done. (ps: if did not work restart your Sublime Text 3).&lt;/p&gt;
-
-&lt;p&gt;Thanks.&lt;/p&gt;
-</description>
-				<published>2014-03-03 00:00:00 -0600</published>
-				<link>http://bymichaellancaster.com//blog/sublime-text-3-jump-to-definition-custom-shortcut</link>
 			</item>
 		
 	</channel>
