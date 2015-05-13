@@ -6,6 +6,84 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>What you should know about React.js</title>
+				<description>&lt;p&gt;To start I want to say to not think about the technology and old paradigms, leave what you know about developing UI&#39;s outside. Focus in the ideas implemented in the library. &lt;br&gt;
+Slides from my talk at Chicago HTML5 meetup to complement are at the end of the post.&lt;/p&gt;
+
+&lt;h3&gt;What&#39;s Reat.js?&lt;/h3&gt;
+
+&lt;p&gt;React.js is a component-based library created to build &lt;strong&gt;modular&lt;/strong&gt; and &lt;strong&gt;fast&lt;/strong&gt; UI&#39;s. React manages the DOM updates applying a concept called Virtual DOM, therefore you don&#39;t need to think about DOM manipulations anymore and manage all the states in your IU with jQuey or any other lib to manipulate the DOM. &lt;br&gt;
+The React library includes a lightweight implementation of the DOM and events System with W3C Standards.&lt;/p&gt;
+
+&lt;h3&gt;What&#39;s the Virtual DOM? and how it works?&lt;/h3&gt;
+
+&lt;p&gt;The Virtual DOM is just a lightweight Javascript Object representation of your component that React uses to diff whenever a change occurs to your component which it&#39;s going to compare your old/previous representation with your updated/new representation and isolate just the parts that changed compared with your previous Virtual DOM.
+When React need to actually render the representation in the DOM it&#39;s going to iterate through recursively generate a string with the markup and put in the document after doing that it&#39;s going to attach the events at top level as event delegation.. so you have event delegation by default.&lt;/p&gt;
+
+&lt;h3&gt;What&#39;s JSX?&lt;/h3&gt;
+
+&lt;p&gt;JSX is a xml-like sintax to write html markup in your React component..which is familiar for all front end developers and adventurers.
+JSX doesn&#39;t care about your component the only job JSX has is to compile your markup code into Javascript and will accept custom attributes but React.js itself won&#39;t render in the browser, so for that you will need data- for custom attributes, To interpreter your code you will need curly braces {}.&lt;/p&gt;
+
+&lt;h3&gt;React&#39;s lifecycle&lt;/h3&gt;
+
+&lt;p&gt;&lt;br&gt; &lt;strong&gt;Mounting/Unmounting&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The methods below are part of the mounting cycle...&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;getInitialState() // called before component is mounted, stateful components should implemet this with initial state.&lt;/li&gt;
+&lt;li&gt;getDefaultProps() // called when the component is monted render, set default props to your component before any instance is intialized&lt;/li&gt;
+&lt;li&gt;componentWillMount() // called before mounting occurs&lt;/li&gt;
+&lt;li&gt;render()&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Those methods occurs every time before you see your App in the browser.&lt;/p&gt;
+
+&lt;p&gt;And these are part of Unmonting cycle...&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;componentDidMount() // at this point React has a representation of your component&lt;/li&gt;
+&lt;li&gt;componentWillUnmount() // At this point the component has been added to the document&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The methods part of the updating lifecycle are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;componentWillReceiveNewProps(nextProps) // called when a component is receiving new props, you can setState here and render won&#39;t be called&lt;/li&gt;
+&lt;li&gt;shouldComponentUpdate(nextProps, nextState) // return false when you know the component wont receive any update, called before render method&lt;/li&gt;
+&lt;li&gt;componentWillUpdate(nextProps, nextState) // called before update occurs&lt;/li&gt;
+&lt;li&gt;render()&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and after DOM mutations&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;componentDidUpdate(); // called after updates occurs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Props vs State&lt;/h3&gt;
+
+&lt;p&gt;Parent components pass data through props to their childrens and the childrens can&#39;t change the data received from the parents. &lt;br&gt;
+You can think of props as options, configuration (immutable).
+States are mutable where when used in your component you need a default state. Try to keep your components states for less complexity over time. &lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Check out the slides to have a better understanding.&lt;/p&gt;
+
+&lt;h3&gt;Slides&lt;/h3&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;script async class=&quot;speakerdeck-embed&quot; data-id=&quot;8b2d15f2f6bb46218bbf4bf34df1f306&quot; data-ratio=&quot;1.33333333333333&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+</description>
+				<published>2015-05-12 00:00:00 -0500</published>
+				<link>http://bymichaellancaster.com//blog/intro-to-reactjs-or-what-you-should-know-html5-chicago-meetup</link>
+			</item>
+		
+			<item>
 				<title>Accessing folder recursively with Node.js</title>
 				<description>&lt;p&gt;A very quick post on how to access folders recursively with Node.js. &lt;br&gt;
 This code was taken from Grunt.js src code with a slight change made by myself.&lt;/p&gt;
@@ -1222,34 +1300,6 @@ Cheers!&lt;/p&gt;
 </description>
 				<published>2014-07-30 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/speaking-at-front-in-bh-conference-2014</link>
-			</item>
-		
-			<item>
-				<title>Soundnode App - Soundcloud for desktop released</title>
-				<description>&lt;p&gt;Soundnode App - The Soundcloud for desktop beta released! &lt;br&gt;
-That being said you download the best version to your computer &lt;a href=&quot;http://www.soundnodeapp.com&quot; target=&quot;_blank&quot; title=&quot;Soundnode App - Soundcloud for desktop&quot;&gt;here&lt;/a&gt; and &lt;strong&gt;out of the box&lt;/strong&gt; click, authenticate your user and start to listen to songs.&lt;/p&gt;
-
-&lt;div class=&quot;fluidImg&quot;&gt;
-    &lt;img src=&quot;/assets/images/post-images/soundenode-0-1-0.png&quot; alt=&quot;Sublime Text 3 jump to definition/method&quot;&gt;
-&lt;/div&gt;
-
-&lt;h2&gt;Current Features&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Search&lt;/li&gt;
-&lt;li&gt;Keyboard shortcuts (not native for this release)
-Play/Pause &lt;code&gt;command+return&lt;/code&gt; or &lt;code&gt;space&lt;/code&gt;, Prev &lt;code&gt;command+left&lt;/code&gt;, Next &lt;code&gt;command+right&lt;/code&gt;, Volume down &lt;code&gt;command+down&lt;/code&gt;, Volume up &lt;code&gt;command+up&lt;/code&gt;, Cheat-sheet &lt;code&gt;shift+?&lt;/code&gt; (ps: use ctrl for Windows/PC user)&lt;/li&gt;
-&lt;li&gt;Listen to songs from your Streams, Likes, Tracks or Playlists&lt;/li&gt;
-&lt;li&gt;Automatic update available notification&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There&#39;s still known minor bugs which you can track on the &lt;a href=&quot;https://github.com/Soundnode/soundnode-app/issues&quot; target=&quot;_blank&quot; title=&quot;Soundnode App issues list&quot;&gt;issues list&lt;/a&gt; &lt;br&gt;
-and lots of features to come.&lt;/p&gt;
-
-&lt;p&gt;Cheers!&lt;/p&gt;
-</description>
-				<published>2014-06-19 00:00:00 -0500</published>
-				<link>http://bymichaellancaster.com//blog/soundcloud-for-desktop-win-mac-released-soundnode-app</link>
 			</item>
 		
 	</channel>

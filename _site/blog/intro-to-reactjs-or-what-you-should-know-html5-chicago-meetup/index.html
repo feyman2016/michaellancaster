@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> Fluid iframe without use of javascript. |  Michael Lancaster Web Engineer based in Chicago - IL</title>
+    <title> What you should know about React.js |  Michael Lancaster Web Engineer based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" Fluid iframe without use of javascript. |  Michael Lancaster UI Engineer based in Chicago - IL">
+    <meta name="description" content=" What you should know about React.js |  Michael Lancaster UI Engineer based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
-    <meta property="og:title" content="Fluid iframe without use of javascript. by Michael Lancaster">
+    <meta property="og:title" content="What you should know about React.js by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
 	<meta property="og:url" content="http://www.bymichaellancaster.com">
 	<meta property="og:image" content="http://www.bymichaellancaster.com/assets/images/cat-javascript.jpg">
@@ -412,63 +412,86 @@
 
 		<article class="post">
 
-    <h2 class="ui-tit-01">Fluid iframe without use of javascript.</h2>
+    <h2 class="ui-tit-01">What you should know about React.js</h2>
 
-    <span class="ui-date db">12 Mar 13</span>
+    <span class="ui-date db">12 May 15</span>
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>Simple technique to make fluid iframes without use of javascript or plugins. Using this technique we have more gains in performance and simplicity.</p>
+	<div class="ui-copy"><p>To start I want to say to not think about the technology and old paradigms, leave what you know about developing UI's outside. Focus in the ideas implemented in the library. <br>
+Slides from my talk at Chicago HTML5 meetup to complement are at the end of the post.</p>
 
-<p>This is a technique of positioning a element inside of another using &quot;position: absolute;&quot; for the &quot;child&quot; and &quot;position: relative;&quot; for the &quot;wrap&quot;.</p>
+<h3>What's Reat.js?</h3>
 
-<p>(ps: Depending on your case I suggest you set height for images).</p>
+<p>React.js is a component-based library created to build <strong>modular</strong> and <strong>fast</strong> UI's. React manages the DOM updates applying a concept called Virtual DOM, therefore you don't need to think about DOM manipulations anymore and manage all the states in your IU with jQuey or any other lib to manipulate the DOM. <br>
+The React library includes a lightweight implementation of the DOM and events System with W3C Standards.</p>
 
-<h2>HTML</h2>
+<h3>What's the Virtual DOM? and how it works?</h3>
 
-<pre><code data-language="html">
-<div class="fluidMedia">
-    <iframe src="" frameborder="0"> </iframe>
-</div>
-</code></pre>
+<p>The Virtual DOM is just a lightweight Javascript Object representation of your component that React uses to diff whenever a change occurs to your component which it's going to compare your old/previous representation with your updated/new representation and isolate just the parts that changed compared with your previous Virtual DOM.
+When React need to actually render the representation in the DOM it's going to iterate through recursively generate a string with the markup and put in the document after doing that it's going to attach the events at top level as event delegation.. so you have event delegation by default.</p>
 
-<h2>CSS</h2>
+<h3>What's JSX?</h3>
 
-<pre><code data-language="css">
-.fluidMedia {
-    position: relative;
-    padding-bottom: 56.25%; /* proportion value to aspect ratio 16:9 (9 / 16 = 0.5625 or 56.25%) */
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-}
+<p>JSX is a xml-like sintax to write html markup in your React component..which is familiar for all front end developers and adventurers.
+JSX doesn't care about your component the only job JSX has is to compile your markup code into Javascript and will accept custom attributes but React.js itself won't render in the browser, so for that you will need data- for custom attributes, To interpreter your code you will need curly braces {}.</p>
 
-.fluidMedia iframe {
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-</code></pre>
+<h3>React's lifecycle</h3>
 
-<p>Example <a href="/blog/secrets-of-lea-verou-css/" title="fluid iframe example">here</a>.</p>
+<p><br> <strong>Mounting/Unmounting</strong></p>
 
-<h2>Browser support</h2>
+<p>The methods below are part of the mounting cycle...</p>
 
 <ul>
-<li>IE 7+</li>
-<li>Firefox 3.6+</li>
-<li>Chrome 6+</li>
-<li>Safari 5+</li>
+<li>getInitialState() // called before component is mounted, stateful components should implemet this with initial state.</li>
+<li>getDefaultProps() // called when the component is monted render, set default props to your component before any instance is intialized</li>
+<li>componentWillMount() // called before mounting occurs</li>
+<li>render()</li>
 </ul>
 
-<p>You can know more about it on <a href="http://alistapart.com/article/creating-intrinsic-ratios-for-video" target="_blank" title="A List Apart">A List Apart</a> great article.</p>
+<p>Those methods occurs every time before you see your App in the browser.</p>
+
+<p>And these are part of Unmonting cycle...</p>
+
+<ul>
+<li>componentDidMount() // at this point React has a representation of your component</li>
+<li>componentWillUnmount() // At this point the component has been added to the document</li>
+</ul>
+
+<p><strong>Update</strong></p>
+
+<p>The methods part of the updating lifecycle are:</p>
+
+<ul>
+<li>componentWillReceiveNewProps(nextProps) // called when a component is receiving new props, you can setState here and render won't be called</li>
+<li>shouldComponentUpdate(nextProps, nextState) // return false when you know the component wont receive any update, called before render method</li>
+<li>componentWillUpdate(nextProps, nextState) // called before update occurs</li>
+<li>render()</li>
+</ul>
+
+<p>and after DOM mutations</p>
+
+<ul>
+<li>componentDidUpdate(); // called after updates occurs</li>
+</ul>
+
+<h3>Props vs State</h3>
+
+<p>Parent components pass data through props to their childrens and the childrens can't change the data received from the parents. <br>
+You can think of props as options, configuration (immutable).
+States are mutable where when used in your component you need a default state. Try to keep your components states for less complexity over time. <br></p>
+
+<p>Check out the slides to have a better understanding.</p>
+
+<h3>Slides</h3>
+
+<p><br>
+<script async class="speakerdeck-embed" data-id="8b2d15f2f6bb46218bbf4bf34df1f306" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script></p>
 
 <p>Cheers!</p>
 </div>
 
-    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2013</small></span> -->
+    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2015</small></span> -->
 
             <div id="disqus_thread"></div>
 		    <script type="text/javascript">
