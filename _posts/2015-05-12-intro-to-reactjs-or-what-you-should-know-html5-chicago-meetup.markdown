@@ -22,7 +22,7 @@ When React needs to actually render the representation in the DOM it's going to 
 ### What's JSX?
 
 JSX is an xml-like sintax to write html markup in your React component..which is familiar for all front end developers and adventurers. <br>
-JSX doesn't care about your component; the only job JSX has is to compile your markup code into native Javascript and will accept custom attributes when using **data-**. You also need to write attributes in javascript notation **className** instead of class, **onClick** and so on. You will need curly braces {} to interpret your code in JSX.
+JSX doesn't care about your component; the only job JSX has is to compile your markup code into native Javascript and will accept custom attributes when using **data-**. You also need to write attributes in javascript notation **className** instead of class, **onClick** and so on. You will need curly braces **{}** to interpret your javascript inside JSX.
 
 ### React's lifecycle
     
