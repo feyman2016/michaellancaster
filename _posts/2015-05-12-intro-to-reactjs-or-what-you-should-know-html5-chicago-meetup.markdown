@@ -15,7 +15,7 @@ The React library includes a lightweight implementation of the DOM and events Sy
 
 ### What's the Virtual DOM and how does it work?
 
-The **Virtual DOM is just a lightweight Javascript Object representation of your component**. <br> 
+The **Virtual DOM is just a lightweight Javascript Object as a representation of your component**. <br> 
 React uses the virtual DOM (component representation) to diff whenever a change occurs to your component which it's going to compare your old/previous representation with your updated/new representation and isolate just the parts that changed compared with your previous Virtual DOM. <br>
 When React needs to actually render the representation in the DOM it's going to iterate through the components recursively generate a string with the markup and put in the document. After doing that, it's going to attach the events at the top level as even delegation... so you have event delegation by default.
 
