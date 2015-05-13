@@ -5,12 +5,12 @@ title: What you should know about React.js
 excerpt: When starting with React.js do not think forget about old paradigms, leave what you know about developing UI's outside. Focus on the ideas implemented in the library.
 ---
 
-To start I want to say to not think about the technology and old paradigms, leave what you know about developing UI's outside. Focus in the ideas implemented in the library. <br>
+To start I want to say to not think about the technology and old paradigms, leave what you know about developing UI's outside. Focus on the ideas implemented in the library. <br>
 Slides from my talk at Chicago HTML5 meetup to complement are at the end of the post.
 
-### What's Reat.js
+### What's React.js
 
-React.js is a component-based library created to build **modular** and **fast** UIs. React manages the DOM updates applying a concept called Virtual DOM, therefore you don't need to think about DOM manipulations anymore managing all the states in your IU with jQuey. <br>
+React.js is a component-based library created to build **modular** and **fast** UIs. React manages the DOM updates applying a concept called Virtual DOM, therefore you don't need to think about DOM manipulations anymore managing all the states in your UI with jQuey. <br>
 The React library includes a lightweight implementation of the DOM and events System with W3C Standards.
 
 ### What's the Virtual DOM and how does it work?
