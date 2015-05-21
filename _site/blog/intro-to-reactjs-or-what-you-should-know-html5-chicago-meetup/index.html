@@ -81,6 +81,8 @@
 		<option value="/about">About</option>
 		<optgroup label="Articles">
 			
+			<option value="/blog/soundnode-the-soundcloud-for-desktop-and-its-10-k-plus-downloads">Soundnode App and its 10k plus downloads</option>
+			
 			<option value="/blog/intro-to-reactjs-or-what-you-should-know-html5-chicago-meetup">What you should know about React.js</option>
 			
 			<option value="/blog/nodejs-recursively-access-folder">Accessing folder recursively with Node.js</option>
@@ -159,6 +161,13 @@
 
 	<!-- articles list -->
 	<ul id="articles-list" class="vh">
+		
+		<li>
+			<a href="/blog/soundnode-the-soundcloud-for-desktop-and-its-10-k-plus-downloads" title="Soundnode App and its 10k plus downloads">
+				<h2 class="ui-tit-02">Soundnode App and its 10k plus downloads</h2>
+				<span class="ui-date">21 May 2015</span>
+			</a>
+		</li>
 		
 		<li>
 			<a href="/blog/intro-to-reactjs-or-what-you-should-know-html5-chicago-meetup" title="What you should know about React.js">
@@ -418,23 +427,25 @@
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>To start I want to say to not think about the technology and old paradigms, leave what you know about developing UI's outside. Focus in the ideas implemented in the library. <br>
+	<div class="ui-copy"><p>To start I want to say to not think about the technology and old paradigms, leave what you know about developing UI's outside. Focus on the ideas implemented in the library. <br>
 Slides from my talk at Chicago HTML5 meetup to complement are at the end of the post.</p>
 
-<h3>What's Reat.js?</h3>
+<h3>What's React.js</h3>
 
-<p>React.js is a component-based library created to build <strong>modular</strong> and <strong>fast</strong> UI's. React manages the DOM updates applying a concept called Virtual DOM, therefore you don't need to think about DOM manipulations anymore and manage all the states in your IU with jQuey or any other lib to manipulate the DOM. <br>
+<p>React.js is a component-based library created to build <strong>modular</strong> and <strong>fast</strong> UIs. React manages the DOM updates applying a concept called Virtual DOM, therefore you don't need to think about DOM manipulations anymore managing all the states in your UI with jQuey. <br>
 The React library includes a lightweight implementation of the DOM and events System with W3C Standards.</p>
 
-<h3>What's the Virtual DOM? and how it works?</h3>
+<h3>What's the Virtual DOM and how does it work?</h3>
 
-<p>The Virtual DOM is just a lightweight Javascript Object representation of your component that React uses to diff whenever a change occurs to your component which it's going to compare your old/previous representation with your updated/new representation and isolate just the parts that changed compared with your previous Virtual DOM.
-When React need to actually render the representation in the DOM it's going to iterate through recursively generate a string with the markup and put in the document after doing that it's going to attach the events at top level as event delegation.. so you have event delegation by default.</p>
+<p>The <strong>Virtual DOM is just a lightweight Javascript Object as a representation of your component</strong>. <br> 
+React uses the virtual DOM (component representation) to diff whenever a change occurs to your component which it's going to compare your old/previous representation with your updated/new representation and isolate just the parts that changed compared with your previous Virtual DOM. <br>
+When React needs to actually render the representation in the DOM it's going to iterate through the components, recursively generate a string with the markup, and put in the document. After doing that, it's going to attach the events at the top level as even delegation... so you have event delegation by default.</p>
 
 <h3>What's JSX?</h3>
 
-<p>JSX is a xml-like sintax to write html markup in your React component..which is familiar for all front end developers and adventurers.
-JSX doesn't care about your component the only job JSX has is to compile your markup code into Javascript and will accept custom attributes but React.js itself won't render in the browser, so for that you will need data- for custom attributes, To interpreter your code you will need curly braces {}.</p>
+<p>JSX is an xml-like syntax to write html markup in your React component..which is familiar for all front end developers and adventurers. <br>
+JSX doesn't care about your component; the only job JSX has is to compile your markup code into native Javascript and will accept custom attributes when using <strong>data-</strong>. You also need to write attributes in javascript notation <strong>className</strong> instead of class, <strong>onClick</strong> and so on. <br>
+You will need curly braces <strong>{}</strong> to interpret your javascript inside JSX.</p>
 
 <h3>React's lifecycle</h3>
 
@@ -443,15 +454,15 @@ JSX doesn't care about your component the only job JSX has is to compile your ma
 <p>The methods below are part of the mounting cycle...</p>
 
 <ul>
-<li>getInitialState() // called before component is mounted, stateful components should implemet this with initial state.</li>
-<li>getDefaultProps() // called when the component is monted render, set default props to your component before any instance is intialized</li>
+<li>getInitialState() // called before component is mounted, stateful components should implement this with initial state.</li>
+<li>getDefaultProps() // called when the component is mounted, set default props to your component before any instance is intialized</li>
 <li>componentWillMount() // called before mounting occurs</li>
 <li>render()</li>
 </ul>
 
 <p>Those methods occurs every time before you see your App in the browser.</p>
 
-<p>And these are part of Unmonting cycle...</p>
+<p>And these are part of Unmounting cycle...</p>
 
 <ul>
 <li>componentDidMount() // at this point React has a representation of your component</li>
@@ -477,7 +488,7 @@ JSX doesn't care about your component the only job JSX has is to compile your ma
 
 <h3>Props vs State</h3>
 
-<p>Parent components pass data through props to their childrens and the childrens can't change the data received from the parents. <br>
+<p>Parent components pass data through props to their children and the children can't change the data received from the parents. <br>
 You can think of props as options, configuration (immutable).
 States are mutable where when used in your component you need a default state. Try to keep your components states for less complexity over time. <br></p>
 

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+      <loc>http://bymichaellancaster.com/blog/soundnode-the-soundcloud-for-desktop-and-its-10-k-plus-downloads</loc>
+      <lastmod>2015-05-21</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://bymichaellancaster.com/blog/intro-to-reactjs-or-what-you-should-know-html5-chicago-meetup</loc>
       <lastmod>2015-05-12</lastmod>
       <changefreq>never</changefreq>
