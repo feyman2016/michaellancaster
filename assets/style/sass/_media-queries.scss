@@ -18,31 +18,10 @@ $last_breakpoint: "max-width: 700px";
 	}
 
 	.menu a {
-		padding-left: 74px;
-		text-indent: -99999px;
-	}
 
-	.menu li:nth-child(1) a {
-		background: url(../images/icons-user.png) no-repeat 20px 40px;
-	}
-	.menu li:nth-child(1) a:hover, .about .menu li:nth-child(1) a {
-		background: #333 url(../images/icons-user.png) no-repeat 20px -100px;
-	}
-
-	//second menu
-	.menu li:nth-child(2) a {
-		background: url(../images/icons-article.png) no-repeat 20px 40px;
-	}
-	.menu li:nth-child(2) a:hover, .menu li:nth-child(2) .active {
-		background: #333 url(../images/icons-article.png) no-repeat 20px -90px;
-	}
-
-	//third menu
-	.menu li:nth-child(3) a {
-		background: url(../images/icons-lab.png) no-repeat 20px 40px;
-	}
-	.menu li:nth-child(3) a:hover, .lab .menu li:nth-child(3) a {
-		background: #333 url(../images/icons-lab.png) no-repeat 20px -87px;
+		& span {
+			display: none;
+		}
 	}
 
 	#articles-list.active {
