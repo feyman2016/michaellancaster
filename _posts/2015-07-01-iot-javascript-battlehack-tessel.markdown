@@ -30,6 +30,7 @@ The device would be linked to your user account in the website where you would h
 All claps have 1x clap for confirmation.. let's say you want to order pizza, you would clap 2x than wait 3 secs and clap again to confirm you actually want that.
 
 The tech stack:
+
 - Tessel micro-controller
 - Tessel Ambient Module
 - Node.js (websocket)

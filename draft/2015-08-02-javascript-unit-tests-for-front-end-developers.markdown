@@ -1,35 +1,27 @@
 ---
 layout: post
-title: How to start with Javascript Unit Tests
+title: Javascript Unit Test for UI developers
 
-excerpt: So there was I at Battlehack Chicago brainstorming ideas...
+excerpt: Unit tests for UI developer is a underground world, not everyone knows about it and nobody knows who does Unit Test code.
 ---
 
-### Experimenting with IoT
+Unit tests for UI developer is a underground world, not everyone knows about it and nobody knows who does Unit Test code. <br>
 
-So there was I at <a href="https://2015.battlehack.org/" title="Battlehack Chicago" target="_blank">Battlehack</a> Chicago brainstorming ideas...trying to come up with something I would have fun developing and at the same time learn something new.
+### My use case
 
-<div class="fluidImg">
-    <img src="/assets/images/post-images/battlehack-02.jpg" alt="Battlehack Chicago 2015">
-</div>
+I haven't done any real App unit tests, only trivial things like is something true/false and so on but last month I was assigned to write unit tests for a project with LOC (lines of code) around 25k lines of Javascript.
 
-<br>
+ I was working on it so I knew that my trivial knowledge in Unit Tests would not work, I had 3 days to get up to speed so I started on a Friday then spent sometime during the weekend and Monday morning researching about it.
 
-After team up with <a href="https://josephmilla.com/" title="Joseph Milla" target="_blank">Joseph Milla</a> a young and smart CS student, we both decide to build something related to IoT ending up using my <a href="https://tessel.io/" title="Tessel IoT" target="_blank">Tessel</a> micro-controller and the Tessel Ambient module.
+I found nothing very conclusive to help me get up to speed fast, so I decided to write this post to get you up to speed in Unit Tests, but after reading different sources and listen to different people I had enough information to get started.
 
-Tessel is a micro-controller with built-in wifi and support to run nodejs out-of-the-box, therefore we were good because both of us have experience with Nodejs.
+### Where to start
 
-After discuss what we should do we decide the build something called <a href="https://github.com/josephmilla/clappity" title="Clappity" target="_blank">Clappity</a>. <br>
-Clappity is a device which you plug to your wall and listen to your configured claps to order online, in our case you would be able to order Pizza, Sandwich or Burrito.
+The first thing that I would say that helped me was know the philosophy behind the unit tests.
 
-How does that work though? anyone could just clap and order without permission, right? no. <br>
-So the device would be linked to your user account in the website where you would configure what you would like to order and how many claps for that particular item.. But all claps has a plus clap for confirmation.. let's say you want to order pizza, you would clap 2x than wait 3 secs and clap again to confirm you actually want that.
+So why unit test? here's some points.
 
-The tech stack:
-- Tessel micro-controller
-- Tessel Ambient Module
-- Node.js (websocket)
-- HTML5/Javascript
+- Prevent bugs in new and/or old features
+- Server as
 
-We did not win the Battlehack but was a fun experimentation with IoT. <br>
-The code is <a href="https://github.com/josephmilla/clappity" title="Clappity Open Source" target="_blank">Open Source</a>.
+First thing that will help you think about unit tests is `test small`, when I started writing my first unit test what I did was take a function/method and test everything inside this function/method in a single unit test
