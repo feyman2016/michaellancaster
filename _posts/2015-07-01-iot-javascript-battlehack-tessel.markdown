@@ -26,7 +26,7 @@ Tessel is a micro-controller with built-in wifi and support to run nodejs out-of
 ### How does it that work? 
 
 Anyone could just clap and order without permission, right? no. <br>
-The device would be linked to your user account in the website where you would have the user configuration to what to order and how many claps. <br>
+The device would be linked to your user account in the website where you would have access to order options and how many claps they require through the user configuration. <br>
 All claps have 1x clap for confirmation.. let's say you want to order pizza, you would clap 2x than wait 3 secs and clap again to confirm you actually want that.
 
 The tech stack:
