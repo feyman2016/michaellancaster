@@ -6,6 +6,41 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>IoT for fun and Lazyness</title>
+				<description>&lt;h3&gt;Experimenting with IoT&lt;/h3&gt;
+
+&lt;p&gt;So there was I at &lt;a href=&quot;https://2015.battlehack.org/&quot; title=&quot;Battlehack Chicago&quot; target=&quot;_blank&quot;&gt;Battlehack&lt;/a&gt; Chicago brainstorming ideas...trying to come up with something I would have fun developing and at the same time learn something new.&lt;/p&gt;
+
+&lt;div class=&quot;fluidImg&quot;&gt;
+    &lt;img src=&quot;/assets/images/post-images/battlehack-02.jpg&quot; alt=&quot;Battlehack Chicago 2015&quot;&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;After team up with &lt;a href=&quot;https://josephmilla.com/&quot; title=&quot;Joseph Milla&quot; target=&quot;_blank&quot;&gt;Joseph Milla&lt;/a&gt; a young and smart CS student, we both decide to build something related to IoT ending up using my &lt;a href=&quot;https://tessel.io/&quot; title=&quot;Tessel IoT&quot; target=&quot;_blank&quot;&gt;Tessel&lt;/a&gt; micro-controller and the Tessel Ambient module.&lt;/p&gt;
+
+&lt;p&gt;Tessel is a micro-controller with built-in wifi and support to run nodejs out-of-the-box, therefore we were good because both of us have experience with Nodejs.&lt;/p&gt;
+
+&lt;p&gt;After discuss what we should do we decide the build something called &lt;a href=&quot;https://github.com/josephmilla/clappity&quot; title=&quot;Clappity&quot; target=&quot;_blank&quot;&gt;Clappity&lt;/a&gt;. &lt;br&gt;
+Clappity is a device which you plug to your wall and listen to your configured claps to order online, in our case you would be able to order Pizza, Sandwich or Burrito.&lt;/p&gt;
+
+&lt;p&gt;How does that work though? anyone could just clap and order without permission, right? no. &lt;br&gt;
+So the device would be linked to your user account in the website where you would configure what you would like to order and how many claps for that particular item.. But all claps has a plus clap for confirmation.. let&#39;s say you want to order pizza, you would clap 2x than wait 3 secs and clap again to confirm you actually want that.&lt;/p&gt;
+
+&lt;p&gt;The tech stack:
+- Tessel micro-controller
+- Tessel Ambient Module
+- Node.js (websocket)
+- HTML5/Javascript&lt;/p&gt;
+
+&lt;p&gt;We did not win the Battlehack but was a fun experimentation with IoT. &lt;br&gt;
+The code is &lt;a href=&quot;https://github.com/josephmilla/clappity&quot; title=&quot;Clappity Open Source&quot; target=&quot;_blank&quot;&gt;Open Source&lt;/a&gt;.&lt;/p&gt;
+</description>
+				<published>2015-07-01 00:00:00 -0500</published>
+				<link>http://bymichaellancaster.com//blog/iot-javascript-battlehack-tessel</link>
+			</item>
+		
+			<item>
 				<title>Soundnode App and its 10k plus downloads</title>
 				<description>&lt;p&gt;Soundnode App reached more than 10 thousand plus downloads and it&#39;s been great!&lt;/p&gt;
 
@@ -1295,24 +1330,6 @@ Also note that in ES6 this OO Approach are going to very clear on how to use the
 </description>
 				<published>2014-08-25 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/javascript-object-oriented-simple-form-validation</link>
-			</item>
-		
-			<item>
-				<title>Ep.1 Data Structures and Algorithms with JS</title>
-				<description>&lt;p&gt;I don&#39;t have officially a Computer Science degree.. But clearly nowadays you wont need a degree as engineer. You just need to be passionated to what you do and have that eager to learn and always evolve.&lt;/p&gt;
-
-&lt;p&gt;That being said I have been always trying to learn and evolve to be better on what I do which I&#39;m passionate about so here&#39;s something else I&#39;m improving.&lt;/p&gt;
-
-&lt;p&gt;Web applications has evolved to a much complex system and with that Developers/Engineers are being &amp;quot;forced&amp;quot; to solve problems (could be the other way around) applying concepts of Computer Science which before you would just see on systems/programs using languages such as C, C++, Java and so on.&lt;/p&gt;
-
-&lt;p&gt;What I want to do here it&#39;s not just help me improve/evolve my knowledge also share the basics of Data Structures and Algorithms exploring some concepts with Javascript where what kind of Data Structure is more efficient than other or when certain Algorithm perform better than others.&lt;/p&gt;
-
-&lt;p&gt;I&#39;m not a Computer Scientist and this Series of posts wont be very advanced but I&#39;m sure will be worthwhile.&lt;/p&gt;
-
-&lt;p&gt;Cheers!&lt;/p&gt;
-</description>
-				<published>2014-08-06 00:00:00 -0500</published>
-				<link>http://bymichaellancaster.com//blog/javascript-data-structure-algorithms-series-ep1</link>
 			</item>
 		
 	</channel>

@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> How become better developer |  Michael Lancaster Web Engineer based in Chicago - IL</title>
+    <title> IoT for fun and Lazyness |  Michael Lancaster Web Engineer based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" How become better developer |  Michael Lancaster UI Engineer based in Chicago - IL">
+    <meta name="description" content=" IoT for fun and Lazyness |  Michael Lancaster UI Engineer based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
-    <meta property="og:title" content="How become better developer by Michael Lancaster">
+    <meta property="og:title" content="IoT for fun and Lazyness by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
 	<meta property="og:url" content="http://www.bymichaellancaster.com">
 	<meta property="og:image" content="http://www.bymichaellancaster.com/assets/images/cat-javascript.jpg">
@@ -84,6 +84,8 @@
 		<option value="/">Home</option>
 		<option value="/about">About</option>
 		<optgroup label="Articles">
+			
+			<option value="/blog/iot-javascript-battlehack-tessel">IoT for fun and Lazyness</option>
 			
 			<option value="/blog/soundnode-the-soundcloud-for-desktop-and-its-10-k-plus-downloads">Soundnode App and its 10k plus downloads</option>
 			
@@ -165,6 +167,13 @@
 
 	<!-- articles list -->
 	<ul id="articles-list" class="vh">
+		
+		<li>
+			<a href="/blog/iot-javascript-battlehack-tessel" title="IoT for fun and Lazyness">
+				<h2 class="ui-tit-02">IoT for fun and Lazyness</h2>
+				<span class="ui-date">01 Jul 2015</span>
+			</a>
+		</li>
 		
 		<li>
 			<a href="/blog/soundnode-the-soundcloud-for-desktop-and-its-10-k-plus-downloads" title="Soundnode App and its 10k plus downloads">
@@ -425,22 +434,43 @@
 
 		<article class="post">
 
-    <h2 class="ui-tit-01">How become better developer</h2>
+    <h2 class="ui-tit-01">IoT for fun and Lazyness</h2>
 
-    <span class="ui-date db"></span>
+    <span class="ui-date db">01 Jul 15</span>
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>There is a lot of steps to become a better developer and one of those steps I will talk about on this post..</p>
+	<div class="ui-copy"><h3>Experimenting with IoT</h3>
 
-<h3>How to become better developer</h3>
+<p>So there was I at <a href="https://2015.battlehack.org/" title="Battlehack Chicago" target="_blank">Battlehack</a> Chicago brainstorming ideas...trying to come up with something I would have fun developing and at the same time learn something new.</p>
 
-<p>Or why you should comment your code... I have been writing code for quite a while now and one of the most important things I learned from reading and writing code is to work on understanding the code around the code, does that makes sense? if not let me explain.</p>
-
-<p>As a developers we tend to think just about code, lines of code, get things done and so on, but days or even hours later we can hate what we have written in the past, don't write code today.</p>
+<div class="fluidImg">
+    <img src="/assets/images/post-images/battlehack-02.jpg" alt="Battlehack Chicago 2015">
 </div>
 
-    <!-- <span class="meta"><small>By Michael Lancaster &copy; </small></span> -->
+<p><br></p>
+
+<p>After team up with <a href="https://josephmilla.com/" title="Joseph Milla" target="_blank">Joseph Milla</a> a young and smart CS student, we both decide to build something related to IoT ending up using my <a href="https://tessel.io/" title="Tessel IoT" target="_blank">Tessel</a> micro-controller and the Tessel Ambient module.</p>
+
+<p>Tessel is a micro-controller with built-in wifi and support to run nodejs out-of-the-box, therefore we were good because both of us have experience with Nodejs.</p>
+
+<p>After discuss what we should do we decide the build something called <a href="https://github.com/josephmilla/clappity" title="Clappity" target="_blank">Clappity</a>. <br>
+Clappity is a device which you plug to your wall and listen to your configured claps to order online, in our case you would be able to order Pizza, Sandwich or Burrito.</p>
+
+<p>How does that work though? anyone could just clap and order without permission, right? no. <br>
+So the device would be linked to your user account in the website where you would configure what you would like to order and how many claps for that particular item.. But all claps has a plus clap for confirmation.. let's say you want to order pizza, you would clap 2x than wait 3 secs and clap again to confirm you actually want that.</p>
+
+<p>The tech stack:
+- Tessel micro-controller
+- Tessel Ambient Module
+- Node.js (websocket)
+- HTML5/Javascript</p>
+
+<p>We did not win the Battlehack but was a fun experimentation with IoT. <br>
+The code is <a href="https://github.com/josephmilla/clappity" title="Clappity Open Source" target="_blank">Open Source</a>.</p>
+</div>
+
+    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2015</small></span> -->
 
             <div id="disqus_thread"></div>
 		    <script type="text/javascript">

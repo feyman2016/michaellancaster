@@ -1,0 +1,35 @@
+---
+layout: post
+title: IoT for fun and Lazyness
+
+excerpt: So there was I at Battlehack Chicago brainstorming ideas...
+---
+
+### Experimenting with IoT
+
+So there was I at <a href="https://2015.battlehack.org/" title="Battlehack Chicago" target="_blank">Battlehack</a> Chicago brainstorming ideas...trying to come up with something I would have fun developing and at the same time learn something new.
+
+<div class="fluidImg">
+    <img src="/assets/images/post-images/battlehack-02.jpg" alt="Battlehack Chicago 2015">
+</div>
+
+<br>
+
+After team up with <a href="https://josephmilla.com/" title="Joseph Milla" target="_blank">Joseph Milla</a> a young and smart CS student, we both decide to build something related to IoT ending up using my <a href="https://tessel.io/" title="Tessel IoT" target="_blank">Tessel</a> micro-controller and the Tessel Ambient module.
+
+Tessel is a micro-controller with built-in wifi and support to run nodejs out-of-the-box, therefore we were good because both of us have experience with Nodejs.
+
+After discuss what we should do we decide the build something called <a href="https://github.com/josephmilla/clappity" title="Clappity" target="_blank">Clappity</a>. <br>
+Clappity is a device which you plug to your wall and listen to your configured claps to order online, in our case you would be able to order Pizza, Sandwich or Burrito.
+
+How does that work though? anyone could just clap and order without permission, right? no. <br>
+So the device would be linked to your user account in the website where you would configure what you would like to order and how many claps for that particular item.. But all claps has a plus clap for confirmation.. let's say you want to order pizza, you would clap 2x than wait 3 secs and clap again to confirm you actually want that.
+
+The tech stack:
+- Tessel micro-controller
+- Tessel Ambient Module
+- Node.js (websocket)
+- HTML5/Javascript
+
+We did not win the Battlehack but was a fun experimentation with IoT. <br>
+The code is <a href="https://github.com/josephmilla/clappity" title="Clappity Open Source" target="_blank">Open Source</a>.
