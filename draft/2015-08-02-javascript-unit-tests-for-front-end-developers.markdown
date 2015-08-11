@@ -17,11 +17,12 @@ I found nothing very conclusive to help me get up to speed fast, so I decided to
 
 ### Where to start
 
-The first thing that I would say that helped me was know the philosophy behind the unit tests.
+The first thing that I would say helped me was try understanding the philosophy behind unit tests.
+So why unit test? here's just a few points.
 
-So why unit test? here's some points.
+- Reduce bugs (new and/or existing features)
+- Server as documentation
+- Improve Software Design (as in architectural manner)
+- Reduce fear (you can develop something without afraid to break something else)
 
-- Prevent bugs in new and/or old features
-- Server as
-
-First thing that will help you think about unit tests is `test small`, when I started writing my first unit test what I did was take a function/method and test everything inside this function/method in a single unit test
+Also, Unit tests are meant to be `small`, what I mean by that is let's say you have a function called `foo` that calls three other functions `fooUno` `fooDos` and `fooTres` and each of this three functions do different things from another, You don't want
