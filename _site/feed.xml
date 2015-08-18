@@ -6,6 +6,114 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>Javascript Unit Test for UI developers</title>
+				<description>&lt;p&gt;Unit tests for UI developers is a underground world and today we will explore this world a bit. &lt;br&gt;
+You can find the code example &lt;a href=&quot;https://github.com/weblancaster/karma-mocha-chai-sinon&quot; target=&quot;_blank&quot; title=&quot;karma-mocha-chai-sinon starter kit&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Where to start&lt;/h3&gt;
+
+&lt;p&gt;The first question you need to answer is, why unit test my code? that will give you a better understanding of why unit tests are important and useful. &lt;br&gt;
+Here a few points.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Reduce bugs (new and/or existing features)&lt;/li&gt;
+&lt;li&gt;Serve as documentation&lt;/li&gt;
+&lt;li&gt;Improve Software Design&lt;/li&gt;
+&lt;li&gt;Reduce fear (you can write code with no fear of breaking something else)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Unit tests are meant to be &lt;strong&gt;small&lt;/strong&gt; but what I mean by that is, let&#39;s say you have a function called foo() that calls two other functions fooUno() and fooDos() each function has a specific logic/goal, let&#39;s also say that one of those functions inside foo() make a XHR request.. &lt;br&gt;
+You don&#39;t want to make a XHR request because it&#39;s slow and the XHR might depend on something else from the system, but foo() require the data from the function that make XHR request, so what do you do? this scenario is very common for UI developers.&lt;/p&gt;
+
+&lt;p&gt;One of the ways to achieve isolation and small unit tests is using &lt;strong&gt;Spies&lt;/strong&gt;, &lt;strong&gt;Stubs&lt;/strong&gt; and &lt;strong&gt;Mocks&lt;/strong&gt; understanding them will help you write better unit tests, I&#39;m going to talk more about it later.&lt;/p&gt;
+
+&lt;p&gt;A good structure for unit tests is 3A&#39;s &lt;strong&gt;Arrange, Act, Assert&lt;/strong&gt; (not applicable to all scenarios), where Arrange is the set up of the object/function being tested (e.g stub a dependency), Act is when you act on the object being tested (e.g call the function) and Assert where you claim the object. (e.g assert that the function was called with xyz arguments);&lt;/p&gt;
+
+&lt;h3&gt;What tools to use&lt;/h3&gt;
+
+&lt;p&gt;Javascript ecosystem isn&#39;t like Java, .Net, C++ and other languages with established frameworks/tools for unit tests, in Javascript you will find a lot of frameworks/tools, the good part is that you will have multiple options that suits you the bad part is that most of them isn&#39;t well established.&lt;/p&gt;
+
+&lt;p&gt;In this article I&#39;m going to introduce you to the most established framework/tools I know.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Karma&lt;/strong&gt; &lt;br&gt;
+&lt;a href=&quot;http://karma-runner.github.io/0.13/index.html&quot; target=&quot;_blank&quot; title=&quot;Karma.js&quot;&gt;Karma&lt;/a&gt; is a test runner by Google/Angular team created to increase developer productivity helping on setting up the environment for testing, with features like tests in real browser, debugging for tests, plugins and more.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mocha&lt;/strong&gt; &lt;br&gt;
+The website has a good explanation, &amp;quot;&lt;a href=&quot;http://mochajs.org/&quot; target=&quot;_blank&quot; title=&quot;Mocha.js&quot;&gt;Mocha&lt;/a&gt; is a JavaScript test framework running on Node.js and the browser, making asynchronous testing simple. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;Mocha include a series of interfaces where you can choose how to write your tests in BDD, TDD, Exports, QUnit or Require.&lt;/p&gt;
+
+&lt;p&gt;We will be using the BDD interface which provide &lt;strong&gt;describe()&lt;/strong&gt;, &lt;strong&gt;context()&lt;/strong&gt; (same as describe, just a way to keep tests easier to read and organized), &lt;strong&gt;before()&lt;/strong&gt;, &lt;strong&gt;after()&lt;/strong&gt;, &lt;strong&gt;beforeEach()&lt;/strong&gt;, &lt;strong&gt;afterEach()&lt;/strong&gt; and &lt;strong&gt;it()&lt;/strong&gt;, this introduce a great design structure for unit tests.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Chai&lt;/strong&gt; &lt;br&gt;
+&lt;a href=&quot;http://chaijs.com/&quot; target=&quot;_blank&quot; title=&quot;Chai.js&quot;&gt;Chai&lt;/a&gt; is a BDD/TDD assertion library which has several styles &lt;strong&gt;assert&lt;/strong&gt;, &lt;strong&gt;should&lt;/strong&gt; or &lt;strong&gt;expect&lt;/strong&gt;, this makes very flexible for the developer to express the unit test.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sinon&lt;/strong&gt; &lt;br&gt;
+&lt;a href=&quot;http://sinonjs.org/&quot; target=&quot;_blank&quot; title=&quot;Sinon.js&quot;&gt;Sinon&lt;/a&gt; is the library that implements features like stubs, spies, mocks and things like fake XHR and server.&lt;/p&gt;
+
+&lt;h3&gt;Spies, Stubs &amp;amp; Mocks&lt;/h3&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;strong&gt;Spies&lt;/strong&gt; &lt;br&gt;
+The word basically describe what the concept means, you spy on a function and then you can assert your test if the function was called, how many times was called if called, what the parameters was called with and what was returned.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+context(&#39;Spy&#39;, function() {
+    it(&#39;spy on a function&#39;, function() {
+        var addSpy = sinon.spy(add());
+
+        addSpy(2, 4);
+
+        expect(addSpy.called).to.be.true;
+
+        addSpy.reset(); // reset spy to it&#39;s normal state
+    });
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Stubs&lt;/strong&gt; &lt;br&gt;
+This concept is used to isolate a function from the rest of the App, stubs are going to take place of the component and return consistent results making easier to write tests, stubs are also spies.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+context(&#39;Stub&#39;, function() {
+    it(&#39;stub function&#39;, function() {
+        var result;
+        var isTruthyStub = sinon.stub(isTruthy()).returns(true);
+        var obj = {
+            &quot;name&quot;: &quot;John Doe&quot;,
+            &quot;age&quot;: 24
+        };
+
+        result = person(&#39;John Doe&#39;, 24);
+
+        expect(result).to.be.deep.equal(obj);
+
+        isTruthyStub.reset(); // reset spy to it&#39;s normal state
+    })
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Mocks&lt;/strong&gt; &lt;br&gt;
+Mocks are very similar to spies and stubs with the difference you need to define all things that need to happen before you assert and when you are done with all the actions defined you then assert everything happened as planned/defined.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+ context(&#39;Mock&#39;, function() {
+    it(&#39;mock function&#39;, function() {
+        var multiplyMock = sinon.mock(obj);
+
+        multiplyMock.expects(&#39;foo&#39;).once();
+
+        obj.foo();
+
+        multiplyMock.verify();
+    });
+});
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+				<published>2015-08-02 00:00:00 -0500</published>
+				<link>http://bymichaellancaster.com//blog/client-side-javascript-unit-tests-for-front-end-developers</link>
+			</item>
+		
+			<item>
 				<title>IoT for fun and Lazyness</title>
 				<description>&lt;h3&gt;Experimenting with IoT&lt;/h3&gt;
 
@@ -17,21 +125,28 @@
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;After team up with &lt;a href=&quot;https://josephmilla.com/&quot; title=&quot;Joseph Milla&quot; target=&quot;_blank&quot;&gt;Joseph Milla&lt;/a&gt; a young and smart CS student, we both decide to build something related to IoT ending up using my &lt;a href=&quot;https://tessel.io/&quot; title=&quot;Tessel IoT&quot; target=&quot;_blank&quot;&gt;Tessel&lt;/a&gt; micro-controller and the Tessel Ambient module.&lt;/p&gt;
+&lt;p&gt;After teaming up with &lt;a href=&quot;https://josephmilla.com/&quot; title=&quot;Joseph Milla&quot; target=&quot;_blank&quot;&gt;Joseph Milla&lt;/a&gt; a young and smart CS student, After discussing what we should do we decided to build something related to IoT so we ended up using my &lt;a href=&quot;https://tessel.io/&quot; title=&quot;Tessel IoT&quot; target=&quot;_blank&quot;&gt;Tessel&lt;/a&gt;micro-controller and the Tessel Ambient module.&lt;/p&gt;
 
 &lt;p&gt;Tessel is a micro-controller with built-in wifi and support to run nodejs out-of-the-box, therefore we were good because both of us have experience with Nodejs.&lt;/p&gt;
 
-&lt;p&gt;After discuss what we should do we decide the build something called &lt;a href=&quot;https://github.com/josephmilla/clappity&quot; title=&quot;Clappity&quot; target=&quot;_blank&quot;&gt;Clappity&lt;/a&gt;. &lt;br&gt;
-Clappity is a device which you plug to your wall and listen to your configured claps to order online, in our case you would be able to order Pizza, Sandwich or Burrito.&lt;/p&gt;
+&lt;h3&gt;Clappity&lt;/h3&gt;
 
-&lt;p&gt;How does that work though? anyone could just clap and order without permission, right? no. &lt;br&gt;
-So the device would be linked to your user account in the website where you would configure what you would like to order and how many claps for that particular item.. But all claps has a plus clap for confirmation.. let&#39;s say you want to order pizza, you would clap 2x than wait 3 secs and clap again to confirm you actually want that.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/josephmilla/clappity&quot; title=&quot;Clappity&quot; target=&quot;_blank&quot;&gt;Clappity&lt;/a&gt; is a device that you plug into your wall and listen to your configured claps to trigger an online order, in our case you would be able to order a pizza, sandwich or burrito.&lt;/p&gt;
 
-&lt;p&gt;The tech stack:
-- Tessel micro-controller
-- Tessel Ambient Module
-- Node.js (websocket)
-- HTML5/Javascript&lt;/p&gt;
+&lt;h3&gt;How does it that work?&lt;/h3&gt;
+
+&lt;p&gt;Anyone could just clap and order without permission, right? no. &lt;br&gt;
+The device would be linked to your user account in the website where you would have access to order options and how many claps they require through the user configuration. &lt;br&gt;
+All claps have 1x clap for confirmation.. let&#39;s say you want to order pizza, you would clap 2x than wait 3 secs and clap again to confirm you actually want that.&lt;/p&gt;
+
+&lt;p&gt;The tech stack:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tessel micro-controller&lt;/li&gt;
+&lt;li&gt;Tessel Ambient Module&lt;/li&gt;
+&lt;li&gt;Node.js (websocket)&lt;/li&gt;
+&lt;li&gt;HTML5/Javascript&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;We did not win the Battlehack but was a fun experimentation with IoT. &lt;br&gt;
 The code is &lt;a href=&quot;https://github.com/josephmilla/clappity&quot; title=&quot;Clappity Open Source&quot; target=&quot;_blank&quot;&gt;Open Source&lt;/a&gt;.&lt;/p&gt;
@@ -1167,169 +1282,6 @@ console.log(numsLessThan5) // [0, 1, 2, 3, 4]
 </description>
 				<published>2014-09-03 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/javascript-data-structure-algorithms-series-ep2-arrays</link>
-			</item>
-		
-			<item>
-				<title>Javascript Object Oriented simple form validation</title>
-				<description>&lt;p&gt;Today I want to show you how to build a simple form validation with Object Oriented programming in Javascript.&lt;/p&gt;
-
-&lt;h3&gt;Why Object Oriented&lt;/h3&gt;
-
-&lt;p&gt;Object Oriented programming aim to provide a model of programming based on Objects where an Object has both behaviors state (data) and behavior (code). &lt;br&gt;
-Therefore focus on Objects rather than actions and data rather than logic with that our advantages are a more clear modular structure, easier to maintain and modify since we can create more objects with small differences from the exiting ones.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The core concepts&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Objects&lt;/li&gt;
-&lt;li&gt;Classes&lt;/li&gt;
-&lt;li&gt;Data Abstraction and Encapsulation&lt;/li&gt;
-&lt;li&gt;Inheritance&lt;/li&gt;
-&lt;li&gt;Polymorphism&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;OO form validation&lt;/h2&gt;
-
-&lt;p&gt;Here&#39;s our simple form validation in javascript based on Object Oriented programming. &lt;br&gt;
-Our scenario: validate fields when form is submitted.&lt;/p&gt;
-
-&lt;p&gt;First things first... Let&#39;s create our class called &lt;code&gt;Validator&lt;/code&gt; and also create our constructor called as method &lt;code&gt;constructor&lt;/code&gt; which is responsible to setup our basic data.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;Javascript&quot;&gt;
-;(function(window, undefined) {
-  
-  var Validator = {
-    
-    constructor: function(form, config) {
-      this._elForm = form;
-      this._els = config.fields || {};
-    }
-  
-  }
-  
-})(window, undefined);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now let&#39;s create our initializer called &lt;code&gt;init&lt;/code&gt; and initialize the program adding a listener to the form using the info/data was passed to our constructor. &lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;Javascript&quot;&gt;
-;(function(window, undefined) {
-  
-  var Validator = {
-    
-    constructor: function(form, config) {
-      this._elForm = form;
-      this._els = config.fields || {};
-      
-      this.init();
-    },
-    
-    init: function() {
-      this.addFormListener();
-    },
-    
-    addFormListener: function() {
-        var formSelector = this._elForm
-          , elForm = document.querySelector(formSelector);
-          
-          elForm.addEventListener(&#39;submit&#39;, this.validate.bind(this), false);
-    }
-  
-  }
-  
-})(window, undefined);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The method called &lt;code&gt;addFormListener&lt;/code&gt; does what it&#39;s named.. we add a listener to the form to when submitted trigger a method and also chain a method called &lt;code&gt;bind&lt;/code&gt; which call the method &lt;code&gt;this.validate&lt;/code&gt; with the context of the class instead of send the object clicked &lt;code&gt;form&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;The example below we are going add the method to &lt;code&gt;validate&lt;/code&gt; which is responsible to test against the field requirement &lt;code&gt;required&lt;/code&gt;, &lt;code&gt;empty&lt;/code&gt; or &lt;code&gt;maxlength&lt;/code&gt; and then add a CSS class to the input field.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;Javascript&quot;&gt;
-;(function(window, undefined) {
-  
-  var Validator = {
-    
-    constructor: function(form, config) {
-      this._elForm = form;
-      this._els = config.fields || {};
-      
-      this.init();
-    },
-    
-    init: function() {
-      this.addFormListener();
-    },
-    
-    addFormListener: function() {
-        var formSelector = this._elForm
-          , elForm = document.querySelector(formSelector);
-          
-          elForm.addEventListener(&#39;submit&#39;, this.validate.bind(this), false);
-    },
-    
-    validate: function(e) {
-      var elFields = this._els;
-      
-      for ( var field in elFields ) {
-        var el = document.querySelector(field)
-          , elVal = el.value;
-          
-        if ( elFields[field].require || elVal === &#39;&#39; || elVal.length &gt; elFields[field].maxlength ) {
-          el.classList.add(&#39;invalid&#39;);
-        }
-      }
-      
-      e.preventDefault();
-    }
-  
-  }
-  
-})(window, undefined);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We simply create a new object which are going to inherit directly from our class/object and call the constructor passing the &lt;code&gt;form ID&lt;/code&gt; and an Object containing an Object called &lt;code&gt;fields&lt;/code&gt; which contain all fields that need to be validate with our requirements &lt;code&gt;required&lt;/code&gt; and &lt;code&gt;maxlength&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;Javascript&quot;&gt;
-var form1 = Object.create(Validator);
-form1.constructor(&#39;#form1&#39;, {
-  fields: {
-    &#39;#fname&#39;: {
-      required: true,
-      maxlength: 20
-    },
-    &#39;#lname&#39;: {
-      maxlength: 10
-    }
-  }
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As a reference the HTML markup looks like this.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;html&quot;&gt;
-&lt;form id=&quot;form1&quot;&gt;
-    &lt;fieldset&gt;
-        &lt;legend&gt;Person&lt;/legend&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;
-            &lt;input type=&quot;text&quot; name=&quot;fname&quot; id=&quot;fname&quot; /&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;lname&quot;&gt;Last name:&lt;/label&gt;
-            &lt;input type=&quot;text&quot; name=&quot;fname&quot; id=&quot;lname&quot; /&gt;
-        &lt;/p&gt;
-        &lt;input type=&quot;submit&quot; name=&quot;submit&quot; class=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
-    &lt;/fieldset&gt;
-&lt;/form&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note that we can use a different design pattern to just the &lt;code&gt;constructor&lt;/code&gt; method be accessible, but let&#39;s keep it simple. &lt;br&gt;
-Also note that in ES6 this OO Approach are going to very clear on how to use the API.&lt;/p&gt;
-
-&lt;p&gt;Cheers!&lt;/p&gt;
-</description>
-				<published>2014-08-25 00:00:00 -0500</published>
-				<link>http://bymichaellancaster.com//blog/javascript-object-oriented-simple-form-validation</link>
 			</item>
 		
 	</channel>

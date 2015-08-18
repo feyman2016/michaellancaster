@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+      <loc>http://bymichaellancaster.com/blog/client-side-javascript-unit-tests-for-front-end-developers</loc>
+      <lastmod>2015-08-02</lastmod>
+      <changefreq>never</changefreq>
+  </url>
+  <url>
       <loc>http://bymichaellancaster.com/blog/iot-javascript-battlehack-tessel</loc>
       <lastmod>2015-07-01</lastmod>
       <changefreq>never</changefreq>

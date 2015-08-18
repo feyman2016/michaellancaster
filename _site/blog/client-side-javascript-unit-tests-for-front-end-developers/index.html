@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title> CSS Architecture for Web Applications. |  Michael Lancaster Web Engineer based in Chicago - IL</title>
+    <title> Javascript Unit Test for UI developers |  Michael Lancaster Web Engineer based in Chicago - IL</title>
 
     <!-- metas -->
-    <meta name="description" content=" CSS Architecture for Web Applications. |  Michael Lancaster UI Engineer based in Chicago - IL">
+    <meta name="description" content=" Javascript Unit Test for UI developers |  Michael Lancaster UI Engineer based in Chicago - IL">
     <meta name="viewport" content="width=device-width">
-    <meta property="og:title" content="CSS Architecture for Web Applications. by Michael Lancaster">
+    <meta property="og:title" content="Javascript Unit Test for UI developers by Michael Lancaster">
 	<meta property="og:site_name" content="By Michael Lancaster">
 	<meta property="og:url" content="http://www.bymichaellancaster.com">
 	<meta property="og:image" content="http://www.bymichaellancaster.com/assets/images/cat-javascript.jpg">
@@ -443,263 +443,116 @@
 
 		<article class="post">
 
-    <h2 class="ui-tit-01">CSS Architecture for Web Applications.</h2>
+    <h2 class="ui-tit-01">Javascript Unit Test for UI developers</h2>
 
-    <span class="ui-date db">08 Mar 13</span>
+    <span class="ui-date db">02 Aug 15</span>
 
     <!-- <span class="category">Category: </span> -->
 
-	<div class="ui-copy"><p>Write CSS is more complex than some developers, software engineers and designers think and If you are a &quot;Dogma&quot; &quot;best practice&quot; person this post might hurt your feelings.</p>
+	<div class="ui-copy"><p>Unit tests for UI developers is a underground world and today we will explore this world a bit. <br>
+You can find the code example <a href="https://github.com/weblancaster/karma-mocha-chai-sinon" target="_blank" title="karma-mocha-chai-sinon starter kit">here</a>.</p>
 
-<p>Bad CSS architecture can make Web applications slower (500ms slower = 20% drop in traffic for Google) <br> (100ms slower = 1% drop in sales for amazon), messy and unmaintainable for the team, waste of time trying to find something to fix another thing and the list goes on.</p>
+<h3>Where to start</h3>
 
-<p>All the bad examples showed here for good or for bad I had the pleasure to work with in some project.</p>
-
-<h2>The bad examples first</h2>
-
-<pre><code data-language="css">
-#header {
-    property: value;
-    property: value;
-}
-
-#logo {
-    property: value;
-    property: value;
-}
-
-#menu {
-    property: value;
-    property: value;
-}
-
-#search {
-    property: value;
-    property: value;
-}
-
-#bt-yellow {
-    property: value;
-    property: value;
-}
-</code></pre>
-
-<p>Yeah! people still doing this approach specifying &quot;ID's&quot; for every element on the page and that kind of architecture &quot;id's&quot; has no problem for browser rendering or for Javascript developers concerned about performance or make his life easier.</p>
-
-<p>But as a point of view of good CSS architecture that's not DRY, reusable, modular, scalable and depending on the project this can get pretty messy and heavy. So, never do that way ok?!</p>
-
-<h2>More bad examples</h2>
-
-<p>My second experience with a different way to write CSS architecture was when I worked as a consultant on a ongoing big Web Application. <br>
-At this point the initial developers started kind of in a &quot;good&quot; way making like a mixed code between SMACSS and their own judgments. <br></p>
-
-<pre><code data-language="css">
-ul.button-group-yellow {
-    property: value;
-    property: value;
-}
-
-ul.button-group-yellow li {
-    property: value;
-    property: value;
-}
-
-ul.button-group-yellow li div {
-    property: value;
-    property: value;
-}
-
-ul.button-group-yellow li div p {
-    property: value;
-    property: value;
-}
-
-ul.button-group-yellow li div p a {
-    property: value;
-    property: value;
-}
-</code></pre>
-
-<p>I confess we had a bunch of modular groups forcing DRY methodology but look at those terrible long descendants selectors (nesting), tag-qualify and this approach is very bad for browser rendering/performance, not scalable and gets/got pretty messy after all.</p>
-
-<h2>Some good tips</h2>
+<p>The first question you need to answer is, why unit test my code? that will give you a better understanding of why unit tests are important and useful. <br>
+Here a few points.</p>
 
 <ul>
-<li>All members has to work together but this is not a job for Designers, Software engineers. This is a job Front End Engineers.</li>
-<li>CSS is code therefore size and rendering matters.</li>
-<li>Avoid specificity &quot;ID's&quot;.</li>
-<li>Avoid long descendants selectors (nesting).</li>
-<li>Avoid tag-qualify.</li>
-<li>Browsers render your CSS going right to left.</li>
+<li>Reduce bugs (new and/or existing features)</li>
+<li>Serve as documentation</li>
+<li>Improve Software Design</li>
+<li>Reduce fear (you can write code with no fear of breaking something else)</li>
 </ul>
 
-<pre><code data-language="css">
-#header div ul li p a {
-    /* the browser render/algorithm go through all your elements starting at "a" element to find the matches */
-    property: value;
-    property: value;
-}
+<p>Unit tests are meant to be <strong>small</strong> but what I mean by that is, let's say you have a function called foo() that calls two other functions fooUno() and fooDos() each function has a specific logic/goal, let's also say that one of those functions inside foo() make a XHR request.. <br>
+You don't want to make a XHR request because it's slow and the XHR might depend on something else from the system, but foo() require the data from the function that make XHR request, so what do you do? this scenario is very common for UI developers.</p>
 
-#header a {
-    /* better than the first example */
-    /* but still not good enough */
-    property: value;
-    property: value;
-}
+<p>One of the ways to achieve isolation and small unit tests is using <strong>Spies</strong>, <strong>Stubs</strong> and <strong>Mocks</strong> understanding them will help you write better unit tests, I'm going to talk more about it later.</p>
 
-header#header {
-    /* yet not good. tag-qualify is very very hard to happen to actually use them */
-    property: value;
-    property: value;
-}
+<p>A good structure for unit tests is 3A's <strong>Arrange, Act, Assert</strong> (not applicable to all scenarios), where Arrange is the set up of the object/function being tested (e.g stub a dependency), Act is when you act on the object being tested (e.g call the function) and Assert where you claim the object. (e.g assert that the function was called with xyz arguments);</p>
 
-#header {
-    /* good for performance but not good for modular, DRY, scalable */
-    property: value;
-    property: value;
-}
+<h3>What tools to use</h3>
 
-/* if you need to qualify your selector use quasi tag-qualify methodology */
-/* header */ .header {
-    /* always prefer/use classes they are fast, reusable, scalable, modular, easy to maintain */
-    property: value;
-    property: value;
-}
+<p>Javascript ecosystem isn't like Java, .Net, C++ and other languages with established frameworks/tools for unit tests, in Javascript you will find a lot of frameworks/tools, the good part is that you will have multiple options that suits you the bad part is that most of them isn't well established.</p>
+
+<p>In this article I'm going to introduce you to the most established framework/tools I know.</p>
+
+<p><strong>Karma</strong> <br>
+<a href="http://karma-runner.github.io/0.13/index.html" target="_blank" title="Karma.js">Karma</a> is a test runner by Google/Angular team created to increase developer productivity helping on setting up the environment for testing, with features like tests in real browser, debugging for tests, plugins and more.</p>
+
+<p><strong>Mocha</strong> <br>
+The website has a good explanation, &quot;<a href="http://mochajs.org/" target="_blank" title="Mocha.js">Mocha</a> is a JavaScript test framework running on Node.js and the browser, making asynchronous testing simple. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases&quot;.</p>
+
+<p>Mocha include a series of interfaces where you can choose how to write your tests in BDD, TDD, Exports, QUnit or Require.</p>
+
+<p>We will be using the BDD interface which provide <strong>describe()</strong>, <strong>context()</strong> (same as describe, just a way to keep tests easier to read and organized), <strong>before()</strong>, <strong>after()</strong>, <strong>beforeEach()</strong>, <strong>afterEach()</strong> and <strong>it()</strong>, this introduce a great design structure for unit tests.</p>
+
+<p><strong>Chai</strong> <br>
+<a href="http://chaijs.com/" target="_blank" title="Chai.js">Chai</a> is a BDD/TDD assertion library which has several styles <strong>assert</strong>, <strong>should</strong> or <strong>expect</strong>, this makes very flexible for the developer to express the unit test.</p>
+
+<p><strong>Sinon</strong> <br>
+<a href="http://sinonjs.org/" target="_blank" title="Sinon.js">Sinon</a> is the library that implements features like stubs, spies, mocks and things like fake XHR and server.</p>
+
+<h3>Spies, Stubs &amp; Mocks</h3>
+
+<p><br><strong>Spies</strong> <br>
+The word basically describe what the concept means, you spy on a function and then you can assert your test if the function was called, how many times was called if called, what the parameters was called with and what was returned.</p>
+
+<pre><code data-language="javascript">
+context('Spy', function() {
+    it('spy on a function', function() {
+        var addSpy = sinon.spy(add());
+
+        addSpy(2, 4);
+
+        expect(addSpy.called).to.be.true;
+
+        addSpy.reset(); // reset spy to it's normal state
+    });
+});
 </code></pre>
 
-<ul>
-<li>Use DRY (don't repeat yourself methodology), modular groups, scalable, readable and maintainable.</li>
-<li>Make it well documented (readable for humans not machines).</li>
-<li>Use CSS preprocessors (It doesn't mean you are going to have a good CSS architecture).</li>
-<li>More developers = more problems so write a Doc &amp; Stylesheets guide for your team.</li>
-<li>Comments are KING. They wont be there afterwards because you will minify so use wisely.</li>
-<li>Find the patterns in your design and apply OOCSS method (works great for me).</li>
-<li>Rule sets in specific order (example how I do it below).</li>
-</ul>
+<p><strong>Stubs</strong> <br>
+This concept is used to isolate a function from the rest of the App, stubs are going to take place of the component and return consistent results making easier to write tests, stubs are also spies.</p>
 
-<pre><code data-language="css">
-/* ==========================================================================
-#   SCSS/COMPASS Modular Project Based.
-#   @settings ( COMPASS, Variables, Functions, Mixins, etc... )
-#   @base ( regular elements )
-#   @helpers ( layout helpers )
-#   @layout ( layout template, grid structure )
-#   @skin ( modules, background, colors, typography.. )
-#   @media-queries ( content-driven breakpoints )
-#   @ie ( IE fixes )
-========================================================================== */
+<pre><code data-language="javascript">
+context('Stub', function() {
+    it('stub function', function() {
+        var result;
+        var isTruthyStub = sinon.stub(isTruthy()).returns(true);
+        var obj = {
+            "name": "John Doe",
+            "age": 24
+        };
 
+        result = person('John Doe', 24);
 
-/* ==========================================================================
-@settings
-========================================================================== */
-@import "_settings";
+        expect(result).to.be.deep.equal(obj);
 
-/* ==========================================================================
-@base
-========================================================================== */
-@import "_base";
-
-/* ==========================================================================
-@helpers
-========================================================================== */
-@import "_helpers";
-
-/* ==========================================================================
-@layout
-========================================================================== */
-@import "_layout";
-
-/* ==========================================================================
-@skin
-========================================================================== */
-@import "_skin";
-
-/* ==========================================================================
-@media-queries
-========================================================================== */
-@import "_media-queries";
-
-/* ==========================================================================
-@ie
-========================================================================== */
-@import "_ie";
+        isTruthyStub.reset(); // reset spy to it's normal state
+    })
+});
 </code></pre>
 
-<h2>Another great tips. From BEM methodology</h2>
+<p><strong>Mocks</strong> <br>
+Mocks are very similar to spies and stubs with the difference you need to define all things that need to happen before you assert and when you are done with all the actions defined you then assert everything happened as planned/defined.</p>
 
-<ul>
-<li>Fast-to-develop, long-lived projects. It should be possible to develop and launch the first version of a website quickly with an architecture that helps to maintain it in the long run.</li>
-<li>Team scalability. Adding new people to a product team should improve speed, not decrease it. We need to be able to assign new members to a team without a steep learning curve.</li>
-<li>Code should be well-structured for a project to remain maintainable over time and team changes.</li>
-<li>Code reuse. To maintain UI consistency and minimize development effort on typical interface components, those components have to be easily reusable. The source code should not have contextual dependency on the other code, it should be easy to move that code to another place.</li>
-</ul>
+<pre><code data-language="javascript">
+ context('Mock', function() {
+    it('mock function', function() {
+        var multiplyMock = sinon.mock(obj);
 
-<h2>Our fashionable way</h2>
+        multiplyMock.expects('foo').once();
 
-<p>I always had concern about my classes notation name, how should I name semantically meaningful? how should I show this on the HTML? How I will better transfer/show by notation name my HTML structure?.. <br>
-<strong>One of the most important ideas of classes notation name is try to transfer/show the HTML structure reading the classes names on the CSS file</strong></p>
+        obj.foo();
 
-<p>Example, Let's say we have one module.</p>
-
-<pre><code data-language="css">
-.promo-box {
-    property: value;
-}
-.promo-box-inner {
-    property: value;
-}
-.promo-box-img {
-    property: value;
-}
-.promo-box-tit {
-    property: value;
-}
-.promo-box-txt {
-    property: value;
-}
+        multiplyMock.verify();
+    });
+});
 </code></pre>
-
-<p>I even don't need to show you the HTML markup to make you understand the HTML structure, can you see the possibilities here?!</p>
-
-<h2>I'm changing to..</h2>
-
-<p>One week before I write this post I saw the speak of <a href="http://nicolasgallagher.com/" target="_blank" title="">Nicolas Gallagher</a> about &quot;Questioning good practices&quot; (I highly recommend) in his speak he also showed a <a href="http://www.yandex.com/" target="_blank" title="Russian Search engine">Russian Search engine</a> classes notation name and It's true my notation is fashionable at the moment.</p>
-
-<p>All made sense. So now on I will use this non-fashionable YET classes notation name but answering the same questions I told you before.<br>
-what are you talking about Michael? Here's a new example of that module above.</p>
-
-<pre><code data-language="css">
-.promoBox {
-    property: value;
-}
-.promoBox-inner {
-    property: value;
-}
-.promoBox-inner-img {
-    property: value;
-}
-.promoBox-inner-tit {
-    property: value;
-}
-.promoBox-inner-txt {
-    property: value;
-}
-
-.promoBox--round {
-    property: value;
-}
-</code></pre>
-
-<p>Here we have our module &quot;promoBox&quot;, the &quot;promoBox-inner&quot; with one dash means it is a child of &quot;promoBox&quot;, the &quot;promoBox-inner-img&quot; means it is child of &quot;promoBox-inner&quot; that it is child of &quot;promoBox&quot; and so on. <br>
-Lastly we have &quot;promoBox--round&quot; with two dashes that means extended/modifier. Beautiful right?!</p>
-
-<h2>Final thoughts</h2>
-
-<p>There's no absolute way to write, give classes name notation or build &quot;The god master CSS architecture&quot; but there's definitely great practices to make a great Web application and it all depends on your team and the focus on your Web application goals.</p>
 </div>
 
-    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2013</small></span> -->
+    <!-- <span class="meta"><small>By Michael Lancaster &copy; 2015</small></span> -->
 
             <div id="disqus_thread"></div>
 		    <script type="text/javascript">
