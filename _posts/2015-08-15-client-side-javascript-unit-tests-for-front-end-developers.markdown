@@ -5,7 +5,8 @@ title: Javascript Unit Test for UI developers
 excerpt: Unit tests for UI developers is a underground world and today we will explore this world a bit, this is not a deep dive in the tools or Unit Test philosophy, for that you can find endless resource around the web.
 ---
 
-Unit tests for UI developers is a underground world and today we will explore this world a bit, this is not a deep dive in the tools or Unit Test philosophy, for that you can find endless resource around the web.<br>
+Unit tests for UI developers is a underground world and today we will explore this world a bit, this is not a deep dive in the tools or Unit Test philosophy, for that you can find endless resource around the web.
+
 You can find the code example <a href="https://github.com/weblancaster/karma-mocha-chai-sinon" target="_blank" title="karma-mocha-chai-sinon starter kit">here</a>.
 
 ### Where to start
