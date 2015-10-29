@@ -6,9 +6,124 @@
 		<link>http://bymichaellancaster.com/</link>
 		
 			<item>
+				<title>HTML5 Dev Conf 2015 overview</title>
+				<description>&lt;p&gt;A quick overview of what I saw at &lt;a href=&quot;http://html5devconf.com/&quot; target=&quot;_blank&quot; title=&quot;HTML5devconf&quot;&gt;HTML5devconf&lt;/a&gt; in San Francisco&lt;/p&gt;
+
+&lt;h3&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;First of all I was glad visiting back San Francisco, last time I was there I was visiting Ciro Nunes during the weekend while he was working here as Contractor/Consultant for Macy&#39;s.&lt;/p&gt;
+
+&lt;p&gt;I feel like San Francisco is very similar to SP, a lot of culture, good options to do things, lot&#39;s of hills and not so clean city. &lt;br&gt;
+Besides all that the weather feels good.. not so warm not so cold (like in Chicago), you can see the tech environment taking the city over with outdoors, people wearing t-shirts or using devices (electric skateboard) that you usually don&#39;t see in a non-tech city.&lt;/p&gt;
+
+&lt;p&gt;I stayed in the Marker hotel which was pleasant and comfortable enough for the 4 nights, nothing special though, no city/bay view from my room, no free breakfast (even though I&#39;m vegan I like to have fruits when hotels provide breakfast). &lt;br&gt;
+Just a few blocks from where the conference was happening so I could just walk there every morning to Yerba Buena Center.&lt;/p&gt;
+
+&lt;p&gt;I would say that 90% of the talks I was familiar what was because of my constantly reading trying to stay updated on what can help me and what can&#39;t. &lt;br&gt;
+So the talks I saw was based on how much content I have read about, how much of that I can learn on the internet or because I already know and have been using.&lt;/p&gt;
+
+&lt;h3&gt;Talks&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;“Post” is the New “Pre”: Using Postprocessors to Revolutionize Your Workflow&lt;/strong&gt; &lt;small&gt;Aaron Ladage, DEG&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;Pre processors have been in the devs toolbelt for a while helping us to enable use new technologies or better technologies not supported by the standards (e.g SASS) or just because it&#39;s someone&#39;s preference but that comes with some problems which are, pre processors doesn&#39;t really use standardized code for example the code you write in sass using compass won&#39;t be the same when compiled, pre is also time consuming depending on the size of the project and when not properly set up this can take some time to compile all the tasks until the dev can do something, pre also adds more complexity for debugging when not properly setup.&lt;/p&gt;
+
+&lt;p&gt;Although I have heard of post processors I have never stopped to really get my hands dirty, in this case the speaker gave us a little/quick overview on &lt;a href=&quot;https://github.com/postcss/postcss&quot; target=&quot;_blank&quot; title=&quot;PostCSS&quot;&gt;PostCSS&lt;/a&gt; where you can add to your tasks the same way the pre processors are.. although when using PostCSS you will be able to write standardized code and just add &lt;a href=&quot;https://github.com/postcss/postcss#plugins&quot; target=&quot;_blank&quot; title=&quot;PostCSS plugins/modules&quot;&gt;Plugins/modules&lt;/a&gt; to your PostCSS to work on compiling to something &amp;quot;better&amp;quot; once you are done, you can use prefixes (-webkit-) as example, you would write your code without any prefix but afterwards PostCSS would add them for you.&lt;/p&gt;
+
+&lt;p&gt;I don&#39;t see myself using it soon but the idea seems interesting.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Falcor: One Model Everywhere&lt;/strong&gt; &lt;small&gt;Jafar Husain, Netflix&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;RESTful API architecture style is &amp;quot;broken&amp;quot; and the internet isn&#39;t a place where we get things anymore but where we do things. &lt;br&gt;
+You ask what&#39;s wrong with RESTful API.. In the RESTful API architecture style we would need to make sometimes hundreds of calls and maintain hundreds of ENDPOINTS, it&#39;s also hard to keep UI engineers aware of what ENDPOINTS call what, another problem is that browsers have a limitation problem which is max parallel HTTP connections.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://netflix.github.io/falcor/&quot; target=&quot;_blank&quot; title=&quot;Falcor&quot;&gt;Falcor&lt;/a&gt; was built by the team at Netflix (which I admire for what they are doing over there) because they faced those issues and saw good opportunities in using an different architecture style called RPC (Remote Procedure Call), they still have ENDPOINTS though but not specifically built around RESTful.&lt;/p&gt;
+
+&lt;p&gt;Facebook ended up with he same idea and built &lt;a href=&quot;https://github.com/facebook/graphql&quot; target=&quot;_blank&quot; title=&quot;GraphQL&quot;&gt;GraphQL&lt;/a&gt; which I have tried and really liked as well.&lt;/p&gt;
+
+&lt;p&gt;You would have one ENDPOINT (if you like) where you define your model and the client retrieve the key.. there is much more to know so take a look &lt;a href=&quot;http://netflix.github.io/falcor/starter/why-falcor.html&quot; target=&quot;_blank&quot; title=&quot;learn more about Falcor&quot;&gt;here&lt;/a&gt; to learn more.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To Err Is Human&lt;/strong&gt; &lt;small&gt;Alex Liu, Netflix&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;Oh errors. How easy and boring our lives would be without you? Alex Liu gave a great talk on how his team is handling errors at Netflix.&lt;/p&gt;
+
+&lt;p&gt;His talk resumes to learn from your errors and deal with them preserving and adding, cause, time, history and not using catch so often.&lt;/p&gt;
+
+&lt;p&gt;there is two kinds of errors we face, expected and not expected where when in Node we have a &amp;quot;best practice&amp;quot; to call callback with error where at some point we might deal with that.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
+function foo(cb) {
+    service.get(&#39;movies&#39;, function(err, data) {
+        if (err) {
+            return cb(err);
+        }
+        return cb(null, data);
+    });
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Some of the modules him and his team have been using are &lt;a href=&quot;https://github.com/davepacheco/node-verror&quot; target=&quot;_blank&quot; title=&quot;node-verror&quot;&gt;Verror&lt;/a&gt; where will combine errors while preserving each one&#39;s error message and for wrapping errors. Another module is &lt;a href=&quot;https://github.com/restify/errors&quot; target=&quot;_blank&quot; title=&quot;Restify-errors&quot;&gt;Restify-errors&lt;/a&gt; has a collection of HTTP and REST Error constructors.&lt;/p&gt;
+
+&lt;p&gt;You can find the &lt;a href=&quot;www.slideshare.net/AlexLiu24/to-err-is-human-54101650&quot; target=&quot;_blank&quot; title=&quot;To err is human, hadling errors in Node js&quot;&gt;slides here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Architecting modern JavaScript apps&lt;/strong&gt; &lt;small&gt;Matt DeBergalis, Meteor&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;I was afraid Matt would just talk about Meteor.js but turned out that he actually did not sell Meteor although he used as use case on his talk which is fair. &lt;br&gt;
+His talk was a overview of how a modern Javascript Application architecture works.. where in the old days we would navigate to an page and the browser would refresh/request that page and start clean/fresh but nowadays we are focused on rich UX/UI which take us to have stateful Apps (no refresh), real time data pushed to the client and the client need to be reactive to update the UI.&lt;/p&gt;
+
+&lt;p&gt;Not a very technical talk but enjoyable and knowledgeable.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;JavaScript and the AST&lt;/strong&gt; &lt;small&gt;Jarrod Overson, Shape Security&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;A very technical and nice talk about Abstract Syntax Tree, for those that are not familiar with that name AST is an tree representation of your code (beautiful stuff).&lt;/p&gt;
+
+&lt;p&gt;The points he touched was why would we use AST in &amp;quot;real life&amp;quot; one of the examples was let&#39;s say you want to read from a input and most of the cases you/we would write an Regex but this input could be very complex and &amp;quot;nobody&amp;quot; really knows Regex so one better solution is to have AST from the input where would be just plain old Javascript Obj he also touched on how to get started with Javascript AST mentioning tools such as parsers Esprima, Acorn and Shift, other points were Standardized AST formats.&lt;/p&gt;
+
+&lt;p&gt;AST is something I&#39;m interested to use anytime soon. You can find the &lt;a href=&quot;http://www.slideshare.net/JarrodOverson/javascript-asts-transformations-analysis-and-transpiling&quot; target=&quot;_blank&quot; title=&quot;JavaScript and the AST&quot;&gt;slides here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Measuring web Perf ? Lets write an app for that !!&lt;/strong&gt; &lt;small&gt;Parashuram Narasimhan, Microsoft&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;Parashuram Narasimhan spoke about how measuring client side performance can actually work when done right, He was focused in the performance while the user is using the Web App and not the waiting time (usually loading time) which is what most of the research and work on performance improvements has been done.&lt;/p&gt;
+
+&lt;p&gt;When someone says &amp;quot;the website feels slow&amp;quot; that did not meant necessarily on waiting/loading but on the feels, that being said the website is &lt;a href=&quot;http://jankfree.org/&quot; target=&quot;_blank&quot; title=&quot;Jank free&quot;&gt;Janky free&lt;/a&gt;/choppy so he showed us that this can be monitored using the Chrome DevTools profiling to check if the rendering/repaint is at 60 FPS or close (nothing I haven&#39;t done) but he reserved the best for last.. Imagine for every change in the code you need to go back to DevTools and profiling again then again, this is a tedious work and comparing to Back End most of the time they have test cases, CI (automation) integrated on every time someone pushes code the CI will catch any broken test and report back to the person.&lt;/p&gt;
+
+&lt;p&gt;I like him believe all tests should be integrated with CI, if you want to know more about his talk go here &lt;a href=&quot;https://www.youtube.com/watch?v=86LwhTD_rkM&quot; target=&quot;_blank&quot; title=&quot;Measuring web Perf ? Lets write an app for that !!&quot;&gt;visit here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How Automation Can Open Up Your Product to a Billion More Users&lt;/strong&gt; &lt;small&gt;Leith Abdulla, Coursera&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;Internet is a very diverse environment, you might think that a local website doesn&#39;t need internationalization but even hyper local websites has people from other locations at that particular location.. e.g Asian people in SF a lot of them doesn&#39;t know english very well and some doesn&#39;t even know at all so internationalization could be a game changer bringing your product/service to a new clientele.&lt;/p&gt;
+
+&lt;p&gt;Several tools that can help us bringing internationalization to a lot of people and some of them are &lt;a href=&quot;http://formatjs.io/&quot; target=&quot;_blank&quot; title=&quot;formatjs&quot;&gt;Formatjs&lt;/a&gt;, &lt;a href=&quot;https://github.com/airbnb/polyglot.js&quot; target=&quot;_blank&quot; title=&quot;formatjs&quot;&gt;Polyglot.js&lt;/a&gt; but a lot of websites like Orbitz, Coursera, Ebay, Groupon, etc uses crowdsource therefore it&#39;s more than enough prove that crowdsource internationalization works.&lt;/p&gt;
+
+&lt;p&gt;Also, do not forget to make this a easier process integrating with your CI. &lt;br&gt;
+You can find more about it &lt;a href=&quot;https://www.youtube.com/watch?v=WO0BFNCyugQ&quot; target=&quot;_blank&quot; title=&quot;How Coursera Automates i18n on the Front-End&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;When can I have Native Code?&lt;/strong&gt; &lt;small&gt;Brad Nelson, Google&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;This was a interesting talk. The web is open, &amp;quot;free&amp;quot;, portable and what is missing is the power the native code brings to the web where this technology will enable some very powerful and cool opportunities.&lt;/p&gt;
+
+&lt;p&gt;Why native code on the browser, it&#39;s really fast because it&#39;s close to the metal, lower power, has access to hardware, Threads + Shared Memory, Dynamic code generation and would support all the languages like C++, Java, Python, etc therefore starting at gaming, no console?! just open type the url into your browser and start playing native like games experience (e.g Call of Duty).&lt;/p&gt;
+
+&lt;p&gt;What you can start using now are NaCl (Native Client), PNaCl (Portable Native Client), Emscripten, Asm.js (Assembly Language).. you can also start using now with Javascript type declarations (float64, float32, int32, uint32, TypedArray).&lt;/p&gt;
+
+&lt;p&gt;Of course all that comes with good and bad sides.. the bad sides are those we already know such as Malwares, data theft, Architecture dependent, OS dependent, Browser dependent, Configuration dependent.&lt;/p&gt;
+
+&lt;p&gt;All that looks promising when you see the pros over the cons. If you want to know more take a look on his &lt;a href=&quot;https://flagxor-html5devconf2015.storage.googleapis.com/index.html#/44&quot; target=&quot;_blank&quot; title=&quot;How Coursera Automates i18n on the Front-End&quot;&gt;slides&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;End&lt;/h3&gt;
+
+&lt;p&gt;In general the conference was great, I did not see any issues, 90% of the speakers were prepared and knowledgeable about their subjects. &lt;br&gt;
+I saw some people I haven&#39;t seen in a while, made some new friends, hung out around the city so my days in SF was enjoyable.&lt;/p&gt;
+</description>
+				<published>2015-10-26 00:00:00 -0500</published>
+				<link>http://bymichaellancaster.com//blog/html5-dev-conf-2015-overview</link>
+			</item>
+		
+			<item>
 				<title>Javascript Unit Test for UI developers</title>
-				<description>&lt;p&gt;Unit tests for UI developers is a underground world and today we will explore this world a bit. &lt;br&gt;
-You can find the code example &lt;a href=&quot;https://github.com/weblancaster/karma-mocha-chai-sinon&quot; target=&quot;_blank&quot; title=&quot;karma-mocha-chai-sinon starter kit&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+				<description>&lt;p&gt;Unit tests for UI developers is a underground world and today we will explore this world a bit, this is not a deep dive in the tools or Unit Test philosophy, for that you can find endless resource around the web.&lt;/p&gt;
+
+&lt;p&gt;You can find the code example &lt;a href=&quot;https://github.com/weblancaster/karma-mocha-chai-sinon&quot; target=&quot;_blank&quot; title=&quot;karma-mocha-chai-sinon starter kit&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3&gt;Where to start&lt;/h3&gt;
 
@@ -54,7 +169,7 @@ The website has a good explanation, &amp;quot;&lt;a href=&quot;http://mochajs.or
 &lt;h3&gt;Spies, Stubs &amp;amp; Mocks&lt;/h3&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;strong&gt;Spies&lt;/strong&gt; &lt;br&gt;
-The word basically describe what the concept means, you spy on a function and then you can assert your test if the function was called, how many times was called if called, what the parameters was called with and what was returned.&lt;/p&gt;
+The word basically describe what the concept means, you spy on a function and then you can assert if the function was called, how many times was called, what the parameters was called with and what was returned.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
 context(&#39;Spy&#39;, function() {
@@ -108,8 +223,13 @@ Mocks are very similar to spies and stubs with the difference you need to define
     });
 });
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Setup&lt;/h3&gt;
+
+&lt;p&gt;I created this &lt;a href=&quot;https://github.com/weblancaster/karma-mocha-chai-sinon&quot; target=&quot;_blank&quot; title=&quot;karma-mocha-chai-sinon starter kit&quot;&gt;starter kit&lt;/a&gt; to help anyone starting with Javascript unit tests get up to speed. &lt;br&gt;
+I suggest you read how to use those tools and start writing tests which is the best and only way to learn.&lt;/p&gt;
 </description>
-				<published>2015-08-02 00:00:00 -0500</published>
+				<published>2015-08-12 00:00:00 -0500</published>
 				<link>http://bymichaellancaster.com//blog/client-side-javascript-unit-tests-for-front-end-developers</link>
 			</item>
 		
@@ -854,434 +974,6 @@ Enjoy!&lt;/p&gt;
 </description>
 				<published>2014-11-04 00:00:00 -0600</published>
 				<link>http://bymichaellancaster.com//blog/migrate-jekyll-to-ghost-built-with-nodejs</link>
-			</item>
-		
-			<item>
-				<title>Ep.2 Data Structures and Algorithms with JS - Arrays</title>
-				<description>&lt;div class=&quot;intro-series&quot;&gt;
-    This post is part of the series: Data Structures and Algorithms with JS therefore before continue to read I suggest you &lt;a href=&quot;/blog/javascript-data-structure-algorithms-series-ep1/&quot; title=&quot;Data Structures and Algorithms Ep.1&quot;&gt;the introduction&lt;/a&gt; to this series of posts if you haven&#39;t read yet. thanks.
-&lt;/div&gt;
-
-&lt;h3&gt;Brushing up on Arrays&lt;/h3&gt;
-
-&lt;p&gt;This is the second post on the series of Data Structure and Algorithms with JS - focused on Array. &lt;br&gt;
-Notice that this is a overview/start point for those that need to brush up your knowledge on Arrays where we are going to be using in the future on more complex topics.&lt;/p&gt;
-
-&lt;p&gt;Every programming language has sort of a built-in Array where you can access data via index and most of these languages has a strict type of Array which would be integer BUT not in Javascript, where Array is also an object which when integers used for index they are converted to strings. &lt;br&gt;
-And Array being an object means that it contain properties and functions you can use out of the box.&lt;/p&gt;
-
-&lt;p&gt;In Javascript we don&#39;t need to define the length of our Array as in C++ and we can have different types of values therefore making Arrays in Javascript flexible and easier to manipulate than other classic languages.&lt;/p&gt;
-
-&lt;h3&gt;Creating Arrays&lt;/h3&gt;
-
-&lt;p&gt;Let&#39;s create an Array with length zero:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var arr = []; // arr.length = 0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now let&#39;s create an Array with some elements defined and length equal 5:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var arr = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]; // arr.length = 5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Array with different types would look like:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var arr = [&#39;michael&#39;, &#39;lancaster&#39;, 23, true, null];
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If you want to verify if an object is an Array you can use the method &lt;code&gt;Arrays.isArray()&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var arr = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;];
-Array.isArray(arr); // true
-
-var str = &#39;Michael Lancaster&#39;;
-Array.isArray(str); // false
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Accessing&lt;/h3&gt;
-
-&lt;p&gt;Use the operator &lt;code&gt;[]&lt;/code&gt; passing the index to access the value/element.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var arr = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;];
-console.log( arr[2] ) // c
-console.log( arr[4] ) // e
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Also iterating through an Array sequentially&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var arr = [1, 2, 3, 4, 5];
-for ( var i = 0; i &lt; arr.length; i++ ) {
-    console.log(&#39;Index: &#39; + i, &#39;Value: &#39; + arr[i])
-}
-
-// outputs
-// Index: 0 Value: 1
-// Index: 1 Value: 2
-// Index: 2 Value: 3
-// Index: 3 Value: 4
-// Index: 4 Value: 5 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Notice on the sample above that the loop is controlled by the length of the Array &lt;code&gt;arr.length&lt;/code&gt; since in Javascript Array is an object and it can be modified so we guarantee that we have gone through all indexes.&lt;/p&gt;
-
-&lt;h3&gt;Array from String&lt;/h3&gt;
-
-&lt;p&gt;We can also create Arrays from strings defining a delimiter (&lt;code&gt;space&lt;/code&gt; in my case).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var str = &#39;Michael lancaster 23 and developer&#39;;
-var arr = str.split(&#39; &#39;); // [&quot;Michael&quot;, &quot;lancaster&quot;, &quot;23&quot;, &quot;and&quot;, &quot;developer&quot;]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Object Copy&lt;/h3&gt;
-
-&lt;p&gt;There&#39;s several ways of Object copy &lt;code&gt;Shallow Copy&lt;/code&gt;, &lt;code&gt;Deep Copy&lt;/code&gt; and &lt;code&gt;Lazy Copy&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;Shallow Copy&lt;/code&gt; is when you assign &amp;quot;B = A&amp;quot; which has the disadvantage of when updating Array A the Array B will also be modified with same updates as A no matter what. Here&#39;s an example of &lt;code&gt;Shallow Copy&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var arr1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-var arr2 = arr1;
-console.log(arr2) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-arr1.push(&#39;michael&#39;);
-console.log(arr1) // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, &quot;michael&quot;]
-console.log(arr2) // 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, &quot;michael&quot;]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;When we pushed a new value to the end of &lt;code&gt;arr1&lt;/code&gt; this change is reflected into &lt;code&gt;arr2&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;A better way to do a copy would be the &lt;code&gt;Deep Copy&lt;/code&gt; which one don&#39;t depend on another but it&#39;s a slower operation. &lt;br&gt;
-Here&#39;s an example of &lt;code&gt;Deep Copy&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var arr1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-var arr2 = [];
-
-function deepCopy(arr1, arr2) {
-    for ( var i = 0; i &lt; arr1.length; i++ ) {
-        arr2[i] = arr1[i];
-    }
-}
-
-deepCopy(arr1, arr2);
-
-console.log(arr1) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-console.log(arr2) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-arr1.push(&#39;michael&#39;)
-console.log(arr1) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, &quot;michael&quot;] 
-console.log(arr2) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In the example above you can notice that the value pushed to &lt;code&gt;arr1&lt;/code&gt; do not reflected into &lt;code&gt;arr2&lt;/code&gt;.
-Now. &lt;code&gt;Lazy Copy&lt;/code&gt; is the combination of both operations.&lt;/p&gt;
-
-&lt;h3&gt;Array traversal and mutation operations&lt;/h3&gt;
-
-&lt;p&gt;Array is list-like and also a constructor that contains prototype methods to perform traversal and mutation operations such as:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Searching a value&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Searching a value can be done with the method &lt;code&gt;Array.prototype.indexOf()&lt;/code&gt; which perform an operation of comparing with &lt;code&gt;===&lt;/code&gt; the value passed to the function is found and return it&#39;s index position otherwise will return -1.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var languages = [&#39;Javascript&#39;, &#39;Java&#39;, &#39;C++&#39;, &#39;Go&#39;];
-languages.indexOf(&#39;C++&#39;) // 2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Notice that this search operation using the &lt;code&gt;indexOf&lt;/code&gt; will return the just the position of the &lt;code&gt;first&lt;/code&gt; value encountered in the Array.
-You can also the &#39;lastIndexOf&#39; which will do the same but return the position of the last value encountered.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var languages = [&#39;Javascript&#39;, &#39;Java&#39;, &#39;C++&#39;, &#39;Go&#39;, &#39;Lua&#39;, &#39;C++&#39;];
-languages.lastIndexOf(&#39;C++&#39;) // 5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;String from Arrays&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;There&#39;s two methods to return a string representation from an Array &lt;code&gt;Array.prototype.join()&lt;/code&gt; and &lt;code&gt;Array.prototype.toString()&lt;/code&gt;. &lt;br&gt;
-It&#39;s automatically delimited by commas but you can pass your delimiter on the method. Here&#39;s an example using &lt;code&gt;join&lt;/code&gt; and &lt;code&gt;toString&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var languages = [&#39;Javascript&#39;, &#39;Java&#39;, &#39;C++&#39;, &#39;Go&#39;, &#39;Lua&#39;];
-languages.join(); // &quot;Javascript,Java,C++,Go,Lua&quot;
-languages.toString(); // &quot;Javascript,Java,C++,Go,Lua&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;New Array from Array&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;There&#39;s also multiple methods to create an Array from another Array &lt;code&gt;Array.prototype.concat()&lt;/code&gt; and &lt;code&gt;Array.prototype.splice()&lt;/code&gt;.
-The &lt;code&gt;Array.prototype.concat()&lt;/code&gt; method allow you to pass one or more Arrays/Values as argument to create a new Array.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var cats = [&#39;Abyssinian&#39;, &#39;Persian&#39;, &#39;Peterbald&#39;];
-var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-var birds = [&#39;Malleefowl&#39;, &#39;Maleo&#39;];
-
-var petAnimals = cats.concat(dogs, birds);
-console.log(petAnimals); // [&quot;Abyssinian&quot;, &quot;Persian&quot;, &quot;Peterbald&quot;, &quot;Alaskan Klee Kai&quot;, &quot;American Bulldog&quot;, &quot;Pitbull&quot;, &quot;Malleefowl&quot;, &quot;Maleo&quot;];
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The &lt;code&gt;Array.prototype.splice()&lt;/code&gt; takes two arguments (minimum) or more. You can also use to add new elements to the middle of an Array. &lt;br&gt;
-They are going to be used to mutate the Array therefore it can add new elements and/or remove old elements.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-var removedDogs = dogs.splice(2, 0, &quot;Bull Terrier&quot;);
-console.log(dogs); // [&quot;Alaskan Klee Kai&quot;, &quot;American Bulldog&quot;, &quot;Bull Terrier&quot;, &quot;Pitbull&quot;]
-console.log(removedDogs); // [] empty since no values/elements were removed
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Above the order of my arguments are &lt;code&gt;.splice(from index, remove, enter new element)&lt;/code&gt; so looking at my arguments we have inserted a new value &lt;code&gt;Bull terrier&lt;/code&gt; removed &lt;code&gt;0&lt;/code&gt; and started at index &lt;code&gt;2&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-var removedDogs = dogs.splice(1, 1, &quot;Bull Terrier&quot;);
-console.log(dogs); // [&quot;Alaskan Klee Kai&quot;, &quot;Bull Terrier&quot;, &quot;Pitbull&quot;]
-console.log(removedDogs); // [&quot;American Bulldog&quot;]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The code above I said .splice &lt;code&gt;from index 1, remove index 1, insert &#39;Bull Terrier&#39;&lt;/code&gt; so now the variable &lt;code&gt;removedDogs&lt;/code&gt; contain the item removed from the index defined which in this case is &lt;code&gt;1&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3&gt;Adding elements/values to an Array&lt;/h3&gt;
-
-&lt;p&gt;So instead of use the length of an Array to add an element to the end or even harder to add an element to the beginning of an Array which you would have to iterate through the Array and shift the index from the end towards start.
-Anyway. Let&#39;s keep it simple with these two methods to add new elements to an Array &lt;code&gt;Array.prototype.push()&lt;/code&gt; add to the end of an Array and &lt;code&gt;Array.prototype.unshift()&lt;/code&gt; add to the beginning of an Array (Both methods accept multiple values/elements passed as arguments). &lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;The &lt;code&gt;push()&lt;/code&gt; function/method add a value/element to the end of an Array.&lt;br&gt;
-Here&#39;s an example.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-console.log(dogs); // [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-
-dogs.push(&#39;Bull Terrier&#39;);
-console.log(dogs); // [&quot;Alaskan Klee Kai&quot;, &quot;American Bulldog&quot;, &quot;Pitbull&quot;, &quot;Bull Terrier&quot;]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The &lt;code&gt;unshift()&lt;/code&gt; function/method add a value/element to the beginning of an Array. &lt;br&gt;
-Here&#39;s an example.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-console.log(dogs); // [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-
-dogs.unshift(&#39;American Bulldog&#39;);
-console.log(dogs); // [&quot;American Bulldog&quot;, &quot;Alaskan Klee Kai&quot;, &quot;American Bulldog&quot;, &quot;Pitbull&quot;]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Removing elements/values from an Array&lt;/h3&gt;
-
-&lt;p&gt;There&#39;s also two methods to remove values/elements from an Array where you can remove the beginning using &lt;code&gt;Array.prototype.shift()&lt;/code&gt; or if you want to remove from the end you can use &lt;code&gt;Array.prototype.pop()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here&#39;s an example to remove the first element using the &lt;code&gt;Array.prototype.shift()&lt;/code&gt; method.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-console.log(dogs); // [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-
-dogs.shift();
-console.log(dogs); // [ &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And here&#39;s an example to remove the last element using the &lt;code&gt;Array.prototype.pop()&lt;/code&gt; method.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-console.log(dogs); // [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-
-dogs.pop();
-console.log(dogs); // [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;];
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Ordering/Sorting elements&lt;/h3&gt;
-
-&lt;p&gt;There&#39;s also two ways to order/sort an Array &lt;code&gt;Array.prototype.reverse()&lt;/code&gt; which are going to do what says and &lt;code&gt;Array.prototype.sort()&lt;/code&gt; to put elements in order but in this case the method &lt;code&gt;Array.prototype.sort()&lt;/code&gt; turns every value in strings so if you have numbers you are going to need to pass a function and order the numbers.&lt;/p&gt;
-
-&lt;p&gt;Here&#39;s an example of &lt;code&gt;Array.prototype.reverse()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-console.log(dogs); // [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-
-dogs.reverse();
-console.log(dogs); // [&quot;Pitbull&quot;, &quot;American Bulldog&quot;, &quot;Alaskan Klee Kai&quot;];
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Here&#39;s an example of &lt;code&gt;Array.prototype.sort()&lt;/code&gt; with strings.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var alphabet = [&#39;a&#39;, &#39;b&#39;, &#39;e&#39;, &#39;z&#39;, &#39;f&#39;, &#39;c&#39;];
-console.log(alphabet); // [&#39;a&#39;, &#39;b&#39;, &#39;e&#39;, &#39;z&#39;, &#39;f&#39;, &#39;c&#39;]
-
-alphabet.sort();
-console.log(alphabet); // [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;e&quot;, &quot;f&quot;, &quot;z&quot;]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And here&#39;s an example of how to pass a function to &lt;code&gt;Array.prototype.sort()&lt;/code&gt; to order numbers.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var nums = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
-console.log(nums) // [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
-
-nums.sort(function(n1, n2) {
-  return n1 - n2;
-});
-
-console.log(nums) // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Iterator methods&lt;/h3&gt;
-
-&lt;p&gt;The iterator methods/functions are going to be applied for each value/element and may or may not return a new array, groups of values or just a value as result of the operation.&lt;/p&gt;
-
-&lt;p&gt;First let&#39;s talk about the &lt;code&gt;Array.prototype.forEach()&lt;/code&gt; which receive a callback as argument and this callback has three arguments respectively &lt;code&gt;element&lt;/code&gt;, &lt;code&gt;index&lt;/code&gt;, &lt;code&gt;array being traversed&lt;/code&gt; going to iterate on ascending order. &lt;br&gt;
-Here&#39;s an example using &lt;code&gt;Array.prototype.forEach()&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-
-dogs.forEach(function(value, index, array) {
-    console.log(&#39;Dog breed: &#39; + value + &#39;, position: &#39; + index);
-});
-
-// outputs
-// Dog breed: Alaskan Klee Kai, position: 0
-// Dog breed: American Bulldog, position: 1
-// Dog breed: Pitbull, position: 2 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now it&#39;s time to show the &lt;code&gt;Array.prototype.every()&lt;/code&gt; which test a condition against each element and return true in case all elements meet the condition or false. &lt;br&gt;
-Also receives a callback as argument and this callback has three arguments respectively &lt;code&gt;element&lt;/code&gt;, &lt;code&gt;index&lt;/code&gt;, &lt;code&gt;array being traversed&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-var meetCondition = nums.every(function(element, index, array) {
-    return (element &lt; 11);
-});
-
-console.log(meetCondition) // true
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In the code above all elements are tested against the condition to check if they are less than 11 in our case all elements are less than 11 so the result returned is true.&lt;/p&gt;
-
-&lt;p&gt;The method/function &lt;code&gt;Array.prototype.some()&lt;/code&gt; works almost the same way as &lt;code&gt;Array.prototype.every()&lt;/code&gt; but in this case if at least one element meet the condition would return true.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-
-var meetCondition = nums.some(function(element, index, array) {
-    return (element === 11);
-});
-
-console.log(meetCondition) // true
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The &lt;code&gt;Array.prototype.reduce()&lt;/code&gt; method run a function against an accumulator for each element until reduce to one single value.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var nums = [100, 200, 300, 400];
-
-nums.reduce(function(a, b) {
-    console.log(&#39;a&#39;, a);
-    console.log(&#39;b&#39;, b);
-    console.log(&#39;result accumulated is: &#39;, a + b);
-    return a + b;
-});
-
-// output
-
-// a 100
-// b 200
-// result accumulated is: 300
-// a 300
-// b 300
-// result accumulated is: 600
-// a 600
-// b 400
-// result accumulated is: 1000
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As you can see our method &lt;code&gt;Array.prototype.reduce()&lt;/code&gt; receive a function with two arguments &lt;code&gt;previous value&lt;/code&gt; and &lt;code&gt;current value&lt;/code&gt; a + b which the result turns into the &lt;code&gt;accumulator&lt;/code&gt; a and then calculate this result against the next in line which is b and so on so forth. &lt;br&gt;
-You can also pass &lt;code&gt;initial value&lt;/code&gt; where it&#39;s going to turn into the &lt;code&gt;previous value&lt;/code&gt; and the original &lt;code&gt;previous value&lt;/code&gt; turn into &lt;code&gt;current value&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var nums = [100, 200, 300, 400];
-
-nums.reduce(function(a, b) {
-    console.log(&#39;a&#39;, a);
-    console.log(&#39;b&#39;, b);
-    console.log(&#39;result accumulated is: &#39;, a + b);
-    return a + b;
-}, 200);
-
-// output
-
-// a 200
-// b 100
-// result accumulated is: 300
-// a 300
-// b 200
-// result accumulated is: 500
-// a 500
-// b 300
-// result accumulated is: 800
-// a 800
-// b 400
-// result accumulated is: 1200
-// 1200
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;There&#39;s also the possibility to use &lt;code&gt;Array.prototype.reduceRight()&lt;/code&gt; which is going to perform the function on each element of the array from the end to start.&lt;/p&gt;
-
-&lt;p&gt;the &lt;code&gt;Array.prototype.map()&lt;/code&gt; method works the same way &lt;code&gt;Array.prototype.forEach()&lt;/code&gt; method works but return a new Array as the difference between the two methods.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var dogs = [&#39;Alaskan Klee Kai&#39;, &#39;American Bulldog&#39;, &#39;Pitbull&#39;];
-
-var newArr = dogs.map(function(value, index, array) {
-    console.log(&#39;Dog breed: &#39; + value + &#39;, position: &#39; + index);
-    return value;
-});
-
-console.log(newArr);
-
-// outputs
-// Dog breed: Alaskan Klee Kai, position: 0
-// Dog breed: American Bulldog, position: 1
-// Dog breed: Pitbull, position: 2 
-
-// [&quot;Alaskan Klee Kai&quot;, &quot;American Bulldog&quot;, &quot;Pitbull&quot;]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The &lt;code&gt;Array.prototype.filter()&lt;/code&gt; method works almost the same way as &lt;code&gt;Array.prototype.every()&lt;/code&gt; but instead return an Array with the elements that met the condition &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code data-language=&quot;javascript&quot;&gt;
-var nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-var numsLessThan5 = nums.filter(function(element, index, array) {
-    return (element &lt; 5);
-});
-
-console.log(numsLessThan5) // [0, 1, 2, 3, 4] 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;That&#39;s it&lt;/h3&gt;
-
-&lt;p&gt;I hope you have brush up on your Array knowledge being aware of we can use and will use more complex approaches applying some of the topics I covered on this post. &lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;Cheers!&lt;/p&gt;
-
-&lt;p&gt;&lt;small&gt;* Don&#39;t be shy. I will appreciate any improvement and/or fix.&lt;/small&gt;&lt;/p&gt;
-</description>
-				<published>2014-09-03 00:00:00 -0500</published>
-				<link>http://bymichaellancaster.com//blog/javascript-data-structure-algorithms-series-ep2-arrays</link>
 			</item>
 		
 	</channel>
