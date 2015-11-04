@@ -63,7 +63,7 @@ function foo(cb) {
 
 Some of the modules him and his team have been using are <a href="https://github.com/davepacheco/node-verror" target="_blank" title="node-verror">Verror</a> where will combine errors while preserving each one's error message and for wrapping errors. Another module is <a href="https://github.com/restify/errors" target="_blank" title="Restify-errors">Restify-errors</a> has a collection of HTTP and REST Error constructors.
 
-You can find the <a href="www.slideshare.net/AlexLiu24/to-err-is-human-54101650" target="_blank" title="To err is human, hadling errors in Node js">slides here</a>.
+You can find the <a href="http://www.slideshare.net/AlexLiu24/to-err-is-human-54101650" target="_blank" title="To err is human, hadling errors in Node js">slides here</a>.
 
 
 **Architecting modern JavaScript apps** <small>Matt DeBergalis, Meteor</small>
