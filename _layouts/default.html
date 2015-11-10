@@ -83,13 +83,13 @@
 		<option value="" seleted="selected">Select</option>
 		<option value="{{site.baseurl}}/">Home</option>
 		<option value="{{site.baseurl}}/about">About</option>
+		<option value="{{site.baseurl}}/lab">Lab</option>
+		<option value="{{site.baseurl}}/talks">Talks</option>
 		<optgroup label="Articles">
 			{% for post in site.posts %}
 			<option value="{{site.baseurl}}{{ post.url }}">{{ post.title }}</option>
 			{% endfor %}
 		</optgroup>
-		<option value="{{site.baseurl}}/lab">Lab</option>
-		<option value="{{site.baseurl}}/talks">Talks</option>
 	</select>
 	<!-- mobile navigation / end -->
 
