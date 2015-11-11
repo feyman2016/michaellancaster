@@ -112,7 +112,7 @@ What you can start using now are NaCl (Native Client), PNaCl (Portable Native Cl
 
 Of course all that comes with good and bad sides.. the bad sides are those we already know such as Malwares, data theft, Architecture dependent, OS dependent, Browser dependent, Configuration dependent.
 
-All that looks promising when you see the pros over the cons. If you want to know more take a look on his <a href="https://flagxor-html5devconf2015.storage.googleapis.com/index.html#/44" target="_blank" title="How Coursera Automates i18n on the Front-End">slides</a>.
+All that looks promising when you see the pros over the cons. If you want to know more take a look on his <a href="https://flagxor-html5devconf2015.storage.googleapis.com/index.html" target="_blank" title="How Coursera Automates i18n on the Front-End">slides</a>.
 
 ### End
 
