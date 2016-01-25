@@ -7,7 +7,7 @@ excerpt: A month ago was the event Lollapalooza in Chicago and some co-workers f
 
 <div class="intro-series">
     Looks like the domain Lollagram was bought and turned into a porn website. <br>
-    You can still check the code in <a href="https://github.com/weblancaster/instagram-real-time" target="_blank" title="github Lollagram - real time lollagram cosuming Instagram real time API">Lollagram source code.</a>
+    You can still check the code in <a href="https://github.com/weblancaster/instagram-real-time" target="_blank" title="github Lollagram - real time lollagram cosuming Instagram real time API">source code.</a>
 </div>
 
 ## What is Lollagram?
@@ -16,7 +16,7 @@ excerpt: A month ago was the event Lollapalooza in Chicago and some co-workers f
 
 ## The new version
 
-Check out the source code on <a href="https://github.com/weblancaster/instagram-real-time" target="_blank" title="github Lollagram - real time lollagram cosuming Instagram real time API">Lollagram source code.</a>
+Check out the source code on <a href="https://github.com/weblancaster/instagram-real-time" target="_blank" title="github Lollagram - real time lollagram cosuming Instagram real time API">source code.</a>
 
 The old version of Lollagram was a simple website built in PHP where you needed to click on the refresh button to pull the latest pictures shared on Instagram with the hashtags #lollapalooza #lollapalooza2012 or #lolla2012
 
