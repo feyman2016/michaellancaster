@@ -5,9 +5,14 @@ title: How I built Lollagram with Instagram real time API
 excerpt: A month ago was the event Lollapalooza in Chicago and some co-workers from my former company had an idea two years ago (if I'm not wrong) to develop a web Application showing latest pictures people were sharing from the event..and this year I wanted to take it to the next level.
 ---
 
+<div class="intro-series">
+    Looks like the domain Lollagram was bought and turned into a porn website. <br>
+    You can still check the code in <a href="https://github.com/weblancaster/instagram-real-time" target="_blank" title="github Lollagram - real time lollagram cosuming Instagram real time API">Lollagram source code.</a>
+</div>
+
 ## What is Lollagram?
 
-[from the Application] <a href="http://www.lollagram.com" target="_blank" title="Lollagram - real time lollapalooza">Lollagram</a>  is a labor of love that’s designed to help you keep track of the Lollapalooza experience, through the eyes (or, more accurately, snapshots) of music lovers on the ground at Grant Park. Lollagram takes advantage of the Instagram Real Time API and aggregates the moments at Lollapalooza, creating a visual record of the bands, food, people, and city that make up this great musical tradition. With 45 million photos being uploaded to Instagram each day, we're excited to present snapshots from Lollapalooza 2013.
+[from the Application] <a href="" target="_blank" title="Lollagram - real time lollapalooza">Lollagram</a>  is a labor of love that’s designed to help you keep track of the Lollapalooza experience, through the eyes (or, more accurately, snapshots) of music lovers on the ground at Grant Park. Lollagram takes advantage of the Instagram Real Time API and aggregates the moments at Lollapalooza, creating a visual record of the bands, food, people, and city that make up this great musical tradition. With 45 million photos being uploaded to Instagram each day, we're excited to present snapshots from Lollapalooza 2013.
 
 ## The new version
 
