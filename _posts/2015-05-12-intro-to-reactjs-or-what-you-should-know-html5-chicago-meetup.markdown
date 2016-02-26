@@ -47,7 +47,7 @@ And these are part of Unmounting cycle...
 
 The methods part of the updating lifecycle are:
 
-- componentWillReceiveNewProps(nextProps) // called when a component is receiving new props, you can setState here and render won't be called
+- componentWillReceiveProps(nextProps) // called when a component is receiving new props, you can setState here and render won't be called
 - shouldComponentUpdate(nextProps, nextState) // return false when you know the component wont receive any update, called before render method
 - componentWillUpdate(nextProps, nextState) // called before update occurs
 - render()
