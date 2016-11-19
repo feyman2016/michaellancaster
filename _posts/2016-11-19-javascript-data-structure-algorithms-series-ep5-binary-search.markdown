@@ -7,7 +7,7 @@ excerpt: One of the most know and perhaps most used search algorithm. Binary Sea
 
 <div class="intro-series">
     <strong>Be advised!</strong> <br> 
-    This post is part of the series: Data Structures and Algorithms with JS therefore before continuing I suggest you to read<a href="/blog/javascript-data-structure-algorithms-series-ep1/" title="Data Structures and Algorithms Ep.1">the introduction</a> the introduction if you haven't read yet. thanks.
+    This post is part of the series: Data Structures and Algorithms with JS therefore before continuing I suggest you to read <a href="/blog/javascript-data-structure-algorithms-series-ep1/" title="Data Structures and Algorithms Ep.1">the introduction</a> the introduction if you haven't read yet. thanks.
 </div>
 
 
