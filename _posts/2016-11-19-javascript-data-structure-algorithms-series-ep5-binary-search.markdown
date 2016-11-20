@@ -30,7 +30,7 @@ const binarySearch = (list, item) => {
     let high = list.length - 1;
 
     while (low <= high) {
-        let mid = Math.floor((low + high) / (2)); // make number integer
+        let mid = Math.floor((low + high) / (2)); // Math.floor makes number integer
         let guess = list[mid];
 
         if (guess === item) {
