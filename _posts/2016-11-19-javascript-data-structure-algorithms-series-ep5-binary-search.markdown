@@ -7,18 +7,19 @@ excerpt: One of the most know and perhaps most used search algorithm. Binary Sea
 
 <div class="intro-series">
     <strong>Be advised!</strong> <br> 
-    This post is part of the series: Data Structures and Algorithms with JS therefore before continuing I suggest you to read <a href="/blog/javascript-data-structure-algorithms-series-ep1/" title="Data Structures and Algorithms Ep.1">the introduction</a> the introduction if you haven't read yet. thanks.
+    This post is part of the series: Data Structures and Algorithms with JS therefore before continuing I suggest you to read <a href="/blog/javascript-data-structure-algorithms-series-ep1/" title="Data Structures and Algorithms Ep.1">the introduction</a> if you haven't read yet. thanks.
 </div>
 
 
 ### Binary Search
 
-Imagine you have those yellow pages book, let's say contains 10000 pages and you need to find Michael's phone number in there, 
+Imagine you have a yellow pages book that has 10000 pages and you need to find Michael's phone number in there. <br> 
 You wouldn't go page by page and name by name to find Michael's phone number (this is called linear search in CS), instead you would jump to the middle of the book and start from there.
 
 Binary Search works basically the same way, starting at the middle then from there check if the current item is the the same as the one need to find. <br>
 <br>
-Let's say you want to find 8 in a list of 10 elements Binary Search will start at 5 and then check if the current (middle) is what you looking for (corret), low, or high and continue iterating from there eliminating half and checking correct, low, high. 
+Let's say you want to know if number 8 is in a list of 10 elements. Binary Search will start at 5 and then check if the current position (middle) is what looking for then return correct (the position of the element or the element itself), 
+low (when the current position is less than what looking for) or high (when the current position is greater than what looking for) and continuing iterate from there eliminating half and checking correct, low, high. <br>
 Making Binary Search Log2(n). That's why Binary Search is very efficient even for massive collections. 
 
 Another take away is that Binary Search requires sorted (ordered) list, It returns null if the item being search isn't found or return the element position if found.
