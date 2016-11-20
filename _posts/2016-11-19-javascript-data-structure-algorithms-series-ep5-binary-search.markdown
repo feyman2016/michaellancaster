@@ -22,7 +22,7 @@ Let's say you want to know if number 8 is in a list of 10 elements. Binary Searc
 low (when the current position is less than what looking for) or high (when the current position is greater than what looking for) and continuing iterate from there eliminating half and checking correct, low, high. <br>
 Making Binary Search Log2(n). That's why Binary Search is very efficient even for massive collections. 
 
-Another take away is that Binary Search requires sorted (ordered) list, It returns null if the item being search isn't found or return the element position if found.
+Another take away is that Binary Search requires sorted (ordered) list.
 
 <pre><code data-language="javascript">
 const binarySearch = (list, item) => {
