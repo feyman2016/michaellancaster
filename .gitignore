@@ -1,4 +1,8 @@
 .sass-cache
-.node_modules
 .idea
+*.log
 .DS_Store
+.sass-cache
+build
+lib-cov
+node_modules
