@@ -6,8 +6,8 @@
     "dist": "npm run sass:prod && npm run js:prod",
     "watch": "npm run sass:dev",
     "js:prod": "./node_modules/.bin/uglifyjs ./assets/js/app.js -o assets/js/app.min.js -c -m --source-map",
-    "sass:prod": "./node_modules/.bin/node-sass --include-path ./assets/style --output-style compressed ./assets/style/sass/app.scss ./assets/style/stylesheets/app.css",
-    "sass:dev": "./node_modules/.bin/node-sass --recursive --include-path ./assets/style --output-style expanded ./assets/style/sass/app.scss ./assets/style/stylesheets/app.css"
+    "sass:prod": "./node_modules/.bin/node-sass --include-path ./assets/style --output-style compressed ./assets/style/sass/app.scss ./assets/style/app.css",
+    "sass:dev": "./node_modules/.bin/node-sass --recursive --include-path ./assets/style --output-style expanded ./assets/style/sass/app.scss ./assets/style/app.css"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
