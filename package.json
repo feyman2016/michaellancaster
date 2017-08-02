@@ -1,10 +1,12 @@
 {
   "name": "michaellancaster",
   "version": "0.1.0",
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-compass": "~0.7.2",
-    "grunt-contrib-uglify": "~0.2.0",
-    "grunt-contrib-watch": "~0.4.4"
+  "author": "Michael Lancaster",
+  "scripts": {
+    "dist": "npm run sass:prod && npm run js:prod",
+    "watch": "npm run sass:dev",
+    "js:prod": "./node_modules/.bin/uglifyjs assets/js/app.js -o assets/js/app.min.js -c -m --source-map",
+    "sass:prod": "./node_modules/.bin/node-sass --include-path ./app/public/stylesheets/sass --output-style compressed ./app/public/stylesheets/sass/app.scss ./app/public/stylesheets/css/app.css",
+    "sass:dev": "./node_modules/.bin/node-sass --recursive --include-path ./assets/style/sass --output-style expanded ./app/public/stylesheets/sass/app.scss ./assets/style/sass/*.scss"
   }
 }
